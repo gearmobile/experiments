@@ -1,0 +1,92 @@
+/* http://codepen.io/desandro/pen/mIkhq */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.grid {
+    background-color: #ddd;
+}
+
+.grid::before,
+.grid::after {
+    content: '';
+    display: table;
+}
+
+.grid::after {
+    clear: both;
+}
+
+.grid__sizer,
+.grid__item {
+    width: 20%;
+}
+
+.grid__item {
+    height: 100px;
+    border: 2px solid #333;
+    background-color: #00dd88;
+    float: left;
+}
+
+.grid__item--width2 {
+    width: 40%;
+}
+
+.grid__item--height2 {
+    height: 200px;
+}
+
+.grid__controls {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__button {
+    cursor: pointer;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font: 400 10px/1 Arial, sans-serif;
+    padding: 10px 20px;
+    background-color: cornflowerblue;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color .2s;
+}
+
+.grid__button:hover,
+.grid__button:focus {
+    background-color: cadetblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
