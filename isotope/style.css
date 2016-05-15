@@ -8,6 +8,7 @@ body {
 
 .grid {
     background-color: #fff;
+    overflow: hidden;
 }
 
 .grid::before,
@@ -40,6 +41,7 @@ body {
 }
 
 .grid__controls {
+    width: 100%;
     padding: 20px 0;
     display: flex;
     justify-content: center;
@@ -75,25 +77,3 @@ body {
 .red {
     background-color: coral;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
