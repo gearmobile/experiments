@@ -23,7 +23,9 @@ $(document).ready(function () {
     var sortingLinks = $('.sort-link');
     sortingLinks.on('click', function () {
        $(this).toggleClass('selected');
+        $(this).preventDefault();
     });
+
     $(window).on('resize', function () {
         positionThumbnails();
     });
