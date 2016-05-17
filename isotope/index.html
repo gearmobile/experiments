@@ -3,14 +3,15 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Isotope Masonry</title>
+    <link rel="stylesheet" href="normalize.css"/>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="grid__controls">
         <button type="button" data-filter="*" class="grid__button">all</button>
-        <button type="button" data-filter=".red" class="grid__button">red</button>
-        <button type="button" data-filter=".green" class="grid__button">green</button>
-        <button type="button" data-filter=".blue" class="grid__button">blue</button>
+        <button type="button" data-filter=".red" class="grid__button red">red</button>
+        <button type="button" data-filter=".green" class="grid__button green">green</button>
+        <button type="button" data-filter=".blue" class="grid__button blue">blue</button>
     </div>
     <div class="grid">
         <div class="grid__sizer red"></div>
@@ -39,8 +40,8 @@
         <div class="grid__item blue"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.0/isotope.pkgd.min.js"></script>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script src="isotope.pkgd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
