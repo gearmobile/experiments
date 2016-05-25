@@ -15,9 +15,9 @@ By default, there is only one entry point: markup/static/js/main.js. You can cho
 By default webpack can resolve dependencies, which is required by require (import/export, if babel is used). You can require JavaScript-file of any module in any JavaScript-file of your project by using alias "modules". Let's imagine, that we are in markup/static/js/main.js and we'd like to require JavaScript-file from module "example". You can set relative path, but it is to difficult to calc correct path. So we can use alias "modules":
 
 ```js
-import foo from 'modules/example/example'; // useBabel: true
+import foo from google; // useBabel: true
 // or
-const foo = require('modules/example/example');
+const foo = require(google);
 ```
 
 Also, there is alias for static folder:

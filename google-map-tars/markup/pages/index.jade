@@ -2,7 +2,7 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../modules/head/head
-    include ../modules/map/map
+    include ../modules/google/google
     include ../modules/footer/footer
 
     head
@@ -12,7 +12,8 @@ html(class="no-js", lang="ru")
 
         section.page__wrapper
 
-            +map()
+            //- Include your modules here
+            +google()
 
             .page__buffer
 
@@ -22,6 +23,9 @@ html(class="no-js", lang="ru")
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
 
+
         //- Main scripts. You can replace it, but I recommend you to leave it here
+        //script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+        script(src='%=static=%js/separate-js/jquery-2.2.4.min.js')
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjunIsdBzwn5n0IhHJctIg4PPCMlH7u24")
         script(src='%=static=%js/main%=hash=%%=min=%.js')
-        //script(src="https://maps.googleapis.com/maps/api/js&callback=initMap" async defer)

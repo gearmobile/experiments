@@ -15,9 +15,9 @@
 По умолчанию webpack умеет разрешать зависмости, объявленные через require (import/export, если включена обработка кода через babel). При этом, в любой точке приложения вы можете подключить файл модуля с помощью алиаса «modules». Предположим, что мы находимся в markup/static/js/main.js и хотим подключить в нем скрипт из модуля «example». Вместо указания относительного пути от main.js до example.js можно написать так:
 
 ```js
-import foo from 'modules/example/example'; // useBabel: true
+import foo from google; // useBabel: true
 // или
-const foo = require('modules/example/example');
+const foo = require(google);
 ```
 
 Также есть алиас для папки static, который позволит подключить файл из папки static в любой точке приложения:
