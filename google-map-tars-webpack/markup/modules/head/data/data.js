@@ -1,6 +1,6 @@
 head: {
     defaults: {
-        title: 'default title',
+        title: 'Google Map Tars Webpack',
         useSocialMetaTags: true
     }
 }

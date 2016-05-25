@@ -1,0 +1,32 @@
+mixin example(data)
+    .isotope
+        .grid__controls
+            button.grid__button(type="button" data-filter="*") all
+            button.grid__button.red(type="button" data-filter=".red") red
+            button.grid__button.green(type="button" data-filter=".green") green
+            button.grid__button.blue(type="button" data-filter=".blue") blue
+        .grid
+            .grid__sizer.red
+            .grid__item.green
+            .grid__item.blue.grid__item--width2
+            .grid__item.green.grid__item--height2
+            .grid__item.blue
+            .grid__item.blue
+            .grid__item.blue
+            .grid__item.red.grid__item--width2
+            .grid__item.blue.grid__item--width2
+            .grid__item.green.grid__item--height2
+            .grid__item.red.grid__item--height2
+            .grid__item.green
+            .grid__item.blue
+            .grid__item.red.grid__item--width2
+            .grid__item.green
+            .grid__item.red.grid__item--width2
+            .grid__item.blue.grid__item--width2
+            .grid__item.green.grid__item--height2
+            .grid__item.blue
+            .grid__item.green
+            .grid__item.red.grid__item--height2
+            .grid__item.red
+            .grid__item.green
+            .grid__item.blue
