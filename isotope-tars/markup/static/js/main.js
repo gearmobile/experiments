@@ -5,7 +5,6 @@ const Isotope = require('isotope-layout');
 const imagesLoaded = require('imagesloaded');
 imagesLoaded.makeJQueryPlugin( $ );
 
-
 // ISOTOPE LAYOUT
 // -----------------------------------------------------------
 
@@ -17,11 +16,8 @@ var $iso1 = new Isotope( '.iso1', {
     }
 });
 
-
 // IMAGELOADED
 // -----------------------------------------------------------
-
-
 
 var $iso2 = new Isotope( '.iso2', {
     itemSelector: '.iso2 .grid-item',
@@ -30,4 +26,3 @@ var $iso2 = new Isotope( '.iso2', {
         columnWidth: '.iso2 .grid-sizer'
     }
 });
-
