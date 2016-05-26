@@ -6,7 +6,7 @@
 //     }
 // }
 
-/* Module data example */
+/* Module data google */
 
 _template: {
     big: {

@@ -1,6 +1,6 @@
 head: {
     defaults: {
-        title: 'default title',
+        title: 'Isotope Tars Webpack',
         useSocialMetaTags: true
     }
 }

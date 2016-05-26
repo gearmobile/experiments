@@ -6,7 +6,7 @@ const chokidar = tars.packages.chokidar;
 const watcherLog = tars.helpers.watcherLog;
 
 /**
- * This is an example of watcher
+ * This is an google of watcher
  */
 module.exports = function () {
     return chokidar.watch(
