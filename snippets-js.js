@@ -1,5 +1,5 @@
 
-// jQuery animated number counter from zero to value
+// JQUERY ANIMATED NUMBER COUNTER FROM ZERO TO VALUE
 // ------------------------------------------------------------------------
 
 // HTML
@@ -19,7 +19,7 @@ $('.Count').each(function () {
 });
 
 
-// Smooth Scroll
+// SMOOTH SCROLL
 // ------------------------------------------------------------------------
 
 $('a[href*=#]:not([href=#])').click(function() {
@@ -37,7 +37,7 @@ if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
 });
 
 
-// Bar Chart Animation
+// BAR CHART ANIMATION
 // ------------------------------------------------------------------------
 
 $('.bar').width('0%');
@@ -55,7 +55,8 @@ $('.bar').each(function() {
 offset: '85%'
 });
 
-// Math.random examples
+
+// MATH.RANDOM EXAMPLES
 // --------------------------------------------------------------------------
 
 // Returns a random number between 0 (inclusive) and 1 (exclusive)
@@ -80,8 +81,12 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Color random function javascript
+// --------------------------------------------------------------------------
+var color = 'rgb('+(Math.floor(Math.random()*256))+','+(Math.floor(Math.random()*256))+','+(Math.floor(Math.random()*256))+')';
 
-// Smooth Scroll
+
+// SMOOTH SCROLL
 // --------------------------------------------------------------------------
 
 $('a[href*="#"]:not([href="#"])').click(function() {
