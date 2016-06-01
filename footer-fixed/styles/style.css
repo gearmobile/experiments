@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    /* ----- MAGIC START HERE ----- */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* ----- MAGIC END HERE ----- */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    text-transform: uppercase;
+    color: floralwhite;
+    letter-spacing: .2rem;
+    padding: 2rem 0;
+    /* ----- MAGIC START HERE ----- */
+    flex: 0 0 auto;
+    /* ----- MAGIC END HERE ----- */
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    background-color: antiquewhite;
+    /* ----- MAGIC START HERE ----- */
+    flex: 1 0 auto;
+    /* ----- MAGIC END HERE ----- */
+}
+
+.main__sidebar {
+    width: 30%;
+    background-color: darkseagreen;
+    padding: 2rem;
+}
+
+.main__content {
+    width: 70%;
+    background-color: sandybrown;
+    padding: 2rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    color: whitesmoke;
+    padding: 1rem 0;
+    /* ----- MAGIC START HERE ----- */
+    flex: 0 0 auto;
+    /* ----- MAGIC END HERE ----- */
+}
+
+.footer p {
+    margin: 0;
+}
