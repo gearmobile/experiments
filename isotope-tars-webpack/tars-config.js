@@ -50,7 +50,7 @@ module.exports = {
         "port": 3004,
         "open": true,
         "browser": "default",
-        "startUrl": "/index.html",
+        "startUrl": "/home.html",
         "useNotifyInBrowser": true,
         "injectChanges": false
     },
