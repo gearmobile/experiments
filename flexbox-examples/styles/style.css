@@ -24,6 +24,11 @@ body {
 
 .equal-height__item {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: floralwhite;
+    font-size: 30px;
 }
 
 .equal-height__item:nth-child(1) {
@@ -42,7 +47,7 @@ body {
 
 .order {
     display: flex;
-    width: 500px;
+    width: 1000px;
     height: 200px;
     margin: 1rem auto;
 }
@@ -90,6 +95,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: floralwhite;
+    font-size: 30px;
 }
 
 .grid__item:nth-child(1) {
@@ -105,4 +112,20 @@ body {
 .grid__item:nth-child(3) {
     background-color: lightcoral;
     flex: 1 0 auto;
+}
+
+/* ----------- TITLE ----------- */
+
+.title {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.title > a {
+    text-decoration: none;
+    color: orangered;
+}
+
+.title > a:hover {
+    color: darkorange;
 }
