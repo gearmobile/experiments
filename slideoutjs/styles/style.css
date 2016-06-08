@@ -30,6 +30,7 @@ ul, ol {
     overflow-y: auto;
     display: none;
     -webkit-overflow-scrolling: touch;
+    transition: all .5s;
 }
 
 .slideout-panel {
