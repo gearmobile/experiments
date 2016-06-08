@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---------------- FABRIC RULES ------------------------- */
+
+.slideout-menu {
+    width: 300px; /* ------- changed! ------------- */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    display: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+
+/* ---------------- END FABRIC RULES ------------------------- */
+
+
+
+/* ---------- CUSTOM RULES --------- */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-left,
+.button-right {
+    cursor: pointer;
+}
+
+.sidebar {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: darkseagreen;
+}
+
+.sidebar-header {
+    margin: 0 0 2rem 0;
+}
+
+.sidebar-content {
+    padding: 1rem 0;
+}
+
+.sidebar-menu__item {
+    margin: 1rem 0;
+}
+
+/* ---------- END CUSTOM RULES --------- */
