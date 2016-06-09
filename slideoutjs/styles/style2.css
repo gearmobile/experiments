@@ -1,0 +1,198 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---------------- FABRIC RULES ----------------------------- */
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.slideout-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 256px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+
+.fixed {
+    backface-visibility: hidden;
+    position: fixed;
+    z-index: 2;
+    transition: transform 300ms ease;
+}
+
+.fixed-open {
+    transform: translate3d(-256px, 0px, 0px);
+}
+
+/* ---------------- END FABRIC RULES ------------------------- */
+
+
+
+/* ------------------ CUSTOM RULES --------------------------- */
+
+
+/* --------------- SIDEBAR --------------- */
+
+.sidebar {
+    padding: 6rem 0;
+    text-align: center;
+    background-color: palegreen;
+    left: auto; /* move sidebar to right */
+}
+
+.sidebar-header {
+    margin: 0 0 4rem 0;
+}
+
+.sidebar-header .title {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.sidebar-menu__item {
+    padding: .6rem 0;
+    margin: 0 0 2rem;
+}
+
+.sidebar-menu__item:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-menu__item a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: darkred;
+}
+
+.sidebar-menu__item a:hover {
+    color: red;
+}
+
+/* ------------------ TOPHEADER ------------------- */
+
+.topheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkslategray;
+}
+
+.topheader .title {
+    color: #ffffff;
+    font: 700 3rem Helvetica, sans-serif;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+}
+
+.topheader .button {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transition: background-color .2s;
+}
+
+.topheader .button--right {
+    background-color: orangered;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.topheader .button--right:hover {
+    background-color: orange;
+}
+
+
+/* --------------- MAIN CONTENT ------------------- */
+
+.main {
+    margin: 6rem 0 0;
+    background-color: lightblue;
+}
+
+.main-header {
+    margin: 0 0 2rem 0;
+}
+
+.main-header .title {
+    text-transform: capitalize;
+    margin: 0;
+    font: 700 4rem Helvetica, sans-serif;
+}
+
+.main-wrapper {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    max-width: 600px;
+    padding: 4rem 0;
+}
+
+.main-link a {
+    text-transform: lowercase;
+    color: mediumpurple;
+}
+
+.main-link a:hover {
+    text-decoration: none;
+}
+
+.main-content p {
+    margin: 0 0 2rem 0;
+    font: 1.6rem/1.4 Arial, sans-serif;
+}
+
+.main-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------- END CUSTOM RULES -------------------- */
+
+
+

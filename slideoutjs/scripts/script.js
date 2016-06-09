@@ -1,32 +1,50 @@
-// https://github.com/mango/slideout#usage
-// http://codepen.io/gearmobile/pen/ZbbQBw
+(function () {
 
-window.addEventListener('load', function () {
+    var sidebar = document.querySelector('#sidebar');
+    var navbar = document.querySelector('#navbar');
+    var main = document.querySelector('#main');
+    var sidebarWidth = 256;
+    var navbarWidth = 256;
+    var btnSidebar = document.querySelector('.button-sidebar');
+    var btnNavbar = document.querySelector('.button-navbar');
 
-    var btnLeft = document.querySelector('.button-left');
-    //var btnRight = document.querySelector('.button-right');
 
-    var slideoutLeft = new Slideout ({
-        'panel': document.querySelector('#main'),
-        'menu': document.querySelector('#sidebar'),
-        'padding': 300,
-        'tolerance': 70,
-        'duration': 500,
-        'fx': 'ease-in-out',
-        'side': 'left'
+    var leftSlideout = new Slideout({
+        'panel': main,
+        'menu': sidebar,
+        'padding': sidebarWidth,
+        'tolerance': 70
     });
 
-    //var slideoutRight = new Slideout ({
-    //    'panel': document.querySelector('#main'),
-    //    'menu': document.querySelector('#card'),
-    //    'padding': 300,
-    //    'tolerance': 70,
-    //    'duration': 500,
-    //    'fx': 'ease-in-out',
-    //    'side': 'right'
-    //});
 
-    btnLeft.addEventListener('click', function () { slideoutLeft.toggle(); });
-    //btnRight.addEventListener('click', function () { slideoutRight.toggle(); });
+    var rightSlideout = new Slideout({
+        'panel': main,
+        'menu': navbar,
+        'padding': navbarWidth,
+        'tolerance': 70,
+        'side': 'right'
+    });
 
-}, false);
+
+    btnSidebar.addEventListener('click', function () {
+
+        leftSlideout.toggle();
+        sidebar.style.zIndex = '0';
+
+        leftSlideout.on('close', function () {
+            sidebar.style.zIndex = '-1';
+        });
+    });
+
+
+    btnNavbar.addEventListener('click', function () {
+
+        rightSlideout.toggle();
+        navbar.style.zIndex = '0';
+
+        rightSlideout.on('close', function () {
+            navbar.style.zIndex = '-1';
+        });
+    });
+
+})();
