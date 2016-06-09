@@ -1,4 +1,4 @@
-(function () {
+window.addEventListener('DOMContentLoaded', function () {
 
     var sidebar = document.querySelector('#sidebar');
     var navbar = document.querySelector('#navbar');
@@ -47,4 +47,4 @@
         });
     });
 
-})();
+}, false);
