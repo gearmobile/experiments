@@ -45,12 +45,9 @@ window.addEventListener('DOMContentLoaded', function () {
         map = new google.maps.Map( document.getElementById('map'), mapOptions );
 
 
-        // MAP ICOM MARKER
+        // MAP ICON MARKER
         // ------------------------------------------
-        //var iconPath = '../../img/plugins/location.png';
-        //var iconPath = '%=static=%img/assets/google-map/location.png';
-        //var iconPath = '%=static=%img/content/location.png';
-        var iconPath = '../../img/content/location.png';
+        var iconPath = 'static/img/plugins/location.png';
 
 
         // MAP MARKER
