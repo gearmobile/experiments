@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener ('DOMContentLoaded', function () {
 
     var btnSidebar = document.querySelector('.button-sidebar');
     var blockFixed = document.querySelector('.fixed');
