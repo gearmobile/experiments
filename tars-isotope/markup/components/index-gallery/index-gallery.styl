@@ -1,0 +1,30 @@
+*, *::after, *::before
+  box-sizing: border-box
+
+.index-grid
+  margin: auto
+  max-width: 1200px
+
+.index-grid::before
+.index-grid::after
+  content: ''
+  display: table
+
+.index-grid::after
+  clear: both
+
+.index-grid-sizer
+.index-grid-item
+  width: 25%
+
+.index-grid-item
+  float: left
+  padding: 10px
+  background-color: indianred
+  border: 1px solid #000
+
+  & p
+    margin: 0 0 10px
+
+    &:last-child
+      margin-bottom: 0

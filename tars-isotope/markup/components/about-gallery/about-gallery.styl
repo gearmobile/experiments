@@ -1,0 +1,27 @@
+.about-grid::before
+.about-grid::after
+  content: '';
+  display: table
+
+.about-grid::after
+  clear: both;
+
+.about-grid
+  margin: auto;
+  width: 1200px
+
+.about-grid-sizer
+.about-grid-item
+  width: 25%
+
+.about-grid-item
+  float: left;
+  background-color: greenyellow;
+  border: 1px solid #000;
+  padding: 10px
+
+.about-grid-item p
+  margin: 0 0 10px
+
+  &:last-child
+    margin-bottom: 0
