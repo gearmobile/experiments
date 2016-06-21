@@ -4,8 +4,9 @@ mixin gallery(data)
             | first block
         .gallery__item
             | second block
-        .gallery__item(data-bottom-top='' data-center-top='margin-top: -10%')
-            | third block
+        .gallery__wrapper
+            .gallery__item(data-center-top='transform:translate(0%,0%)' data-top-top='transform:translate(0%,-100%)')
+                | scrollr block
         .gallery__item
             | fourth block
         .gallery__item
