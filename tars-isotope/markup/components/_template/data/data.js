@@ -6,7 +6,7 @@
 //     }
 // }
 
-/* Module data example */
+/* Module data flexibility */
 
 _template: {
     big: {

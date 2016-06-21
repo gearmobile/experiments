@@ -368,7 +368,7 @@ exports.__esModule = true;
  * Creates a new instance of Emitter.
  * @class
  * @returns {Object} Returns a new instance of Emitter.
- * @example
+ * @flexibility
  * // Creates a new instance of Emitter.
  * var Emitter = require('emitter');
  *
@@ -387,7 +387,7 @@ var Emitter = (function () {
    * @param {String} event - The event name.
    * @param {Function} listener - A listener function to add.
    * @returns {Object} Returns an instance of Emitter.
-   * @example
+   * @flexibility
    * // Add an event listener to "foo" event.
    * emitter.on('foo', listener);
    */
@@ -412,7 +412,7 @@ var Emitter = (function () {
    * @param {String} event - The event name.
    * @param {Function} listener - A listener function to add.
    * @returns {Object} Returns an instance of Emitter.
-   * @example
+   * @flexibility
    * // Will add an event handler to "foo" event once.
    * emitter.once('foo', listener);
    */
@@ -439,7 +439,7 @@ var Emitter = (function () {
    * @param {String} event - The event name.
    * @param {Function} listener - A listener function to remove.
    * @returns {Object} Returns an instance of Emitter.
-   * @example
+   * @flexibility
    * // Remove a given listener.
    * emitter.off('foo', listener);
    */
@@ -475,7 +475,7 @@ var Emitter = (function () {
    * @param {String} event - The name of the event you want to emit.
    * @param {...Object} data - Data to pass to the listeners.
    * @returns {Object} Returns an instance of Emitter.
-   * @example
+   * @flexibility
    * // Emits the "foo" event with 'param1' and 'param2' as arguments.
    * emitter.emit('foo', 'param1', 'param2');
    */

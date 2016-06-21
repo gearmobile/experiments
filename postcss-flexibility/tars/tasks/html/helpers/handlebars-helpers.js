@@ -255,7 +255,7 @@ const builtInHandlebarsHelpers = {
      * @param  {String} context
      * @param  {Object} options
      * @return {String}
-     * @example: <https://github.com/assemble/buttons> (See the "button-i18n" example)
+     * @flexibility: <https://github.com/assemble/buttons> (See the "button-i18n" flexibility)
     */
     i18n(context, options) {
         let language = void 0;

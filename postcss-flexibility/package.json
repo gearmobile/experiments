@@ -4,7 +4,9 @@
   "description": "Your awesome project description",
   "main": "gulpfile.js",
   "directories": {},
-  "dependencies": {},
+  "dependencies": {
+    "autoprefixer": "^6.3.6"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "postcss-flexibility": "^1.0.3"
