@@ -9,5 +9,9 @@ forEach( items, function (el) {
     el.style.backgroundColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
 });
 
-var s = skrollr.init({ smoothScrolling: false, forceHeight: false, mobileDeceleration: 0.004 });
-s.refresh(document.querySelector('.footer'));
+var bgItems = document.querySelectorAll('.background__section');
+forEach( bgItems, function (el) {
+    el.style.backgroundColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+});
+
+skrollr.init({ smoothScrolling: false, forceHeight: false, mobileDeceleration: 0.004 });
