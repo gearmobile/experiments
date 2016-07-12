@@ -1,0 +1,81 @@
+body
+    margin: 20px 0 0
+    background-color: grey
+
+
+// BLOCK
+// -------------------------------------------------------
+
+.block
+    width: 100%
+    height: 100%
+    /*padding: 160px 0*/
+    position: relative
+    background: url('%=static=%assets/triangle/sample-01.jpg') 50% 50% no-repeat
+    background-size: cover
+
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba( #000, .3 )
+
+
+    // BLOCK TOP && BLOCK BOTTOM
+    // -------------------------------------------------------
+
+    &__top
+    &__bottom
+        position: absolute
+        width: 100%
+        left: 0
+
+        & > canvas
+            display: none
+
+    &__top
+        top: 0
+
+    &__bottom
+        bottom: 0
+
+
+    // BLOCK CENTER
+    // -------------------------------------------------------
+
+    &__center
+        lost-center 1200px flex
+        padding: 80px 10px
+        flex-direction: column
+        align-items: center
+        color: lightgray
+
+
+    // BLOCK TITLE
+    // -------------------------------------------------------
+
+    &__title
+        margin: 0 0 20px
+        text-transform: capitalize
+
+
+    // BLOCK SUBTITLE
+    // -------------------------------------------------------
+
+    &__subtitle
+        margin: 0 0 16px
+        text-transform: capitalize
+
+
+    // BLOCK PARAGRAPH
+    // -------------------------------------------------------
+
+    & p
+        lost-center 800px flex
+        padding: 0 10px
+        font: 16px/1.6 Arial, sans-serif
+        text-align: center
