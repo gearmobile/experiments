@@ -8,11 +8,7 @@ var delta1 = 0.08;
 var delta2 = 0.041;
 var delta3 = 0.66;
 
-var width = Math.floor( window.innerWidth );
-var height = Math.floor( width * delta );
-var width1 = Math.floor( width * delta3 );
-var height1 = Math.floor( width * delta1 );
-var height2 = Math.floor( width * delta2 );
+var width, height, width1, height1, height2;
 
 var block = document.querySelector( '.block' );
 var blockTop = document.querySelector( '.block__top' );
@@ -26,26 +22,36 @@ var triangleTopCtx = triangleTop.getContext( '2d' );
 var triangleBottom = document.querySelector( '#triangleBottom' );
 var triangleBottomCtx = triangleBottom.getContext( '2d' );
 
-window.addEventListener( 'DOMContentLoaded', function () {
+triangleTopCtx.lineWidth = 1;
+triangleBottomCtx.lineWidth = 1;
+
+
+// STYLING ELEMENTS
+// -------------------------------------------------
+
+function stylingElements() {
+    width = Math.floor( window.innerWidth );
+    height = Math.floor( width * delta );
+    width1 = Math.floor( width * delta3 );
+    height1 = Math.floor( width * delta1 );
+    height2 = Math.floor( width * delta2 );
 
     blockTop.style.height = height + 'px';
     blockBottom.style.height = height + 'px';
     block.style.paddingTop = height + 'px';
     block.style.paddingBottom = height + 'px';
 
-    triangleTopCtx.lineWidth = 1;
-    triangleBottomCtx.lineWidth = 1;
-
     triangleTop.width = width;
     triangleBottom.width = width;
 
     triangleTop.height = height;
     triangleBottom.height = height;
+}
 
+// DRAW TRIANGLE TOP
+// -------------------------------------------------
 
-    // TRIANGLE TOP
-    // -------------------------------------------------
-
+function drawTriangleTop() {
     triangleTopCtx.strokeStyle = color1;
     triangleTopCtx.fillStyle = color1;
     triangleTopCtx.beginPath();
@@ -55,11 +61,12 @@ window.addEventListener( 'DOMContentLoaded', function () {
     triangleTopCtx.stroke();
     triangleTopCtx.fill();
     triangleTopCtx.closePath();
+}
 
+// DRAW TRIANGLE BOTTOM
+// -------------------------------------------------
 
-    // TRIANGLE BOTTOM
-    // -------------------------------------------------
-
+function drawTriangleBottom() {
     triangleBottomCtx.strokeStyle = color1;
     triangleBottomCtx.fillStyle = color1;
     triangleBottomCtx.beginPath();
@@ -79,10 +86,28 @@ window.addEventListener( 'DOMContentLoaded', function () {
     triangleBottomCtx.stroke();
     triangleBottomCtx.fill();
     triangleBottomCtx.closePath();
+}
 
+// CONVERT CANVAS TO IMAGE
+// ------------------------------------------------
+
+function canvasToImage() {
     blockImageTop.src = triangleTopCtx.canvas.toDataURL();
     blockImageBottom.src = triangleBottomCtx.canvas.toDataURL();
+}
 
+window.addEventListener( 'DOMContentLoaded', function () {
+    stylingElements();
+    drawTriangleTop();
+    drawTriangleBottom();
+    canvasToImage();
+}, false );
+
+window.addEventListener( 'resize', function () {
+    stylingElements();
+    drawTriangleTop();
+    drawTriangleBottom();
+    canvasToImage();
 }, false );
 
 
