@@ -1,0 +1,52 @@
+$primary-color = skyblue
+$secondary-color = cornflowerblue
+$tertiary-color = lightblue
+
+.content
+    padding: 1rem 0
+    text-align: center
+
+    & p
+        margin: 0 0 1rem
+
+.list
+    lost-center 1000px flex
+    flex-direction: column
+
+    &__item
+        display: flex
+        align-items: center
+        margin: 1rem 0
+        border: 1px solid darkgrey
+        padding: 1rem
+        border-radius: .5rem
+
+        & > p
+            text-transform: capitalize
+
+        & .list-icon
+            margin: 0 1rem 0 0
+
+        &:nth-child(1)
+            color: hotpink
+
+            &  .list-icon > use
+                fill: green
+
+        &:nth-child(2) use
+            fill: goldenrod
+
+        &:nth-child(3) use
+            fill: forestgreen
+
+        &:nth-child(4) #icon-02
+            fill: maroon
+
+            &:hover
+                fill: skyblue
+
+        &:nth-child(5) #icon-01
+            fill: $primary-color
+
+        &:nth-child(5):hover #icon-01
+            fill: $secondary-color

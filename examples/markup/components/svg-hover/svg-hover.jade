@@ -1,0 +1,24 @@
+mixin svg-hover(data)
+    .svg-hover
+        .content
+            p Изменение цвета svg-иконок при hover
+            p Смотри common.styl
+        ul.list
+            li.list__item
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon-01', className: 'list-icon'})
+                p list item
+            li.list__item
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon-02', className: 'list-icon'})
+                p list item
+            li.list__item
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon-01', className: 'list-icon'})
+                p list item
+            li.list__item
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon-02', className: 'list-icon'})
+                p list item
+            li.list__item
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon-01', className: 'list-icon'})
+                p list item
+            li.list__item
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon-02', className: 'list-icon'})
+                p list item
