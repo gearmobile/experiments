@@ -13,5 +13,3 @@ firstPageLayout = new Isotope( firstPageGrid, {
         columnWidth: firstPageSizer
     }
 });
-
-module.exports = {};

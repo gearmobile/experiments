@@ -6,5 +6,9 @@ head: {
     second: {
         title: 'Second Page',
         useSocialMetaTags: true
+    },
+    tetro: {
+        title: 'Third Page',
+        useSocialMetaTags: true
     }
 }

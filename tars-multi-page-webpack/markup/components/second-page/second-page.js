@@ -1,3 +1,4 @@
+
 var Isotope = require( 'isotope-layout' );
 
 var secondPageGrid = document.querySelector( '.second-page .grid' );
@@ -12,5 +13,3 @@ secondPageLayout = new Isotope( secondPageGrid, {
         columnWidth: secondPageSizer
     }
 });
-
-module.exports = {};

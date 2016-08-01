@@ -1,4 +1,5 @@
 'use strict';
 
-var firstPage = require( '../../components/first-page/first-page' );
-var secondPage = require( '../../components/second-page/second-page' );
+require( '../../components/first-page/first-page' );
+require( '../../components/second-page/second-page' );
+require( '../../components/tetro-page/tetro-page' );
