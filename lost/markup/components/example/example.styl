@@ -1,0 +1,55 @@
+// BLOCK
+// --------------------------------------
+.block
+    lost-center 1000px flex
+    padding 4rem 2rem
+    border 2px solid salmon
+
+    // BLOCK PRIMARY
+    // --------------------------------------
+    &__primary
+        lost-column 1/2
+        lost-column-gutter 60px
+        display flex
+        flex-direction column
+
+        @media screen and ( max-width 768px )
+            lost-column 1/1
+            margin 0 0 20px
+
+    // BLOCK SECONDARY
+    // --------------------------------------
+    &__secondary
+        lost-column 1/2
+        lost-column-gutter 60px
+        display flex
+        flex-direction column
+
+        @media screen and ( max-width 768px )
+            lost-column 1/1
+
+    // BLOCK INPUT
+    // --------------------------------------
+    &__input
+        padding 20px 30px
+        border 2px solid #e5e5e5
+        background-color transparent
+        margin 0 0 10px
+        transition border-color .2s
+
+        &:hover
+            border-color darken( #e5e5e5, 50% )
+
+        &:focus
+            border-color firebrick
+
+    // BLOCK LABEL
+    // --------------------------------------
+    &__label
+        margin 0 0 0 20px
+        text-transform uppercase
+        font 600 10px/1.2 sans-serif
+        color forestgreen
+
+        @media screen and ( max-width 500px )
+            margin 0
