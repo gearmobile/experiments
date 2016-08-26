@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "directories": {},
   "dependencies": {
+    "elastic-svg": "0.0.4",
     "lost": "^7.0.4"
   },
   "devDependencies": {
