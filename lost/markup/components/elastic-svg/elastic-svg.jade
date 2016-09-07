@@ -1,4 +1,5 @@
 mixin elastic-svg()
     .block-elastic
         .block-elastic__primary
+            != jadeHelpers.Icon.call( locals, { iconName: 'elastic', className: 'elastic-bg' })
         .block-elastic__secondary

@@ -9,7 +9,7 @@ module.exports = {
     ],
     "svg": {
         "active": true,
-        "workflow": "sprite",
+        "workflow": "symbols",
         "symbolsConfig": {
             "loadingType": "inject",
             "usePolyfillForExternalSymbols": true,
