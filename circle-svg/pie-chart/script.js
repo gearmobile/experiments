@@ -9,7 +9,7 @@ window.addEventListener( 'load', function () {
     var continents = {
         asia: 60,
         northAmerica: 5,
-        southAmerica: 9,
+        southAmerica: 7,
         oceania: 1,
         africa: 15,
         europe: 12
