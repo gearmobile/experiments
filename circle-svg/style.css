@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto 0;
+    border: 1px solid #000;
+    position: relative;
+    background-color: #789;
+}
+
+.wrapper svg {
+    display: block;
+    width: 200px;
+    height: 200px;
+    fill: none;
+}
+
+.wrapper .diagramm {
+    stroke-width: 20px;
+}
+
+.wrapper .diagramm--main {
+    stroke: salmon;
+}
+
+.wrapper .diagramm--progress {
+    stroke: firebrick;
+    stroke-linecap: round;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 52;
+}
+
+.wrapper__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.wrapper__text p {
+    text-transform: uppercase;
+    font: 700 30px/1.2 sans-serif;
+    color: #fff;
+}
