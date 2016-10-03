@@ -1,0 +1,6 @@
+mixin card( data )
+    section.card()
+        each item in card.users
+            ul.card__item
+                li.card__name= item.name
+                li.card__profession= item.profession
