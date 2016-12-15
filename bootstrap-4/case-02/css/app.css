@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+}
+
+.cover {
+    height: 100%;
+    background: #222 url( '../images/stars.jpg' ) 50% 50% no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.cover .cover__title {
+    text-transform: capitalize;
+}
+
+.cover .cover__caption {
+    text-align: center;
+    color: #fff;
+}
+
+.cover .cover__form {
+    margin: 0 0 20px;
+}
