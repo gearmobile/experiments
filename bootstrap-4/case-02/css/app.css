@@ -89,3 +89,31 @@ html, body {
 .about .about__link {
     text-transform: capitalize;
 }
+
+/* ------------ LATEST ---------------- */
+
+.news {
+    padding: 6rem 0;
+}
+
+.news .news__header {
+    border-bottom: .1rem solid #ccc;
+    padding: 0 0 1.4rem;
+}
+
+.news .news__title {
+    text-transform: capitalize;
+}
+
+.news .lead {
+    margin-bottom: 0;
+}
+
+.news .news__content {
+    padding: 2rem 0 1rem;
+}
+
+.news .news__pagination {
+    padding: 1rem 0 0;
+    border-top: .1rem solid #ccc;
+}
