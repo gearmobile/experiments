@@ -59,3 +59,33 @@ html, body {
     text-transform: uppercase;
     font-size: .7rem;
 }
+
+/* -------------------- ABOUT -------------------- */
+
+.about {
+    padding: 6rem 0;
+    background: #fff url( '../images/about-bg.jpg' ) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.about .about__content {
+    padding: 2rem;
+    background-color: rgba( 0, 0, 0, .8 );
+    color: #fff;
+}
+
+.about .about__title {
+    text-transform: capitalize;
+}
+
+.about .about__subtitle {
+    text-transform: capitalize;
+}
+
+.about .about__links {
+    margin: 1rem 0 0;
+}
+
+.about .about__link {
+    text-transform: capitalize;
+}
