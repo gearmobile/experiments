@@ -17,6 +17,7 @@ html, body {
 }
 
 .cover .cover__caption {
+    width: 100%;
     text-align: center;
     color: #fff;
 }
@@ -116,4 +117,29 @@ html, body {
 .news .news__pagination {
     padding: 1rem 0 0;
     border-top: .1rem solid #ccc;
+}
+
+/* ------------------- FOOTER ------------------ */
+
+.footer {
+    padding: 2rem 0;
+    background-color: #222;
+    color: #fff;
+}
+
+.footer .footer__lead {
+    text-transform: capitalize;
+}
+
+.footer .footer__list {
+    text-transform: capitalize;
+}
+
+.footer .footer__title {
+    text-transform: uppercase;
+}
+
+.footer .footer__subtitle {
+    text-transform: uppercase;
+    font-size: .8rem;
 }
