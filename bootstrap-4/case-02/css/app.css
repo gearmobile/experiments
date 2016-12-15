@@ -2,9 +2,11 @@ html, body {
     height: 100%;
 }
 
+/* ----------------- COVER RULES --------------------- */
+
 .cover {
     height: 100%;
-    background: #222 url( '../images/stars.jpg' ) 50% 50% no-repeat;
+    background: #222 url( '../images/cover-bg.jpg' ) 50% 50% no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -21,4 +23,39 @@ html, body {
 
 .cover .cover__form {
     margin: 0 0 20px;
+}
+
+/* ---------------- SLIDER RULES -------------------- */
+
+.slider .carousel-caption__title {
+    text-transform: capitalize;
+}
+
+
+/* --------------- CARDS RULES ------------- */
+
+.cards {
+    padding: 4rem 0;
+}
+
+.cards .cards__header {
+    margin: 0 0 3rem;
+}
+
+.cards .cards__title {
+    text-transform: capitalize;
+}
+
+.cards .card-title {
+    text-transform: capitalize;
+}
+
+.cards .card-subtitle {
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.cards .card-link {
+    text-transform: uppercase;
+    font-size: .7rem;
 }
