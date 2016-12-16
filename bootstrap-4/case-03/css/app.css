@@ -92,6 +92,34 @@ img {
     font-size: .8rem;
 }
 
+/* --------------- FEATURE-ONE ----------------- */
+
+.feature-one {
+    padding: 8rem 0;
+    overflow: hidden;
+}
+
+
+/* --------------- FEATURE-TWO ----------------- */
+
+.feature-two {
+    padding: 8rem 0 0;
+    background-color: #262f36;
+}
+
+.feature-two .feature-two__button {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.feature-two .feature-two__caption {
+    color: #fff;
+}
+
+.feature-two .feature-two__title {
+    color: #fff;
+}
+
 
 
 
