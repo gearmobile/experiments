@@ -1,0 +1,46 @@
+
+/* ------------  COMMON RULES  ---------------- */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* --------------- HEADER-TOP -------------- */
+
+.header-top .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+}
+
+.header-top .navbar-brand .header-top__logo {
+    height: 1.625rem;
+}
+
+.header-top .nav-item .nav-link,
+.header-top .nav-item .header-top__button {
+    text-transform: capitalize;
+}
+
+
+
+.stage {
+    height: 1200px;
+}
+
+
+
+
+@media screen and ( max-width: 992px ) {
+    .header-top .header-top__holder {
+        flex-direction: column;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+    }
+}
