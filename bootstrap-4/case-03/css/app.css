@@ -8,6 +8,33 @@ html, body {
 body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    color: #6c6f73;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #333;
+}
+
+h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.blockquote {
+    color: #333;
+    font-size: 1.6rem;
+    border: none;
+    padding: 0;
+}
+
+.blockquote-footer {
+    margin: 1rem 0 0;
 }
 
 
@@ -28,10 +55,41 @@ body {
     text-transform: capitalize;
 }
 
-
+/* --------------------- STAGE ----------------- */
 
 .stage {
-    height: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff url( '../images/stage-bg.jpg' ) center center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.stage .stage__caption {
+    max-width: 60rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.stage .stage__caption .stage__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.stage .stage__caption .stage__subtitle {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.stage .stage__caption .stage__button {
+    text-transform: uppercase;
+    font-size: .8rem;
 }
 
 
