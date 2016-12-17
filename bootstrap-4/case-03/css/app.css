@@ -68,6 +68,7 @@ img {
 
 .stage .stage__caption {
     max-width: 60rem;
+    padding: 0 2rem;
     font-size: 1.2rem;
     font-weight: 200;
     text-align: center;
@@ -99,11 +100,10 @@ img {
     overflow: hidden;
 }
 
-
 /* --------------- FEATURE-TWO ----------------- */
 
 .feature-two {
-    padding: 8rem 0 0;
+    padding: 8rem 0;
     background-color: #262f36;
 }
 
@@ -120,13 +120,64 @@ img {
     color: #fff;
 }
 
+.feature-two .feature-two__image {
+    margin-bottom: -8rem;
+}
+
+/* --------------- FEATURE-THREE ----------------- */
+
+.feature-three {
+    padding: 8rem 0;
+}
+
+.feature-three .feature-three__button {
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+/* --------------- FEATURE-FOUR ----------------- */
+
+.feature-four {
+    background-color: #f0f0f0;
+}
+
+.feature-four .blockquote {
+    margin-bottom: 0;
+}
 
 
+/* --------------- MEDIA QUERIES ----------------- */
 
 @media screen and ( max-width: 992px ) {
+    /* ---------- HEADER-TOP ---------- */
     .header-top .header-top__holder {
         flex-direction: column;
         -ms-align-items: flex-start;
         align-items: flex-start;
+    }
+    /* ---------- FEATURE-ONE --------- */
+    .feature-one .feature-one__primary {
+        margin: 0 0 4rem;
+    }
+    /* ---------- FEATURE-TWO --------- */
+    .feature-two .feature-two__primary {
+        margin: 0 0 4rem;
+    }
+    /* ---------- FEATURE-FOUR --------- */
+    .feature-four {
+        padding: 8rem 0;
+    }
+}
+
+@media screen and ( min-width: 992px ) {
+    /* ---------- FEATURE-TWO --------- */
+    .feature-two .feature-two__row {
+        display: flex;
+        align-items: center;
+    }
+    /* ---------- FEATURE-THREE --------- */
+    .feature-four .feature-four__row {
+        display: flex;
+        align-items: center;
     }
 }
