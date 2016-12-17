@@ -187,6 +187,22 @@ img {
 }
 
 
+/* --------------- FOOTER ----------------- */
+
+.footer {
+    padding: 8rem 0;
+    background-color: #262f36;
+}
+
+.footer .footer__copyright a {
+    text-transform: capitalize;
+}
+
+.footer .footer__list a {
+    text-transform: capitalize;
+}
+
+
 /* --------------- MEDIA QUERIES ----------------- */
 
 @media screen and ( max-width: 992px ) {
