@@ -145,6 +145,47 @@ img {
     margin-bottom: 0;
 }
 
+/* --------------- FEATURE-FIVE ----------------- */
+
+.feature-five {
+    padding: 8rem 0;
+}
+
+.feature-five .feature-five__primary {
+    margin: 0 0 4rem;
+}
+
+/* --------------- FEATURE-SIX ----------------- */
+
+.feature-six {
+    padding: 8rem 0;
+    background-color: #262f36;
+}
+
+.feature-six .feature-six__title {
+    color: #fff;
+}
+
+.feature-six .feature-six__image {
+    margin-bottom: -8rem;
+}
+
+.feature-six .feature-six__button {
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+
+/* --------------- FEATURE-SEVEN ----------------- */
+
+.feature-seven {
+    padding: 8rem 0;
+}
+
+.feature-seven .feature-seven__button {
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+
 
 /* --------------- MEDIA QUERIES ----------------- */
 
