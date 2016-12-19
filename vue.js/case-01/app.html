@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 01</title>
+    <script src="../library/scripts/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">{{ message }}</div>
+
+    <div id="appDuo">
+        <p v-bind:title="message">
+            Подержи курсор надо мной пару секунд, чтобы увидеть динамически связанное значение title!
+        </p>
+    </div>
+
+    <div id="appTre">
+        <p v-if="view">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, corporis.</p>
+    </div>
+
+    <div id="appQuattro">
+        <ul>
+            <li v-for="item in list">{{ item.title }}</li>
+        </ul>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="app.js"></script>
+</body>
+</html>
