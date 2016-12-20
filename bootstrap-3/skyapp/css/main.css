@@ -25,6 +25,76 @@ button {
   -webkit-border-radius: 0;
   border-radius: 0; }
 
+.showcase {
+  min-height: 400px;
+  background: #fff url("../images/showcase-bg.jpg") 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center; }
+  .showcase__content {
+    text-align: center; }
+  .showcase__title {
+    color: #00aff0; }
+
+.search-form {
+  padding: 30px 0;
+  background-color: #e4eef2; }
+  .search-form__content {
+    padding-left: 0;
+    padding-right: 0; }
+  .search-form__primary {
+    padding-left: 0;
+    padding-right: 0; }
+  .search-form__block {
+    display: flex;
+    justify-content: space-between; }
+  .search-form__input {
+    border: 2px solid #00aff0;
+    width: calc( 100% - 54px );
+    height: 50px;
+    padding: 5px 20px;
+    font-size: 18px; }
+  .search-form__button {
+    padding: 0;
+    border: none; }
+
+.feature-one {
+  padding: 30px 0;
+  background-color: #fff; }
+  .feature-one .block {
+    padding: 15px;
+    color: #fff; }
+    .feature-one .block p {
+      font-size: 16px;
+      line-height: 1.6; }
+  .feature-one .block--primary {
+    background-color: #00aff0; }
+  .feature-one .block--secondary {
+    background-color: #7fba00; }
+  .feature-one .block__title {
+    text-transform: capitalize;
+    font-size: 24px; }
+    .feature-one .block__title i {
+      margin-right: 8px; }
+  .feature-one .block__link {
+    text-transform: capitalize;
+    font-size: 16px; }
+
+.feature-two {
+  padding: 30px 0; }
+  .feature-two .block {
+    background-color: #e4eef2;
+    padding: 20px;
+    text-align: center; }
+    .feature-two .block__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      border: 1px solid #00aff0; }
+
 .header-main .header-main__navbar {
   width: 90%;
   margin: 0 auto;
@@ -37,10 +107,17 @@ button {
     font-size: 20px;
     padding-top: 20px;
     padding-bottom: 20px; }
+  .header-main .header-main__navbar .container-fluid .navbar-collapse .active a {
+    background-color: #00aff0;
+    color: #fff; }
+  .header-main .header-main__navbar .container-fluid .navbar-collapse a:hover, .header-main .header-main__navbar .container-fluid .navbar-collapse a:focus {
+    background-color: #00aff0;
+    color: #fff; }
   .header-main .header-main__navbar .navbar-header .navbar-brand {
     text-transform: uppercase;
     color: #00aff0; }
   .header-main .header-main__navbar .container-fluid .navbar-collapse a {
-    color: #00aff0; }
+    color: #00aff0;
+    transition: background-color .2s, color .2s; }
 
 /*# sourceMappingURL=main.css.map */

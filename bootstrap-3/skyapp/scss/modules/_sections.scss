@@ -1,0 +1,116 @@
+
+// showcase section
+// ----------------------------------
+.showcase {
+  min-height: 400px;
+  background: #fff url( '../images/showcase-bg.jpg' ) 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    color: $primary-color;
+  }
+
+}
+
+// search-form
+// ----------------------------------
+.search-form {
+  padding: 30px 0;
+  background-color: $pale-color;
+
+  &__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__primary {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    border: 2px solid $primary-color;
+    width: calc( 100% - 54px );
+    height: 50px;
+    padding: 5px 20px;
+    font-size: 18px;
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+  }
+}
+
+// feature-one
+// ----------------------------------
+.feature-one {
+  padding: 30px 0;
+  background-color: $white-color;
+
+  & .block {
+    padding: 15px;
+    color: $white-color;
+
+    & p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+  
+  & .block--primary {
+    background-color: $primary-color;
+  }
+  
+  & .block--secondary {
+    background-color: $secondary-color;
+  }
+
+  & .block__title {
+    text-transform: capitalize;
+    font-size: 24px;
+
+    & i {
+      margin-right: 8px;
+    }
+  }
+
+  & .block__link {
+    text-transform: capitalize;
+    font-size: 16px;
+  }
+}
+
+// feature-two
+// ----------------------------------
+.feature-two {
+  padding: 30px 0;
+  
+  & .block {
+    background-color: $pale-color;
+    padding: 20px;
+    text-align: center;
+    
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      //padding: 13px 15px;
+      border: 1px solid $primary-color;
+    }
+  }
+}

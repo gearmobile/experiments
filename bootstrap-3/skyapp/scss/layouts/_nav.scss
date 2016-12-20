@@ -6,13 +6,22 @@
   min-height: 60px;
   background-color: $white-color;
 
-
-
   & .container-fluid a {
     text-transform: capitalize;
     font-size: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+
+  & .container-fluid .navbar-collapse .active a {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+
+  & .container-fluid .navbar-collapse a:hover,
+  & .container-fluid .navbar-collapse a:focus {
+    background-color: $primary-color;
+    color: $white-color;
   }
 
   & .navbar-header .navbar-brand {
@@ -22,6 +31,7 @@
 
   & .container-fluid .navbar-collapse a {
     color: $primary-color;
+    transition: background-color .2s, color .2s;
   }
 
 }
