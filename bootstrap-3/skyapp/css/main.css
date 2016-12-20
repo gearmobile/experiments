@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic-ext");
 h1,
 h2,
 h3,
@@ -5,8 +6,11 @@ h4,
 h5 {
   margin-top: 0; }
 
+.page-header {
+  margin-top: 30px; }
+
 body {
-  font-family: "Roboto Slab", serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 15px;
   color: #666;
   line-height: 1.4; }
@@ -17,6 +21,26 @@ a {
 input,
 textarea,
 button {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
   border-radius: 0; }
+
+.header-main .header-main__navbar {
+  width: 90%;
+  margin: 0 auto;
+  border-left: 1px solid #e7e7e7;
+  border-right: 1px solid #e7e7e7;
+  min-height: 60px;
+  background-color: #fff; }
+  .header-main .header-main__navbar .container-fluid a {
+    text-transform: capitalize;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .header-main .header-main__navbar .navbar-header .navbar-brand {
+    text-transform: uppercase;
+    color: #00aff0; }
+  .header-main .header-main__navbar .container-fluid .navbar-collapse a {
+    color: #00aff0; }
 
 /*# sourceMappingURL=main.css.map */

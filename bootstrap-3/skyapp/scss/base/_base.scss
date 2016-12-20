@@ -12,5 +12,5 @@ a {
 input,
 textarea,
 button {
-  border-radius: 0;
+  @include border-radius( 0 );
 }
