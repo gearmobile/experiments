@@ -1,3 +1,22 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0; }
 
+body {
+  font-family: "Roboto Slab", serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.4; }
+
+a {
+  color: #00aff0; }
+
+input,
+textarea,
+button {
+  border-radius: 0; }
 
 /*# sourceMappingURL=main.css.map */
