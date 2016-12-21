@@ -174,7 +174,8 @@ button {
 
 .slogan {
   background-color: #00aff0;
-  padding: 30px 0; }
+  padding: 30px 0;
+  border-top: 6px solid #7fba00; }
   .slogan__title {
     color: #fff;
     text-transform: capitalize;
@@ -259,6 +260,14 @@ button {
     text-transform: capitalize;
     font-size: 18px;
     color: #fff; }
+
+.services {
+  padding: 30px 0; }
+  .services__title {
+    text-transform: capitalize;
+    color: #00aff0;
+    border-bottom-color: #00aff0;
+    border-bottom-width: 2px; }
 
 .header-main .header-main__navbar {
   width: 90%;

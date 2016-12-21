@@ -248,6 +248,7 @@
 .slogan {
   background-color: $primary-color;
   padding: $padding 0;
+  border-top: 6px solid $secondary-color;
   
   &__title {
     color: $white-color;
@@ -393,6 +394,18 @@
   }
 }
 
+// SERVICES
+// ----------------------------------
+.services {
+  padding: $padding 0;
+
+  &__title {
+    text-transform: capitalize;
+    color: $primary-color;
+    border-bottom-color: $primary-color;
+    border-bottom-width: 2px;
+  }
+}
 
 
 
