@@ -19,20 +19,14 @@
 
 }
 
-// search-form
+// SEARCH-FORM
 // ----------------------------------
 .search-form {
   padding: 30px 0;
   background-color: $pale-color;
 
   &__content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  &__primary {
-    padding-left: 0;
-    padding-right: 0;
+    width: 90%;
   }
 
   &__block {
@@ -54,14 +48,14 @@
   }
 }
 
-// feature-one
+// FEATURE-ONE
 // ----------------------------------
 .feature-one {
   padding: 30px 0;
   background-color: $white-color;
 
   & .block {
-    padding: 15px;
+    padding: 20px;
     color: $white-color;
 
     & p {
@@ -93,7 +87,7 @@
   }
 }
 
-// feature-two
+// FEATURE-TWO
 // ----------------------------------
 .feature-two {
   padding: 30px 0;
@@ -107,10 +101,155 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 70px;
-      height: 70px;
-      //padding: 13px 15px;
+      margin: 0 auto 20px;
+      @include size( 100px );
       border: 1px solid $primary-color;
+      @include border-radius( 4px );
+      color: $primary-color;
+    }
+    
+    &__title {
+      text-transform: capitalize;
+      color: $primary-color;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 1.6;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+}
+
+// FEATURE-THREE
+// ----------------------------------
+.feature-three {
+  padding: 30px 0;
+  background-color: $pale-color;
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 30px;
+    
+    & span {
+      color: $primary-color;
     }
   }
+
+  & .list {
+    width: 80%;
+    margin-bottom: 30px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding: 6px 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $grey-color;
+      }
+      
+      & .fa {
+        color: $primary-color;
+        margin-right: 12px;
+      }
+
+      & span {
+        font-size: 20px;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+  
+  &__button {
+    text-transform: capitalize;
+    color: $white-color;
+    background-color: $primary-color;
+    border: none;
+    transition: background-color .2s, color .2s;
+    
+    &:hover,
+    &:focus {
+      background-color: darken( $primary-color, 10% );
+      color: $white-color;
+    }
+  }
+}
+
+// FEATURE-FOUR
+// ----------------------------------
+.feature-four {
+  padding: 30px 0;
+  background-color: $primary-color;
+  
+  &__secondary p {
+    color: $white-color;
+    font-size: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__title {
+    text-transform: capitalize;
+    color: $white-color;
+  }
+
+  &__image {
+    margin-bottom: -30px;
+  }
+
+  &__button {
+    margin-top: 30px;
+    text-transform: capitalize;
+  }
+}
+
+// FOOTER-MAIN
+// ----------------------------------
+.footer-main {
+  border-top: 6px solid #7fba00;
+  padding: 30px 0;
+  background-color: #2b5464;
+  
+  & .footer-main__row &__title {
+    color: $white-color;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+
+  & .list__item {
+    padding: 4px 0;
+
+    & a {
+      color: $white-color;
+      text-transform: capitalize;
+    }
+  }
+
+}
+
+// SLOGAN
+// ----------------------------------
+.slogan {
+  background-color: $primary-color;
+  padding: 30px 0;
+  
+  &__title {
+    color: $white-color;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
 }
