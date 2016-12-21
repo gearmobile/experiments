@@ -1,9 +1,9 @@
 
-// showcase section
+// SHOWCASE SECTION
 // ----------------------------------
 .showcase {
   min-height: 400px;
-  background: #fff url( '../images/showcase-bg.jpg' ) 50% 50% no-repeat;
+  background: $white-color url( '../images/showcase-bg.jpg' ) 50% 50% no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   display: flex;
@@ -22,8 +22,12 @@
 // SEARCH-FORM
 // ----------------------------------
 .search-form {
-  padding: 30px 0;
+  padding: $padding 0;
   background-color: $pale-color;
+
+  &--offset {
+    padding-top: 100px;
+  }
 
   &__content {
     width: 90%;
@@ -51,7 +55,7 @@
 // FEATURE-ONE
 // ----------------------------------
 .feature-one {
-  padding: 30px 0;
+  padding: $padding 0;
   background-color: $white-color;
 
   & .block {
@@ -90,7 +94,7 @@
 // FEATURE-TWO
 // ----------------------------------
 .feature-two {
-  padding: 30px 0;
+  padding: $padding 0;
   
   & .block {
     background-color: $pale-color;
@@ -129,7 +133,7 @@
 // FEATURE-THREE
 // ----------------------------------
 .feature-three {
-  padding: 30px 0;
+  padding: $padding 0;
   background-color: $pale-color;
 
   &__title {
@@ -188,7 +192,7 @@
 // FEATURE-FOUR
 // ----------------------------------
 .feature-four {
-  padding: 30px 0;
+  padding: $padding 0;
   background-color: $primary-color;
   
   &__secondary p {
@@ -219,7 +223,7 @@
 // ----------------------------------
 .footer-main {
   border-top: 6px solid #7fba00;
-  padding: 30px 0;
+  padding: $padding 0;
   background-color: #2b5464;
   
   & .footer-main__row &__title {
@@ -243,7 +247,7 @@
 // ----------------------------------
 .slogan {
   background-color: $primary-color;
-  padding: 30px 0;
+  padding: $padding 0;
   
   &__title {
     color: $white-color;
@@ -253,3 +257,166 @@
   }
 
 }
+
+// ABOUT-US
+// ----------------------------------
+.about-us {
+  padding: ( $padding + 10px ) 0;
+  background-color: $white-color;
+  
+  &__title {
+    text-transform: capitalize;
+    color: $primary-color;
+    border-bottom-color: $primary-color;
+    border-bottom-width: 2px;
+  }
+
+  &__primary p {
+    line-height: 1.6;
+  }
+
+  &__secondary &__title {
+    margin-top: 0;
+  }
+
+  &__secondary .list {
+    margin-bottom: 40px;
+  }
+
+  &__secondary .list__item {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-color;
+    }
+
+    & .fa {
+      margin-right: 10px;
+      color: $primary-color;
+    }
+
+    & span {
+      text-transform: capitalize;
+      font-size: 18px;
+    }
+  }
+
+  &__secondary .panel-title a {
+    text-transform: capitalize;
+    font-size: 18px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      
+      & span {
+        color: $secondary-color;
+      }
+    }
+    
+    & span {
+      color: $primary-color;
+      font-weight: 700;
+    }
+  }
+}
+
+// ABOUT-TEAM
+// ----------------------------------
+.about-team {
+  padding: $padding 0;
+  background-color: $white-color;
+  
+  &__title {
+    text-transform: capitalize;
+    color: $secondary-color;
+    border-bottom-color: $secondary-color;
+    border-bottom-width: 2px;
+  }
+
+  &__item .thumbnail {
+    padding: 10px;
+    margin-bottom: 0;
+    border-color: $grey-color;
+
+    &__picture {
+      margin: 0 0 10px;
+    }
+
+    &__image {
+      border-radius: 4px 4px 0 0;
+    }
+
+    &__title {
+      text-transform: capitalize;
+    }
+
+    & p {
+      line-height: 1.5;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &--active {
+      background-color: $light-color;
+    }
+  }
+}
+
+// TESTIMONIALS
+// ----------------------------------
+.testimonials {
+  padding: $padding 0;
+  background-color: $primary-color;
+  border-bottom: 6px solid $secondary-color;
+  
+  & .block__title {
+    text-transform: capitalize;
+    color: $white-color;
+    border-bottom-width: 2px;
+    margin-bottom: $padding;
+  }
+
+  & .block__subtitle {
+    color: $white-color;
+    line-height: 1.4;
+  }
+
+  & .block__cite {
+    text-transform: capitalize;
+    font-size: 18px;
+    color: $white-color;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
