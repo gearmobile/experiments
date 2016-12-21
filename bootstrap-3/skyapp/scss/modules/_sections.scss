@@ -405,8 +405,116 @@
     border-bottom-color: $primary-color;
     border-bottom-width: 2px;
   }
+
+  &__content {
+    margin: 0 0 40px;
+  }
+
+  &__accordion .panel-title a {
+    text-transform: capitalize;
+    font-size: 18px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+
+  // secondary tabs form
+  &__secondary .services__tabs {
+    margin: 0 0 ( $padding + 10px );
+
+    // nav tabs
+    & .nav-tabs {
+      border-color: transparent;
+
+      & li > a {
+        border-color: transparent;
+        text-transform: capitalize;
+        transition: background-color .2s, color .2s;
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+          border-color: transparent;
+        }
+      }
+
+      & li.active > a {
+        background-color: $primary-color;
+        color: $white-color;
+
+        &:focus {
+          background-color: $primary-color;
+          color: $white-color;
+        }
+      }
+    }
+
+    // tab panels
+    & .tab-content .tab-pane {
+      padding: 14px 20px;
+      border-radius: 0 0 4px 4px;
+      font-size: 16px;
+      line-height: 1.6;
+
+      &.active {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+  }
+
 }
 
+// SERVICES-DO
+// ----------------------------------
+.services-do {
+  padding: ( $padding + 10px ) 0;
+  background-color: $primary-color;
+
+  &__title {
+    color: $white-color;
+    border-bottom-width: 2px;
+  }
+
+  &__content {
+    padding-left: 0;
+    padding-right: 0;
+
+    &:not(:last-child) {
+      margin: 0 0 $padding;
+    }
+  }
+  
+  & .item {
+    color: $white-color;
+    @include clearfix();
+
+    &__icon {
+      width: 20%;
+      float: left;
+
+      & .fa {
+        margin-top: 10px;
+      }
+    }
+
+    &__content {
+      width: 80%;
+      float: left;
+
+      & p:last-of-type {
+        margin: 0;
+      }
+    }
+
+    &__title {
+      text-transform: capitalize;
+    }
+  }
+}
 
 
 

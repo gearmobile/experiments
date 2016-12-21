@@ -14,3 +14,11 @@
     height: nth( $size, 2 );
   }
 }
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

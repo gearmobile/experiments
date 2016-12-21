@@ -268,6 +268,93 @@ button {
     color: #00aff0;
     border-bottom-color: #00aff0;
     border-bottom-width: 2px; }
+  .services__content {
+    margin: 0 0 40px; }
+  .services__accordion .panel-title a {
+    text-transform: capitalize;
+    font-size: 18px; }
+    .services__accordion .panel-title a:hover, .services__accordion .panel-title a:focus {
+      text-decoration: none;
+      color: #00aff0; }
+  .services__secondary .services__tabs {
+    margin: 0 0 40px; }
+    .services__secondary .services__tabs .nav-tabs {
+      border-color: transparent; }
+      .services__secondary .services__tabs .nav-tabs li > a {
+        border-color: transparent;
+        text-transform: capitalize;
+        transition: background-color .2s, color .2s;
+        font-weight: 700; }
+        .services__secondary .services__tabs .nav-tabs li > a:hover, .services__secondary .services__tabs .nav-tabs li > a:focus {
+          border-color: transparent; }
+      .services__secondary .services__tabs .nav-tabs li.active > a {
+        background-color: #00aff0;
+        color: #fff; }
+        .services__secondary .services__tabs .nav-tabs li.active > a:focus {
+          background-color: #00aff0;
+          color: #fff; }
+    .services__secondary .services__tabs .tab-content .tab-pane {
+      padding: 14px 20px;
+      border-radius: 0 0 4px 4px;
+      font-size: 16px;
+      line-height: 1.6; }
+      .services__secondary .services__tabs .tab-content .tab-pane.active {
+        background-color: #00aff0;
+        color: #fff; }
+
+.services-do {
+  padding: 40px 0;
+  background-color: #00aff0; }
+  .services-do__title {
+    color: #fff;
+    border-bottom-width: 2px; }
+  .services-do__content {
+    padding-left: 0;
+    padding-right: 0; }
+    .services-do__content:not(:last-child) {
+      margin: 0 0 30px; }
+  .services-do .item {
+    color: #fff; }
+    .services-do .item::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .services-do .item__icon {
+      width: 20%;
+      float: left; }
+      .services-do .item__icon .fa {
+        margin-top: 10px; }
+    .services-do .item__content {
+      width: 80%;
+      float: left; }
+      .services-do .item__content p:last-of-type {
+        margin: 0; }
+    .services-do .item__title {
+      text-transform: capitalize; }
+
+.block--primary {
+  border: 1px solid #00aff0; }
+  .block--primary__title {
+    background-color: #00aff0;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 12px 16px;
+    margin: 0; }
+  .block--primary__icon {
+    margin: 0 10px 0 0; }
+  .block--primary__content {
+    padding: 20px; }
+    .block--primary__content .form-group label {
+      text-transform: capitalize; }
+    .block--primary__content .form-group textarea {
+      min-height: 100px; }
+    .block--primary__content .block--primary__button {
+      text-transform: capitalize;
+      color: #fff;
+      background-color: #00aff0;
+      font-size: 16px; }
+      .block--primary__content .block--primary__button:hover, .block--primary__content .block--primary__button:focus {
+        background-color: #008abd; }
 
 .header-main .header-main__navbar {
   width: 90%;
