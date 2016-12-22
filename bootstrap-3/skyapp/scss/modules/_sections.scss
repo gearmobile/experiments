@@ -686,11 +686,12 @@
         margin-bottom: 0;
 
         &__item {
-          padding: 6px 0;
+          padding: 10px 0;
           @include clearfix();
 
           &:not(:last-child) {
             margin-bottom: ( $padding / 2 );
+            border-bottom: 1px solid $grey-color;
           }
 
           & .list__thumb {

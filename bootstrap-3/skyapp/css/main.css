@@ -417,13 +417,14 @@ button {
   .blog__secondary .blog-comments__content .list {
     margin-bottom: 0; }
     .blog__secondary .blog-comments__content .list__item {
-      padding: 6px 0; }
+      padding: 10px 0; }
       .blog__secondary .blog-comments__content .list__item::after {
         content: "";
         display: table;
         clear: both; }
       .blog__secondary .blog-comments__content .list__item:not(:last-child) {
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ccc; }
       .blog__secondary .blog-comments__content .list__item .list__thumb {
         float: left;
         margin-right: 15px; }
