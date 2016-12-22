@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic-ext");
 h1,
 h2,
 h3,
@@ -24,18 +23,6 @@ button {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0; }
-
-.showcase {
-  min-height: 400px;
-  background: #fff url("../images/showcase-bg.jpg") 50% 50% no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  display: flex;
-  align-items: center; }
-  .showcase__content {
-    text-align: center; }
-  .showcase__title {
-    color: #00aff0; }
 
 .search-form {
   padding: 30px 0;
@@ -157,20 +144,6 @@ button {
   .feature-four__button {
     margin-top: 30px;
     text-transform: capitalize; }
-
-.footer-main {
-  border-top: 6px solid #7fba00;
-  padding: 30px 0;
-  background-color: #2b5464; }
-  .footer-main .footer-main__row .footer-main__title {
-    color: #fff;
-    text-transform: capitalize;
-    font-size: 20px; }
-  .footer-main .list__item {
-    padding: 4px 0; }
-    .footer-main .list__item a {
-      color: #fff;
-      text-transform: capitalize; }
 
 .slogan {
   background-color: #00aff0;
@@ -482,29 +455,72 @@ button {
       .block--primary__content .block--primary__button:hover, .block--primary__content .block--primary__button:focus {
         background-color: #008abd; }
 
-.header-main .header-main__navbar {
+.showcase {
+  min-height: 400px;
+  background: #fff url("../images/showcase-bg.jpg") 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center; }
+  .showcase__content {
+    text-align: center; }
+  .showcase__title {
+    color: #00aff0; }
+
+.header-main__holder {
   width: 90%;
   margin: 0 auto;
   border-left: 1px solid #e7e7e7;
   border-right: 1px solid #e7e7e7;
   min-height: 60px;
   background-color: #fff; }
-  .header-main .header-main__navbar .container-fluid a {
-    text-transform: capitalize;
+  .header-main__holder a {
+    text-transform: capitalize; }
+  .header-main__holder .header-main__toggle a {
+    text-transform: uppercase;
     font-size: 20px;
     padding-top: 20px;
-    padding-bottom: 20px; }
-  .header-main .header-main__navbar .container-fluid .navbar-collapse .active a {
-    background-color: #00aff0;
-    color: #fff; }
-  .header-main .header-main__navbar .container-fluid .navbar-collapse a:hover, .header-main .header-main__navbar .container-fluid .navbar-collapse a:focus {
-    background-color: #00aff0;
-    color: #fff; }
-  .header-main .header-main__navbar .navbar-header .navbar-brand {
-    text-transform: uppercase;
+    padding-bottom: 20px;
     color: #00aff0; }
-  .header-main .header-main__navbar .container-fluid .navbar-collapse a {
-    color: #00aff0;
-    transition: background-color .2s, color .2s; }
+    .header-main__holder .header-main__toggle a:hover {
+      color: #7fba00; }
+  .header-main__holder .header-main__primary li > a {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: background-color .2s, color .2s;
+    color: #00aff0; }
+    .header-main__holder .header-main__primary li > a:hover, .header-main__holder .header-main__primary li > a:focus {
+      background-color: #00aff0;
+      color: #fff; }
+  .header-main__holder .header-main__primary li.active > a {
+    background-color: #00aff0;
+    color: #fff; }
+    .header-main__holder .header-main__primary li.active > a:hover, .header-main__holder .header-main__primary li.active > a:focus {
+      background-color: #00aff0;
+      color: #fff; }
+  .header-main__holder .header-main__secondary li > a, .header-main__holder .header-main__secondary li.active > a {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: background-color .2s, color .2s;
+    color: #00aff0; }
+    .header-main__holder .header-main__secondary li > a:hover, .header-main__holder .header-main__secondary li > a:focus, .header-main__holder .header-main__secondary li.active > a:hover, .header-main__holder .header-main__secondary li.active > a:focus {
+      background-color: #00aff0;
+      color: #fff; }
+
+.footer-main {
+  border-top: 6px solid #7fba00;
+  padding: 30px 0;
+  background-color: #2b5464; }
+  .footer-main .footer-main__row .footer-main__title {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px; }
+  .footer-main .list__item {
+    padding: 4px 0; }
+    .footer-main .list__item a {
+      color: #fff;
+      text-transform: capitalize; }
 
 /*# sourceMappingURL=main.css.map */

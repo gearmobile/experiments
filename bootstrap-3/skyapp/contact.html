@@ -11,13 +11,13 @@
 </head>
 <body id="contact">
 
-    <!-- header -->
+    <!-- HEADER -->
     <header class="header-main">
-        <nav class="header-main__navbar navbar navbar-default navbar-fixed-top">
+        <nav class="header-main__holder navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
 
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <div class="header-main__toggle navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-main" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -26,20 +26,22 @@
                     <a class="navbar-brand" href="#">Skyapp</a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="header-main">
 
-                    <ul class="nav navbar-nav">
+                    <!-- header-main primary -->
+                    <ul class="header-main__primary nav navbar-nav">
                         <li class="active"><a href="index.html">home</a></li>
                         <li><a href="about.html">about</a></li>
                         <li><a href="services.html">services</a></li>
                         <li><a href="blog.html">blog</a></li>
                         <li><a href="contact.html">contact</a></li>
-                    </ul>
+                    </ul><!-- end header-main primary -->
 
-                    <ul class="nav navbar-nav navbar-sub pull-right">
+                    <!-- header-main secondary -->
+                    <ul class="header-main__secondary nav navbar-nav navbar-sub pull-right">
                         <li><a href="#">register</a></li>
                         <li><a href="#">login</a></li>
-                    </ul>
+                    </ul><!-- end header-main secondary -->
 
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -76,7 +78,7 @@
 
     <!--map-->
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173294.152340034!2d39.48791749984381!3d47.2611561545886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c777c3b4b6ef%3A0x8248b451e48b4d04!2sRostov-on-Don%2C+Rostov+Oblast!5e0!3m2!1sen!2sru!4v1482229042655" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d173294.152340034!2d39.48791749984381!3d47.2611561545886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3c777c3b4b6ef%3A0x8248b451e48b4d04!2sRostov-on-Don%2C+Rostov+Oblast!5e0!3m2!1sen!2sru!4v1482229042655" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
     </div><!-- end map -->
 
     <!--contact-->
@@ -205,8 +207,9 @@
         </div>
     </footer><!-- end footer -->
 
-<!--SCRIPTS-->
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
+    <!--SCRIPTS-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

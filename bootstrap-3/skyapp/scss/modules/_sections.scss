@@ -1,24 +1,4 @@
 
-// SHOWCASE SECTION
-// ----------------------------------
-.showcase {
-  min-height: 400px;
-  background: $white-color url( '../images/showcase-bg.jpg' ) 50% 50% no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-
-  &__content {
-    text-align: center;
-  }
-
-  &__title {
-    color: $primary-color;
-  }
-
-}
-
 // SEARCH-FORM
 // ----------------------------------
 .search-form {
@@ -217,30 +197,6 @@
     margin-top: 30px;
     text-transform: capitalize;
   }
-}
-
-// FOOTER-MAIN
-// ----------------------------------
-.footer-main {
-  border-top: 6px solid #7fba00;
-  padding: $padding 0;
-  background-color: #2b5464;
-  
-  & .footer-main__row &__title {
-    color: $white-color;
-    text-transform: capitalize;
-    font-size: 20px;
-  }
-
-  & .list__item {
-    padding: 4px 0;
-
-    & a {
-      color: $white-color;
-      text-transform: capitalize;
-    }
-  }
-
 }
 
 // SLOGAN
