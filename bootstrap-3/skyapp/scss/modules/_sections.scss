@@ -524,6 +524,7 @@
   // blog title
   &__title {
     text-transform: capitalize;
+    margin-bottom: $padding;
   }
 
   // blog post block
@@ -560,6 +561,13 @@
         // blog post image
         &__image {
           max-width: 200px;
+          height: auto;
+          opacity: .8;
+          transition: opacity .2s;
+
+          &:hover {
+            opacity: 1;
+          }
         }
 
         // blog post content
@@ -612,6 +620,101 @@
         text-decoration: none;
         color: $secondary-color;
       }
+    }
+
+  }
+
+  // blog secondary
+  &__secondary {
+
+    // blog secondary tabs
+    & .blog-tabs {
+      margin: 0 0 $padding;
+
+      // nav tabs
+      & .nav-tabs {
+        border-bottom-color: transparent;
+
+        & .nav-tabs__item .nav-tabs__link {
+          border-color: transparent;
+          text-transform: capitalize;
+          font-weight: 700;
+          transition: background-color .2s, color .2s;
+        }
+
+        & .nav-tabs__item.active .nav-tabs__link {
+          background-color: $primary-color;
+          color: $white-color;
+        }
+      }
+
+      // tab content
+      & .tab-content .tab-pane {
+        padding: 20px 16px;
+        border-radius: 0 0 4px 4px;
+
+        // tab content title
+        & .tab-content__title {
+          text-transform: capitalize;
+        }
+
+        & p {
+          line-height: 1.6;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        // tab content active
+        &.active {
+          background-color: $primary-color;
+          color: $white-color;
+        }
+      }
+    }
+
+    // blog secondary video
+    & .blog-video {
+      margin: 0 0 $padding;
+    }
+
+    // blog secondary comments
+    & .blog-comments {
+
+      &__content .list {
+        margin-bottom: 0;
+
+        &__item {
+          padding: 6px 0;
+          @include clearfix();
+
+          &:not(:last-child) {
+            margin-bottom: ( $padding / 2 );
+          }
+
+          & .list__thumb {
+            float: left;
+            margin-right: ( $padding / 2 );
+
+            & .list__image {
+              max-width: 100px;
+              height: auto;
+              opacity: .8;
+              transition: opacity .2s;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+
+          & p:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
     }
 
   }
