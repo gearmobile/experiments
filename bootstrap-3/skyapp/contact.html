@@ -83,43 +83,52 @@
     <div class="contact">
         <div class="contact__main container">
             <div class="contact__row row">
+
+                <!-- contact primary -->
                 <div class="contact__primary col-md-8">
                     <h2 class="contact__title">contact us</h2>
-                    <div class="contact-block">
+                    <div class="contact-form">
                         <form role="form" method="get" action="#">
-                            <div class="form-group">
-                                <label for="services-name">name</label>
-                                <input type="text" class="form-control" id="services-name" placeholder="Enter name" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                            <div class="contact-form__group form-group">
+                                <label class="contact-form__label" for="contact-name">name</label>
+                                <input type="text" class="contact-form__input form-control" id="contact-name" placeholder="Enter name" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
                             </div>
-                            <div class="form-group">
-                                <label for="services-phone">phone number</label>
-                                <input type="text" class="form-control" id="services-phone" placeholder="Enter phone">
+                            <div class="contact-form__group form-group">
+                                <label class="contact-form__label" for="contact-phone">phone number</label>
+                                <input type="text" class="contact-form__input form-control" id="contact-phone" placeholder="Enter phone">
                             </div>
-                            <div class="form-group">
-                                <label for="services-email">email address</label>
-                                <input type="email" class="form-control" id="services-email" placeholder="Enter email">
+                            <div class="contact-form__group form-group">
+                                <label class="contact-form__label" for="contact-email">email address</label>
+                                <input type="email" class="contact-form__input form-control" id="contact-email" placeholder="Enter email">
                             </div>
-                            <div class="form-group">
-                                <label for="services-message">message</label>
-                                <textarea class="form-control" id="services-message"></textarea>
+                            <div class="contact-form__group form-group">
+                                <label class="contact-form__label" for="contact-message">message</label>
+                                <textarea class="contact-form__textarea form-control" id="contact-message"></textarea>
                             </div>
-                            <button role="button" type="submit" class="btn btn-primary">submit</button>
+                            <button role="button" type="submit" class="contact-form__button btn">submit</button>
                         </form>
                     </div>
-                </div>
+                </div><!-- end contact primary -->
+
+                <!-- contact secondary -->
                 <div class="contact__secondary col-md-4">
-                    <div class="contact-block">
-                        <h3><i class="fa fa-home"></i>our location</h3>
-                        <h3 class="page-header">SKYAPP, Inc</h3>
-                        <ul class="list-unstyled">
-                            <li>44 Main Street</li>
-                            <li>Boston MA, 01922</li>
-                            <li>Phone: 555-555-5555</li>
-                            <li>Fax: 666-666-6666</li>
-                        </ul>
+                    <div class="contact-block block--primary">
+                        <h3 class="block--primary__title">
+                            <i class="block--primary__icon fa fa-home"></i>
+                            our location
+                        </h3>
+                        <div class="block--primary__content">
+                            <h3 class="contact-block__subtitle">SKYAPP, Inc</h3>
+                            <ul class="list list-unstyled">
+                                <li class="list__item">44 Main Street</li>
+                                <li class="list__item">Boston MA, 01922</li>
+                                <li class="list__item">Phone: 555-555-5555</li>
+                                <li class="list__item">Fax: 666-666-6666</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- end contact secondary -->
         </div>
     </div><!-- end contact -->
 

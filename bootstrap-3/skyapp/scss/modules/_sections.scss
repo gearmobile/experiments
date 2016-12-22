@@ -721,7 +721,44 @@
   }
 }
 
+// MAP
+// ----------------------------------
+.map {
+  padding: $padding 0;
+}
 
+// CONTACT
+// ----------------------------------
+.contact {
+  padding: $padding 0;
+
+  // contact title
+  &__title {
+    text-transform: capitalize;
+    margin-bottom: $padding;
+  }
+
+  // contact form label
+  & .contact-form__label {
+    text-transform: capitalize;
+  }
+
+  & .contact-form__textarea {
+    min-height: 100px;
+  }
+
+  & .contact-form__button {
+    text-transform: capitalize;
+    background-color: $primary-color;
+    color: $white-color;
+    transition: background-color .2s;
+    
+    &:hover,
+    &:focus {
+      background-color: darken( $primary-color, 10% );
+    }
+  }
+}
 
 
 

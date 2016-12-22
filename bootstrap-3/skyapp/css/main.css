@@ -438,6 +438,26 @@ button {
       .blog__secondary .blog-comments__content .list__item p:last-of-type {
         margin-bottom: 0; }
 
+.map {
+  padding: 30px 0; }
+
+.contact {
+  padding: 30px 0; }
+  .contact__title {
+    text-transform: capitalize;
+    margin-bottom: 30px; }
+  .contact .contact-form__label {
+    text-transform: capitalize; }
+  .contact .contact-form__textarea {
+    min-height: 100px; }
+  .contact .contact-form__button {
+    text-transform: capitalize;
+    background-color: #00aff0;
+    color: #fff;
+    transition: background-color .2s; }
+    .contact .contact-form__button:hover, .contact .contact-form__button:focus {
+      background-color: #008abd; }
+
 .block--primary {
   border: 1px solid #00aff0; }
   .block--primary__title {
