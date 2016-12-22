@@ -467,47 +467,40 @@ button {
   .showcase__title {
     color: #00aff0; }
 
-.header-main__holder {
+.navbar {
   width: 90%;
   margin: 0 auto;
   border-left: 1px solid #e7e7e7;
   border-right: 1px solid #e7e7e7;
   min-height: 60px;
   background-color: #fff; }
-  .header-main__holder a {
-    text-transform: capitalize; }
-  .header-main__holder .header-main__toggle a {
-    text-transform: uppercase;
-    font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #00aff0; }
-    .header-main__holder .header-main__toggle a:hover {
-      color: #7fba00; }
-  .header-main__holder .header-main__primary li > a {
-    font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: background-color .2s, color .2s;
-    color: #00aff0; }
-    .header-main__holder .header-main__primary li > a:hover, .header-main__holder .header-main__primary li > a:focus {
-      background-color: #00aff0;
-      color: #fff; }
-  .header-main__holder .header-main__primary li.active > a {
-    background-color: #00aff0;
-    color: #fff; }
-    .header-main__holder .header-main__primary li.active > a:hover, .header-main__holder .header-main__primary li.active > a:focus {
-      background-color: #00aff0;
-      color: #fff; }
-  .header-main__holder .header-main__secondary li > a, .header-main__holder .header-main__secondary li.active > a {
-    font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: background-color .2s, color .2s;
-    color: #00aff0; }
-    .header-main__holder .header-main__secondary li > a:hover, .header-main__holder .header-main__secondary li > a:focus, .header-main__holder .header-main__secondary li.active > a:hover, .header-main__holder .header-main__secondary li.active > a:focus {
-      background-color: #00aff0;
-      color: #fff; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #00aff0;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: capitalize; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #00aff0;
+  color: #fff; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: #00aff0;
+  color: #fff; }
+
+.navbar-default .navbar-brand {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #00aff0; }
+  .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #7fba00; }
 
 .footer-main {
   border-top: 6px solid #7fba00;
