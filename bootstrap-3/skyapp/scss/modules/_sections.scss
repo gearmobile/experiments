@@ -516,7 +516,106 @@
   }
 }
 
+// BLOG
+// ----------------------------------
+.blog {
+  padding: ( $padding + 10px ) 0;
 
+  // blog title
+  &__title {
+    text-transform: capitalize;
+  }
+
+  // blog post block
+  & .blog-post {
+    border: 1px solid $grey-color;
+
+    &:not(:last-child) {
+      margin-bottom: ( $padding + 10px );
+    }
+
+    &__header {
+      padding: 0 20px;
+      margin: $padding 0 ( $padding / 2 );
+    }
+
+    // blog post title
+    &__title {
+      text-transform: capitalize;
+      margin: 0;
+      border-bottom-color: $grey-color;
+    }
+
+    // blog post main
+    &__main {
+      padding: 10px 20px;
+      @include clearfix();
+
+      // blog post thumb
+      & .thumb {
+        border: 1px solid $grey-color;
+        float: left;
+        margin-right: $padding;
+
+        // blog post image
+        &__image {
+          max-width: 200px;
+        }
+
+        // blog post content
+        &__content p {
+          line-height: 1.6;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+
+    // blog post footer
+    &__footer {
+      border-top: 1px solid $grey-color;
+      background-color: #f3f3ff;
+      padding: 14px 20px;
+
+      // meta block
+      & .meta {
+        margin-bottom: 0;
+
+        // meta icon
+        &__icon {
+          margin-right: 2px;
+        }
+
+        // meta link
+        &__link {
+          text-transform: capitalize;
+          color: $base-font-color;
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    // read more link
+    &__link {
+      text-transform: capitalize;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $secondary-color;
+      }
+    }
+
+  }
+}
 
 
 

@@ -332,6 +332,57 @@ button {
     .services-do .item__title {
       text-transform: capitalize; }
 
+.blog {
+  padding: 40px 0; }
+  .blog__title {
+    text-transform: capitalize; }
+  .blog .blog-post {
+    border: 1px solid #ccc; }
+    .blog .blog-post:not(:last-child) {
+      margin-bottom: 40px; }
+    .blog .blog-post__header {
+      padding: 0 20px;
+      margin: 30px 0 15px; }
+    .blog .blog-post__title {
+      text-transform: capitalize;
+      margin: 0;
+      border-bottom-color: #ccc; }
+    .blog .blog-post__main {
+      padding: 10px 20px; }
+      .blog .blog-post__main::after {
+        content: "";
+        display: table;
+        clear: both; }
+      .blog .blog-post__main .thumb {
+        border: 1px solid #ccc;
+        float: left;
+        margin-right: 30px; }
+        .blog .blog-post__main .thumb__image {
+          max-width: 200px; }
+        .blog .blog-post__main .thumb__content p {
+          line-height: 1.6; }
+          .blog .blog-post__main .thumb__content p:last-of-type {
+            margin-bottom: 0; }
+    .blog .blog-post__footer {
+      border-top: 1px solid #ccc;
+      background-color: #f3f3ff;
+      padding: 14px 20px; }
+      .blog .blog-post__footer .meta {
+        margin-bottom: 0; }
+        .blog .blog-post__footer .meta__icon {
+          margin-right: 2px; }
+        .blog .blog-post__footer .meta__link {
+          text-transform: capitalize;
+          color: #666; }
+          .blog .blog-post__footer .meta__link:hover, .blog .blog-post__footer .meta__link:focus {
+            text-decoration: none;
+            color: #00aff0; }
+    .blog .blog-post__link {
+      text-transform: capitalize; }
+      .blog .blog-post__link:hover, .blog .blog-post__link:focus {
+        text-decoration: none;
+        color: #7fba00; }
+
 .block--primary {
   border: 1px solid #00aff0; }
   .block--primary__title {
