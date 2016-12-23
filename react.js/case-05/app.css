@@ -1,0 +1,20 @@
+/* --------------- RULES ------------- */
+
+.holder {
+    text-align: center;
+}
+
+.holder__title {
+    text-transform: uppercase;
+    margin: 3rem 0;
+}
+
+.holder__image {
+    max-width: 200px;
+    height: auto;
+}
+
+.holder__subtitle {
+    text-transform: capitalize;
+    margin: 2rem 0;
+}
