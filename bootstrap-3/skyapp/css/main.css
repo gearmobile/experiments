@@ -465,10 +465,23 @@ button {
   .block-equal {
     height: auto !important; } }
 @media only screen and (max-width: 992px) {
+  .feature-one__column:not(:last-child) {
+    margin: 0 0 30px; }
+
+  .feature-two__column:not(:last-child) {
+    margin: 0 0 30px; }
+
+  .feature-four__primary {
+    text-align: center;
+    margin-bottom: 60px; }
+    .feature-four__primary .feature-four__image {
+      margin-bottom: 0; }
+
   .footer-main__column:not(:last-child) {
     margin: 0 0 30px; } }
 @media only screen and (max-width: 500px) {
-  .footer-main__column {
+  .footer-main__column,
+  .feature-four__secondary {
     text-align: center; } }
 .showcase {
   min-height: 400px;
