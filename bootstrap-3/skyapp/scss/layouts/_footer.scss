@@ -6,7 +6,7 @@
   background-color: #2b5464;
 
   & .footer-main__row &__title {
-    color: $white-color;
+    color: $primary-color;
     text-transform: capitalize;
     font-size: 20px;
   }
@@ -17,6 +17,13 @@
     & a {
       color: $white-color;
       text-transform: capitalize;
+      transition: color .2s;
+      
+      &:hover,
+      &:focus {
+        color: $secondary-color;
+        text-decoration: none;
+      }
     }
   }
 

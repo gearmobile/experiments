@@ -49,10 +49,13 @@ button {
   background-color: #fff; }
   .feature-one .block {
     padding: 20px;
-    color: #fff; }
+    color: #fff;
+    position: relative; }
     .feature-one .block p {
       font-size: 16px;
       line-height: 1.6; }
+      .feature-one .block p:last-of-type {
+        margin-bottom: 80px; }
   .feature-one .block--primary {
     background-color: #00aff0; }
   .feature-one .block--secondary {
@@ -64,7 +67,10 @@ button {
       margin-right: 8px; }
   .feature-one .block__link {
     text-transform: capitalize;
-    font-size: 16px; }
+    font-size: 16px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px; }
 
 .feature-two {
   padding: 30px 0; }
@@ -91,7 +97,7 @@ button {
       font-size: 16px;
       line-height: 1.6; }
       .feature-two .block p:last-of-type {
-        margin-bottom: 0; }
+        margin-bottom: 40px; }
 
 .feature-three {
   padding: 30px 0;
@@ -455,6 +461,15 @@ button {
       .block--primary__content .block--primary__button:hover, .block--primary__content .block--primary__button:focus {
         background-color: #008abd; }
 
+@media only screen and (max-width: 767px) {
+  .block-equal {
+    height: auto !important; } }
+@media only screen and (max-width: 992px) {
+  .footer-main__column:not(:last-child) {
+    margin: 0 0 30px; } }
+@media only screen and (max-width: 500px) {
+  .footer-main__column {
+    text-align: center; } }
 .showcase {
   min-height: 400px;
   background: #fff url("../images/showcase-bg.jpg") 50% 50% no-repeat;
@@ -507,13 +522,17 @@ button {
   padding: 30px 0;
   background-color: #2b5464; }
   .footer-main .footer-main__row .footer-main__title {
-    color: #fff;
+    color: #00aff0;
     text-transform: capitalize;
     font-size: 20px; }
   .footer-main .list__item {
     padding: 4px 0; }
     .footer-main .list__item a {
       color: #fff;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      transition: color .2s; }
+      .footer-main .list__item a:hover, .footer-main .list__item a:focus {
+        color: #7fba00;
+        text-decoration: none; }
 
 /*# sourceMappingURL=main.css.map */

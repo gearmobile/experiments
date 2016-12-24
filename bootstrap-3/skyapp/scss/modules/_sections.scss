@@ -41,10 +41,15 @@
   & .block {
     padding: 20px;
     color: $white-color;
+    position: relative;
 
     & p {
       font-size: 16px;
       line-height: 1.6;
+
+      &:last-of-type {
+        margin-bottom: 80px;
+      }
     }
   }
   
@@ -68,6 +73,9 @@
   & .block__link {
     text-transform: capitalize;
     font-size: 16px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
   }
 }
 
@@ -102,7 +110,7 @@
       line-height: 1.6;
 
       &:last-of-type {
-        margin-bottom: 0;
+        margin-bottom: 40px;
       }
     }
 

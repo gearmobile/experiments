@@ -1,0 +1,17 @@
+@media only screen and (max-width : 767px) {
+  .block-equal {
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .footer-main__column:not(:last-child) {
+    margin: 0 0 $padding;
+  }
+}
+
+@media only screen and (max-width : 500px) {
+  .footer-main__column {
+    text-align: center;
+  }
+}
