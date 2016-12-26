@@ -60,6 +60,13 @@
   .blog .blog__primary {
     margin-bottom: $padding + 10px;
   }
+  .blog .blog-comments .list__item {
+    text-align: center;
+  }
+  .blog .blog-comments .list__item .list__thumb {
+    float: none;
+    margin: 0 0 $padding / 2;
+  }
   // FOOTER
   .footer-main__column:not(:last-child) {
     margin: 0 0 $padding;
@@ -123,6 +130,29 @@
   .block-equal {
     height: auto !important;
   }
+  // blog
+  .blog .blog-post__footer {
+    display: flex;
+    flex-direction: column;
+
+    & .primary,
+    & .secondary {
+      float: none !important;
+    }
+
+    & .primary {
+      margin: 0 0 $padding / 4;
+    }
+  }
+}
+
+// 600 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 600px ) {
+  // blog
+  .blog .blog-post__footer .primary {
+    display: none;
+  }
 }
 
 // 500 BREAKPOINT
@@ -137,6 +167,16 @@
   .about-us .about-us__primary .right.carousel-control,
   .about-us .about-us__primary .carousel-indicators {
     display: none;
+  }
+
+  // blog
+  .blog .blog-post__main .thumb {
+    float: none;
+    margin: 0 0 $padding/2;
+
+    & .thumb__image {
+      max-width: 100%;
+    }
   }
 
   // testimonials

@@ -352,6 +352,14 @@ button {
       border-top: 1px solid #ccc;
       background-color: #f3f3ff;
       padding: 14px 20px; }
+      .blog .blog-post__footer::after {
+        content: "";
+        display: table;
+        clear: both; }
+      .blog .blog-post__footer > .primary {
+        float: left; }
+      .blog .blog-post__footer > .secondary {
+        float: right !important; }
       .blog .blog-post__footer .meta {
         margin-bottom: 0; }
         .blog .blog-post__footer .meta__icon {
@@ -393,6 +401,8 @@ button {
         color: #fff; }
   .blog__secondary .blog-video {
     margin: 0 0 30px; }
+    .blog__secondary .blog-video .blog-video__content {
+      padding: 6px 7.5px 2px; }
   .blog__secondary .blog-comments__content .list {
     margin-bottom: 0; }
     .blog__secondary .blog-comments__content .list__item {
@@ -508,6 +518,13 @@ button {
   .blog .blog__primary {
     margin-bottom: 40px; }
 
+  .blog .blog-comments .list__item {
+    text-align: center; }
+
+  .blog .blog-comments .list__item .list__thumb {
+    float: none;
+    margin: 0 0 15px; }
+
   .footer-main__column:not(:last-child) {
     margin: 0 0 30px; } }
 @media only screen and (max-width: 900px) {
@@ -554,7 +571,18 @@ button {
     text-align: center; }
 
   .block-equal {
-    height: auto !important; } }
+    height: auto !important; }
+
+  .blog .blog-post__footer {
+    display: flex;
+    flex-direction: column; }
+    .blog .blog-post__footer .primary, .blog .blog-post__footer .secondary {
+      float: none !important; }
+    .blog .blog-post__footer .primary {
+      margin: 0 0 7.5px; } }
+@media only screen and (max-width: 600px) {
+  .blog .blog-post__footer .primary {
+    display: none; } }
 @media only screen and (max-width: 500px) {
   .showcase__title {
     font-size: 30px; }
@@ -563,6 +591,12 @@ button {
   .about-us .about-us__primary .right.carousel-control,
   .about-us .about-us__primary .carousel-indicators {
     display: none; }
+
+  .blog .blog-post__main .thumb {
+    float: none;
+    margin: 0 0 15px; }
+    .blog .blog-post__main .thumb .thumb__image {
+      max-width: 100%; }
 
   .testimonials .block__subtitle {
     font-size: 20px; }

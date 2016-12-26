@@ -551,6 +551,17 @@
       border-top: 1px solid $grey-color;
       background-color: #f3f3ff;
       padding: 14px 20px;
+      @include clearfix();
+
+      // footer primary
+      & > .primary {
+        float: left;
+      }
+
+      // footer secondary
+      & > .secondary {
+        float: right !important;
+      }
 
       // meta block
       & .meta {
@@ -641,6 +652,10 @@
     // blog secondary video
     & .blog-video {
       margin: 0 0 $padding;
+
+      & .blog-video__content {
+        padding: 6px ( $padding / 4 ) 2px;
+      }
     }
 
     // blog secondary comments
