@@ -483,6 +483,12 @@ button {
   .testimonials .block__subtitle {
     font-size: 30px; }
 
+  .about-team .about-team__item:not(:last-child) {
+    margin-bottom: 30px; }
+
+  .about-team .about-team__item .thumbnail__image {
+    width: 100%; }
+
   .footer-main__column:not(:last-child) {
     margin: 0 0 30px; } }
 @media only screen and (max-width: 900px) {
@@ -520,11 +526,24 @@ button {
   .collapse.in {
     display: block !important; } }
 @media only screen and (max-width: 767px) {
+  .testimonials .block__title {
+    text-align: center; }
+
+  .slogan .slogan__title {
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: center; }
+
   .block-equal {
     height: auto !important; } }
 @media only screen and (max-width: 500px) {
   .showcase__title {
     font-size: 30px; }
+
+  .about-us .about-us__primary .left.carousel-control,
+  .about-us .about-us__primary .right.carousel-control,
+  .about-us .about-us__primary .carousel-indicators {
+    display: none; }
 
   .testimonials .block__subtitle {
     font-size: 20px; }

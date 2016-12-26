@@ -31,6 +31,13 @@
   .testimonials .block__subtitle {
     font-size: 30px;
   }
+  // about-team
+  .about-team .about-team__item:not(:last-child) {
+    margin-bottom: $padding;
+  }
+  .about-team .about-team__item .thumbnail__image {
+    width: 100%;
+  }
   // FOOTER
   .footer-main__column:not(:last-child) {
     margin: 0 0 $padding;
@@ -79,7 +86,18 @@
 
 // 767 BREAKPOINT
 // -----------------------------------------------
-@media only screen and (max-width : 767px) {
+@media only screen and ( max-width: 767px ) {
+  // testimonials
+  .testimonials .block__title {
+    text-align: center;
+  }
+  // slogan
+  .slogan .slogan__title {
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: center;
+  }
+  // block equal
   .block-equal {
     height: auto !important;
   }
@@ -87,10 +105,16 @@
 
 // 500 BREAKPOINT
 // -----------------------------------------------
-@media only screen and (max-width : 500px) {
+@media only screen and ( max-width: 500px ) {
 
   .showcase__title {
     font-size: 30px;
+  }
+
+  .about-us .about-us__primary .left.carousel-control,
+  .about-us .about-us__primary .right.carousel-control,
+  .about-us .about-us__primary .carousel-indicators {
+    display: none;
   }
 
   // testimonials
