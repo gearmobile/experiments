@@ -1,10 +1,46 @@
-@media only screen and (max-width : 767px) {
-  .block-equal {
-    height: auto !important;
+
+// 992 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 992px ) {
+
+  // feature one
+  .feature-one__column:not(:last-child) {
+    margin: 0 0 $padding;
+  }
+  // feature two
+  .feature-two__column:not(:last-child){
+    margin: 0 0 $padding;
+  }
+  .feature-two__row .feature-two__column:not(:last-child) {
+    margin-bottom: $padding;
+  }
+  // feature four
+  .feature-four__primary {
+    text-align: center;
+    margin-bottom: ( $padding * 2 );
+
+    & .feature-four__image {
+      margin-bottom: 0;
+    }
+  }
+  // about us
+  .about-us__primary {
+    margin-bottom: $padding + 10px;
+  }
+  // testimonials
+  .testimonials .block__subtitle {
+    font-size: 30px;
+  }
+  // FOOTER
+  .footer-main__column:not(:last-child) {
+    margin: 0 0 $padding;
   }
 }
 
-@media only screen and (max-width : 900px) {
+
+// 900 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 900px ) {
   .navbar-header {
     float: none;
   }
@@ -41,34 +77,15 @@
   }
 }
 
-// 992 breakpoint
+// 767 BREAKPOINT
 // -----------------------------------------------
-@media only screen and (max-width : 992px) {
-
-  // feature one
-  .feature-one__column:not(:last-child) {
-    margin: 0 0 $padding;
-  }
-  // feature two
-  .feature-two__column:not(:last-child){
-    margin: 0 0 $padding;
-  }
-  // feature four
-  .feature-four__primary {
-    text-align: center;
-    margin-bottom: ( $padding * 2 );
-
-    & .feature-four__image {
-      margin-bottom: 0;
-    }
-  }
-  // footer
-  .footer-main__column:not(:last-child) {
-    margin: 0 0 $padding;
+@media only screen and (max-width : 767px) {
+  .block-equal {
+    height: auto !important;
   }
 }
 
-// 500 breakpoint
+// 500 BREAKPOINT
 // -----------------------------------------------
 @media only screen and (max-width : 500px) {
 
@@ -76,6 +93,11 @@
     font-size: 30px;
   }
 
+  // testimonials
+  .testimonials .block__subtitle {
+    font-size: 20px;
+  }
+  // footer
   .footer-main__column,
   .feature-four__secondary {
     text-align: center;
