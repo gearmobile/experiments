@@ -38,6 +38,28 @@
   .about-team .about-team__item .thumbnail__image {
     width: 100%;
   }
+  // services
+  .services .services__primary {
+    margin-bottom: $padding + 10px;
+  }
+  // services-do
+  .services-do .services-do__row .services-do__column:not(:last-child) {
+    margin-bottom: $padding;
+  }
+  .services-do .item {
+    text-align: center;
+  }
+  .services-do .item__icon {
+    width: 100%;
+    margin-bottom: $padding;
+  }
+  .services-do .item__content {
+    width: 100%;
+  }
+  // blog
+  .blog .blog__primary {
+    margin-bottom: $padding + 10px;
+  }
   // FOOTER
   .footer-main__column:not(:last-child) {
     margin: 0 0 $padding;

@@ -489,6 +489,25 @@ button {
   .about-team .about-team__item .thumbnail__image {
     width: 100%; }
 
+  .services .services__primary {
+    margin-bottom: 40px; }
+
+  .services-do .services-do__row .services-do__column:not(:last-child) {
+    margin-bottom: 30px; }
+
+  .services-do .item {
+    text-align: center; }
+
+  .services-do .item__icon {
+    width: 100%;
+    margin-bottom: 30px; }
+
+  .services-do .item__content {
+    width: 100%; }
+
+  .blog .blog__primary {
+    margin-bottom: 40px; }
+
   .footer-main__column:not(:last-child) {
     margin: 0 0 30px; } }
 @media only screen and (max-width: 900px) {
