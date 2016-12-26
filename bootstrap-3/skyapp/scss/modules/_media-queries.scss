@@ -67,6 +67,10 @@
     float: none;
     margin: 0 0 $padding / 2;
   }
+  // contact
+  .contact .contact__primary {
+    margin: 0 0 ( $padding + 10px );
+  }
   // FOOTER
   .footer-main__column:not(:last-child) {
     margin: 0 0 $padding;

@@ -525,6 +525,9 @@ button {
     float: none;
     margin: 0 0 15px; }
 
+  .contact .contact__primary {
+    margin: 0 0 40px; }
+
   .footer-main__column:not(:last-child) {
     margin: 0 0 30px; } }
 @media only screen and (max-width: 900px) {
