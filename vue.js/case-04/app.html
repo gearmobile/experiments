@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Case - 04 - Events</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="../library/scripts/vue.js"></script>
+</head>
+<body>
+
+    <div id="app" class="row">
+        <form action="done.html" @submit.prevent="fnHandle">
+            <button type="submit">submit me</button>
+        </form>
+    </div>
+    <div id="count" class="row">
+        <button type="submit" @click="fnCount">
+            Increment Counter {{ count }}
+        </button>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="app.js"></script>
+</body>
+</html>
