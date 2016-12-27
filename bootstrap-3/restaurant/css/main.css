@@ -1,0 +1,65 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0; }
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.4; }
+
+a {
+  color: #00aff0; }
+
+input,
+textarea,
+button {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0; }
+
+.hero {
+  margin: 100px 0 0; }
+  .hero .hero__item {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0; }
+    .hero .hero__item--primary {
+      background-color: #aad4b3; }
+    .hero .hero__item--secondary {
+      background-color: #86cdd7; }
+    .hero .hero__item--tertiary {
+      background-color: #ffe5b9; }
+    .hero .hero__item .caption {
+      padding: 40px 0;
+      color: #fff;
+      text-align: center; }
+      .hero .hero__item .caption .hero__icon {
+        padding: 0 0 24px; }
+      .hero .hero__item .caption .hero__title {
+        padding: 0 0 24px; }
+      .hero .hero__item .caption .hero__link {
+        color: #fff;
+        font-size: 20px; }
+
+.header {
+  background-color: #f1f0f1;
+  padding: 30px 0 0; }
+  .header .navbar {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background-color: #f1f0f1; }
+    .header .navbar .navbar-brand {
+      text-transform: uppercase;
+      font-size: 48px; }
+    .header .navbar .navbar-nav > li > a {
+      font-size: 18px; }
+    .header .navbar .navbar-right {
+      font-size: 20px; }
+
+/*# sourceMappingURL=main.css.map */
