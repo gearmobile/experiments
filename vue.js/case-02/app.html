@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Case 02</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="../library/scripts/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <form action="#" method="get">
+            <div class="row">
+                <span class="error" v-show="!message">you must enter a message</span>
+            </div>
+            <div class="row">
+                <textarea v-model="message" id="area" name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="row">
+                <button v-if="message" id="btn" type="submit">send message</button>
+            </div>
+        </form>
+
+        <pre>{{ $data | json }}</pre>
+
+    </div>
+
+
+    <!--SCRIPTS-->
+    <script src="app.js"></script>
+</body>
+</html>
