@@ -28,3 +28,23 @@ button {
     text-transform: uppercase;
     color: white;
 }
+
+.title {
+    background-color: skyblue;
+    padding: 20px 10px;
+}
+
+.block {
+    padding: 20px;
+    background-color: #f0ad4e;
+    margin: 0 0 10px;
+}
+
+.block__title {
+    text-transform: capitalize;
+    margin: 0 0 20px;
+}
+
+.block__button {
+    text-transform: capitalize;
+}

@@ -13,12 +13,13 @@
         <counter></counter>
         <counter></counter>
         <headling></headling>
+        <headling></headling>
         <dropdown></dropdown>
     </div>
     <template id="counterTemplate">
-        <div>
-            <h1>heading</h1>
-            <button type="button">increment</button>
+        <div class="block">
+            <h1 class="block__title">heading</h1>
+            <button @click="fnClick" class="block__button" type="button">increment {{ count }}</button>
         </div>
     </template>
     <!--SCRIPTS-->

@@ -3,7 +3,7 @@
 
 // РЕГИСТРАЦИЯ ГЛОБАЛЬНОГО КОМПОНЕНТА
 Vue.component( 'counter', {
-    template: '<h1>Hello World</h1>'
+    template: '<h1 class="title">Hello World</h1>'
 });
 
 // РЕГИСТРАЦИЯ ГЛОБАЛЬНОГО КОМПОНЕНТА
@@ -25,9 +25,17 @@ var child = {
     template: '<div>Пользовательский компонент!</div>'
 };
 
-// INSTANCE
+// ROOT INSTANCE
 new Vue({
     el: '#app',
+    data: {
+        count: 0
+    },
+    methods: {
+        fnClick: function () {
+            this.count += 1;
+        }
+    },
     components: {
         // этот компонент будет доступен только внутри данного инстанса
         'child-component': child
