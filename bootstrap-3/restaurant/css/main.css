@@ -22,7 +22,7 @@ button {
   border-radius: 0; }
 
 .hero {
-  margin: 100px 0 0; }
+  margin: 100px 0 50px; }
   .hero .hero__item {
     padding: 0;
     margin: 0;
@@ -45,6 +45,29 @@ button {
       .hero .hero__item .caption .hero__link {
         color: #fff;
         font-size: 20px; }
+
+.thumbs {
+  text-align: center;
+  color: #969696; }
+  .thumbs .thumbs__item p {
+    font-size: 14px; }
+  .thumbs .thumbs__icon {
+    margin: 0 auto 30px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #969696;
+    border-radius: 50%;
+    line-height: 120px; }
+    .thumbs .thumbs__icon span {
+      font-size: 40px; }
+      .thumbs .thumbs__icon span::after {
+        content: '.'; }
+  .thumbs .thumbs__link {
+    padding: 2px 30px;
+    color: #969696;
+    text-transform: lowercase;
+    border-radius: 0;
+    font-size: 20px; }
 
 .header {
   background-color: #f1f0f1;
