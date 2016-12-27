@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Case - 05 - Components</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="../library/scripts/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <counter></counter>
+        <counter></counter>
+        <counter></counter>
+        <headling></headling>
+        <headling></headling>
+        <dropdown></dropdown>
+    </div>
+    <template id="counterTemplate">
+        <div class="block">
+            <h1 class="block__title">heading</h1>
+            <button @click="fnClick" class="block__button" type="button">increment {{ count }}</button>
+        </div>
+    </template>
+    <!--SCRIPTS-->
+    <script src="app.js"></script>
+</body>
+</html>
