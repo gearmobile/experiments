@@ -11,6 +11,20 @@
   //
 }
 
+@media only screen and ( min-width: 768px ) {
+
+  .is-table-row {
+    display: table;
+  }
+
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+
+}
+
 // 767 BREAKPOINT
 // -----------------------------------------------
 @media only screen and ( max-width: 767px ) {
@@ -28,3 +42,4 @@
 @media only screen and ( max-width: 500px ) {
   //
 }
+

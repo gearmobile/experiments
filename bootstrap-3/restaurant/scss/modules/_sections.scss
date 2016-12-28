@@ -1,0 +1,147 @@
+// HERO
+// --------------------------------
+.hero {
+  margin: 100px 0 50px;
+
+  & &__item {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+
+    &--primary {
+      background-color: $color-green;
+    }
+
+    &--secondary {
+      background-color: $color-blue;
+    }
+
+    &--tertiary {
+      background-color: $color-yellow;
+    }
+
+    & .caption {
+      padding: 40px 0;
+      color: $color-white;
+      text-align: center;
+
+      & .hero__icon {
+        padding: 0 0 24px;
+      }
+
+      & .hero__title {
+        padding: 0 0 24px;
+      }
+
+      & .hero__link {
+        color: $color-white;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// THUMBS
+// --------------------------------
+.thumbs {
+  padding: $padding 0;
+  text-align: center;
+  color: #969696;
+
+  & .thumbs__item p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 26px;
+  }
+
+  & .thumbs__icon {
+    margin: 0 auto 30px;
+    @include size( 120px );
+    border: 1px solid #969696;
+    border-radius: 50%;
+    line-height: 120px;
+    font-family: $tertiary-font-family;
+
+    & span {
+      font-size: 40px;
+
+      &::after {
+        content: '.';
+      }
+    }
+  }
+
+}
+
+// FEATURE-ONE
+// --------------------------------
+.feature-one {
+  padding: 50px 0;
+  background-color: $color-grey;
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  & p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  & .button {
+    margin-top: 30px;
+  }
+}
+
+// FEATURE-TWO
+// --------------------------------
+.feature-two {
+  padding: 40px 0;
+
+  & &__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  & &__picture {
+    margin-bottom: 30px;
+  }
+
+  & &__image {
+    max-width: 100%;
+  }
+
+  & &__link {
+    float: right;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

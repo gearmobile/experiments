@@ -4,13 +4,3 @@ body {
   color: $base-font-color;
   line-height: $base-line-height;
 }
-
-a {
-  color: $primary-color;
-}
-
-input,
-textarea,
-button {
-  @include border-radius( 0 );
-}
