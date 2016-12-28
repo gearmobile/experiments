@@ -312,6 +312,54 @@
 // --------------------------------
 .reservation {
   padding: 50px 0;
+
+  & .reservation__block {
+    margin-bottom: 40px;
+  }
+
+  & .reservation__lead {
+    font-size: 16px;
+    color: $color-dark;
+    line-height: 1.6;
+  }
+
+  & .reservation__form {
+    margin-top: 40px;
+
+    & .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    & label {
+      color: #737272;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    & textarea {
+      min-height: 140px;
+      resize: none;
+      background-color: #fdfdfd;
+    }
+
+    & .selects label {
+      padding-top: 3px;
+    }
+
+    & .controls {
+      @include clearfix();
+
+      & .controls__reset {
+        float: left;
+      }
+
+      & .controls__submit {
+        float: right;
+      }
+    }
+  }
+
 }
 
 

@@ -1,0 +1,24 @@
+.plus-link {
+  @include size( 36px );
+  background-color: #2e2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: $color-white;
+  transition: color .2s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+}
+
+.heading {
+  color: $color-dark;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}

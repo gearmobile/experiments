@@ -48,7 +48,7 @@
             <div class="reservation__row row">
                 <div class="reservation__primary col-md-8">
                     <article class="reservation__block">
-                        <h2 class="reservation__title">Reserve Your Table</h2>
+                        <h2 class="reservation__title heading">reserve your table</h2>
                         <div class="reservation__content">
                             <figure class="reservation__image">
                                 <img src="" alt="">
@@ -62,7 +62,7 @@
                         </div>
                     </article>
                     <article class="reservation__block">
-                        <h2 class="reservation__title">Useful Information</h2>
+                        <h2 class="reservation__title heading">useful information</h2>
                         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quisquam.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto cum debitis dolorum eos esse quidem similique tempora, voluptas voluptatem?</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ea minus natus nesciunt recusandae vero? Dolorum odit ut voluptas. A amet in magnam nam nemo praesentium sequi tempora voluptas voluptatibus.</p>
@@ -70,7 +70,71 @@
                     </article>
                     <a href="#" class="button" role="button">more</a>
                 </div>
-                <div class="reservation__secondary col-md-4"></div>
+                <div class="reservation__secondary col-md-4">
+                    <h2 class="reservation__title heading">our hours</h2>
+                    <p class="reservation__lead lead">We are open 7 days a week - 8 AM to 12 PM <br> +1 101 889 9898</p>
+                    <div class="reservation__form">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input type="email" class="form-control" id="reservationEmail1" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input type="password" class="form-control" id="reservationPassword" placeholder="Password">
+                                </div>
+                            </div>
+                            <!-- reservation checkin -->
+                            <div class="form-group">
+                                <label for="reservationCheckIn" class="col-sm-3 control-label">Check-in</label>
+                                <div class="col-sm-9">
+                                    <input type="datetime" class="form-control" id="reservationCheckIn" placeholder="10/05/2014">
+                                </div>
+                            </div><!-- end reservation checkin -->
+                            <!-- reservation checkout -->
+                            <div class="form-group">
+                                <label for="reservationCheckOut" class="col-sm-3 control-label">Check-out</label>
+                                <div class="col-sm-9">
+                                    <input type="datetime" class="form-control" id="reservationCheckOut" placeholder="20/05/2014">
+                                </div>
+                            </div><!-- end reservation checkout -->
+                            <div class="selects form-group">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <label for="reservationAdults" class="col-sm-4 control-label">Adults</label>
+                                        <select name="reservationAdults" id="reservationAdults" class="col-sm-4">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="reservationChildren" class="col-sm-6 control-label">Children</label>
+                                    <select name="reservationChildren" id="reservationChildren" class="col-sm-5">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <textarea class="form-control" rows="6" placeholder="Message:"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="controls col-sm-7 col-sm-push-5">
+                                    <button class="controls__reset button" type="reset" role="button">clear</button>
+                                    <button class="controls__submit button" type="submit" role="button">send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section><!-- end reservation -->

@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Playball|Dosis|Economica|Open+Sans:300,400,700");
+p:last-of-type {
+  margin-bottom: 0 !important; }
+
+textarea {
+  border-radius: 0 !important; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -213,20 +219,35 @@ a {
 
 .reservation {
   padding: 50px 0; }
-
-.button {
-  display: inline-block;
-  padding: 3px 30px 5px;
-  border: 1px solid #969696;
-  font-size: 20px;
-  font-family: "Economica", sans-serif;
-  text-transform: lowercase;
-  color: #969696;
-  transition: background-color .2s, color .2s; }
-  .button:hover, .button:focus {
-    text-decoration: none;
-    background-color: #969696;
-    color: #fff; }
+  .reservation .reservation__block {
+    margin-bottom: 40px; }
+  .reservation .reservation__lead {
+    font-size: 16px;
+    color: #535151;
+    line-height: 1.6; }
+  .reservation .reservation__form {
+    margin-top: 40px; }
+    .reservation .reservation__form .form-group:last-child {
+      margin-bottom: 0; }
+    .reservation .reservation__form label {
+      color: #737272;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left; }
+    .reservation .reservation__form textarea {
+      min-height: 140px;
+      resize: none;
+      background-color: #fdfdfd; }
+    .reservation .reservation__form .selects label {
+      padding-top: 3px; }
+    .reservation .reservation__form .controls::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .reservation .reservation__form .controls .controls__reset {
+      float: left; }
+    .reservation .reservation__form .controls .controls__submit {
+      float: right; }
 
 .plus-link {
   width: 36px;
@@ -242,6 +263,28 @@ a {
   .plus-link:hover, .plus-link:focus {
     text-decoration: none;
     color: #abccab; }
+
+.heading {
+  color: #535151;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 25px; }
+
+.button {
+  display: inline-block;
+  padding: 3px 30px 5px;
+  border: 1px solid #969696;
+  font-size: 20px;
+  font-family: "Economica", sans-serif;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #969696;
+  background-color: transparent;
+  transition: background-color .2s, color .2s; }
+  .button:hover, .button:focus {
+    text-decoration: none;
+    background-color: #969696;
+    color: #fff; }
 
 @media only screen and (min-width: 768px) {
   .is-table-row {
