@@ -119,6 +119,41 @@
   }
 }
 
+// FEATURE-THREE
+// --------------------------------
+.feature-three {
+  padding: $padding 0;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+
+  &__tertiary .list__item:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  &__tertiary .list__link {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    color: $color-white;
+    background-color: #303030;
+    font-family: $secondary-font-family;
+    font-size: 24px;
+
+    & span {
+      font-size: 30px;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $secondary-color;
+    }
+  }
+}
+
 
 
 
