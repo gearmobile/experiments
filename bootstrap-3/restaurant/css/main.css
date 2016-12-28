@@ -7,6 +7,9 @@ p {
 textarea {
   border-radius: 0 !important; }
 
+img {
+  transition: opacify .2s; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -258,6 +261,26 @@ a {
     .reservation .reservation__form .controls .controls__submit {
       float: right; }
 
+.blog {
+  padding: 40px 0; }
+  .blog .blog__secondary .recent-posts .media-left {
+    float: left;
+    margin-right: 20px;
+    padding-right: 0; }
+    .blog .blog__secondary .recent-posts .media-left img {
+      opacity: .8; }
+      .blog .blog__secondary .recent-posts .media-left img:hover {
+        opacity: 1; }
+  .blog .blog__secondary .recent-posts .media-body p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6; }
+    .blog .blog__secondary .recent-posts .media-body p::after {
+      content: ' [...]';
+      color: #535151; }
+  .blog .blog__secondary .recent-posts .list__item:not(:last-child) {
+    margin-bottom: 45px; }
+
 .plus-link {
   width: 36px;
   height: 36px;
@@ -328,8 +351,9 @@ a {
       font-family: "Economica", sans-serif; }
       .header .navbar .navbar-right li a:hover, .header .navbar .navbar-right li a:focus {
         color: #abccab; }
-      .header .navbar .navbar-right li:first-of-type > a {
-        color: #abccab; }
+      .header .navbar .navbar-right li.active > a {
+        color: #abccab;
+        background-color: transparent; }
 
 .footer {
   padding: 30px 0;

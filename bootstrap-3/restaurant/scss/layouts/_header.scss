@@ -37,8 +37,9 @@
         color: $secondary-color;
       }
 
-      & li:first-of-type > a {
+      & li.active > a {
         color: $secondary-color;
+        background-color: transparent;
       }
     }
   }

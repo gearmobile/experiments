@@ -368,6 +368,46 @@
 
 }
 
+// BLOG
+// --------------------------------
+.blog {
+  padding: 40px 0;
+
+  & .blog__secondary .recent-posts {
+    //
+
+    & .media-left {
+      float: left;
+      margin-right: 20px;
+      padding-right: 0;
+
+      & img {
+        opacity: .8;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    & .media-body p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+
+      &::after {
+        content: ' [...]';
+        color: $color-dark;
+      }
+    }
+
+    & .list__item:not(:last-child) {
+      margin-bottom: 45px;
+    }
+
+  }
+}
+
 
 
 
