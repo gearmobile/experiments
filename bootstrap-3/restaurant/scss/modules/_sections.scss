@@ -308,13 +308,19 @@
   }
 }
 
-// reservation
+// RESERVATION
 // --------------------------------
 .reservation {
   padding: 50px 0;
 
+  & .reservation__image {
+    float: left;
+    margin-right: 20px;
+  }
+
   & .reservation__block {
     margin-bottom: 40px;
+    @include clearfix();
   }
 
   & .reservation__lead {

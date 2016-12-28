@@ -221,8 +221,15 @@ a {
 
 .reservation {
   padding: 50px 0; }
+  .reservation .reservation__image {
+    float: left;
+    margin-right: 20px; }
   .reservation .reservation__block {
     margin-bottom: 40px; }
+    .reservation .reservation__block::after {
+      content: "";
+      display: table;
+      clear: both; }
   .reservation .reservation__lead {
     font-size: 16px;
     color: #535151;
