@@ -244,6 +244,7 @@
     background-color: #303030;
     font-family: $secondary-font-family;
     font-size: 24px;
+    transition: background-color .2s;
 
     & span {
       font-size: 30px;
@@ -253,6 +254,7 @@
     &:focus {
       text-decoration: none;
       color: $secondary-color;
+      background-color: $color-black;
     }
   }
 }

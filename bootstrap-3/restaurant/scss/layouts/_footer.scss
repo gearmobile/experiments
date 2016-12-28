@@ -1,2 +1,44 @@
-// FOOTER-MAIN
+// FOOTER
 // ----------------------------------
+.footer {
+  padding: $padding 0;
+  background-color: #adacac;
+
+  & .footer__main {
+    @include clearfix();
+
+    & .footer__primary {
+      float: left;
+      color: #e2e2e2;
+    }
+
+    & .footer__secondary {
+      float: right;
+
+      & .icons {
+        display: flex;
+
+        & .icons__item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 8px;
+          border-radius: 50%;
+          background-color: #ddd;
+          transition: background-color .2s;
+          @include size( 50px );
+          
+          & i {
+            color: $color-white;
+            font-size: 24px;
+          }
+
+          &:hover,
+          &:focus {
+            background-color: #303030;
+          }
+        }
+      }
+    }
+  }
+}

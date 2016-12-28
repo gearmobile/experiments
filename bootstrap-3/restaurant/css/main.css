@@ -172,12 +172,14 @@ a {
     color: #fff;
     background-color: #303030;
     font-family: "Economica", sans-serif;
-    font-size: 24px; }
+    font-size: 24px;
+    transition: background-color .2s; }
     .feature-three__tertiary .list__link span {
       font-size: 30px; }
     .feature-three__tertiary .list__link:hover, .feature-three__tertiary .list__link:focus {
       text-decoration: none;
-      color: #abccab; }
+      color: #abccab;
+      background-color: #000; }
 
 .button {
   display: inline-block;
@@ -231,5 +233,35 @@ a {
       font-size: 18px; }
     .header .navbar .navbar-right {
       font-size: 20px; }
+
+.footer {
+  padding: 30px 0;
+  background-color: #adacac; }
+  .footer .footer__main::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .footer .footer__main .footer__primary {
+    float: left;
+    color: #e2e2e2; }
+  .footer .footer__main .footer__secondary {
+    float: right; }
+    .footer .footer__main .footer__secondary .icons {
+      display: flex; }
+      .footer .footer__main .footer__secondary .icons .icons__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 8px;
+        border-radius: 50%;
+        background-color: #ddd;
+        transition: background-color .2s;
+        width: 50px;
+        height: 50px; }
+        .footer .footer__main .footer__secondary .icons .icons__item i {
+          color: #fff;
+          font-size: 24px; }
+        .footer .footer__main .footer__secondary .icons .icons__item:hover, .footer .footer__main .footer__secondary .icons .icons__item:focus {
+          background-color: #303030; }
 
 /*# sourceMappingURL=main.css.map */
