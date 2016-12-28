@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Dosis|Economica|Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Playball|Dosis|Economica|Open+Sans:300,400,700");
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -75,6 +75,7 @@ a {
   background-color: #f1f0f1; }
   .feature-one__title {
     font-size: 36px;
+    font-weight: 700;
     margin-bottom: 30px; }
   .feature-one p {
     font-size: 14px;
@@ -87,6 +88,7 @@ a {
   padding: 40px 0; }
   .feature-two .feature-two__title {
     font-size: 36px;
+    font-weight: 700;
     margin-bottom: 40px; }
   .feature-two .feature-two__picture {
     margin-bottom: 30px; }
@@ -98,8 +100,69 @@ a {
 .feature-three {
   padding: 30px 0; }
   .feature-three__title {
-    margin-bottom: 20px;
-    font-size: 36px; }
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 700; }
+  .feature-three__primary p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 0; }
+    .feature-three__primary p:last-of-type {
+      margin-bottom: 0; }
+  .feature-three__primary .media-left {
+    padding-right: 20px; }
+  .feature-three__primary .media {
+    position: relative;
+    overflow: visible; }
+    .feature-three__primary .media .media__quote {
+      font-size: 30px;
+      color: #535151;
+      position: absolute;
+      right: 10px;
+      top: -26px; }
+    .feature-three__primary .media .media-body {
+      padding-right: 10px;
+      margin-bottom: 26px; }
+      .feature-three__primary .media .media-body .media-heading {
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif; }
+    .feature-three__primary .media .media__info {
+      margin-top: 10px;
+      text-align: right; }
+      .feature-three__primary .media .media__info .media__link {
+        color: #969696;
+        font-size: 20px;
+        font-family: "Economica", sans-serif; }
+        .feature-three__primary .media .media__info .media__link:hover, .feature-three__primary .media .media__info .media__link:focus {
+          text-decoration: underline; }
+  .feature-three__secondary .list__item p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 0; }
+    .feature-three__secondary .list__item p:last-of-type {
+      margin-bottom: 0; }
+  .feature-three__secondary .list__item:not(:last-child) {
+    margin-bottom: 30px; }
+  .feature-three__secondary .list__thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    float: left;
+    background-color: #000;
+    padding: 16px 0 20px;
+    margin: 0 30px 0 0; }
+    .feature-three__secondary .list__thumb span {
+      font-family: "Economica", sans-serif;
+      color: #fff;
+      font-size: 24px;
+      line-height: 1;
+      text-transform: capitalize; }
   .feature-three__tertiary .list__item:not(:last-child) {
     margin-bottom: 4px; }
   .feature-three__tertiary .list__link {

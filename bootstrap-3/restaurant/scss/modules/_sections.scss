@@ -82,6 +82,7 @@
 
   &__title {
     font-size: 36px;
+    font-weight: 700;
     margin-bottom: 30px;
   }
 
@@ -103,6 +104,7 @@
 
   & &__title {
     font-size: 36px;
+    font-weight: 700;
     margin-bottom: 40px;
   }
 
@@ -125,10 +127,111 @@
   padding: $padding 0;
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 36px;
+    font-weight: 700;
   }
 
+  // primary section
+  &__primary p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__primary .media-left {
+    padding-right: 20px;
+
+    & img {
+      //max-width: 100%;
+    }
+  }
+
+  &__primary .media {
+    position: relative;
+    overflow: visible;
+
+    & .media__quote {
+      font-size: 30px;
+      color: #535151;
+      position: absolute;
+      right: 10px;
+      top: -26px;
+    }
+
+    & .media-body {
+      padding-right: 10px;
+      margin-bottom: 26px;
+
+      & .media-heading {
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: $base-font-family;
+      }
+    }
+
+    & .media__info {
+      margin-top: 10px;
+      text-align: right;
+
+      & .media__link {
+        color: $base-font-color;
+        font-size: 20px;
+        font-family: $secondary-font-family;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // secondary section
+  &__secondary .list__item p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__secondary .list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__secondary .list__thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    float: left;
+    background-color: $color-black;
+    padding: 16px 0 20px;
+    margin: 0 30px 0 0;
+
+    & span {
+      font-family: $secondary-font-family;
+      color: $color-white;
+      font-size: 24px;
+      line-height: 1;
+      text-transform: capitalize;
+    }
+  }
+
+  // tertiary section
   &__tertiary .list__item:not(:last-child) {
     margin-bottom: 4px;
   }
