@@ -11,14 +11,35 @@
     & .navbar-brand {
       text-transform: uppercase;
       font-size: 48px;
+      font-family: $quaternary-font-family;
+      letter-spacing: -3px;
+      font-weight: 700;
     }
 
     & .navbar-nav > li > a {
       font-size: 18px;
+      font-family: $secondary-font-family;
+      color: $primary-color;
+
+      &:hover,
+      &:focus {
+        color: $secondary-color;
+      }
     }
+
 
     & .navbar-right {
       font-size: 20px;
+      font-family: $secondary-font-family;
+
+      & li a:hover,
+      & li a:focus {
+        color: $secondary-color;
+      }
+
+      & li:first-of-type > a {
+        color: $secondary-color;
+      }
     }
   }
 }

@@ -259,6 +259,60 @@
   }
 }
 
+// MENU
+// --------------------------------
+.menu {
+  padding: 50px 0 100px;
+
+  & .menu__row {
+    margin-bottom: $padding;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & .menu__item {
+    background-color: #f1f0f1;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    font-family: $base-font-family;
+    color: $base-font-color;
+    font-weight: 300;
+
+    & p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  & .menu__title {
+    font-size: 18px;
+    font-family: $base-font-family;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  & .menu__content {
+    padding: 30px 50px 30px 20px;
+  }
+
+  & .menu__button {
+    margin-top: 30px;
+  }
+}
+
+// reservation
+// --------------------------------
+.reservation {
+  padding: 50px 0;
+}
 
 
 
