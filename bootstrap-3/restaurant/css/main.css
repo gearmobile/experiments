@@ -303,6 +303,20 @@ a {
     font-size: 14px; }
     .blog .blog__primary .post .post__meta a:hover, .blog .blog__primary .post .post__meta a:focus {
       color: #abccab; }
+  .blog .blog__secondary .categories {
+    margin-bottom: 100px; }
+    .blog .blog__secondary .categories .list {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style-position: inside; }
+      .blog .blog__secondary .categories .list__item {
+        padding: 4px 0; }
+      .blog .blog__secondary .categories .list__link {
+        font-weight: 300;
+        color: #535151; }
+        .blog .blog__secondary .categories .list__link:hover, .blog .blog__secondary .categories .list__link:focus {
+          text-decoration: underline;
+          color: #abccab; }
   .blog .blog__secondary .recent-posts .media-left {
     float: left;
     margin-right: 20px;
@@ -311,11 +325,11 @@ a {
       opacity: .8; }
       .blog .blog__secondary .recent-posts .media-left img:hover {
         opacity: 1; }
-  .blog .blog__secondary .recent-posts .media-body p {
+  .blog .blog__secondary .recent-posts .media-content p {
     font-size: 14px;
     font-weight: 300;
     line-height: 1.6; }
-    .blog .blog__secondary .recent-posts .media-body p::after {
+    .blog .blog__secondary .recent-posts .media-content p::after {
       content: ' [...]';
       color: #535151; }
   .blog .blog__secondary .recent-posts .list__item:not(:last-child) {
