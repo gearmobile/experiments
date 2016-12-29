@@ -515,7 +515,61 @@
   }
 }
 
+// contacts
+// --------------------------------
+.contacts {
+  padding: 50px 0;
 
+  &__primary {
+
+    & p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    // map
+    & #contacts-map {
+      height: 445px;
+      background: #c0c0c0 url( '../images/contacts/contact-image-01.jpg' ) center center no-repeat;
+      background-size: cover;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__secondary {
+    padding-top: 100px;
+
+    & ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      & li,
+      & li a {
+        font-size: 16px;
+        color: $color-dark;
+        font-family: $base-font-family;
+      }
+    }
+
+    & .contacts__headling {
+      text-transform: capitalize;
+      color: $color-dark;
+      font-size: 16px;
+      font-family: $base-font-family;
+      font-weight: 700;
+      margin-bottom: 20px;
+
+      &::after {
+        content: ':';
+      }
+    }
+  }
+}
 
 
 

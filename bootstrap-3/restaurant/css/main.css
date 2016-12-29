@@ -335,6 +335,38 @@ a {
   .blog .blog__secondary .recent-posts .list__item:not(:last-child) {
     margin-bottom: 45px; }
 
+.contacts {
+  padding: 50px 0; }
+  .contacts__primary p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6; }
+  .contacts__primary #contacts-map {
+    height: 445px;
+    background: #c0c0c0 url("../images/contacts/contact-image-01.jpg") center center no-repeat;
+    background-size: cover;
+    margin-bottom: 26px; }
+  .contacts__secondary {
+    padding-top: 100px; }
+    .contacts__secondary ul {
+      list-style-type: none;
+      padding-left: 0; }
+      .contacts__secondary ul:not(:last-child) {
+        margin-bottom: 40px; }
+      .contacts__secondary ul li, .contacts__secondary ul li a {
+        font-size: 16px;
+        color: #535151;
+        font-family: "Open Sans", sans-serif; }
+    .contacts__secondary .contacts__headling {
+      text-transform: capitalize;
+      color: #535151;
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      margin-bottom: 20px; }
+      .contacts__secondary .contacts__headling::after {
+        content: ':'; }
+
 .plus-link {
   width: 36px;
   height: 36px;
