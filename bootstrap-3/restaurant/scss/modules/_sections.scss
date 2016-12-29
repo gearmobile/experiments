@@ -571,6 +571,43 @@
   }
 }
 
+// contacts-form
+// --------------------------------
+.contacts-form {
+  padding: 50px 0;
+  background-color: #f1f0f1;
+
+  & .form-row:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  & label {
+    text-transform: capitalize;
+
+    &::after {
+      content: ':';
+    }
+  }
+
+  & input,
+  & textarea {
+    border-radius: 0;
+    background-color: #fafafa;
+    font-size: 14px;
+    color: $primary-color;
+  }
+
+  & textarea {
+    resize: none;
+    min-height: 300px;
+    padding: 30px;
+  }
+
+  &__controls {
+    //display: flex;
+    //
+  }
+}
 
 
 

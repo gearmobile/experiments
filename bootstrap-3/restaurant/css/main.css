@@ -367,6 +367,25 @@ a {
       .contacts__secondary .contacts__headling::after {
         content: ':'; }
 
+.contacts-form {
+  padding: 50px 0;
+  background-color: #f1f0f1; }
+  .contacts-form .form-row:not(:last-child) {
+    margin-bottom: 20px; }
+  .contacts-form label {
+    text-transform: capitalize; }
+    .contacts-form label::after {
+      content: ':'; }
+  .contacts-form input, .contacts-form textarea {
+    border-radius: 0;
+    background-color: #fafafa;
+    font-size: 14px;
+    color: #727171; }
+  .contacts-form textarea {
+    resize: none;
+    min-height: 300px;
+    padding: 30px; }
+
 .plus-link {
   width: 36px;
   height: 36px;
