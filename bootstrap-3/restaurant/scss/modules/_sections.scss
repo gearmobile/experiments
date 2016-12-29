@@ -378,6 +378,10 @@
 
     & .post {
 
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+
       & .post__header {
         margin-bottom: 30px;
 
@@ -415,6 +419,8 @@
       & .post__row {
         padding: 10px 0;
         border-top: 1px solid #adacac;
+        margin-right: 0;
+        margin-left: 0;
       }
 
       & .post__column {
@@ -422,6 +428,10 @@
         align-items: center;
 
         & .post__icon {
+          margin-right: 10px;
+        }
+
+        & .meta:first-child {
           margin-right: 20px;
         }
 
@@ -434,7 +444,7 @@
 
         &:hover,
         &:focus {
-          text-decoration: underline;
+          color: $secondary-color;
         }
       }
     }
