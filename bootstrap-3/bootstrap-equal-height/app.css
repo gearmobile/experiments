@@ -1,0 +1,47 @@
+.is-flex {
+  display: flex;
+  flex-wrap: wrap; }
+  .is-flex > [class*='col-'] {
+    display: flex; }
+
+@media only screen and (max-width: 991px) {
+  .js__row .js__column .box {
+    height: auto !important; }
+
+  .js__row .js__column:not(:last-child) {
+    margin-bottom: 20px; } }
+body {
+  background: #27063c;
+  padding: 50px 0 100px;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif; }
+
+.box {
+  background-color: #fff;
+  text-align: center;
+  padding: 25px 7% 0;
+  position: relative;
+  border: 1px solid #fff; }
+  .box__title {
+    text-transform: capitalize;
+    font-weight: 300;
+    letter-spacing: -.05em;
+    margin: 0 0 15px; }
+  .box__text {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: .8;
+    padding-bottom: 125px; }
+  .box__link {
+    display: block;
+    width: 100%;
+    padding: 25px 0;
+    border-radius: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
+.js.container {
+  margin-bottom: 40px; }
+
+/*# sourceMappingURL=app.css.map */

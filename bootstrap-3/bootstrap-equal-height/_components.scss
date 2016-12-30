@@ -1,0 +1,19 @@
+// make flex block and equal height
+.is-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > [class*='col-'] {
+    display: flex;
+  }
+}
+
+// media query for js-script
+@media only screen and ( max-width: 991px ) {
+  .js__row .js__column .box {
+    height: auto !important;
+  }
+  .js__row .js__column:not( :last-child ) {
+    margin-bottom: 20px;
+  }
+}
