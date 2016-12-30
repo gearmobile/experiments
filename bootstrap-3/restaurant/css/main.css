@@ -36,7 +36,7 @@ a {
     text-decoration: none; }
 
 .hero {
-  margin: 100px 0 50px; }
+  margin: 190px 0 50px; }
   .hero .hero__item {
     padding: 0;
     margin: 0;
@@ -453,7 +453,7 @@ a {
     vertical-align: top; } }
 .header {
   background-color: #f1f0f1;
-  padding: 30px 0 0; }
+  padding: 21px 0 0; }
   .header .header__holder {
     margin: 0;
     border: none;
@@ -461,18 +461,32 @@ a {
     background-color: #f1f0f1; }
     .header .header__holder .header__brand {
       background-color: #2e2d2d;
-      padding: 20px 14px 20px 26px;
-      color: #fff;
-      height: 118px; }
+      padding: 32px 30px;
+      color: #fff; }
       .header .header__holder .header__brand .navbar-brand {
+        padding: 0;
+        line-height: normal;
+        height: auto;
         text-transform: uppercase;
         font-size: 48px;
         font-family: "BebasRegular", sans-serif;
         color: #fff;
         letter-spacing: -3px;
-        font-weight: 700; }
+        font-weight: 700;
+        margin-left: 0; }
+        .header .header__holder .header__brand .navbar-brand:hover {
+          color: #abccab; }
       .header .header__holder .header__brand .header__subtitle {
-        float: left; }
+        float: right;
+        height: 55px;
+        line-height: 55px;
+        text-transform: lowercase;
+        font-size: 20px;
+        font-family: "Economica", sans-serif;
+        padding-left: 20px;
+        margin-left: 20px;
+        border-left: 1px solid #4b4a4a;
+        letter-spacing: normal; }
     .header .header__holder .header__primary li a {
       text-transform: lowercase;
       font-size: 20px;
@@ -484,7 +498,7 @@ a {
       font-size: 20px;
       font-family: "Economica", sans-serif;
       padding-top: 50px;
-      padding-bottom: 48px; }
+      padding-bottom: 49px; }
       .header .header__holder .header__secondary li > a:hover, .header .header__holder .header__secondary li > a:focus {
         color: #abccab; }
     .header .header__holder .header__secondary li.active > a {
