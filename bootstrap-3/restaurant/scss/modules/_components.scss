@@ -22,3 +22,24 @@
   text-transform: capitalize;
   margin-bottom: 25px;
 }
+
+// BACK TO TOP BUTTON
+// -----------------------------------
+.back-to-top {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $primary-color;
+  transition: background-color .2s;
+  
+  & .glyphicon-chevron-up {
+    color: $color-white;
+  }
+  
+  &:hover,
+  &:focus {
+    background-color: $color-dark;
+  }
+}

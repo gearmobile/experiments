@@ -414,6 +414,19 @@ a {
   text-transform: capitalize;
   margin-bottom: 25px; }
 
+.back-to-top {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #727171;
+  transition: background-color .2s; }
+  .back-to-top .glyphicon-chevron-up {
+    color: #fff; }
+  .back-to-top:hover, .back-to-top:focus {
+    background-color: #535151; }
+
 .button {
   display: inline-block;
   padding: 3px 30px 5px;
