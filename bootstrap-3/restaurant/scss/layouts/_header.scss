@@ -10,6 +10,11 @@
     border-radius: 0;
     background-color: $color-grey;
 
+    // HEADER CONTAINER FLUID
+    & .container-fluid {
+      padding-left: 0;
+    }
+
     // HEADER BRAND
     & .header__brand {
       background-color: #2e2d2d;

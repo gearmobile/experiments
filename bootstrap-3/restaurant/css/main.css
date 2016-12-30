@@ -58,7 +58,8 @@ a {
         padding: 0 0 24px; }
       .hero .hero__item .caption .hero__link {
         color: #fff;
-        font-size: 20px; }
+        font-size: 20px;
+        font-family: "Economica", sans-serif; }
 
 .thumbs {
   padding: 30px 0;
@@ -123,6 +124,11 @@ a {
       margin-bottom: 0; }
   .feature-three__primary .media-left {
     padding-right: 20px; }
+    .feature-three__primary .media-left img {
+      opacity: .8;
+      transition: opacity .2s; }
+      .feature-three__primary .media-left img:hover {
+        opacity: 1; }
   .feature-three__primary .media {
     position: relative;
     overflow: visible; }
@@ -193,6 +199,7 @@ a {
       background-color: #000; }
 
 .menu {
+  margin-top: 140px;
   padding: 50px 0 100px; }
   .menu .menu__row {
     margin-bottom: 30px; }
@@ -223,6 +230,7 @@ a {
     margin-top: 30px; }
 
 .reservation {
+  margin-top: 140px;
   padding: 50px 0; }
   .reservation .reservation__image {
     float: left;
@@ -262,7 +270,8 @@ a {
       float: right; }
 
 .blog {
-  padding: 40px 0; }
+  margin-top: 140px;
+  padding: 50px 0; }
   .blog .blog__primary .post:not(:last-child) {
     margin-bottom: 50px; }
   .blog .blog__primary .post .post__header {
@@ -336,6 +345,7 @@ a {
     margin-bottom: 45px; }
 
 .contacts {
+  margin-top: 140px;
   padding: 50px 0; }
   .contacts__primary p {
     font-size: 14px;
@@ -459,6 +469,8 @@ a {
     border: none;
     border-radius: 0;
     background-color: #f1f0f1; }
+    .header .header__holder .container-fluid {
+      padding-left: 0; }
     .header .header__holder .header__brand {
       background-color: #2e2d2d;
       padding: 32px 30px;
