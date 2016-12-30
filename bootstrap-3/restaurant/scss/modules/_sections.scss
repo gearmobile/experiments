@@ -600,12 +600,16 @@
   & textarea {
     resize: none;
     min-height: 300px;
+    min-width: 100%;
     padding: 30px;
   }
 
   &__controls {
-    //display: flex;
-    //
+    @include clearfix();
+
+    & nav {
+      float: right;
+    }
   }
 }
 

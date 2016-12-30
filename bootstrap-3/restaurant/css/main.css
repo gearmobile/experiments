@@ -384,7 +384,14 @@ a {
   .contacts-form textarea {
     resize: none;
     min-height: 300px;
+    min-width: 100%;
     padding: 30px; }
+  .contacts-form__controls::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .contacts-form__controls nav {
+    float: right; }
 
 .plus-link {
   width: 36px;
