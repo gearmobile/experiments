@@ -8,6 +8,41 @@
   }
 }
 
+// TABLE WAY
+.is-table {
+  display: table;
+  border-collapse: separate;
+
+  & .tableway__row {
+    display: table-row;
+  }
+
+  & .tableway__column {
+    display: table-cell;
+  }
+
+}
+
+// MARGIN WAY
+.is-margin {
+  overflow: hidden;
+
+  & .marginway__column .box {
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
+
+    & .box__text {
+      padding-bottom: 0;
+
+    }
+  }
+
+  & .marginway__link {
+    border-radius: 0;
+    padding: 10px 40px;
+  }
+}
+
 // media query for js-script
 @media only screen and ( max-width: 991px ) {
   .js__row .js__column .box {

@@ -4,6 +4,25 @@
   .is-flex > [class*='col-'] {
     display: flex; }
 
+.is-table {
+  display: table;
+  border-collapse: separate; }
+  .is-table .tableway__row {
+    display: table-row; }
+  .is-table .tableway__column {
+    display: table-cell; }
+
+.is-margin {
+  overflow: hidden; }
+  .is-margin .marginway__column .box {
+    padding-bottom: 99999px;
+    margin-bottom: -99999px; }
+    .is-margin .marginway__column .box .box__text {
+      padding-bottom: 0; }
+  .is-margin .marginway__link {
+    border-radius: 0;
+    padding: 10px 40px; }
+
 @media only screen and (max-width: 991px) {
   .js__row .js__column .box {
     height: auto !important; }
@@ -41,7 +60,13 @@ body {
     bottom: 0;
     left: 0; }
 
-.js.container {
+.js.container,
+.flex.container,
+.tableway.container,
+.marginway.container {
   margin-bottom: 40px; }
+
+.welcome {
+  background-color: indianred; }
 
 /*# sourceMappingURL=app.css.map */
