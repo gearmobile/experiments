@@ -49,3 +49,36 @@
     background-color: $color-dark;
   }
 }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+/* Make equal height with table styles */
+
+//@media (min-width: 768px) {
+//  .table-row {
+//    display: table;
+//    table-layout: fixed;
+//  }
+//
+//  .table-row [class^="col-"] {
+//    display: table-cell;
+//    float: none;
+//  }
+//}
+
+@media only screen and (min-width : 768px) {
+  .is-table-row {
+    display: table;
+    table-layout: fixed;
+  }
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+  }
+}

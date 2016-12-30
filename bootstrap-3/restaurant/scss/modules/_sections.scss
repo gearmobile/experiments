@@ -53,10 +53,20 @@
   text-align: center;
   color: #969696;
 
-  & .thumbs__item p {
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 26px;
+  & .thumbs__item {
+    padding-bottom: 20px;
+    position: relative;
+
+    & p {
+      font-size: 14px;
+      font-weight: 300;
+
+      &:last-of-type {
+        padding-bottom: 125px;
+        //margin-bottom: 20px !important;
+      }
+
+    }
   }
 
   & .thumbs__icon {
@@ -74,6 +84,10 @@
         content: '.';
       }
     }
+  }
+
+  & .thumbs__link {
+    //margin-top: 26px;
   }
 
 }
