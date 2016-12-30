@@ -31,7 +31,10 @@
       }
 
       & .hero__title {
-        padding: 0 0 24px;
+        padding: 0 0 20px;
+        width: 50%;
+        margin: 0 auto 10px;
+        border-bottom: 1px dashed $color-white;
       }
 
       & .hero__link {

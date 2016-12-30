@@ -55,7 +55,10 @@ a {
       .hero .hero__item .caption .hero__icon {
         padding: 0 0 24px; }
       .hero .hero__item .caption .hero__title {
-        padding: 0 0 24px; }
+        padding: 0 0 20px;
+        width: 50%;
+        margin: 0 auto 10px;
+        border-bottom: 1px dashed #fff; }
       .hero .hero__item .caption .hero__link {
         color: #fff;
         font-size: 20px;
