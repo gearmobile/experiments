@@ -1,46 +1,73 @@
+// HEADER
 .header {
   background-color: $color-grey;
   padding: 30px 0 0;
 
-  & .navbar {
+  // HEADER HOLDER
+  & .header__holder {
     margin: 0;
     border: none;
     border-radius: 0;
     background-color: $color-grey;
 
-    & .navbar-brand {
-      text-transform: uppercase;
-      font-size: 48px;
-      font-family: $quaternary-font-family;
-      letter-spacing: -3px;
-      font-weight: 700;
-    }
+    // HEADER BRAND
+    & .header__brand {
+      background-color: #2e2d2d;
+      padding: 20px 14px 20px 26px;
+      color: $color-white;
+      height: 118px;
 
-    & .navbar-nav > li > a {
-      font-size: 18px;
-      font-family: $secondary-font-family;
-      color: $primary-color;
-
-      &:hover,
-      &:focus {
-        color: $secondary-color;
+      & .navbar-brand {
+        text-transform: uppercase;
+        font-size: 48px;
+        font-family: $quaternary-font-family;
+        color: $color-white;
+        letter-spacing: -3px;
+        font-weight: 700;
+        //line-height: 118px;
       }
+
+      & .header__subtitle {
+        float: left;
+        //margin-top: 20px;
+        //line-height: 118px;
+        //padding: 50px 0 48px;
+      }
+
     }
 
-
-    & .navbar-right {
+    // HEADER PRIMARY
+    & .header__primary li a {
+      text-transform: lowercase;
       font-size: 20px;
       font-family: $secondary-font-family;
+      padding-top: 50px;
+      padding-bottom: 48px;
+    }
 
-      & li a:hover,
-      & li a:focus {
-        color: $secondary-color;
+    // HEADER SECONDARY
+    & .header__secondary li {
+
+      & > a {
+        text-transform: lowercase;
+        font-size: 20px;
+        font-family: $secondary-font-family;
+        padding-top: 50px;
+        padding-bottom: 48px;
+
+        &:hover,
+        &:focus {
+          color: $secondary-color;
+        }
       }
 
-      & li.active > a {
+      &.active > a {
         color: $secondary-color;
         background-color: transparent;
       }
+
     }
+
   }
+
 }
