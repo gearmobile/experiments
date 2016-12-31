@@ -321,15 +321,16 @@
     border: none;
     font-family: $base-font-family;
     color: $base-font-color;
-    font-weight: 300;
+    position: relative;
 
     & p {
       font-size: 14px;
+      font-weight: 300;
       line-height: 1.6;
       margin-bottom: 20px;
 
       &:last-of-type {
-        margin-bottom: 0;
+        padding-bottom: 80px;
       }
     }
   }
@@ -346,7 +347,9 @@
   }
 
   & .menu__button {
-    margin-top: 30px;
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
   }
 }
 
@@ -364,6 +367,12 @@
   & .reservation__block {
     margin-bottom: 40px;
     @include clearfix();
+
+    & p {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.6;
+    }
   }
 
   & .reservation__lead {
@@ -443,6 +452,7 @@
         & p {
           font-size: 14px;
           line-height: 1.6;
+          font-weight: 300;
         }
       }
 
@@ -613,8 +623,15 @@
         content: ':';
       }
     }
+
+    & .phones a:hover,
+    & .phones a:focus,
+    & .email a:hover,
+    & .email a:focus {
+      color: $secondary-color;
+    }
   }
-}
+  }
 
 // contacts-form
 // --------------------------------

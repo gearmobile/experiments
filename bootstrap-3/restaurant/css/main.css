@@ -235,13 +235,14 @@ a {
     border: none;
     font-family: "Open Sans", sans-serif;
     color: #969696;
-    font-weight: 300; }
+    position: relative; }
     .menu .menu__item p {
       font-size: 14px;
+      font-weight: 300;
       line-height: 1.6;
       margin-bottom: 20px; }
       .menu .menu__item p:last-of-type {
-        margin-bottom: 0; }
+        padding-bottom: 80px; }
   .menu .menu__title {
     font-size: 18px;
     font-family: "Open Sans", sans-serif;
@@ -250,7 +251,9 @@ a {
   .menu .menu__content {
     padding: 30px 50px 30px 20px; }
   .menu .menu__button {
-    margin-top: 30px; }
+    position: absolute;
+    left: 20px;
+    bottom: 30px; }
 
 .reservation {
   margin-top: 140px;
@@ -264,6 +267,10 @@ a {
       content: "";
       display: table;
       clear: both; }
+    .reservation .reservation__block p {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1.6; }
   .reservation .reservation__lead {
     font-size: 16px;
     color: #535151;
@@ -308,7 +315,8 @@ a {
     margin-bottom: 30px; }
     .blog .blog__primary .post .post__content p {
       font-size: 14px;
-      line-height: 1.6; }
+      line-height: 1.6;
+      font-weight: 300; }
   .blog .blog__primary .post .post__image {
     border: 1px solid #ccc;
     margin-bottom: 30px; }
@@ -399,6 +407,8 @@ a {
       margin-bottom: 20px; }
       .contacts__secondary .contacts__headling::after {
         content: ':'; }
+    .contacts__secondary .phones a:hover, .contacts__secondary .phones a:focus, .contacts__secondary .email a:hover, .contacts__secondary .email a:focus {
+      color: #abccab; }
 
 .contacts-form {
   padding: 50px 0;
