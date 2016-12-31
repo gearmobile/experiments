@@ -1,28 +1,12 @@
-.is-flex {
-  display: flex;
-  flex-wrap: wrap; }
-  .is-flex > [class*='col-'] {
-    display: flex; }
-
-.is-table {
-  display: table;
-  border-collapse: separate; }
-  .is-table .tableway__row {
-    display: table-row; }
-  .is-table .tableway__column {
-    display: table-cell; }
-
-.is-margin {
-  overflow: hidden; }
-  .is-margin .marginway__column .box {
-    padding-bottom: 99999px;
-    margin-bottom: -99999px; }
-    .is-margin .marginway__column .box .box__text {
-      padding-bottom: 0; }
-  .is-margin .marginway__link {
-    border-radius: 0;
-    padding: 10px 40px; }
-
+@media only screen and (min-width: 991px) {
+  .is-flex {
+    display: flex;
+    flex-wrap: wrap; }
+    .is-flex > [class*='col-'] {
+      display: flex; } }
+@media screen and (max-width: 991px) {
+  .flex .flex__column:not(:last-child) {
+    margin-bottom: 20px; } }
 @media only screen and (max-width: 991px) {
   .js__row .js__column .box {
     height: auto !important; }
@@ -61,12 +45,18 @@ body {
     left: 0; }
 
 .js.container,
-.flex.container,
-.tableway.container,
-.marginway.container {
+.flex.container {
   margin-bottom: 40px; }
 
 .welcome {
-  background-color: indianred; }
+  background-color: indianred;
+  padding: 10px 0 10px; }
+  .welcome h1 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: .8; }
 
 /*# sourceMappingURL=app.css.map */

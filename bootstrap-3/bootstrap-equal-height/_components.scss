@@ -1,49 +1,23 @@
-// make flex block and equal height
-.is-flex {
-  display: flex;
-  flex-wrap: wrap;
 
-  & > [class*='col-'] {
+// MAKE FLEX BLOCK AND EQUAL HEIGHT
+@media only screen and ( min-width: 991px ) {
+  .is-flex {
     display: flex;
-  }
-}
+    flex-wrap: wrap;
 
-// TABLE WAY
-.is-table {
-  display: table;
-  border-collapse: separate;
-
-  & .tableway__row {
-    display: table-row;
-  }
-
-  & .tableway__column {
-    display: table-cell;
-  }
-
-}
-
-// MARGIN WAY
-.is-margin {
-  overflow: hidden;
-
-  & .marginway__column .box {
-    padding-bottom: 99999px;
-    margin-bottom: -99999px;
-
-    & .box__text {
-      padding-bottom: 0;
-
+    & > [class*='col-'] {
+      display: flex;
     }
   }
+}
 
-  & .marginway__link {
-    border-radius: 0;
-    padding: 10px 40px;
+@media screen and ( max-width: 991px ) {
+  .flex .flex__column:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
-// media query for js-script
+// MEDIA QUERY FOR JS-SCRIPT
 @media only screen and ( max-width: 991px ) {
   .js__row .js__column .box {
     height: auto !important;

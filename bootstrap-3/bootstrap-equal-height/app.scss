@@ -45,12 +45,45 @@ body {
 }
 
 .js.container,
-.flex.container,
-.tableway.container,
-.marginway.container {
+.flex.container {
   margin-bottom: 40px;
 }
 
 .welcome {
   background-color: indianred;
+  padding: 10px 0 10px;
+
+  & h1 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: .8;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
