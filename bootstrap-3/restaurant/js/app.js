@@ -20,4 +20,11 @@ $( document ).ready( function() {
     });
     backToTop.tooltip( 'show' );
 
+    // datepicker
+    $( '.date' ).datepicker({
+        format: 'mm-dd-yyyy',
+        todayHighlight: true,
+        autoclose: true
+    });
+
 });
