@@ -37,11 +37,16 @@ a {
 
 .hero {
   margin: 190px 0 50px; }
+  .hero .hero__column:nth-child(2) .hero__picture {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
   .hero .hero__item {
     padding: 0;
     margin: 0;
     border: none;
-    border-radius: 0; }
+    border-radius: 0;
+    position: relative; }
     .hero .hero__item--primary {
       background-color: #aad4b3; }
     .hero .hero__item--secondary {
@@ -69,6 +74,7 @@ a {
   text-align: center;
   color: #969696; }
   .thumbs .thumbs__item {
+    padding-top: 20px;
     padding-bottom: 20px;
     position: relative; }
     .thumbs .thumbs__item p {
@@ -88,10 +94,16 @@ a {
       font-size: 40px; }
       .thumbs .thumbs__icon span::after {
         content: '.'; }
+  .thumbs .thumbs__link {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); }
 
 .feature-one {
   padding: 50px 0;
-  background-color: #f1f0f1; }
+  background-color: #f1f0f1;
+  position: relative; }
   .feature-one__title {
     font-size: 36px;
     font-weight: 700;
@@ -100,8 +112,12 @@ a {
     font-size: 14px;
     font-weight: 300;
     line-height: 1.6; }
-  .feature-one .button {
-    margin-top: 30px; }
+    .feature-one p:last-of-type {
+      padding-bottom: 50px; }
+  .feature-one__button {
+    position: absolute;
+    bottom: 0;
+    left: 15px; }
 
 .feature-two {
   padding: 40px 0; }
@@ -444,13 +460,6 @@ a {
   .back-to-top:hover, .back-to-top:focus {
     background-color: #535151; }
 
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-
-/* Make equal height with table styles */
 @media only screen and (min-width: 768px) {
   .is-table-row {
     display: table;

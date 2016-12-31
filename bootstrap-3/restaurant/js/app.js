@@ -3,20 +3,15 @@ $( document ).ready( function() {
     // BLOCK EQUAL HEIGHT
     $( '.block-equal' ).matchHeight();
 
-});
-
-$(document).ready( function () {
-
+    // BACK TO TOP
     var backToTop = $( '#back-to-top' );
-
-    $(window).scroll( function () {
+    $( window ).scroll( function () {
         if ( $( this ).scrollTop() > 50 ) {
             $( backToTop ).fadeIn();
         } else {
             $( backToTop ).fadeOut();
         }
     });
-
     // scroll body to 0px on click
     backToTop.click( function () {
         backToTop.tooltip( 'hide' );
