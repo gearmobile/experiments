@@ -34,6 +34,10 @@
   .feature-three .feature-three__main .feature-three__secondary {
     margin-bottom: 40px;
   }
+  //
+  .menu .menu__column .menu__image {
+    width: 100%;
+  }
 }
 
 // 900 BREAKPOINT
@@ -103,6 +107,15 @@
     margin: 0 auto 30px;
     width: auto;
     padding: 20px;
+  }
+  //
+  .menu .menu__content {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .menu .menu__button {
+    left: 50%;
+    transform: translateX( -50% );
   }
 }
 

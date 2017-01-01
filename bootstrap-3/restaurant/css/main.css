@@ -525,7 +525,10 @@ a {
 
   .feature-three .feature-three__main .feature-three__primary,
   .feature-three .feature-three__main .feature-three__secondary {
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+
+  .menu .menu__column .menu__image {
+    width: 100%; } }
 @media only screen and (max-width: 767px) {
   .block-equal {
     height: auto !important; }
@@ -556,7 +559,15 @@ a {
     float: none;
     margin: 0 auto 30px;
     width: auto;
-    padding: 20px; } }
+    padding: 20px; }
+
+  .menu .menu__content {
+    text-align: center;
+    padding: 30px 20px; }
+
+  .menu .menu__button {
+    left: 50%;
+    transform: translateX(-50%); } }
 .header {
   background-color: #f1f0f1;
   padding: 21px 0 0; }
