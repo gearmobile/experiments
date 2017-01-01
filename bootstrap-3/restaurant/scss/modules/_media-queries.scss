@@ -26,9 +26,13 @@
   .feature-two .feature-two__main .feature-two__row .feature-two__column:not(:last-child) {
     margin-bottom: 40px;
   }
-
   .feature-two .feature-two__main .feature-two__row .feature-two__column .feature-two__image {
     width: 100%;
+  }
+  //
+  .feature-three .feature-three__main .feature-three__primary,
+  .feature-three .feature-three__main .feature-three__secondary {
+    margin-bottom: 40px;
   }
 }
 
@@ -53,6 +57,23 @@
   }
 }
 
+// 700 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 699px ) {
+  //
+  .footer .footer__primary,
+  .footer .footer__secondary {
+    float: none;
+    text-align: center;
+  }
+  .footer .footer__primary {
+    margin-bottom: 40px;
+  }
+  .footer .footer__secondary .icons {
+    justify-content: center;
+  }
+}
+
 // 600 BREAKPOINT
 // -----------------------------------------------
 @media only screen and ( max-width: 599px ) {
@@ -70,11 +91,18 @@
 
 // 400 BREAKPOINT
 // -----------------------------------------------
-@media only screen and ( max-width: 499px ) {
+@media only screen and ( max-width: 399px ) {
   //
   .feature-two .feature-two__column .feature-two__link {
     float: none;
     margin: auto;
+  }
+  //
+  .feature-three .feature-three__secondary .list__thumb {
+    float: none;
+    margin: 0 auto 30px;
+    width: auto;
+    padding: 20px;
   }
 }
 
