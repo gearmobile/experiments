@@ -138,23 +138,28 @@
 .feature-two {
   padding: 40px 0;
 
-  & &__title {
+  &__title {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 40px;
   }
 
-  & &__picture {
+  &__header {
     margin-bottom: 30px;
   }
 
-  & &__image {
+  &__image {
     max-width: 100%;
   }
 
-  & &__link {
+  &__footer {
+    @include clearfix();
+  }
+
+  &__link {
     float: right;
   }
+
 }
 
 // FEATURE-THREE
