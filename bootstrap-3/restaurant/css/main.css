@@ -536,7 +536,14 @@ a {
     width: 100%; }
 
   .reservation .reservation__primary {
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+
+  .blog .blog__primary {
+    margin-bottom: 40px; }
+    .blog .blog__primary .post__image img {
+      width: 100%; }
+    .blog .blog__primary .post__column:not(:last-child) {
+      margin-bottom: 10px; } }
 @media only screen and (max-width: 767px) {
   .block-equal {
     height: auto !important; }
@@ -585,7 +592,12 @@ a {
 
   .reservation .reservation__primary .reservation__block .button {
     display: table;
-    margin: 30px auto 0; } }
+    margin: 30px auto 0; }
+
+  .blog .blog__secondary .recent-posts .media-left {
+    float: none;
+    display: block;
+    margin: 0 0 30px; } }
 .header {
   background-color: #f1f0f1;
   padding: 21px 0 0; }
