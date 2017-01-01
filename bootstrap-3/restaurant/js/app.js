@@ -1,9 +1,11 @@
 $( document ).ready( function() {
 
     // BLOCK EQUAL HEIGHT
+    // --------------------------------------------
     $( '.block-equal' ).matchHeight();
 
     // BACK TO TOP
+    // --------------------------------------------
     var backToTop = $( '#back-to-top' );
     $( window ).scroll( function () {
         if ( $( this ).scrollTop() > 50 ) {
@@ -20,11 +22,13 @@ $( document ).ready( function() {
     });
     backToTop.tooltip( 'show' );
 
-    // datepicker
-    $( '.date' ).datepicker({
+    // DATEPICKER
+    // -------------------------------------------
+    $( '#datePicker' ).datepicker({
         format: 'mm-dd-yyyy',
         todayHighlight: true,
-        autoclose: true
+        autoclose: true,
+        container: '#datePicker'
     });
 
 });
