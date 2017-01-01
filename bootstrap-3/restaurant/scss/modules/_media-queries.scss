@@ -38,6 +38,10 @@
   .menu .menu__column .menu__image {
     width: 100%;
   }
+  //
+  .reservation .reservation__primary {
+    margin-bottom: 40px;
+  }
 }
 
 // 900 BREAKPOINT
@@ -58,6 +62,15 @@
   .header .header__main .header__holder .header__secondary li > a {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  //
+  .reservation .reservation__image {
+    float: none;
+    margin: 0 0 40px;
+
+    & img {
+      width: 100%;
+    }
   }
 }
 
@@ -116,6 +129,11 @@
   .menu .menu__button {
     left: 50%;
     transform: translateX( -50% );
+  }
+  //
+  .reservation .reservation__primary .reservation__block .button {
+    display: table;
+    margin: 30px auto 0;
   }
 }
 

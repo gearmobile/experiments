@@ -368,6 +368,10 @@
   margin-top: 140px;
   padding: 50px 0;
 
+  & .reservation__primary .button {
+    margin-top: 30px;
+  }
+
   & .reservation__image {
     float: left;
     margin-right: 20px;
@@ -395,6 +399,11 @@
 
     & .form-group:last-child {
       margin-bottom: 0;
+    }
+
+    & input {
+      font-size: 14px;
+      color: #737272;
     }
 
     & label {

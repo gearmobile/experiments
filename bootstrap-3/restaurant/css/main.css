@@ -264,6 +264,8 @@ a {
 .reservation {
   margin-top: 140px;
   padding: 50px 0; }
+  .reservation .reservation__primary .button {
+    margin-top: 30px; }
   .reservation .reservation__image {
     float: left;
     margin-right: 20px; }
@@ -285,6 +287,9 @@ a {
     margin-top: 40px; }
     .reservation .reservation__form .form-group:last-child {
       margin-bottom: 0; }
+    .reservation .reservation__form input {
+      font-size: 14px;
+      color: #737272; }
     .reservation .reservation__form label {
       color: #737272;
       font-size: 14px;
@@ -528,14 +533,23 @@ a {
     margin-bottom: 40px; }
 
   .menu .menu__column .menu__image {
-    width: 100%; } }
+    width: 100%; }
+
+  .reservation .reservation__primary {
+    margin-bottom: 40px; } }
 @media only screen and (max-width: 767px) {
   .block-equal {
     height: auto !important; }
 
   .header .header__main .header__holder .header__secondary li > a {
     padding-top: 30px;
-    padding-bottom: 30px; } }
+    padding-bottom: 30px; }
+
+  .reservation .reservation__image {
+    float: none;
+    margin: 0 0 40px; }
+    .reservation .reservation__image img {
+      width: 100%; } }
 @media only screen and (max-width: 699px) {
   .footer .footer__primary,
   .footer .footer__secondary {
@@ -567,7 +581,11 @@ a {
 
   .menu .menu__button {
     left: 50%;
-    transform: translateX(-50%); } }
+    transform: translateX(-50%); }
+
+  .reservation .reservation__primary .reservation__block .button {
+    display: table;
+    margin: 30px auto 0; } }
 .header {
   background-color: #f1f0f1;
   padding: 21px 0 0; }
