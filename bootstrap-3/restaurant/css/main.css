@@ -285,12 +285,22 @@ a {
     line-height: 1.6; }
   .reservation .reservation__form {
     margin-top: 40px; }
+    .reservation .reservation__form .form-control
+    .reservation .reservation__form select {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0; }
     .reservation .reservation__form .input-daterange {
       margin-bottom: 10px; }
     .reservation .reservation__form .input-daterange .form-group {
       margin-bottom: 15px; }
       .reservation .reservation__form .input-daterange .form-group .input-group {
         width: 100%; }
+        .reservation .reservation__form .input-daterange .form-group .input-group input {
+          text-align: left;
+          border-radius: 0; }
+        .reservation .reservation__form .input-daterange .form-group .input-group .input-group-addon {
+          border-radius: 0; }
     .reservation .reservation__form input {
       font-size: 14px;
       color: #737272; }
@@ -305,13 +315,15 @@ a {
       background-color: #fdfdfd; }
     .reservation .reservation__form .selects label {
       padding-top: 3px; }
-    .reservation .reservation__form .controls::after {
-      content: "";
-      display: table;
-      clear: both; }
-    .reservation .reservation__form .controls .controls__reset {
-      float: left; }
-    .reservation .reservation__form .controls .controls__submit {
+    .reservation .reservation__form .reservation__control {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: 0; }
+      .reservation .reservation__form .reservation__control::after {
+        content: "";
+        display: table;
+        clear: both; }
+    .reservation .reservation__form .controls {
       float: right; }
 
 .blog {

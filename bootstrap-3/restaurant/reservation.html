@@ -67,32 +67,28 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, velit!</p>
                         <a href="#" class="button" role="button">more</a>
                     </article>
-                    <!--<a href="#" class="button" role="button">more</a>-->
                 </div>
                 <div class="reservation__secondary col-md-4">
                     <h2 class="reservation__title heading">our hours</h2>
                     <p class="reservation__lead lead">We are open 7 days a week - 8 AM to 12 PM <br> +1 101 889 9898</p>
                     <div class="reservation__form">
                         <form class="form-horizontal">
-
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <input type="email" class="form-control" id="reservationEmail1" placeholder="Email">
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <input type="password" class="form-control" id="reservationPassword" placeholder="Password">
                                 </div>
                             </div>
-
                             <div class="input-daterange input-group" id="dataPicker">
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="reservationCheckIn">Check-in</label>
-                                    <div class="col-sm-9">
+                                    <label class="col-lg-3 control-label" for="reservationCheckIn">Check-in</label>
+                                    <div class="col-lg-9">
                                         <div class="input-group">
-                                            <input type="text" class="input-sm form-control" id="reservationCheckIn" name="start" value="">
+                                            <input type="text" class="input-sm form-control" id="reservationCheckIn" name="start">
                                             <span class="input-group-addon">
                                                 <i class="glyphicon glyphicon-calendar"></i>
                                             </span>
@@ -100,25 +96,19 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="reservationCheckOut">Check-out</label>
-                                    <div class="col-sm-9">
+                                    <label class="col-lg-3 control-label" for="reservationCheckOut">Check-out</label>
+                                    <div class="col-lg-9">
                                         <div class="input-group">
-                                            <input type="text" class="input-sm form-control" id="reservationCheckOut" name="end" value="">
-                                            <span class="input-group-addon">
-                                            <i class="glyphicon glyphicon-calendar"></i>
-                                        </span>
+                                            <input type="text" class="input-sm form-control" id="reservationCheckOut" name="end">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-                            
                             <div class="selects form-group">
                                 <div class="col-sm-6">
                                     <div class="row">
-                                        <label class="col-sm-4 control-label" for="reservationAdults">Adults</label>
-                                        <select class="col-sm-4" name="reservationAdults" id="reservationAdults">
+                                        <label class="col-lg-4 control-label" for="reservationAdults">Adults</label>
+                                        <select class="col-lg-4" name="reservationAdults" id="reservationAdults">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -136,20 +126,17 @@
                                     </select>
                                 </div>
                             </div>
-
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <textarea class="form-control" rows="6" placeholder="Message:"></textarea>
                                 </div>
                             </div>
-
-                            <div class="reservation__controls form-group">
-                                <div class="controls col-sm-7 col-sm-push-5">
+                            <div class="reservation__control form-group">
+                                <nav class="controls">
                                     <button class="controls__reset button" type="reset" role="button">clear</button>
                                     <button class="controls__submit button" type="submit" role="button">send</button>
-                                </div>
+                                </nav>
                             </div>
-
                         </form>
                     </div>
                 </div>

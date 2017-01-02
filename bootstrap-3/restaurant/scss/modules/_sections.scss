@@ -397,6 +397,13 @@
   & .reservation__form {
     margin-top: 40px;
 
+    & .form-control
+    & select {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+    }
+
     & .input-daterange {
       margin-bottom: 10px;
     }
@@ -406,6 +413,15 @@
 
       & .input-group {
         width: 100%;
+        
+        & input {
+          text-align: left;
+          border-radius: 0;
+        }
+
+        & .input-group-addon {
+          border-radius: 0;
+        }
       }
     }
 
@@ -431,16 +447,15 @@
       padding-top: 3px;
     }
 
-    & .controls {
+    & .reservation__control {
       @include clearfix();
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-bottom: 0;
+    }
 
-      & .controls__reset {
-        float: left;
-      }
-
-      & .controls__submit {
-        float: right;
-      }
+    & .controls {
+      float: right;
     }
   }
 

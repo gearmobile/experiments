@@ -32,7 +32,6 @@ $( document ).ready( function() {
     var year = date.getFullYear();
     var today = new Date( year, month, day );
 
-    // var datePicker = $( '#datePicker' );
     var reservationCheckOut = $( '#reservationCheckOut' );
     var reservationCheckIn = $( '#reservationCheckIn' );
 
@@ -45,22 +44,4 @@ $( document ).ready( function() {
     });
     $( '#reservationCheckOut, #reservationCheckIn' ).datepicker( 'setDate', today );
 
-    // SET CURRENT DATE FOR CHECK OUT FIELD
-    // function setCurrentDate() {
-    //
-    //     var currentDay;
-    //     var currentMonth;
-    //
-    //     if ( day < 10 ) {
-    //         currentDay = '0' + day;
-    //     }
-    //     currentMonth = month + 1;
-    //     if ( currentMonth < 10 ) {
-    //         currentMonth = '0' + currentMonth;
-    //     }
-    //     var currentDate = currentMonth + '-' + currentDay + '-' + year;
-    //     reservationCheckOut.attr( 'value', currentDate );
-    // }
-
-    // setCurrentDate();
 });
