@@ -1,11 +1,5 @@
 $( document ).ready( function() {
 
-    var date = new Date();
-    var nowDay = date.getDate();
-    var nowMonth = date.getMonth();
-    var nowYear = date.getFullYear();
-    var today = new Date( nowYear, nowMonth, nowDay );
-
     // BLOCK EQUAL HEIGHT
     // --------------------------------------------
     $( '.block-equal' ).matchHeight();
@@ -30,59 +24,43 @@ $( document ).ready( function() {
 
     // DATEPICKER
     // -------------------------------------------
-    var datePicker = $( '#datePicker' );
+
+    // SET DATE VARIABLES
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    var today = new Date( year, month, day );
+
+    // var datePicker = $( '#datePicker' );
     var reservationCheckOut = $( '#reservationCheckOut' );
     var reservationCheckIn = $( '#reservationCheckIn' );
-    var currDate;
 
-    var optsDatePicker = {
+    // DATEPICKER
+    $( '#dataPicker' ).datepicker({
         format: 'mm-dd-yyyy',
         todayHighlight: true,
         autoclose: true,
-        container: '#datePicker'
-    };
-
-    datePicker.datepicker( optsDatePicker );
-    datePicker.datepicker( 'setDate', today );
-
-    console.log( currDate );
+        container: '#dataPicker'
+    });
+    $( '#reservationCheckOut, #reservationCheckIn' ).datepicker( 'setDate', today );
 
     // SET CURRENT DATE FOR CHECK OUT FIELD
-    // var newNowday =
-    if ( nowDay < 10 ) {
-        var newNowday = '0' + nowDay;
-    }
-    var newNowMonth = nowMonth + 1;
-    if ( newNowMonth < 10 ) {
-        newNowMonth = '0' + newNowMonth;
-    }
-    var nowDate = newNowMonth + '-' + newNowday + '-' + nowYear;
-    reservationCheckOut.attr( 'value', nowDate );
+    // function setCurrentDate() {
+    //
+    //     var currentDay;
+    //     var currentMonth;
+    //
+    //     if ( day < 10 ) {
+    //         currentDay = '0' + day;
+    //     }
+    //     currentMonth = month + 1;
+    //     if ( currentMonth < 10 ) {
+    //         currentMonth = '0' + currentMonth;
+    //     }
+    //     var currentDate = currentMonth + '-' + currentDay + '-' + year;
+    //     reservationCheckOut.attr( 'value', currentDate );
+    // }
 
-    // ------------------------------------------
-    datePicker.on( 'change', function () {
-
-        var limit = 1;
-        currDate = reservationCheckIn.val();
-        console.log( currDate );
-        var currDateN =  currDate.split( '-' );
-        var day = parseInt( currDateN[1] ) + limit;
-
-        if ( day < 10 ) {
-            day = '0' + day;
-        }
-
-        if ( day > '31' ) {
-            alert( 'Wrong choice!' );
-            reservationCheckIn.attr( 'value', nowDate );
-            return false;
-        } else {
-            currDateN[1] = day;
-            var newDate = currDateN.join( '-' );
-            reservationCheckOut.val( newDate );
-        }
-
-    });
-
-
+    // setCurrentDate();
 });

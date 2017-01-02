@@ -285,8 +285,12 @@ a {
     line-height: 1.6; }
   .reservation .reservation__form {
     margin-top: 40px; }
-    .reservation .reservation__form .form-group:last-child {
-      margin-bottom: 0; }
+    .reservation .reservation__form .input-daterange {
+      margin-bottom: 10px; }
+    .reservation .reservation__form .input-daterange .form-group {
+      margin-bottom: 15px; }
+      .reservation .reservation__form .input-daterange .form-group .input-group {
+        width: 100%; }
     .reservation .reservation__form input {
       font-size: 14px;
       color: #737272; }

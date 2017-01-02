@@ -397,8 +397,16 @@
   & .reservation__form {
     margin-top: 40px;
 
-    & .form-group:last-child {
-      margin-bottom: 0;
+    & .input-daterange {
+      margin-bottom: 10px;
+    }
+
+    & .input-daterange .form-group {
+      margin-bottom: 15px;
+
+      & .input-group {
+        width: 100%;
+      }
     }
 
     & input {
