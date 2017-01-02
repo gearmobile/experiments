@@ -89,10 +89,10 @@
 
                             <!-- reservation checkin -->
                             <div class="form-group">
-                                <label for="reservationCheckOut" class="col-sm-3 control-label">Check-in</label>
+                                <label class="col-sm-3 control-label" for="reservationCheckIn">Check-in</label>
                                 <div class="col-sm-9">
                                     <div class="input-group date" id="datePicker">
-                                        <input type="text" class="form-control" name="date" value="20/05/2014">
+                                        <input type="text" class="form-control" id="reservationCheckIn" name="date" value="">
                                         <span class="input-group-addon">
                                             <i class="glyphicon glyphicon-calendar"></i>
                                         </span>
@@ -103,9 +103,9 @@
 
                             <!-- reservation checkout -->
                             <div class="form-group">
-                                <label for="reservationCheckOut" class="col-sm-3 control-label">Check-out</label>
+                                <label class="col-sm-3 control-label" for="reservationCheckOut">Check-out</label>
                                 <div class="col-sm-9">
-                                    <input type="datetime" class="form-control" id="reservationCheckOut" value="20/05/2014">
+                                    <input type="datetime" class="form-control" id="reservationCheckOut" value="">
                                 </div>
                             </div>
                             <!-- end reservation checkout -->
@@ -113,8 +113,8 @@
                             <div class="selects form-group">
                                 <div class="col-sm-6">
                                     <div class="row">
-                                        <label for="reservationAdults" class="col-sm-4 control-label">Adults</label>
-                                        <select name="reservationAdults" id="reservationAdults" class="col-sm-4">
+                                        <label class="col-sm-4 control-label" for="reservationAdults">Adults</label>
+                                        <select class="col-sm-4" name="reservationAdults" id="reservationAdults">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -124,7 +124,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="reservationChildren" class="col-sm-6 control-label">Children</label>
-                                    <select name="reservationChildren" id="reservationChildren" class="col-sm-5">
+                                    <select class="col-sm-5" name="reservationChildren" id="reservationChildren">
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
