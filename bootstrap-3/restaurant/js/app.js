@@ -6,16 +6,6 @@ $( document ).ready( function() {
     var nowYear = date.getFullYear();
     var today = new Date( nowYear, nowMonth, nowDay );
 
-    // if ( nowDay < 10 ) {
-    //     nowDay = '0' + nowDay;
-    // }
-    // nowMonth = nowMonth + 1;
-    // if ( nowMonth < 10 ) {
-    //     nowMonth = '0' + nowMonth;
-    // }
-    // var nowDate = nowMonth + '-' + nowDay + '-' + nowYear;
-    // $( '#reservationCheckOut' ).attr( 'value', nowDate );
-
     // BLOCK EQUAL HEIGHT
     // --------------------------------------------
     $( '.block-equal' ).matchHeight();
@@ -41,6 +31,10 @@ $( document ).ready( function() {
     // DATEPICKER
     // -------------------------------------------
     var datePicker = $( '#datePicker' );
+    var reservationCheckOut = $( '#reservationCheckOut' );
+    var reservationCheckIn = $( '#reservationCheckIn' );
+    var currDate;
+
     var optsDatePicker = {
         format: 'mm-dd-yyyy',
         todayHighlight: true,
@@ -51,15 +45,44 @@ $( document ).ready( function() {
     datePicker.datepicker( optsDatePicker );
     datePicker.datepicker( 'setDate', today );
 
+    console.log( currDate );
+
     // SET CURRENT DATE FOR CHECK OUT FIELD
+    // var newNowday =
     if ( nowDay < 10 ) {
-        nowDay = '0' + nowDay;
+        var newNowday = '0' + nowDay;
     }
-    nowMonth = nowMonth + 1;
-    if ( nowMonth < 10 ) {
-        nowMonth = '0' + nowMonth;
+    var newNowMonth = nowMonth + 1;
+    if ( newNowMonth < 10 ) {
+        newNowMonth = '0' + newNowMonth;
     }
-    var nowDate = nowMonth + '-' + nowDay + '-' + nowYear;
-    $( '#reservationCheckOut' ).attr( 'value', nowDate );
+    var nowDate = newNowMonth + '-' + newNowday + '-' + nowYear;
+    reservationCheckOut.attr( 'value', nowDate );
+
+    // ------------------------------------------
+    datePicker.on( 'change', function () {
+
+        var limit = 1;
+        currDate = reservationCheckIn.val();
+        console.log( currDate );
+        var currDateN =  currDate.split( '-' );
+        var day = parseInt( currDateN[1] ) + limit;
+
+        if ( day < 10 ) {
+            day = '0' + day;
+        }
+
+        if ( day > '31' ) {
+            alert( 'Wrong choice!' );
+            reservationCheckIn.attr( 'value', nowDate );
+            return false;
+        } else {
+            currDateN[1] = day;
+            var newDate = currDateN.join( '-' );
+            reservationCheckOut.val( newDate );
+        }
+
+    });
+
 
 });
