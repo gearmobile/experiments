@@ -294,13 +294,20 @@ a {
       margin-bottom: 10px; }
     .reservation .reservation__form .input-daterange .form-group {
       margin-bottom: 15px; }
+      .reservation .reservation__form .input-daterange .form-group :first-child input {
+        border-right-width: 0; }
       .reservation .reservation__form .input-daterange .form-group .input-group {
         width: 100%; }
         .reservation .reservation__form .input-daterange .form-group .input-group input {
           text-align: left;
           border-radius: 0; }
         .reservation .reservation__form .input-daterange .form-group .input-group .input-group-addon {
-          border-radius: 0; }
+          border-radius: 0;
+          background-color: transparent;
+          border: none;
+          border-top: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc; }
     .reservation .reservation__form input {
       font-size: 14px;
       color: #737272; }
@@ -313,8 +320,15 @@ a {
       min-height: 140px;
       resize: none;
       background-color: #fdfdfd; }
-    .reservation .reservation__form .selects label {
-      padding-top: 3px; }
+    .reservation .reservation__form .selects__group {
+      display: table; }
+    .reservation .reservation__form .selects__label {
+      display: table-cell;
+      width: 1%; }
+    .reservation .reservation__form .selects__list {
+      display: table-cell;
+      width: 99%;
+      margin-left: 6px; }
     .reservation .reservation__form .reservation__control {
       padding-left: 15px;
       padding-right: 15px;
@@ -609,6 +623,9 @@ a {
   .reservation .reservation__primary .reservation__block .button {
     display: table;
     margin: 30px auto 0; }
+
+  .reservation .selects .selects__group {
+    display: block; }
 
   .blog .blog__secondary .recent-posts .media-left {
     float: none;

@@ -411,16 +411,33 @@
     & .input-daterange .form-group {
       margin-bottom: 15px;
 
+      & :first-child input {
+        border-right-width: 0;
+      }
+
       & .input-group {
         width: 100%;
         
         & input {
           text-align: left;
           border-radius: 0;
+          //border-right-width: 0;
         }
+
+        //& .form-group:first-child input {
+        //  border-right-width: 0;
+        //}
 
         & .input-group-addon {
           border-radius: 0;
+          background-color: transparent;
+          border: none;
+          border-top: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          //border-top-width: 1px;
+          //border-right-width: 1px;
+          //border-left-width: 0;
         }
       }
     }
@@ -443,8 +460,23 @@
       background-color: #fdfdfd;
     }
 
-    & .selects label {
-      padding-top: 3px;
+    & .selects {
+      //
+
+      &__group {
+        display: table;
+      }
+
+      &__label {
+        display: table-cell;
+        width: 1%;
+      }
+
+      &__list {
+        display: table-cell;
+        width: 99%;
+        margin-left: 6px;
+      }
     }
 
     & .reservation__control {

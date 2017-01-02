@@ -84,7 +84,9 @@
     & img {
       width: 100%;
     }
+
   }
+
 }
 
 // 700 BREAKPOINT
@@ -147,6 +149,11 @@
   .reservation .reservation__primary .reservation__block .button {
     display: table;
     margin: 30px auto 0;
+  }
+  .reservation .selects {
+    & .selects__group {
+      display: block;
+    }
   }
   //
   .blog .blog__secondary .recent-posts .media-left {
