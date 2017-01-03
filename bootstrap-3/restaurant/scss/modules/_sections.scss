@@ -388,45 +388,45 @@
     }
   }
 
+  // RESERVATION LEAD
   & .reservation__lead {
-    font-size: 16px;
     color: $color-dark;
     line-height: 1.6;
+
+    & span {
+      display: block;
+      white-space: nowrap;
+      font-size: 16px;
+    }
+
   }
 
+  // RESERVATION FORM
   & .reservation__form {
     margin-top: 40px;
 
-    & .form-control
-    & select {
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-    }
-
+    // INPUT DATERANGE
     & .input-daterange {
       margin-bottom: 10px;
-    }
 
-    & .input-daterange .form-group {
-      margin-bottom: 15px;
+      // FORM GROUP
+      & .form-group {
+        margin-bottom: 15px;
 
-      & :first-child input {
-        border-right-width: 0;
+        & .input-with-icon {
+          border-right-width: 0;
+        }
+
       }
 
+      // INPUT GROUP
       & .input-group {
         width: 100%;
-        
+
         & input {
           text-align: left;
           border-radius: 0;
-          //border-right-width: 0;
         }
-
-        //& .form-group:first-child input {
-        //  border-right-width: 0;
-        //}
 
         & .input-group-addon {
           border-radius: 0;
@@ -435,60 +435,62 @@
           border-top: 1px solid #ccc;
           border-right: 1px solid #ccc;
           border-bottom: 1px solid #ccc;
-          //border-top-width: 1px;
-          //border-right-width: 1px;
-          //border-left-width: 0;
         }
+
       }
+
     }
 
+    // ALL INPUTS FORM
     & input {
       font-size: 14px;
       color: #737272;
     }
 
+    // ALL LABELS FORM
     & label {
-      color: #737272;
+      color: $primary-color;
       font-size: 14px;
       font-weight: 400;
       text-align: left;
     }
 
+    // TEXTAREA FORM
     & textarea {
       min-height: 140px;
       resize: none;
       background-color: #fdfdfd;
     }
 
-    & .selects {
-      //
-
-      &__group {
-        display: table;
-      }
-
-      &__label {
-        display: table-cell;
-        width: 1%;
-      }
-
-      &__list {
-        display: table-cell;
-        width: 99%;
-        margin-left: 6px;
-      }
+    // SEECTS FORM
+    & .selects .selects__group {
+      display: table;
     }
 
+    & .selects .selects__label {
+      display: table-cell;
+      width: 1%;
+    }
+
+    & .selects .selects__list {
+      display: table-cell;
+      width: 96%;
+      margin-left: 3%;
+    }
+
+    // FORM BUTTONS
     & .reservation__control {
-      @include clearfix();
       padding-left: 15px;
       padding-right: 15px;
       margin-bottom: 0;
+      @include clearfix();
+
+      & .controls {
+        float: right;
+      }
+
     }
 
-    & .controls {
-      float: right;
-    }
   }
 
 }

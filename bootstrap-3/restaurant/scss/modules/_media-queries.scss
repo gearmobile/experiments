@@ -1,4 +1,13 @@
 
+// 1200 BREAKPOINT
+// -----------------------------------------------
+@media only screen and ( max-width: 1200px ) {
+  //
+  .reservation .reservation__lead {
+    //font-size: 14px;
+  }
+}
+
 // 992 BREAKPOINT
 // -----------------------------------------------
 @media only screen and ( max-width: 991px ) {
@@ -41,6 +50,9 @@
   //
   .reservation .reservation__primary {
     margin-bottom: 40px;
+  }
+  .reservation .reservation__lead {
+    //font-size: 16px;
   }
   //
   .blog .blog__primary {
@@ -150,10 +162,8 @@
     display: table;
     margin: 30px auto 0;
   }
-  .reservation .selects {
-    & .selects__group {
-      display: block;
-    }
+  .reservation .reservation__form .selects .selects__group {
+    display: block;
   }
   //
   .blog .blog__secondary .recent-posts .media-left {
