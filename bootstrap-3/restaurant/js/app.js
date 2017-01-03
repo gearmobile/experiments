@@ -8,24 +8,28 @@ $( document ).ready( function() {
     // --------------------------------------------
     var backToTop = $( '#back-to-top' );
     $( window ).scroll( function () {
-        if ( $( this ).scrollTop() > 50 ) {
-            $( backToTop ).fadeIn();
+        if ( $( this ).scrollTop() > 50 && $(this).width() > 500 ) {
+            backToTop.fadeIn();
         } else {
-            $( backToTop ).fadeOut();
+            backToTop.fadeOut();
         }
     });
-    // scroll body to 0px on click
+
+    // SCROLL TO TOP ON CLICK ------------------------
     backToTop.click( function () {
         backToTop.tooltip( 'hide' );
         $( 'body, html' ).animate({ scrollTop: 0 }, 800 );
         return false;
     });
+
+    // SHOW TOOLTIP --------------------
     backToTop.tooltip( 'show' );
+
 
     // DATEPICKER
     // -------------------------------------------
 
-    // SET DATE VARIABLES
+    // SET DATE VARIABLES -------------
     var date = new Date();
     var day = date.getDate();
     var month = date.getMonth();
@@ -35,13 +39,14 @@ $( document ).ready( function() {
     var reservationCheckOut = $( '#reservationCheckOut' );
     var reservationCheckIn = $( '#reservationCheckIn' );
 
-    // DATEPICKER
+    // DATEPICKER ----------------
     $( '#dataPicker' ).datepicker({
         format: 'mm-dd-yyyy',
         todayHighlight: true,
         autoclose: true,
         container: '#dataPicker'
     });
+    // DATEPICKER SET CURRENT DATE -------------
     $( '#reservationCheckOut, #reservationCheckIn' ).datepicker( 'setDate', today );
 
 });
