@@ -37,6 +37,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 99999;
   background-color: $primary-color;
   transition: background-color .2s;
   

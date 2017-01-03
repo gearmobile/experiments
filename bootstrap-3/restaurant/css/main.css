@@ -505,6 +505,7 @@ a {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 99999;
   background-color: #727171;
   transition: background-color .2s; }
   .back-to-top .glyphicon-chevron-up {
