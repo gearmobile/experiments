@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+//        "sourceMap": true,
+        "outFile": "build/js/app.js",
+        "target": "es5"
+    },
+    "files": [
+        "src/app.ts"
+    ],
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "build",
+        "node_modules",
+        "bower_components",
+        "**/*.spec.ts"
+    ]
+}
