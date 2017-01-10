@@ -1,8 +1,28 @@
-// https://ru.vuejs.org/v2/guide/
 
 new Vue({
-    el: '#app',
+    el: '#container',
     data: {
-        message: ''
+        fruits: [
+            {
+                name: 'apple',
+                status: false
+            },
+            {
+                name: 'melon',
+                status: false
+            },
+            {
+                name: 'apricot',
+                status: false
+            },
+            {
+                name: 'cherry',
+                status: true
+            },
+            {
+                name: 'rose',
+                status: false
+            }
+        ]
     }
 });
