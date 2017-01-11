@@ -1,48 +1,60 @@
 window.addEventListener('DOMContentLoaded', function () {
+
     //
     if ( localStorage ) {
+
         var bookShelfButton = document.querySelector( '#bookshelf__button' );
         var bookShelfList = document.querySelector( '#bookShelfList' );
         var bookShelfSecondary = document.querySelector( '#bookShelfSecondary' );
         //
+
         function saveData() {
+
             //
             var bookAuthor = document.querySelector( '#bookshelfAuthor' );
             var bookTitle = document.querySelector( '#bookshelfTitle' );
+
             //
             localStorage.setItem( 'author', bookAuthor.value );
             localStorage.setItem( 'title', bookTitle.value );
-            // item & paragraphs --------------------
-            var item = document.createElement( 'li' );
-            item.setAttribute( 'class', 'item-list' );
-            var itemAuthor = document.createElement( 'p' );
-            itemAuthor.setAttribute( 'class', 'book-author' );
-            var itemTitle = document.createElement( 'p' );
-            itemTitle.setAttribute( 'class', 'book-title' );
+
+            // card --------------------
+            var card = document.createElement( 'li' );
+            card.setAttribute( 'class', 'card' );
+
+            var cardTitle = document.createElement( 'h4' );
+            cardTitle.setAttribute( 'class', 'card-title' );
+
+            var cardSubtitle = document.createElement( 'h6' );
+            cardSubtitle.setAttribute( 'class', 'card-subtitle' );
+
             // buttons --------------------
-            var buttonRemove = document.createElement( 'button' );
-            var buttonEdit = document.createElement( 'button' );
-            buttonEdit.setAttribute( 'class', 'button-edit pull-left btn btn-primary' );
-            buttonRemove.setAttribute( 'class', 'button-remove pull-right btn btn-danger' );
-            var buttonRemoveText = document.createTextNode( 'Remove' );
-            var buttonEditText = document.createTextNode( 'Edit' );
-            buttonRemove.appendChild( buttonRemoveText );
-            buttonEdit.appendChild( buttonEditText );
+            var cardRemove = document.createElement( 'button' );
+            var cardEdit = document.createElement( 'button' );
+            cardEdit.setAttribute( 'class', 'card-edit pull-left btn btn-primary' );
+            cardRemove.setAttribute( 'class', 'card-remove pull-right btn btn-danger' );
+
+            var cardRemoveText = document.createTextNode( 'Remove' );
+            var cardEditText = document.createTextNode( 'Edit' );
+            cardRemove.appendChild( cardRemoveText );
+            cardEdit.appendChild( cardEditText );
+
             // get local data --------------------
-            itemAuthor.innerHTML = localStorage.getItem( 'author' );
-            itemTitle.innerHTML = localStorage.getItem( 'title' );
+            cardTitle.innerHTML = localStorage.getItem( 'author' );
+            cardSubtitle.innerHTML = localStorage.getItem( 'title' );
+
             // append to page --------------------
-            item.appendChild( itemAuthor );
-            item.appendChild( itemTitle );
-            item.appendChild( buttonEdit );
-            item.appendChild( buttonRemove );
-            bookShelfList.appendChild( item );
+            card.appendChild( cardTitle );
+            card.appendChild( cardSubtitle );
+            card.appendChild( cardEdit );
+            card.appendChild( cardRemove );
+            bookShelfList.appendChild( card );
         }
         //
         bookShelfButton.addEventListener( 'click', saveData, false );
         //
         bookShelfSecondary.addEventListener( 'click', function ( event ) {
-            if ( event && event.target.classList.contains( 'button-remove' ) ) {
+            if ( event && event.target.classList.contains( 'card-remove' ) ) {
                 var currentItem = event.target.parentNode;
                 currentItem.parentNode.removeChild( currentItem );
             }
