@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Case 02</title>
-    <link rel="stylesheet" href="app.css">
     <script src="../library/scripts/vue.js"></script>
+    <style>
+        .selected {
+            color: darkslategray;
+            font-size: 20px;
+            padding: 10px 0;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
 
-    <div id="app">
-        <form action="#" method="get">
-            <div class="row">
-                <span class="error" v-show="!message">you must enter a message</span>
-            </div>
-            <div class="row">
-                <textarea v-model="message" id="area" name="message" id="message" cols="30" rows="10"></textarea>
-            </div>
-            <div class="row">
-                <button v-if="message" id="btn" type="submit">send message</button>
-            </div>
-        </form>
-
-        <pre>{{ $data | json }}</pre>
-
+    <div id="container">
+        <ul>
+            <li v-for="item in fruits" v-bind:class="{ 'selected': item.status }">{{ item.name }}</li>
+        </ul>
     </div>
-
 
     <!--SCRIPTS-->
     <script src="app.js"></script>

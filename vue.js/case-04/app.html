@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Case - 04 - Events</title>
-    <link rel="stylesheet" href="app.css">
+    <title>Case 03</title>
     <script src="../library/scripts/vue.js"></script>
+    <style>
+        .block {
+            width: 400px;
+            height: 400px;
+            background-color: mediumvioletred;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-    <div id="app" class="row">
-        <form action="done.html" @submit.prevent="fnHandle">
-            <button type="submit">submit me</button>
-        </form>
-    </div>
-    <div id="count" class="row">
-        <button type="submit" @click="fnCount">
-            Increment Counter {{ count }}
-        </button>
+    <div id="container">
+        <div class="block"></div>
+        <button type="submit">press</button>
     </div>
 
     <!--SCRIPTS-->

@@ -1,9 +1,7 @@
-// https://ru.vuejs.org/v2/guide/
 
-// view model
 new Vue({
-    el: '#app',
+    el: '#container',
     data: {
-        message: 'Hello Vue.js'
+        message: 'Hello from Vue'
     }
 });
