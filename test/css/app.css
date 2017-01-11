@@ -7,3 +7,33 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
 }
+
+.bookshelf__primary .form-control {
+    text-transform: capitalize;
+}
+
+.bookshelf__list {
+    margin-bottom: 0;
+}
+
+.bookshelf__list .item-list {
+    padding: 20px;
+    border: 1px solid #204d74;
+    border-radius: 4px;
+}
+
+.bookshelf__list .item-list::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.bookshelf__list .item-list:not(:last-child) {
+    margin: 0 0 20px;
+}
+
+.bookshelf__list .book-author,
+.bookshelf__list .book-title {
+    text-transform: capitalize;
+}
+
