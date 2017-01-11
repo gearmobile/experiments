@@ -7,33 +7,32 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-
     <div class="bookshelf container">
         <div class="bookshelf__wrapper row">
             <div class="bookshelf__primary col-md-6">
-                <form class="bookshelf__edit" method="get" action="#">
+                <form id="bookShelfForm" class="bookshelf__edit" method="post" action="#">
                     <div class="form-group">
                         <label for="bookshelfAuthor">Book Author</label>
-                        <input type="text" class="form-control" id="bookshelfAuthor" placeholder="Book Author" required>
+                        <input type="text" class="form-control" id="bookshelfAuthor" pattern="^[a-zA-Z0-9_-]{3,16}$" placeholder="Book Author" required>
                     </div>
                     <div class="form-group">
                         <label for="bookshelfYear">Book Year</label>
-                        <input type="text" class="form-control" id="bookshelfYear" placeholder="Book Year">
+                        <input type="text" class="form-control" id="bookshelfYear" pattern="^\d*\.?\d+$" placeholder="Book Year">
                     </div>
                     <div class="form-group">
                         <label for="bookshelfTitle">Book Title</label>
-                        <input type="text" class="form-control" id="bookshelfTitle" placeholder="Book Title" required>
+                        <input type="text" class="form-control" id="bookshelfTitle" pattern="^[a-zA-Z0-9_-]{3,26}$" placeholder="Book Title" required>
                     </div>
                     <div class="form-group">
                         <label for="bookshelfPages">Book Pages</label>
-                        <input type="text" class="form-control" id="bookshelfPages" placeholder="Book Pages">
+                        <input type="text" class="form-control" id="bookshelfPages" pattern="^\d*\.?\d+$" placeholder="Book Pages">
                     </div>
-                    <button id="bookshelf__button" type="submit" class="btn btn-default pull-left">Add \ Edit Book</button>
+                    <button id="bookshelf__save" type="submit" class="btn btn-default pull-left">Add \ Edit Book</button>
                     <button id="bookshelf__clear" type="reset" class="btn btn-default pull-right">Clear Inputs</button>
                 </form>
             </div>
             <div id="bookShelfSecondary" class="bookshelf__secondary col-md-6">
-                <ul id="bookShelfList" class="bookshelf__list list-unstyled"></ul>
+                <ul id="bookShelfList" class="bookshelf__list list-unstyled clearfix"></ul>
             </div>
         </div>
     </div>

@@ -14,28 +14,31 @@ body {
 
 .bookshelf__list {
     margin-bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
 }
 
 .bookshelf__list .card {
     width: 48%;
-    display: inline-block;
-    margin: 0 1% 20%;
+    float: left;
+    /*display: inl ine-block;*/
+    margin: 0 1% 2%;
     padding: 20px;
     border: 1px solid rgba( 0,0,0, .125 );
     border-radius: 4px;
     background-color: #f7f7f9;
 }
 
-.bookshelf__list .card::after {
-    content: '';
-    display: table;
-    clear: both;
-}
+/*.bookshelf__list .card::after {*/
+    /*content: '';*/
+    /*display: table;*/
+    /*clear: both;*/
+/*}*/
 
 .bookshelf__list .card-title,
-.bookshelf__list .card-subtitle {
+.bookshelf__list .card-subtitle,
+.bookshelf__list .card-edit,
+.bookshelf__list .card-remove {
     text-transform: capitalize;
 }
 

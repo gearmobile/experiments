@@ -1,68 +1,71 @@
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener( 'DOMContentLoaded', function () {
 
-    //
     if ( localStorage ) {
 
-        var bookShelfButton = document.querySelector( '#bookshelf__button' );
+        var bookShelfSave = document.querySelector( '#bookshelf__save' );
         var bookShelfList = document.querySelector( '#bookShelfList' );
-        var bookShelfSecondary = document.querySelector( '#bookShelfSecondary' );
-        //
+        var booksGallery = document.querySelector( '#bookShelfSecondary' );
 
+        var inputs = document.querySelectorAll( '.form-control' );
+        var form = document.querySelector( '#bookShelfForm' );
+        var counter = 0;
+
+        // function to save data -----------------
         function saveData() {
-
-            //
-            var bookAuthor = document.querySelector( '#bookshelfAuthor' );
-            var bookTitle = document.querySelector( '#bookshelfTitle' );
-
-            //
-            localStorage.setItem( 'author', bookAuthor.value );
-            localStorage.setItem( 'title', bookTitle.value );
-
-            // card --------------------
+            var obj = {};
+            inputs.forEach( function ( item ) {
+                var id = item.getAttribute( 'id' );
+                var value = item.value;
+                obj.id = value; // !
+                console.log( obj );
+            });
+            // --------------------------------------------
+            var objStr = JSON.stringify( obj );
+            localStorage.setItem( counter.toString(), objStr );
+            // generate card -------------------------------
             var card = document.createElement( 'li' );
-            card.setAttribute( 'class', 'card' );
-
-            var cardTitle = document.createElement( 'h4' );
-            cardTitle.setAttribute( 'class', 'card-title' );
-
-            var cardSubtitle = document.createElement( 'h6' );
-            cardSubtitle.setAttribute( 'class', 'card-subtitle' );
-
-            // buttons --------------------
-            var cardRemove = document.createElement( 'button' );
-            var cardEdit = document.createElement( 'button' );
-            cardEdit.setAttribute( 'class', 'card-edit pull-left btn btn-primary' );
-            cardRemove.setAttribute( 'class', 'card-remove pull-right btn btn-danger' );
-
-            var cardRemoveText = document.createTextNode( 'Remove' );
-            var cardEditText = document.createTextNode( 'Edit' );
-            cardRemove.appendChild( cardRemoveText );
-            cardEdit.appendChild( cardEditText );
-
-            // get local data --------------------
-            cardTitle.innerHTML = localStorage.getItem( 'author' );
-            cardSubtitle.innerHTML = localStorage.getItem( 'title' );
-
-            // append to page --------------------
-            card.appendChild( cardTitle );
-            card.appendChild( cardSubtitle );
-            card.appendChild( cardEdit );
-            card.appendChild( cardRemove );
-            bookShelfList.appendChild( card );
+            card.classList.add( 'card' );
+            card.setAttribute( 'id', counter.toString() );
+            bookShelfList.append( card );
+            card.insertAdjacentHTML( 'beforeEnd', '<h4 class="card-title">' + document.querySelector( '#bookshelfAuthor' ).value + '</h4>');
+            card.insertAdjacentHTML( 'beforeEnd', '<h6 class="card-subtitle">' + document.querySelector( '#bookshelfTitle' ).value + '</h6>');
+            card.insertAdjacentHTML( 'beforeEnd', '<button class="card-edit pull-left btn btn-primary">edit</button>');
+            card.insertAdjacentHTML( 'beforeEnd', '<button class="card-remove pull-right btn btn-danger">remove</button>');
+            counter++;
         }
-        //
-        bookShelfButton.addEventListener( 'click', saveData, false );
-        //
-        bookShelfSecondary.addEventListener( 'click', function ( event ) {
+
+        // function to load data --------------------
+        // function loadData() {
+        //     inputs.forEach(function ( item ) {
+        //         var id = item.getAttribute( 'id' );
+        //         item.value = localStorage.getItem( id );
+        //     });
+        // }
+
+        // save data --------------
+        bookShelfSave.addEventListener( 'click', saveData, false );
+
+        // remove card ------------------
+        booksGallery.addEventListener( 'click', function ( event ) {
             if ( event && event.target.classList.contains( 'card-remove' ) ) {
                 var currentItem = event.target.parentNode;
                 currentItem.parentNode.removeChild( currentItem );
             }
-        }, false );
-    }
-    //
+        }, false);
 
-}, false);
+        // load data ------------------
+        booksGallery.addEventListener( 'click', function ( event ) {
+            if ( event && event.target.classList.contains( 'card-edit' ) ) {
+                var currentItem = event.target.parentNode;
+                var currentObj = JSON.parse( localStorage.getItem( currentItem.getAttribute( 'id' ) ) );
+                inputs.forEach( function ( item ) {
+                    var id = item.getAttribute( 'id' );
+                    item.value = currentObj.id;
+                });
+            }
+        }, false);
+    }
+});
 
 
 
