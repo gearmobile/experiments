@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="bookshelf container">
+        <div class="bookshelf__wrapper row">
+            <div class="bookshelf__side col-md-6">
+                <form class="bookshelf__edit" method="get" action="#">
+                    <div class="form-group">
+                        <label for="bookshelfAuthor">Book Author</label>
+                        <input type="text" class="form-control" id="bookshelfAuthor" placeholder="Book Author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookshelfYear">Book Year</label>
+                        <input type="text" class="form-control" id="bookshelfYear" placeholder="Book Year">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookshelfTitle">Book Title</label>
+                        <input type="text" class="form-control" id="bookshelfTitle" placeholder="Book Title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookshelfPages">Book Pages</label>
+                        <input type="text" class="form-control" id="bookshelfPages" placeholder="Book Pages">
+                    </div>
+                    <button id="bookshelf__button" type="submit" class="btn btn-default">Add \ Edit Book</button>
+                </form>
+            </div>
+            <div class="bookshelf__side col-md-6">
+                <ul id="bookShelfList" class="bookshelf__list"></ul>
+            </div>
+        </div>
+    </div>
+    <!--SCRIPT-->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
