@@ -10,7 +10,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
         var inputs = document.querySelectorAll( '.form-control' );
         var form = document.querySelector( '#bookShelfForm' );
         var counter = 1;
-        var currentItemID;
+        var currentCardID;
 
         // function to save data -----------------
         function saveData() {
@@ -52,19 +52,18 @@ window.addEventListener( 'DOMContentLoaded', function () {
         booksGallery.addEventListener( 'click', function ( event ) {
             if ( event && event.target.classList.contains( 'card-edit' ) ) {
                 var currentItem = event.target.parentNode;
-                currentItemID = currentItem.getAttribute( 'id' );
-                var currentObj = JSON.parse( localStorage.getItem( currentItemID ) );
+                currentCardID = currentItem.getAttribute( 'id' );
+                var currentObj = JSON.parse( localStorage.getItem( currentCardID ) );
                 inputs.forEach( function ( item ) {
                     item.value = currentObj[ item.id ];
                 });
-                console.log( parseInt( currentItemID ) );
+                console.log( parseInt( currentCardID ) );
             }
         }, false);
 
         // edit data ---------------------
         bookShelfEdit.addEventListener( 'click', function () {
-            var currentCard = document.getElementById( currentItemID );
-            console.log( currentCard );
+            var currentCard = document.getElementById( currentCardID );
             document.querySelectorAll( '.form-control' ).forEach( function ( item ) {
                 if ( item.id === 'bookshelfAuthor' ) {
                     currentCard.childNodes[0].innerHTML = item.value;
@@ -72,10 +71,15 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 if ( item.id === 'bookshelfTitle' ) {
                     currentCard.childNodes[1].innerHTML = item.value;
                 }
-                // item.value = currentObj[ item.id ];
             });
-            // currentCard.childNodes[0].innerHTML = '';
-            // currentCard.childNodes[1].innerHTML = '';
+            var obj = {};
+            document.querySelectorAll( '.form-control' ).forEach( function ( item ) {
+                obj[ item.id ] = item.value;
+            });
+            localStorage.setItem( currentCardID, JSON.stringify( obj ) );
+            document.querySelectorAll( '.form-control' ).forEach( function ( item ) {
+                item.value = '';
+            });
         });
     }
 });
