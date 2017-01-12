@@ -9,8 +9,8 @@ window.addEventListener( 'DOMContentLoaded', function () {
 
         var inputs = document.querySelectorAll( '.form-control' );
         var form = document.querySelector( '#bookShelfForm' );
-        var counter = 1;
         var currentCardID;
+        var counter = 1;
 
         // function to clear all inputs
         function clearInputs() {
@@ -18,6 +18,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 item.value = '';
             });
         }
+
 
         // function to save data -----------------
         function saveData() {
@@ -59,7 +60,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 var currentItem = event.target.parentNode;
                 currentCardID = currentItem.getAttribute( 'id' );
                 var currentObj = JSON.parse( localStorage.getItem( currentCardID ) );
-                inputs.forEach( function ( item ) {
+                document.querySelectorAll( '.form-control' ).forEach( function ( item ) {
                     item.value = currentObj[ item.id ];
                 });
                 bookShelfEdit.style.display = 'block';
@@ -95,8 +96,8 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 card.classList.add( 'card' );
                 card.setAttribute( 'id', key );
                 bookShelfList.append( card );
-                card.insertAdjacentHTML( 'beforeEnd', '<h4 class="card-title">' + currObject['bookshelfAuthor'] + '</h4>');
-                card.insertAdjacentHTML( 'beforeEnd', '<h6 class="card-subtitle">' + currObject['bookshelfTitle'] + '</h6>');
+                card.insertAdjacentHTML( 'beforeEnd', '<h4 class="card-title">' + currObject[ 'bookshelfAuthor' ] + '</h4>');
+                card.insertAdjacentHTML( 'beforeEnd', '<h6 class="card-subtitle">' + currObject[ 'bookshelfTitle' ] + '</h6>');
                 card.insertAdjacentHTML( 'beforeEnd', '<button class="card-edit pull-left btn btn-primary">edit</button>');
                 card.insertAdjacentHTML( 'beforeEnd', '<button class="card-remove pull-right btn btn-danger">remove</button>');
             }
