@@ -50,9 +50,10 @@ window.addEventListener( 'DOMContentLoaded', function () {
         booksGallery.addEventListener( 'click', function ( event ) {
             if ( event && event.target.classList.contains( 'card-remove' ) ) {
                 var currentItem = event.target.parentNode;
+                localStorage.removeItem( currentItem.getAttribute( 'id' ) );
                 currentItem.parentNode.removeChild( currentItem );
             }
-        }, false);
+        }, false );
 
         // load data ------------------
         booksGallery.addEventListener( 'click', function ( event ) {
@@ -65,7 +66,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 });
                 bookShelfEdit.style.display = 'block';
             }
-        }, false);
+        }, false );
 
         // edit data ---------------------
         bookShelfEdit.addEventListener( 'click', function () {
