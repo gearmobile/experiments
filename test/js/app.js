@@ -14,14 +14,9 @@ window.addEventListener( 'DOMContentLoaded', function () {
         function saveData() {
             var obj = {};
             inputs.forEach( function ( item ) {
-                var id = item.getAttribute( 'id' );
-                var value = item.value;
-                obj.id = value; // !
-                console.log( obj );
+                obj[ item.id ] = item.value;
             });
-            // --------------------------------------------
-            var objStr = JSON.stringify( obj );
-            localStorage.setItem( counter.toString(), objStr );
+            localStorage.setItem( counter.toString(), JSON.stringify( obj ) );
             // generate card -------------------------------
             var card = document.createElement( 'li' );
             card.classList.add( 'card' );
@@ -34,16 +29,11 @@ window.addEventListener( 'DOMContentLoaded', function () {
             counter++;
         }
 
-        // function to load data --------------------
-        // function loadData() {
-        //     inputs.forEach(function ( item ) {
-        //         var id = item.getAttribute( 'id' );
-        //         item.value = localStorage.getItem( id );
-        //     });
-        // }
-
         // save data --------------
-        bookShelfSave.addEventListener( 'click', saveData, false );
+        bookShelfSave.addEventListener( 'click', function ( event ) {
+            event.preventDefault();
+            saveData();
+        }, false );
 
         // remove card ------------------
         booksGallery.addEventListener( 'click', function ( event ) {
@@ -59,8 +49,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 var currentItem = event.target.parentNode;
                 var currentObj = JSON.parse( localStorage.getItem( currentItem.getAttribute( 'id' ) ) );
                 inputs.forEach( function ( item ) {
-                    var id = item.getAttribute( 'id' );
-                    item.value = currentObj.id;
+                    item.value = currentObj[ item.id ];
                 });
             }
         }, false);
