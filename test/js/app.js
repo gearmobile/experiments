@@ -57,6 +57,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 inputs.forEach( function ( item ) {
                     item.value = currentObj[ item.id ];
                 });
+                bookShelfEdit.style.display = 'inline-block';
                 console.log( parseInt( currentCardID ) );
             }
         }, false);
@@ -80,6 +81,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
             document.querySelectorAll( '.form-control' ).forEach( function ( item ) {
                 item.value = '';
             });
+            bookShelfEdit.style.display = 'none';
         });
     }
 });
