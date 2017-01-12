@@ -10,7 +10,7 @@
     <div class="bookshelf container">
         <div class="bookshelf__wrapper row">
             <div class="bookshelf__primary col-md-6">
-                <form id="bookShelfForm" class="bookshelf__edit" method="post" action="#">
+                <form id="bookShelfForm" class="bookshelf__edit" method="post" action="#" role="form">
                     <div class="form-group">
                         <label for="bookshelfAuthor">Book Author</label>
                         <input type="text" class="form-control" id="bookshelfAuthor" pattern="^[a-zA-Z0-9_-]{3,16}$" placeholder="Book Author" required>
@@ -28,6 +28,7 @@
                         <input type="text" class="form-control" id="bookshelfPages" pattern="^\d*\.?\d+$" placeholder="Book Pages">
                     </div>
                     <button id="bookshelf__save" type="submit" class="btn btn-default pull-left">Add \ Edit Book</button>
+                    <button id="bookshelf__edit" type="button" class="btn btn-default pull-left">Edit</button>
                     <button id="bookshelf__clear" type="reset" class="btn btn-default pull-right">Clear Inputs</button>
                 </form>
             </div>

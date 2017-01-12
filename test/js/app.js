@@ -3,12 +3,14 @@ window.addEventListener( 'DOMContentLoaded', function () {
     if ( localStorage ) {
 
         var bookShelfSave = document.querySelector( '#bookshelf__save' );
+        var bookShelfEdit = document.querySelector( '#bookshelf__edit' );
         var bookShelfList = document.querySelector( '#bookShelfList' );
         var booksGallery = document.querySelector( '#bookShelfSecondary' );
 
         var inputs = document.querySelectorAll( '.form-control' );
         var form = document.querySelector( '#bookShelfForm' );
-        var counter = 0;
+        var counter = 1;
+        var currentItemID;
 
         // function to save data -----------------
         function saveData() {
@@ -27,6 +29,9 @@ window.addEventListener( 'DOMContentLoaded', function () {
             card.insertAdjacentHTML( 'beforeEnd', '<button class="card-edit pull-left btn btn-primary">edit</button>');
             card.insertAdjacentHTML( 'beforeEnd', '<button class="card-remove pull-right btn btn-danger">remove</button>');
             counter++;
+            inputs.forEach( function ( item ) {
+                item.value = '';
+            });
         }
 
         // save data --------------
@@ -47,12 +52,31 @@ window.addEventListener( 'DOMContentLoaded', function () {
         booksGallery.addEventListener( 'click', function ( event ) {
             if ( event && event.target.classList.contains( 'card-edit' ) ) {
                 var currentItem = event.target.parentNode;
-                var currentObj = JSON.parse( localStorage.getItem( currentItem.getAttribute( 'id' ) ) );
+                currentItemID = currentItem.getAttribute( 'id' );
+                var currentObj = JSON.parse( localStorage.getItem( currentItemID ) );
                 inputs.forEach( function ( item ) {
                     item.value = currentObj[ item.id ];
                 });
+                console.log( parseInt( currentItemID ) );
             }
         }, false);
+
+        // edit data ---------------------
+        bookShelfEdit.addEventListener( 'click', function () {
+            var currentCard = document.getElementById( currentItemID );
+            console.log( currentCard );
+            document.querySelectorAll( '.form-control' ).forEach( function ( item ) {
+                if ( item.id === 'bookshelfAuthor' ) {
+                    currentCard.childNodes[0].innerHTML = item.value;
+                }
+                if ( item.id === 'bookshelfTitle' ) {
+                    currentCard.childNodes[1].innerHTML = item.value;
+                }
+                // item.value = currentObj[ item.id ];
+            });
+            // currentCard.childNodes[0].innerHTML = '';
+            // currentCard.childNodes[1].innerHTML = '';
+        });
     }
 });
 
