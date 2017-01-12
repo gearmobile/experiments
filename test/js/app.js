@@ -5,12 +5,13 @@ window.addEventListener( 'DOMContentLoaded', function () {
         var bookShelfSave = document.querySelector( '#bookshelf__save' );
         var bookShelfEdit = document.querySelector( '#bookshelf__edit' );
         var bookShelfList = document.querySelector( '#bookShelfList' );
-        var booksGallery = document.querySelector( '#bookShelfSecondary' );
+        var booksGallery  = document.querySelector( '#bookShelfSecondary' );
 
         var inputs = document.querySelectorAll( '.form-control' );
         var form = document.querySelector( '#bookShelfForm' );
-        var currentCardID;
-        var counter = 1;
+
+        var currentCardID; // manipulate current cards
+        var counter = 1; // create new cards
 
         // function to clear all inputs
         function clearInputs() {
