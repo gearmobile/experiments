@@ -82,8 +82,10 @@ body {
 @media screen and ( max-width: 499px )  {
     .bookshelf .bookshelf__list .card {
         width: 98%;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0 0 2%;
+    }
+    .bookshelf .bookshelf__list .card:last-child {
+        margin: 0;
     }
 }
 

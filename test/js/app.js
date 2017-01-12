@@ -58,7 +58,6 @@ window.addEventListener( 'DOMContentLoaded', function () {
                     item.value = currentObj[ item.id ];
                 });
                 bookShelfEdit.style.display = 'block';
-                console.log( parseInt( currentCardID ) );
             }
         }, false);
 
@@ -83,6 +82,15 @@ window.addEventListener( 'DOMContentLoaded', function () {
             });
             bookShelfEdit.style.display = 'none';
         });
+
+        // load init -------------------------
+        function storageInit() {
+            for ( key in localStorage ) {
+                console.log( key );
+            }
+        }
+
+        storageInit();
     }
 });
 
