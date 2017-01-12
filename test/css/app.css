@@ -8,8 +8,33 @@ body {
     border: 1px solid #ccc;
 }
 
+.bookshelf .form-group:last-child {
+    margin-bottom: 0;
+}
+
 .bookshelf__primary .form-control {
     text-transform: capitalize;
+}
+
+.bookshelf__controls {
+    position: relative;
+    min-height: 34px;
+}
+
+.bookshelf__controls .btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-transform: capitalize;
+}
+
+.bookshelf__controls #bookshelf__save {
+    z-index: 1;
+}
+
+.bookshelf__controls #bookshelf__edit {
+    z-index: 2;
+    display: none;
 }
 
 .bookshelf__list {
@@ -43,7 +68,47 @@ body {
     margin: 0 0 20px;
 }
 
-#bookshelf__edit {
-    display: none;
+
+/* 992px --------------------------- */
+/* --------------------------------- */
+@media screen and ( max-width: 991px )  {
+    .bookshelf .bookshelf__primary {
+        margin-bottom: 40px;
+    }
 }
+
+/* 500px --------------------------- */
+/* --------------------------------- */
+@media screen and ( max-width: 499px )  {
+    .bookshelf .bookshelf__list .card {
+        width: 98%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

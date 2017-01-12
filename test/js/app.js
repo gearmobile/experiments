@@ -57,7 +57,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 inputs.forEach( function ( item ) {
                     item.value = currentObj[ item.id ];
                 });
-                bookShelfEdit.style.display = 'inline-block';
+                bookShelfEdit.style.display = 'block';
                 console.log( parseInt( currentCardID ) );
             }
         }, false);
