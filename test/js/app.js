@@ -12,6 +12,13 @@ window.addEventListener( 'DOMContentLoaded', function () {
         var counter = 1;
         var currentCardID;
 
+        // function to clear all inputs
+        function clearInputs() {
+            inputs.forEach( function ( item ) {
+                item.value = '';
+            });
+        }
+
         // function to save data -----------------
         function saveData() {
             var obj = {};
@@ -29,9 +36,7 @@ window.addEventListener( 'DOMContentLoaded', function () {
             card.insertAdjacentHTML( 'beforeEnd', '<button class="card-edit pull-left btn btn-primary">edit</button>');
             card.insertAdjacentHTML( 'beforeEnd', '<button class="card-remove pull-right btn btn-danger">remove</button>');
             counter++;
-            inputs.forEach( function ( item ) {
-                item.value = '';
-            });
+            clearInputs();
         }
 
         // save data --------------
@@ -77,16 +82,23 @@ window.addEventListener( 'DOMContentLoaded', function () {
                 obj[ item.id ] = item.value;
             });
             localStorage.setItem( currentCardID, JSON.stringify( obj ) );
-            document.querySelectorAll( '.form-control' ).forEach( function ( item ) {
-                item.value = '';
-            });
             bookShelfEdit.style.display = 'none';
+            clearInputs();
         });
 
         // load init -------------------------
         function storageInit() {
-            for ( key in localStorage ) {
-                console.log( key );
+            for ( var key in localStorage ) {
+                var currObject = JSON.parse( localStorage[ key ] );
+                // generate card -------------------------------
+                var card = document.createElement( 'li' );
+                card.classList.add( 'card' );
+                card.setAttribute( 'id', key );
+                bookShelfList.append( card );
+                card.insertAdjacentHTML( 'beforeEnd', '<h4 class="card-title">' + currObject['bookshelfAuthor'] + '</h4>');
+                card.insertAdjacentHTML( 'beforeEnd', '<h6 class="card-subtitle">' + currObject['bookshelfTitle'] + '</h6>');
+                card.insertAdjacentHTML( 'beforeEnd', '<button class="card-edit pull-left btn btn-primary">edit</button>');
+                card.insertAdjacentHTML( 'beforeEnd', '<button class="card-remove pull-right btn btn-danger">remove</button>');
             }
         }
 
