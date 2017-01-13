@@ -5,9 +5,6 @@ window.addEventListener( 'DOMContentLoaded', function () {
         var bookShelfSave = document.querySelector( '#bookshelfSave' );
         var bookShelfEdit = document.querySelector( '#bookshelfEdit' );
         var bookShelfList = document.querySelector( '#bookShelfList' );
-        // var inputs = document.querySelectorAll( '.form-control' );
-        // var form   = document.querySelector( '#bookShelfForm' );
-        // var booksGallery  = document.querySelector( '#bookShelfSecondary' );
 
         var currentCardID; // manipulate current cards
         var counter = 1; // create new cards
