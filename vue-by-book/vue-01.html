@@ -3,17 +3,33 @@
 <head>
     <meta charset="utf-8">
     <title>Vue 01</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vue-01.min.css">
 </head>
 <body>
 
     <div id="container" class="container">
         <h2>{{ data.title }}</h2>
-        <ul>
-            <li v-for="item in data.fruits">{{ item }}</li>
+        <div class="input-group">
+            <input v-on:keyup.enter="addItem" v-model="newItem" class="form-control" type="text" placeholder="enter item">
+            <span class="input-group-btn">
+                <button v-on:click="addItem" class="btn btn-primary" type="button">add</button>
+            </span>
+        </div>
+        <ul class="list-unstyled">
+            <li v-for="item in data.fruits" v-bind:class="{ 'removed': item.status }">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" v-model="item.status">
+                        {{ item.name }}
+                    </label>
+                </div>
+            </li>
         </ul>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+    <!--<script src="js/vue.js"></script>-->
     <script src="js/vue-01.js"></script>
 </body>
 </html>
