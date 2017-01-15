@@ -6,9 +6,52 @@
     margin-bottom: 1rem;
   }
 
+  &__input {
+    text-transform: capitalize;
+  }
 
-  &__main {
+
+  &__list {
     margin-top: 2rem;
+
+    & li {
+      user-select: none;
+      cursor: pointer;
+      position: relative;
+      padding: 1.2rem .8rem 1.2rem 4rem;
+      background-color: #eee;
+      font-size: 1.4rem;
+      transition: .2s;
+      text-transform: capitalize;
+  
+      &:nth-child( 2n+1 ) {
+        background-color: #f9f9f9;
+      }
+      
+      &:hover {
+        background-color: #ddd;
+      }
+
+      &.checked {
+        background-color: #888;
+        color: #fff;
+        text-decoration: line-through;
+
+        &::before {
+          content: '';
+          position: absolute;
+          border-color: #fff;
+          border-style: solid;
+          border-width: 0 .2rem .2rem 0;
+          top: 1.2rem;
+          left: 1.6rem;
+          transform: rotate(45deg);
+          height: 1.5rem;
+          width: .7rem;
+        }
+      }
+
+    }
   }
 
   &__button {
@@ -18,5 +61,19 @@
 
   & .form-check-label {
     text-transform: capitalize;
+  }
+}
+
+// STYLE THE CLOSE BUTTON
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.5rem 1.6rem;
+  transition: all .2s;
+
+  &:hover {
+    background-color: #f44336;
+    color: white;
   }
 }
