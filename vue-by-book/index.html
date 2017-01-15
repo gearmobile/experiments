@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>List</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="shopping container">
+        <div class="row">
+            <div class="col">
+                <h2 class="shopping__caption">my shopping list</h2>
+                <div class="input-group">
+                    <input id="shoppingInput" class="shopping__input form-control" type="text" placeholder="add shopping list item">
+                    <span class="input-group-btn">
+                        <button id="shoppingButton" class="shopping__button btn btn-primary" type="button">add!</button>
+                    </span>
+                </div>
+                <div id="shoppingMain" class="shopping__main">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            carrot
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            beer
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            book
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" disabled>
+                            Option two is disabled
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--SCRIPT-->
+    <script src="js/jquery-3.1.1.slim.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
