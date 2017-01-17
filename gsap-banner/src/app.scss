@@ -9,14 +9,6 @@
   }
 }
 
-@mixin clearfix() {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
 // COMMON RULES
 // ------------------------------------------------
 
@@ -29,7 +21,7 @@ body {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   font-size: 1.6rem;
   line-height: 1.4;
-  color: #000000;
+  color: black;
   padding: 3rem;
 }
 
@@ -42,7 +34,7 @@ svg path {
 }
 
 
-// main rules
+// MAIN RULES
 // --------------------------------------
 .ad-link {
   display: inline-block;
@@ -83,7 +75,7 @@ svg path {
       top: 0;
       left: 0;
       width: 100%;
-      color: #ffffff;
+      color: white;
       text-align: center;
       text-transform: capitalize;
       font-weight: 700;
