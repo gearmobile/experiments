@@ -53,6 +53,7 @@ svg path {
     height: 20rem;
     position: relative;
     overflow: hidden;
+    opacity: 0;
 
     & .ad-image {
       position: absolute;

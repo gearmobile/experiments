@@ -7,6 +7,7 @@ window.addEventListener( 'load', function () {
     var shadow = document.getElementById( 'adShadow' );
     var icon = document.getElementById( 'adIcon' );
     var adBg = document.getElementById( 'adBg' );
+    var adBlock = document.getElementById( 'adBlock' );
     var duration = 1;
     var fnEasing0 = Power0.easeOut;
     var fnEasing1 = Power2.easeOut;
@@ -17,7 +18,7 @@ window.addEventListener( 'load', function () {
     function textColor() {
         const tlTextColor = new TimelineMax();
         tlTextColor
-            .to( icon, ( duration + 1 ), { fill: 'green' } );
+            .to( icon, ( duration + 1 ), { fill: '#b22222' } );
     }
     // --------------------------------
     function fnRotation() {
@@ -30,6 +31,7 @@ window.addEventListener( 'load', function () {
             .set( icon, { rotation: 20 } );
     }
     tl
+        .to( adBlock, .6, { opacity: 1, delay: .8 } )
         .from( text2, duration, { y: -100, ease: fnEasing1 } )
         .to( text1, ( duration + 2 ), { y: 200, ease: fnEasing1 }, '-=.7' )
         .from( marker, duration, { y: -200, ease: fnEasing2 }, '-=2' )
