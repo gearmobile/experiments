@@ -1,3 +1,25 @@
+@mixin size( $size ) {
+  @if length( $size ) == 1 {
+    width:  $size;
+    height: $size;
+  }
+  @else if length( $size ) == 2 {
+    width:  nth( $size, 1 );
+    height: nth( $size, 2 );
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// COMMON RULES
+// ------------------------------------------------
+
 html {
   height: 100%;
   font-size: 62.5%;
@@ -10,6 +32,15 @@ body {
   color: #000000;
   padding: 3rem;
 }
+
+svg {
+  transition: all .2s
+}
+
+svg path {
+  fill: inherit;
+}
+
 
 // main rules
 // --------------------------------------
@@ -25,7 +56,7 @@ body {
 
     & .ad-image {
       position: absolute;
-      background: transparent url( '../images/ad-bg.png' ) 0 0 no-repeat;
+      background: transparent url( '../images/ad-bg.png' );
     }
 
     & .ad-bg {
@@ -33,6 +64,8 @@ body {
       height: 100%;
       top: 0;
       left: 0;
+      background-position: 0 0;
+      background-repeat: repeat;
     }
 
     & .ad-fg {
@@ -41,6 +74,7 @@ body {
       left: 0;
       bottom: 0;
       background-position: 0 -33rem;
+      background-repeat: no-repeat;
     }
 
     & .ad-text {
@@ -90,6 +124,14 @@ body {
       left: 310px;
       -webkit-background-size: cover;
       background-size: cover;
+    }
+
+    & .ad-icon {
+      position: absolute;
+      top: 10rem;
+      left: 70rem;
+      fill: yellow;
+      @include size( 7rem );
     }
   }
 }
