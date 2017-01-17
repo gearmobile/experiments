@@ -1,12 +1,14 @@
-var ad,
-banner_end = false,
-clicktag,
-btn_replay,
-rotating = false,
-main_tl = new TimelineMax()
-;
+// File is attached
+// Need to size it down for adwords, and also make a few variations.
 
-pre_init = function() {
+var ad;
+var banner_end = false;
+var clicktag;
+var btn_replay;
+var rotating = false;
+var main_tl = new TimelineMax();
+
+pre_init = function () {
 	var img = new Image();
 	img.onload = function() {
 		init();
@@ -15,11 +17,11 @@ pre_init = function() {
 };
 
 init = function(){
-	clicktag = document.getElementById('background_exit');
-	btn_replay = document.getElementById('btn_replay');
-	
+	clicktag = document.getElementById( 'background_exit' );
+	btn_replay = document.getElementById( 'btn_replay' );
+
 	/* Animation */
-	function intro_anim() {
+	function intro_anim () {
 		var intro_tl = new TimelineMax();
 		intro_tl
 			.set('#logo_wrapper',{scale:0,rotationY:360,x:-78,y:-54,perspective:400})
@@ -27,6 +29,7 @@ init = function(){
 			.set('.pink',{scale:.6,transformOrigin:'50% 50% 0'})
 			.set('.brown',{scale:.6,transformOrigin:'50% 50% 0'})
 			.set('.tan',{scale:.6,transformOrigin:'50% 50% 0'})
+			// --------------------------------------------------------------
 			.add('start','+=.1')
 			.from('#tan_circles',.5,{scale:0,transformOrigin:'50% 50% 0',ease:Power4.easeOut},'start')
 			.from('#brown_circles',.6,{scale:0,transformOrigin:'50% 50% 0',ease:Power4.easeOut},'start')
@@ -85,16 +88,16 @@ init = function(){
 			.from('#ef_line3',.5,{autoAlpha:0,y:10,ease:Power2.easeOut},'start+=14.8')
 			.from('#cta',.5,{autoAlpha:0,y:10,ease:Power2.easeOut},'start+=15.5')
 			.from('#ef_line4',.5,{autoAlpha:0,y:10,ease:Power2.easeOut},'start+=15.7')
-			//.from(btn_replay,.5,{autoAlpha:0,ease:Power1.easeOut})
-			.addCallback(bannerDone);
+			.from( btn_replay, .5, { autoAlpha: 0, ease: Power1.easeOut }) // turn off btn replay
+			.addCallback( bannerDone );
 		;
 		return intro_tl;
 	};
-	
+
 	function bannerDone() {
 		banner_end = true;
 	};
-	
+
 	function animate() {
 		main_tl
 			.addLabel('start')
@@ -104,34 +107,45 @@ init = function(){
 		//main_tl.seek(12);
 		//main_tl.timeScale(1.3);
 	};
-	
+
 	/* MOUSE ACTIONS */
-    function addlisteners() {
-	    clicktag.addEventListener('click', function() {
-		    //console.log('background exit click');
+    function addlisteners () {
+    	// ---------------------------------------------------------
+	    clicktag.addEventListener( 'click', function () {
+		    console.log( 'background exit click' );
 	    });
-    	clicktag.addEventListener('mouseover', function() {
-	    	if(banner_end){
-            	//TweenMax.to('#cta',.4,{backgroundColor:'#000',ease:Power1.easeOut});     	
+	    // ---------------------------------------------------------
+    	clicktag.addEventListener( 'mouseover', function() {
+	    	if( banner_end ) {
+            	TweenMax.to( '#cta', .4, { backgroundColor: '#000', ease: Power1.easeOut } );
             }
     	});
+    	// ---------------------------------------------------------
         clicktag.addEventListener('mouseout', function() {
-            if(banner_end){
-	            //TweenMax.to('#cta',.4,{backgroundColor:'#fff',ease:Power1.easeOut});
+            if ( banner_end ) {
+	            TweenMax.to( '#cta', .4, { backgroundColor: '#fff', ease: Power1.easeOut } );
            }
 		});
-		btn_replay.addEventListener('mouseover', function() {
-	    	if(!rotating){
+		// ---------------------------------------------------------
+		btn_replay.addEventListener( 'mouseover', function () {
+	    	if ( !rotating ) {
 		    	rotating = true;
-		    	TweenMax.set(btn_replay,{rotation:0});
-            	TweenMax.to(btn_replay,.5,{rotation:360,ease:Power1.easeOut,onComplete:function(){rotating = false;}});
+		    	TweenMax.set( btn_replay, { rotation: 0 } );
+            	TweenMax.to( btn_replay, .5, {
+            		rotation: 360,
+            		ease: Power1.easeOut,
+            		onComplete: function () {
+            			rotating = false;
+            		}
+            	});
             }
     	});
-    	btn_replay.addEventListener('click', function() {
+    	// ---------------------------------------------------------
+    	btn_replay.addEventListener( 'click', function () {
 	    	main_tl.restart();
     	});
     };
-    
+
     animate();
     addlisteners();
 }

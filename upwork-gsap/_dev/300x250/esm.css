@@ -6,7 +6,7 @@ html, body { background-color: #fff; margin: 0; padding: 0; }
 transform-style: preserve-3d;
 perspective: 400;
 -webkit-transform-style: preserve-3d;
--webkit-perspective: 400;		
+-webkit-perspective: 400;
 }
 #esm svg { position: absolute; overflow: hidden; }
 #esm div { display: block; overflow: hidden; position: absolute; background: transparent; }
@@ -19,7 +19,16 @@ perspective: 400;
 
 #esm #cta { background: #f2682b; width: 115px; height: 28px; left: 16px; bottom: 69px; }
 
-#esm #btn_replay { width: 20px; height: 20px; right: 5px; top: 5px; cursor: pointer; transform-origin: 50% 55%; -webkit-transform-origin: 50% 55%; }
+#esm #btn_replay {
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    transform-origin: 50% 55%;
+    -webkit-transform-origin: 50% 55%;
+    visibility: hidden;
+}
 
 /*--------------------- IE/Utilities ---------------------*/
 #esm #border { background: transparent; border: 1px solid #000; width: 298px; height: 248px; position: absolute; top: 0; left: 0; }
