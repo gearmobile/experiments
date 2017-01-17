@@ -1,0 +1,28 @@
+/*--------------------- Globals ---------------------*/
+:focus { outline:none; }
+::-moz-focus-inner { border:0; }
+html, body { background-color: #fff; margin: 0; padding: 0; }
+#esm { background-color: #fff; position: absolute; top: 0px; left: 0px; width: 300px; height: 250px; overflow: hidden;
+transform-style: preserve-3d;
+perspective: 400;
+-webkit-transform-style: preserve-3d;
+-webkit-perspective: 400;		
+}
+#esm svg { position: absolute; overflow: hidden; }
+#esm div { display: block; overflow: hidden; position: absolute; background: transparent; }
+
+#esm #logo_wrapper { background: transparent; width: 118px; height: 118px; bottom: 12px; left: 169px; z-index: 1; }
+
+#esm #logo_wrapper #logo { background: transparent url('logo.svg') 0 0 no-repeat; width: 118px; height: 118px; }
+
+#esm #logo_wrapper #logo_cover { background: #e49b6a;  width: 118px; height: 118px; border-radius: 100%; -webkit-border-radius: 100%; }
+
+#esm #cta { background: #f2682b; width: 115px; height: 28px; left: 16px; bottom: 69px; }
+
+#esm #btn_replay { width: 20px; height: 20px; right: 5px; top: 5px; cursor: pointer; transform-origin: 50% 55%; -webkit-transform-origin: 50% 55%; }
+
+/*--------------------- IE/Utilities ---------------------*/
+#esm #border { background: transparent; border: 1px solid #000; width: 298px; height: 248px; position: absolute; top: 0; left: 0; }
+#esm #background_exit { display: block; overflow: hidden; background: transparent; width: 100%; height: 100%; position: absolute;  }
+#esm #loading { background: #fff; width: 100%; height: 100%; }
+#esm .hide { display: none; }
