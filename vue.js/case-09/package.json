@@ -5,16 +5,17 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "browserify -t vueify -e app.js -o build.js",
-    "watch": "watchify -t vueify -e app.js -o build.js"
-  },
-  "devDependencies": {
-    "browserify": "*",
-    "vue": "*",
-    "vueify": "*",
-    "watchify": "^3.8.0"
+    "build": "browserify -t vueify -e main.js -o build.js",
+    "watch": "watchify -t vueify -e main.js -o build.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "gearmobile",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.3.0",
+    "vue": "^2.1.10",
+    "vue-template-compiler": "^2.1.10",
+    "vueify": "^9.4.0",
+    "watchify": "^3.8.0"
+  }
 }

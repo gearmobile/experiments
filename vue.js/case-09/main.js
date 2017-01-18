@@ -1,10 +1,9 @@
-
 var Vue = require( 'vue' );
 var hello = require( './components/hello.vue' );
 
-var wm = new Vue({
+var app = new Vue({
     el: '#wrapper',
     components: {
-        heading: hello
+        hello: hello
     }
 });

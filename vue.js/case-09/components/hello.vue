@@ -1,21 +1,22 @@
 <template>
-    <h1>{{ message }}</h1>
+    <h2 class="caption">{{ msg }}</h2>
 </template>
+
+<style>
+    .caption {
+        text-transform: capitalize;
+        text-align: center;
+        color: firebrick;
+        font-size: 30px;
+    }
+</style>
 
 <script>
     module.exports = {
         data: function () {
             return {
-                message: 'Hello from Vue.js'
+                msg: 'hello world!'
             }
         }
     }
 </script>
-
-<style>
-    h1 {
-        font-size: 30px;
-        text-transform: capitalize;
-        text-align: center;
-    }
-</style>

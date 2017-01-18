@@ -1,17 +1,15 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-
-var Vue = require( 'vue' );
-var hello = require( './components/hello.vue' );
-
-var wm = new Vue({
-    el: '#wrapper',
-    components: {
-        heading: hello
-    }
-});
-},{"./components/hello.vue":2,"vue":5}],2:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("h1 {\n    font-size: 30px;\n    text-transform: capitalize;\n    text-align: center;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".caption {\n    text-transform: capitalize;\n    text-align: center;\n    color: firebrick;\n    font-size: 30px;\n}")
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -20,7 +18,7 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("h1 {\n  
 module.exports = {
     data: function () {
         return {
-            message: 'Hello from Vue.js'
+            msg: 'hello world!'
         }
     }
 }
@@ -29,7 +27,7 @@ module.exports = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('h1',[_vm._v(_vm._s(_vm.message))])}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('h2',{staticClass:"caption"},[_vm._v(_vm._s(_vm.msg))])}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -37,12 +35,22 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-b977f3c0", __vue__options__)
+    hotAPI.createRecord("data-v-7685fe42", __vue__options__)
   } else {
-    hotAPI.reload("data-v-b977f3c0", __vue__options__)
+    hotAPI.reload("data-v-7685fe42", __vue__options__)
   }
 })()}
-},{"vue":5,"vue-hot-reload-api":4,"vueify/lib/insert-css":6}],3:[function(require,module,exports){
+},{"vue":5,"vue-hot-reload-api":4,"vueify/lib/insert-css":6}],2:[function(require,module,exports){
+var Vue = require( 'vue' );
+var hello = require( './components/hello.vue' );
+
+var app = new Vue({
+    el: '#wrapper',
+    components: {
+        hello: hello
+    }
+});
+},{"./components/hello.vue":1,"vue":5}],3:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -6587,4 +6595,4 @@ exports.insert = function (css) {
   }
 }
 
-},{}]},{},[1]);
+},{}]},{},[2]);
