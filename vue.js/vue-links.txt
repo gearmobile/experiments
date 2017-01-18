@@ -1,7 +1,10 @@
-// Ausite Blog
+// AUSITE BLOG
 https://www.youtube.com/watch?v=O9p4dRBRSXE&list=PLEyOhcqU3T9VL6wathF8CoHnHGvUAdzq6
 https://goo.gl/xKpqC9
 
-// russian laracasts
+// RUSSIAN LARACASTS
 https://www.youtube.com/watch?v=k3yRfEw1pYk&list=PL5r0NkdgM0UOxb4Hl81FV5UIgexwTf8h7
 https://goo.gl/qgeKRR
+
+// AWESOME VUE.JS
+https://github.com/vuejs/awesome-vue
