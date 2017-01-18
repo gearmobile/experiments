@@ -1,0 +1,20 @@
+{
+  "name": "case-09",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -t vueify -e app.js -o build.js",
+    "watch": "watchify -t vueify -e app.js -o build.js"
+  },
+  "devDependencies": {
+    "browserify": "*",
+    "vue": "*",
+    "vueify": "*",
+    "watchify": "^3.8.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
