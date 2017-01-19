@@ -6,7 +6,25 @@
   </head>
   <body>
     <div id="wrapper">
-      <page-header></page-header>
+      <!--<page-header></page-header>-->
+      <!--<page-posts></page-posts>-->
+
+      <all-posts>
+        <div class="post" v-for="item in posts">
+          <span class="post__id">{{ item.id }}</span>
+          <h3 class="post__title">{{ item.title }}</h3>
+          <p class="post__body">{{ item.body }}</p>
+        </div>
+      </all-posts>
+
+      <!--<single-post>-->
+        <!--<div class="post">-->
+          <!--<span class="post__id">{{ item.id }}</span>-->
+          <!--<h3 class="post__title">{{ item.title }}</h3>-->
+          <!--<p class="post__body">{{ item.body }}</p>-->
+        <!--</div>-->
+      <!--</single-post>-->
+
     </div>
     <!--SCRIPTS-->
     <script src="/dist/build.js"></script>
