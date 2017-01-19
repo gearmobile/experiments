@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Case Pagination</title>
+    <link rel="stylesheet" href="app.min.css">
+</head>
+<body>
+
+    <div class="wrapper" id="container">
+        <section class="grid">
+            <div class="grid__item card" v-for="item in photos">
+                <header class="card__header">
+                    <img :src="item.urls.small" alt="">
+                </header>
+                <footer class="card__footer meta">
+                    <header class="meta__header">
+                        <img class="meta__image" :src="item.user.profile_image.small" alt="">
+                    </header>
+                    <footer class="meta__footer">
+                        <a class="meta__link" :href="item.user.portfolio_url" target="_blank">{{ item.user.name }}</a>
+                    </footer>
+                </footer>
+            </div>
+        </section>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="../library/scripts/vue.js"></script>
+    <script src="../library/scripts/vue-resource.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
