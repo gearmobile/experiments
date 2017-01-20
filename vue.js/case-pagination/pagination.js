@@ -4,6 +4,14 @@ Vue.component( 'pagination', {
         current: {
             type: Number,
             default: 1
+        },
+        totalPages: {
+            type: Number,
+            default: 1
+        },
+        perPage: {
+            type: Number,
+            default: 9
         }
     },
     computed: {
@@ -12,6 +20,9 @@ Vue.component( 'pagination', {
         },
         getPrevPage: function () {
             return this.current - 1;
+        },
+        totalPages: function () {
+            return Math.ceil( this.photosAmount / this.perPage );
         }
     },
     methods: {

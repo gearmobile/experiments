@@ -22,7 +22,7 @@
                     </footer>
                 </footer>
             </div>
-            <pagination :current="currentPage" @page-change="fetchPhotos"></pagination>
+            <pagination :current="currentPage" :totalPages="photosAmount" :perPages="photosPerPage" @page-change="fetchPhotos"></pagination>
         </section>
     </div>
 
@@ -31,6 +31,7 @@
             <div class="pagination__prev">
                 <a @click.prevent="changePage( getPrevPage )" class="pagination__link" href="#" role="button">previous</a>
             </div>
+            <div class="pagination__numbers">{{ currentPage }} from {{ totalPages }}</div>
             <div class="pagination__next">
                 <a @click.prevent="changePage( getNextPage )" class="pagination__link" href="#" role="button">next</a>
             </div>
