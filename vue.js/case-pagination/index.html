@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <div class="wrapper" id="container">
+    <div class="wrapper" id="container"> 
         <section class="grid">
             <div class="grid__item card" v-for="item in photos">
                 <header class="card__header">
@@ -22,9 +22,20 @@
                     </footer>
                 </footer>
             </div>
+            <pagination :current="currentPage" @page-change="fetchPhotos"></pagination>
         </section>
-        <pagination></pagination>
     </div>
+
+    <template id="pagination-template">
+        <div class="pagination">
+            <div class="pagination__prev">
+                <a @click.prevent="changePage( getPrevPage )" class="pagination__link" href="#" role="button">previous</a>
+            </div>
+            <div class="pagination__next">
+                <a @click.prevent="changePage( getNextPage )" class="pagination__link" href="#" role="button">next</a>
+            </div>
+        </div>
+    </template>
 
     <!--SCRIPTS-->
     <script src="../library/scripts/vue.js"></script>
