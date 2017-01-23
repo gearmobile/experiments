@@ -52,20 +52,20 @@
       },
       computed: {
         remaining: function () {
-          return this.todos.filter(function (item) { return !item.completed }).length
+          return this.todos.filter( function ( item ) { return !item.completed }).length
         },
         filteredItems: function () {
-          if (this.filter === 'todo') {
-            return this.todos.filter(function (item) { return !item.completed })
-          } else if (this.filter === 'done') {
-            return this.todos.filter(function (item) { return item.completed })
-          } else if (this.filter === 'all') {
+          if ( this.filter === 'todo' ) {
+            return this.todos.filter( function ( item ) { return !item.completed })
+          } else if ( this.filter === 'done' ) {
+            return this.todos.filter( function ( item ) { return item.completed })
+          } else if ( this.filter === 'all' ) {
             return this.todos
           }
         },
         allDone: {
-          set: function (value) {
-            this.todos.forEach(function (item) {
+          set: function ( value ) {
+            this.todos.forEach( function ( item ) {
               item.completed = value
             })
           },

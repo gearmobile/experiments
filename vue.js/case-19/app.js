@@ -2,15 +2,15 @@
 var wm = new Vue({
     el: '#app',
     data: {
-        modalState: false
+        modalState: false;
     },
     methods: {
-        modalToggle: function () {
+        modalToggle() {
             this.modalState = !this.modalState;
         }
     },
     computed: {
-        modalStyle: function () {
+        modalStyle() {
             return this.modalState ? { display: 'block' } : {}
         }
     }
