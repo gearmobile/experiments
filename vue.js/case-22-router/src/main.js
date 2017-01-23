@@ -17,7 +17,7 @@ var router = new VueRouter({
       { path: '/contacts', component: Contacts },
       { path: '/projects', component: Projects },
       { path: '/blog', component: Blog },
-      { path: '/post', component: Post }
+      { path: '/post/:id', name: 'post', component: Post }
   ]
 });
 
