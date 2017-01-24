@@ -1,16 +1,16 @@
-var Vue = require( 'vue' );
-var VueRouter = require( 'vue-router' );
+let Vue = require( 'vue' );
+let VueRouter = require( 'vue-router' );
 
-var About = require( './components/About.vue' );
-var Brands = require( './components/Brands.vue' );
-var Contacts = require( './components/Contacts.vue' );
-var Projects = require( './components/Projects.vue' );
-var Blog = require( './components/Blog.vue' );
-var Post = require( './components/Post.vue' );
+let About = require( './components/About.vue' );
+let Brands = require( './components/Brands.vue' );
+let Contacts = require( './components/Contacts.vue' );
+let Projects = require( './components/Projects.vue' );
+let Blog = require( './components/Blog.vue' );
+let Post = require( './components/Post.vue' );
 
 Vue.use( VueRouter );
 
-var router = new VueRouter({
+let router = new VueRouter({
   routes: [
       { path: '/about', component: About },
       { path: '/brands', component: Brands },
@@ -21,7 +21,7 @@ var router = new VueRouter({
   ]
 });
 
-var app = new Vue({
+let app = new Vue({
     el: '#app',
     router: router
 });

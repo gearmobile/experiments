@@ -1,20 +1,21 @@
 <template>
   <div id="app">
-    <!--<img src="./assets/logo.png">-->
-    <!--<hello></hello>-->
-    <example></example>
+    <carousel>
+      <carousel-slide>slide item 1</carousel-slide>
+      <carousel-slide>slide item 2</carousel-slide>
+    </carousel>
   </div>
 </template>
 
 <script>
-// import Hello from './components/Hello'
-import Example from './components/Example'
+import Carousel from './components/carousel/Carousel'
+import CarouselSlide from './components/carousel/CarouselSlide'
 
 export default {
   name: 'app',
   components: {
-//    Hello,
-    Example
+    Carousel,
+    CarouselSlide
   }
 }
 </script>
