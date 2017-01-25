@@ -23,10 +23,11 @@ body {
 
 .screen {
     height: 100%;
-    border: 1px solid #000;
+    border: 2px solid darkblue;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: lightskyblue;
 }
 
 .screen__content {
@@ -37,19 +38,23 @@ body {
 .screen__title {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 80px;
+    font-family: 'Raleway', sans-serif;
     margin: 0 0 2rem;
     color: rgba( 0,0,0, .6 );
+    opacity: .7;
 }
 
 .screen__content p {
     font-size: 1.8rem;
+    opacity: .8;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .corner {
     width: 50px;
     height: 50px;
-    border: 1px solid #f00;
+    border: 2px solid blueviolet;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -58,6 +63,7 @@ body {
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;
+    background-color: slateblue;
 }
 
 .corner-1 {
