@@ -4,11 +4,35 @@
     <meta charset="utf-8">
     <title>AJAX jQuery</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app-jquery.css">
 </head>
 <body>
 
-    <div id="content"></div>
-    <button id="load" class="btn btn-success">load data</button>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-push-3">
+                    <form class="search" id="search" method="get" action="#">
+                        <label class="search__caption" for="searchInput">live search</label>
+                        <small class="search__title">enter the name or info about a speaker</small>
+                        <input class="search__input" type="search" id="searchInput" placeholder="search here">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-push-2">
+                    <div class="main" id="main"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!--SCRIPTS-->
     <script src="js/jquery-3.1.1.min.js"></script>
