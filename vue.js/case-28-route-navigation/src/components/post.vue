@@ -1,10 +1,7 @@
 <template>
     <section class="users">
-        <div class="post" v-for="item in posts">
-            <span class="post__id">{{ item.postID }}</span>
-            <h4 class="post__title">{{ item.postTitle }}</h4>
-            <h5 class="post__author">Post author: {{ item.postAuthor }}</h5>
-            <p class="post_body">{{ item.postBody }}</p>
+        <div class="post">
+            {{ $route.params.id }}
         </div>
     </section>
 </template>
@@ -32,38 +29,3 @@
     }
   }
 </script>
-
-<style scoped>
-    .users {
-        display: block;
-    }
-    .post {
-        margin: 0 0 20px;
-        padding: 20px;
-        border: 1px solid rgba( 0,0,0, .8 );
-        text-align: left;
-        background-color: palegoldenrod;
-    }
-    .post__id {
-        color: rgba( 0,0,0, .1 );
-        font-size: 80px;
-        font-style: italic;
-        float: right;
-    }
-    .post__title {
-        text-transform: uppercase;
-        font-size: 20px;
-        margin: 0 0 10px;
-    }
-    .post__author {
-        font-style: italic;
-        text-transform: capitalize;
-        margin: 0 0 20px;
-    }
-    .post p {
-        margin: 0 0 20px;
-    }
-    .post p:last-of-type {
-        margin-bottom: 0;
-    }
-</style>

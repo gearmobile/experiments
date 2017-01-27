@@ -13,6 +13,10 @@
 <style scoped>
     .home {
         background-color: palegreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
     .home__title {
         text-transform: uppercase;

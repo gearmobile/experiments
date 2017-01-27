@@ -1,0 +1,16 @@
+.row {
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.col-md-8 {
+    padding-top: 3px;
+}
+
+.btn {
+    text-transform: capitalize;
+}

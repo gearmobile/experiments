@@ -13,6 +13,10 @@
 <style scoped>
     .contacts {
         background-color: paleturquoise;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
     .contacts__title {
         text-transform: uppercase;

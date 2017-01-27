@@ -1,12 +1,14 @@
 <template>
   <div id="app" class="app">
     <h1 class="app__title">let's go somewhere!</h1>
-    <nav class="app__navigation menu">
+    <nav class="app__navigation">
       <router-link to="/">home</router-link>
-      <router-link to="/users">users</router-link>
+      <router-link to="/users/11">users</router-link>
       <router-link to="/contacts">contacts</router-link>
+      <router-link to="/post">{{ $route.params.id }}</router-link>
     </nav>
     <router-view></router-view>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eveniet ex quod repellat sequi soluta voluptate voluptatibus. Blanditiis dolorem, voluptas?</p>
   </div>
 </template>
 
@@ -35,12 +37,6 @@
     color: #2c3e50;
     height: 100%;
   }
-  #app section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
   .app__title {
     margin: 0;
     padding: 10px 0;
@@ -48,6 +44,19 @@
     font-size: 20px;
     background-color: cornflowerblue;
     color: whitesmoke;
+  }
+  .app__navigation {
+    padding: 10px 0;
+  }
+  .app__navigation a {
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 20px;
+  }
+  .app__navigation a:hover,
+  .app__navigation a:focus {
+    text-decoration: underline;
+    color: darkgreen;
   }
   h1, h2 {
     font-weight: normal;
