@@ -21,7 +21,7 @@ new Vue({
     divClass: function () {
       return {
         green: this.isAttached,
-        blue: !this.isAttached
+        blue: !this.isAttached,
       }
     },
     myStyle: function () {
@@ -29,12 +29,12 @@ new Vue({
         backgroundColor: this.color,
         width: this.width + 'px',
         height: this.height + 'px',
-        borderRadius: this.radius + 'px'
-      }
+        borderRadius: this.radius + 'px',
+      },
     },
     mySquare: function () {
       return {
-        width: this.square + 'px'
+        width: this.square + 'px',
       }
     }
   }

@@ -1,8 +1,8 @@
 
-var wm = new Vue({
+const wm = new Vue({
     el: '#app',
     data: {
-        modalState: false;
+        modalState: false,
     },
     methods: {
         modalToggle() {
@@ -11,7 +11,7 @@ var wm = new Vue({
     },
     computed: {
         modalStyle() {
-            return this.modalState ? { display: 'block' } : {}
+            return this.modalState ? { display: 'block' } : {},
         }
     }
 });

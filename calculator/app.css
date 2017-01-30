@@ -1,0 +1,13 @@
+.container {
+  margin-bottom: 40px;
+}
+
+h3 {
+  color: forestgreen;
+}
+
+.info {
+  color: cornflowerblue;
+  font-size: 10px;
+  margin-top: 5px;
+}
