@@ -1,13 +1,16 @@
-const app = new Vue({
-  el: '#app',
+new Vue({
   data: {
-    counter: 0,
+    count: 0,
   },
   methods: {
-    increase: () => {
-      this.counter += 1;
+    increaseCounter() {
+      this.count += 1;
+    },
+    decreaseCounter() {
+      if (this.count <= 0) {
+        return false;
+      }
+      this.count -= 1;
     },
   },
-});
-
-// app.$mount('#app');
+}).$mount('#app');

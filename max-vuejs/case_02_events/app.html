@@ -8,8 +8,9 @@
 <body>
 
     <div id="app">
-        <button :click.prevent="increase">increase count</button>
-        <p>{{ counter }}</p>
+        <button class="app__button" v-on:click="increaseCounter">increase count</button>
+        <button class="app__button" v-on:click="decreaseCounter">decrease count</button>
+        <p v-text="count"></p>
     </div>
 
 
