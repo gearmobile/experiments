@@ -1,4 +1,33 @@
+.app {
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: palegreen;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.app:hover {
+    background-color: limegreen;
+}
+
+.app:hover .app__coods {
+    color: white;
+}
+
 .app__button {
     cursor: pointer;
     text-transform: uppercase;
+}
+
+.app__coods {
+    font-size: 20px;
+    color: forestgreen;
+    font-weight: 700;
+    transition: color .2s;
+}
+
+.app__count {
+    border: 1px solid firebrick;
+    padding: 20px;
+    color: white;
 }

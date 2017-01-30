@@ -1,16 +1,26 @@
 new Vue({
   data: {
     count: 0,
+    x: 0,
+    y: 0,
   },
   methods: {
-    increaseCounter() {
-      this.count += 1;
+    increaseCounter(value) {
+      this.count += value;
     },
-    decreaseCounter() {
-      if (this.count <= 0) {
+    decreaseCounter(value) {
+      if (this.count > 0) {
+        this.count -= value;
+      } else {
         return false;
       }
-      this.count -= 1;
+    },
+    mouseMove(event) {
+      this.x = event.clientX;
+      this.y = event.clientY;
+    },
+    inputModify(event) {
+      console.log(event.target.value);
     },
   },
 }).$mount('#app');
