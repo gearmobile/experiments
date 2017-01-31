@@ -5,40 +5,60 @@ new Vue({
     gameIsRunning: false,
   },
   methods: {
+
+    // START GAME
+    // -------------------------------------
     startGame() {
       this.gameIsRunning = true;
       this.playerHealth = 100;
       this.monsterHealth = 100;
     },
+
+    // ATTACK GAME
+    // -------------------------------------
     attackGame() {
-        let maxValue = 10;
-        let minValue = 3;
-        this.playerHealth -= Math.max(Math.floor(Math.random() * maxValue) + 1, minValue);
-
-        if (this.playerHealth <= 0) {
-          alert('You lost!');
-          this.gameIsRunning = false;
-          return false;
+        this.monsterHealth -= this.calcDamage(5, 12);
+        if (this.checkGame()) {
+          return;
         }
 
-        maxValue += 2;
-        minValue += 2;
-        this.monsterHealth -= Math.max(Math.floor(Math.random() * maxValue) + 1, minValue);
-
-        if (this.monsterHealth <= 0) {
-          alert('You win!');
-          this.gameIsRunning = false;
-        }
-
+        this.playerHealth -= this.calcDamage(3, 10);
+        this.checkGame()
     },
+
     specialAttackGame() {
       //
     },
+
     healGame() {
       //
     },
+
     giveUpGame() {
       //
+    },
+
+    calcDamage(minValue, maxValue) {
+      return Math.max(Math.floor(Math.random() * maxValue) + 1, minValue);
+    },
+
+    checkGame() {
+      if (this.monsterHealth <= 0) {
+        if (confirm('You win! Start new game?')) {
+          this.startGame();
+        } else {
+          this.gameIsRunning = false;
+        }
+        return true;
+      } else if (this.playerHealth <= 0) {
+        if (confirm('You lost! Start new game?')) {
+          this.startGame();
+        } else {
+          this.gameIsRunning = false;
+        }
+        return true;
+      }
+      return false;
     }
   }
 }).$mount('#app');
