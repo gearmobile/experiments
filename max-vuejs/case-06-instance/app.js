@@ -1,17 +1,15 @@
 
 // FILTERS
 // ---------------------------------------------------
-
 Vue.filter('capitalize', function (value) {
   return value.slice(0, 1).toUpperCase() + value.slice(1);
 });
 
 Vue.filter('capitalizeEachWord', function (value) {
   let line = value.toLowerCase().split(' ');
-  for (let i = 0; i < line.length; i += 1) {
-    line[i] = line[i].slice(0, 1).toUpperCase() + line[i].slice(1);
-  }
-  return line.join(' ');
+  return line.map(function (item) {
+    return item.slice(0, 1).toUpperCase() + item.slice(1);
+  }).join(' ');
 });
 
 // FIRST INSTANCE
@@ -25,6 +23,7 @@ const app1 = new Vue({
     show() {
       this.showParagraph = !this.showParagraph;
       this.updateTitle('the Vue instance (updated)');
+      this.$refs.appButton.innerText = this.showParagraph ? 'the paragraph is visible' : 'the paragraph is not visible';
     },
     updateTitle(value) {
       this.title = value;
@@ -51,6 +50,7 @@ const app2 = new Vue({
   methods: {
     onChange() {
       app1.title = 'this title changed from second instance';
+      app1.show();
     },
   },
 });
@@ -62,3 +62,5 @@ app2.$mount('#app2');
 setTimeout(function () {
   app2.title = 'this title changed from javascript';
 }, 3000);
+
+console.log(app1.$data.title);

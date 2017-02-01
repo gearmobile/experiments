@@ -9,13 +9,13 @@
 
     <div id="app1">
         <h2>{{ title | capitalizeEachWord }}</h2>
-        <button v-on:click="show" type="button">show paragraph</button>
+        <button v-on:click="show" type="button" ref="appButton">show paragraph</button>
         <p v-if="showParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dignissimos dolorem ea eveniet incidunt molestias neque nihil officia, similique suscipit!</p>
     </div>
 
     <div id="app2">
         <h2>{{ title | capitalizeEachWord }}</h2>
-        <button v-on:click="onChange" type="button">change in first instance</button>
+        <button v-on:click="onChange" type="button">change title in first instance</button>
     </div>
 
 
