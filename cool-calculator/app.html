@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>current state</h3>
+                    <div class="league">
+                        <select name="currLeague" id="currLeague" v-model="currLeagueSelect">
+                            <option v-for="item in league" :value="item.value">{{ item.name }}</option>
+                        </select>
+                    </div>
+                    <div class="division">
+                        <select name="currDivision" id="currDivision" v-model="currDivisionSelect">
+                            <option v-for="item in division" :value="item.value">{{ item.name }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3>desired state</h3>
+                    <div class="league">
+                        <select name="disLeague" id="disLeague" v-model="disLeagueSelect">
+                            <option v-for="item in league" :value="item.value">{{ item.name }}</option>
+                        </select>
+                    </div>
+                    <div class="division">
+                        <select name="disDivision" id="disDivision" v-model="disDivisionSelect">
+                            <option v-for="item in division" :value="item.value">{{ item.name }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <h3>total sum</h3>
+                    <p class="warning" v-if="leagueWarning">desired league can not be {{ leagueWarningText }} than current league</p>
+                    <p class="warning" v-if="divisionWarning">desired division can not be less than current division</p>
+                    <p class="sum" v-else>total sum - {{ totalSum }}$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

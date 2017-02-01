@@ -1,0 +1,10 @@
+.warning {
+  color: red;
+  font-style: italic;
+}
+
+.sum {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
