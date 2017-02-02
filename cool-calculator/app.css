@@ -18,3 +18,9 @@
 .app__holder {
   margin: 10px 0;
 }
+
+.app__button {
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 14px;
+}

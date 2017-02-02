@@ -53,7 +53,7 @@ const app = new Vue({
     desDivisionSelect: 4,
 
     // server state ------------
-    serverState: 'north america',
+    currServerState: 'north america',
 
     // warnings ---------------
     showWarning: false,
@@ -66,20 +66,26 @@ const app = new Vue({
     condition: true,
   },
   computed: {
-    initSum: function() {
+    initSumDollar: function() {
       let leaguePrice = searchPrice( this.currLeagueSelect, this.league );
       let divisionPrice = searchPrice_2( this.currDivisionSelect, this.division );
       return leaguePrice + divisionPrice;
     },
-    currSum: function() {
+    initSumEuro: function() {
+      return this.initSumDollar * .7;
+    },
+    currSumDollar: function() {
       let selectLeaguePrice = searchPrice( this.desLeagueSelect, this.league );
       let selectDivisionPrice = searchPrice_2( this.desDivisionSelect, this.division );
       return selectLeaguePrice + selectDivisionPrice;
     },
-    currImagePath: function () {
+    currSumEuro: function() {
+      return this.currSumDollar * .7;
+    },
+    currImagePath: function() {
       return 'images/' + this.currLeagueSelect + '_' + this.currDivisionSelect + '.png';
     },
-    desImagePath: function () {
+    desImagePath: function() {
       return 'images/' + this.desLeagueSelect + '_' + this.desDivisionSelect + '.png';
     }
   },
@@ -99,7 +105,7 @@ const app = new Vue({
       } else {
         this.showWarning = false;
         this.condition = false;
-        this.currSum;
+        this.currSumDollar;
       }
     },
     desDivisionSelect: function () {
@@ -117,7 +123,7 @@ const app = new Vue({
       } else {
         this.showWarning = false;
         this.condition = false;
-        this.currSum;
+        this.currSumDollar;
       }
     },
     currLeagueSelect: function () {

@@ -61,7 +61,7 @@
                     <h3 class="title">your server</h3>
                     <div class="app__holder col-md-12">
                         <div class="server">
-                            <select class="form-control" name="server" id="server" v-model="serverState">
+                            <select class="form-control" name="server" id="server" v-model="currServerState">
                                 <option v-for="item in server" :value="item.value" v-text="item.name"></option>
                             </select>
                         </div>
@@ -79,9 +79,9 @@
                     <h3 class="title">total price</h3>
                     <p class="warning" v-if="showWarning">{{ headText }} {{ currPlace }} can not be {{ middleText }} {{ endText }} {{ currPlace }}</p>
                     <template v-else>
-                        <p class="sum" v-if="condition">{{ initSum }}$</p>
-                        <p class="sum" v-else>{{ currSum }}$</p>
-                        <button class="btn btn-info">purchase</button>
+                        <p class="sum" v-if="condition">{{ initSumEuro }}€ (${{ initSumDollar }})</p>
+                        <p class="sum" v-else>{{ currSumEuro }}€ (${{ currSumDollar }})</p>
+                        <button class="app__button btn btn-info">purchase</button>
                     </template>
                 </div>
             </div>
