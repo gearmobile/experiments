@@ -40,14 +40,14 @@
                     <div class="app__holder col-md-12">
                         <div class="league">
                             <select class="form-control" name="desLeague" id="desLeague" v-model="desLeagueSelect">
-                                <option v-for="item in league" :value="item.value">{{ item.name }}</option>
+                                <option v-for="item in league" :value="item.value" v-text="item.name"></option>
                             </select>
                         </div>
                     </div>
                     <div class="app__holder col-md-12">
                         <div class="division">
                             <select class="form-control" name="desDivision" id="desDivision" v-model="desDivisionSelect">
-                                <option v-for="item in division" :value="item.value">{{ item.name }}</option>
+                                <option v-for="item in division" :value="item.value" v-text="item.name"></option>
                             </select>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                     <div class="app__holder col-md-12">
                         <div class="server">
                             <select class="form-control" name="server" id="server" v-model="serverState">
-                                <option v-for="item in server" :value="item.value">{{ item.name }}</option>
+                                <option v-for="item in server" :value="item.value" v-text="item.name"></option>
                             </select>
                         </div>
                     </div>
@@ -76,9 +76,13 @@
 
                 <!--total-->
                 <div class="col-md-3 text-center">
-                    <h3 class="title">total sum</h3>
-                    <p class="warning" v-if="showWarning">{{ headText }} {{ currPlace }} can not be {{ middleText }} than {{ endText }} {{ currPlace }}</p>
-                    <p class="sum" v-else>total sum - {{ totalSum }}$</p>
+                    <h3 class="title">total price</h3>
+                    <p class="warning" v-if="showWarning">{{ headText }} {{ currPlace }} can not be {{ middleText }} {{ endText }} {{ currPlace }}</p>
+                    <template v-else>
+                        <p class="sum" v-if="condition">{{ initSum }}$</p>
+                        <p class="sum" v-else>{{ currSum }}$</p>
+                        <button class="btn btn-info">purchase</button>
+                    </template>
                 </div>
             </div>
         </div>
