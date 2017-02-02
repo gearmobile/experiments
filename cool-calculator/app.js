@@ -2,23 +2,37 @@
 const app = new Vue({
   data: {
     league: [
-      { name: 'diamond', value: 500 },
-      { name: 'platinum', value: 400 },
-      { name: 'gold', value: 300 },
-      { name: 'silver', value: 200 },
-      { name: 'bronze', value: 100 },
+      { name: 'diamond', value: 'diamond' },
+      { name: 'platinum', value: 'platinum' },
+      { name: 'gold', value: 'gold' },
+      { name: 'silver', value: 'silver' },
+      { name: 'bronze', value: 'bronze' },
     ],
     division: [
-      { name: 'division-5', value: 500 },
-      { name: 'division-4', value: 400 },
-      { name: 'division-3', value: 300 },
-      { name: 'division-2', value: 200 },
-      { name: 'division-1', value: 100 },
+      { name: 'division I', value: 1 },
+      { name: 'division II', value: 2 },
+      { name: 'division III', value: 3 },
+      { name: 'division IV', value: 4 },
+      { name: 'division V', value: 5 },
     ],
-    currLeagueSelect: 200,
-    currDivisionSelect: 200,
-    disLeagueSelect: 300,
-    disDivisionSelect: 300,
+    server: [
+      { name: 'EU West', value: 1 },
+      { name: 'EU Nordic&amp;East', value: 2 },
+      { name: 'North America', value: 3 },
+      { name: 'Brazil', value: 4 },
+      { name: 'Russia', value: 5 },
+      { name: 'Latin America North', value: 6 },
+      { name: 'Latin America South', value: 7 },
+      { name: 'Oceania', value: 8 },
+      { name: 'Turkey', value: 9 },
+    ],
+    // current state ---------
+    currLeagueSelect: 'silver',
+    currDivisionSelect: 3,
+    // desired state ------------
+    disLeagueSelect: 'gold',
+    disDivisionSelect: 4,
+    // warnings ---------------
     leagueWarning: false,
     divisionWarning: false,
     leagueWarningText: '',
@@ -27,6 +41,9 @@ const app = new Vue({
     totalSum: function () {
       return this.disLeagueSelect + this.disDivisionSelect;
     },
+    currImagePath: function () {
+      return 'images/' + this.currLeagueSelect + '_' + this.currDivisionSelect + '.png';
+    }
   },
   watch: {
     disLeagueSelect: function () {

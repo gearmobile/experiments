@@ -8,3 +8,12 @@
   font-size: 18px;
   text-transform: uppercase;
 }
+
+.title {
+  text-transform: capitalize;
+  color: forestgreen;
+}
+
+.app__holder {
+  margin: 10px 0;
+}
