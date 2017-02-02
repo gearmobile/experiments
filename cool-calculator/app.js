@@ -112,7 +112,6 @@ const app = new Vue({
     currLeagueSelect: function () {
       let desLeaguePrice = searchPrice( this.desLeagueSelect, this.league );
       let currLeaguePrice = searchPrice( this.currLeagueSelect, this.league );
-      console.log( currLeaguePrice, desLeaguePrice );
       if ( currLeaguePrice === desLeaguePrice ) {
         this.showWarning = true;
         this.headText = 'current';
@@ -129,7 +128,6 @@ const app = new Vue({
     currDivisionSelect: function () {
       let desDivisionPrice = searchPrice_2( this.desDivisionSelect, this.division );
       let currDivisionPrice = searchPrice_2( this.currDivisionSelect, this.division );
-      console.log( currDivisionPrice, desDivisionPrice );
       if ( currDivisionPrice === desDivisionPrice ) {
         this.showWarning = true;
         this.headText = 'current';
