@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Calculator</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
 
                 <!--current state-->
                 <div class="col-md-3 text-center">
-                    <h3 class="title">current state</h3>
+                    <h3 class="title">your current league</h3>
                     <div class="app__holder col-md-12">
                         <div class="league">
                             <select class="form-control" name="currLeague" id="currLeague" v-model="currLeagueSelect">
@@ -32,31 +32,27 @@
                     <div class="app__holder col-md-12">
                         <img :src="currImagePath" alt="Icon">
                     </div>
-                    <div class="app__holder col-md-12">
-                        <p>{{ currLeagueSelect }}</p>
-                        <p>{{ currDivisionSelect }}</p>
-                    </div>
                 </div>
 
                 <!--desired state-->
                 <div class="col-md-3 text-center">
-                    <h3 class="title">desired state</h3>
+                    <h3 class="title">desired league</h3>
                     <div class="app__holder col-md-12">
                         <div class="league">
-                            <select class="form-control" name="disLeague" id="disLeague" v-model="disLeagueSelect">
+                            <select class="form-control" name="desLeague" id="desLeague" v-model="desLeagueSelect">
                                 <option v-for="item in league" :value="item.value">{{ item.name }}</option>
                             </select>
                         </div>
                     </div>
                     <div class="app__holder col-md-12">
                         <div class="division">
-                            <select class="form-control" name="disDivision" id="disDivision" v-model="disDivisionSelect">
+                            <select class="form-control" name="desDivision" id="desDivision" v-model="desDivisionSelect">
                                 <option v-for="item in division" :value="item.value">{{ item.name }}</option>
                             </select>
                         </div>
                     </div>
                     <div class="app__holder col-md-12">
-                        <img src="images/bronze_1.png" alt="Icon">
+                        <img :src="desImagePath" alt="Icon">
                     </div>
                 </div>
 
@@ -65,7 +61,7 @@
                     <h3 class="title">your server</h3>
                     <div class="app__holder col-md-12">
                         <div class="server">
-                            <select class="form-control" name="server" id="server">
+                            <select class="form-control" name="server" id="server" v-model="serverState">
                                 <option v-for="item in server" :value="item.value">{{ item.name }}</option>
                             </select>
                         </div>
@@ -81,7 +77,7 @@
                 <!--total-->
                 <div class="col-md-3 text-center">
                     <h3 class="title">total sum</h3>
-                    <p class="warning" v-if="leagueWarning">desired league can not be {{ leagueWarningText }} than current league</p>
+                    <p class="warning" v-if="leagueWarning">{{ headText }} league can not be {{ middleText }} than {{ endText }} league</p>
                     <p class="warning" v-if="divisionWarning">desired division can not be less than current division</p>
                     <p class="sum" v-else>total sum - {{ totalSum }}$</p>
                 </div>
@@ -92,7 +88,7 @@
 
 
 
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="libs/vue.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
