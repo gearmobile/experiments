@@ -77,8 +77,8 @@
                 <!--total-->
                 <div class="col-md-3 text-center">
                     <h3 class="title">total sum</h3>
-                    <p class="warning" v-if="leagueWarning">{{ headText }} league can not be {{ middleText }} than {{ endText }} league</p>
-                    <p class="warning" v-if="divisionWarning">desired division can not be less than current division</p>
+                    <p class="warning" v-if="showWarning">{{ headText }} {{ currPlace }} can not be {{ middleText }} than {{ endText }} {{ currPlace }}</p>
+                    <!--<p class="warning" v-if="divisionWarning">{{ headText }} division can not be {{ middleText }} than {{ endText }} division</p>-->
                     <p class="sum" v-else>total sum - {{ totalSum }}$</p>
                 </div>
             </div>

@@ -8,6 +8,14 @@ function searchPrice( nameKey, nameArray ) {
     }
 }
 
+function searchPrice_2( nameKey, nameArray ) {
+    for ( let i = 0; i < nameArray.length; i++ ) {
+        if ( nameArray[i].value === nameKey ) {
+            return nameArray[i].price;
+        }
+    }
+}
+
 const app = new Vue({
   data: {
     league: [
@@ -18,11 +26,11 @@ const app = new Vue({
       { name: 'bronze', value: 'bronze', price: 100 },
     ],
     division: [
-      { name: 'division I', value: 1, price: 500 },
-      { name: 'division II', value: 2, price: 400 },
+      { name: 'division I', value: 1, price: 100 },
+      { name: 'division II', value: 2, price: 200 },
       { name: 'division III', value: 3, price: 300 },
-      { name: 'division IV', value: 4, price: 200 },
-      { name: 'division V', value: 5, price: 100 },
+      { name: 'division IV', value: 4, price: 400 },
+      { name: 'division V', value: 5, price: 500 },
     ],
     server: [
       { name: 'eu west', value: 1 },
@@ -38,7 +46,7 @@ const app = new Vue({
 
     // current state ---------
     currLeagueSelect: 'silver',
-    currDivisionSelect: 3,
+    currDivisionSelect: 2,
 
     // desired state ------------
     desLeagueSelect: 'gold',
@@ -48,13 +56,14 @@ const app = new Vue({
     serverState: 'eu west',
 
     // warnings ---------------
-    leagueWarning: false,
-    divisionWarning: false,
+    showWarning: false,
+    // divisionWarning: false,
 
     // placeholders -------------
     headText: '',
     middleText: '',
-    endText: ''
+    endText: '',
+    currPlace: ''
   },
   computed: {
     totalSum: function () {
@@ -72,37 +81,67 @@ const app = new Vue({
       let desLeaguePrice = searchPrice( this.desLeagueSelect, this.league );
       let currLeaguePrice = searchPrice( this.currLeagueSelect, this.league );
       if ( desLeaguePrice === currLeaguePrice ) {
-        this.leagueWarning = true;
+        this.showWarning = true;
         this.headText = 'desired';
         this.middleText = 'equal';
         this.endText = 'current';
+        this.currPlace = 'league';
       } else if ( desLeaguePrice < currLeaguePrice ) {
-        this.leagueWarning = true;
+        this.showWarning = true;
         this.middleText = 'less';
       } else {
-        this.leagueWarning = false;
+        this.showWarning = false;
       }
     },
     desDivisionSelect: function () {
-      console.log( this.desDivisionSelect );
+      let desDivisionPrice = searchPrice_2( this.desDivisionSelect, this.division );
+      let currDivisionPrice = searchPrice_2( this.currDivisionSelect, this.division );
+      if ( desDivisionPrice === currDivisionPrice ) {
+        this.showWarning = true;
+        this.headText = 'desired';
+        this.middleText = 'equal';
+        this.endText = 'current';
+        this.currPlace = 'division';
+      } else if ( desDivisionPrice < currDivisionPrice ) {
+        this.showWarning = true;
+        this.middleText = 'less';
+      } else {
+        this.showWarning = false;
+      }
     },
     currLeagueSelect: function () {
       let desLeaguePrice = searchPrice( this.desLeagueSelect, this.league );
       let currLeaguePrice = searchPrice( this.currLeagueSelect, this.league );
-      if ( desLeaguePrice === currLeaguePrice ) {
-        this.leagueWarning = true;
+      console.log( currLeaguePrice, desLeaguePrice );
+      if ( currLeaguePrice === desLeaguePrice ) {
+        this.showWarning = true;
         this.headText = 'current';
         this.middleText = 'equal';
         this.endText = 'desired';
-      } else if ( desLeaguePrice < currLeaguePrice ) {
-        this.leagueWarning = true;
+        this.currPlace = 'league';
+      } else if ( currLeaguePrice > desLeaguePrice ) {
+        this.showWarning = true;
         this.middleText = 'more';
       } else {
-        this.leagueWarning = false;
+        this.showWarning = false;
       }
     },
     currDivisionSelect: function () {
-      console.log( this.currDivisionSelect );
+      let desDivisionPrice = searchPrice_2( this.desDivisionSelect, this.division );
+      let currDivisionPrice = searchPrice_2( this.currDivisionSelect, this.division );
+      console.log( currDivisionPrice, desDivisionPrice );
+      if ( currDivisionPrice === desDivisionPrice ) {
+        this.showWarning = true;
+        this.headText = 'current';
+        this.middleText = 'equal';
+        this.endText = 'desired';
+        this.currPlace = 'division';
+      } else if ( currDivisionPrice > desDivisionPrice ) {
+        this.showWarning = true;
+        this.middleText = 'more';
+      } else {
+        this.showWarning = false;
+      }
     }
   },
 });
