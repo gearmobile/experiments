@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Calculator</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/bootstrap.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -36,7 +36,7 @@
                     <select class="calc__list form-control" name="conditionTwo" id="conditionTwo" v-model="conditionTwoValue">
                         <option v-for="item in conditionTwo" v-text="item.name" :value="item.value"></option>
                     </select>
-                    <button type="button" class="calc__change btn btn-default">изменить</button>
+                    <button type="button" class="calc__change btn btn-default" v-show="show">изменить</button>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
                     <select class="calc__list form-control" name="vehicle" id="vehicle" v-model="vehicleValue">
                         <option v-for="item in vehicle" v-text="item.name" :value="item.value"></option>
                     </select>
-                    <button type="button" class="calc__change btn btn-default">изменить</button>
+                    <button type="button" class="calc__change btn btn-default" v-show="show">изменить</button>
                 </div>
             </div>
 
@@ -62,7 +62,7 @@
                     <select class="calc__list form-control" name="power" id="power" v-model="powerValue">
                         <option v-for="item in power" v-text="item.name" :value="item.value"></option>
                     </select>
-                    <button type="button" class="calc__change btn btn-default">изменить</button>
+                    <button type="button" class="calc__change btn btn-default" v-show="show">изменить</button>
                 </div>
             </div>
 
@@ -75,7 +75,7 @@
                     <select class="calc__list form-control" name="trailer" id="trailer" v-model="trailerValue">
                         <option v-for="item in trailer" v-text="item.name" :value="item.value"></option>
                     </select>
-                    <button type="button" class="calc__change btn btn-default">изменить</button>
+                    <button type="button" class="calc__change btn btn-default" v-show="show">изменить</button>
                 </div>
             </div>
 
@@ -88,7 +88,7 @@
                     <select class="calc__list form-control" name="region" id="region" v-model="regionValue">
                         <option v-for="item in region" v-text="item.name" :value="item.value"></option>
                     </select>
-                    <button type="button" class="calc__change btn btn-default">изменить</button>
+                    <button type="button" class="calc__change btn btn-default" v-show="show">изменить</button>
                 </div>
             </div>
 
@@ -400,7 +400,7 @@
                             <option v-for="item in group76" v-text="item.name" :value="item.value"></option>
                         </select>
 
-                        <button class="calc__change btn btn-default">изменить</button>
+                        <button class="calc__change btn btn-default" v-show="show">изменить</button>
                     </div>
                 </div>
             </div>
@@ -410,51 +410,8 @@
                     <h3 class="calc__title">Период использования</h3>
                 </div>
                 <div class="col-md-6">
-                    <select class="sel" name="period-fl" id="period-fl">
-                        <option value="-1">Не выбран</option>
-                        <option value="10">1 год</option>
-                        <option value="9">9 месяцев</option>
-                        <option value="8">8 месяцев</option>
-                        <option value="7">7 месяцев</option>
-                        <option value="6">6 месяцев</option>
-                        <option value="5">5 месяцев</option>
-                        <option value="4">4 месяца</option>
-                        <option value="3">3 месяца</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="row calc__row">
-                <div class="col-md-6">
-                    <h3 class="calc__title">Период использования</h3>
-                </div>
-                <div class="col-md-6">
-                    <select class="sel" name="period-fl" id="period-fl">
-                        <option value="-1">Не выбран</option>
-                        <option value="10">1 год</option>
-                        <option value="9">9 месяцев</option>
-                        <option value="8">8 месяцев</option>
-                        <option value="7">7 месяцев</option>
-                        <option value="6">6 месяцев</option>
-                        <option value="5">5 месяцев</option>
-                        <option value="4">4 месяца</option>
-                        <option value="3">3 месяца</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="row calc__row">
-                <div class="col-md-6">
-                    <h3 class="calc__title">Период использования</h3>
-                </div>
-                <div class="col-md-6">
-                    <select class="sel" name="period-ul" id="period-ul">
-                        <option value="-1">Не выбран</option>
-                        <option value="10">1 год</option>
-                        <option value="9">9 месяцев</option>
-                        <option value="8">8 месяцев</option>
-                        <option value="7">7 месяцев</option>
-                        <option value="6">6 месяцев</option>
+                    <select class="calc__list form-control" name="period" id="period">
+                        <option v-for="item in period" v-text="item.name" :value="item.value"></option>
                     </select>
                 </div>
             </div>
@@ -543,10 +500,7 @@
         </div>
     </div>
 
-
-
-
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="libs/vue.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
