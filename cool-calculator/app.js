@@ -71,16 +71,16 @@ const app = new Vue({
       let divisionPrice = searchPrice_2( this.currDivisionSelect, this.division );
       return leaguePrice + divisionPrice;
     },
-    initSumEuro: function() {
-      return this.initSumDollar * .7;
+    initSumEuro: function () {
+      return Math.floor(this.initSumDollar * .7);
     },
-    currSumDollar: function() {
+    currSumDollar: function () {
       let selectLeaguePrice = searchPrice( this.desLeagueSelect, this.league );
       let selectDivisionPrice = searchPrice_2( this.desDivisionSelect, this.division );
       return selectLeaguePrice + selectDivisionPrice;
     },
-    currSumEuro: function() {
-      return this.currSumDollar * .7;
+    currSumEuro: function () {
+      return Math.floor(this.currSumDollar * .7);
     },
     currImagePath: function() {
       return 'images/' + this.currLeagueSelect + '_' + this.currDivisionSelect + '.png';
