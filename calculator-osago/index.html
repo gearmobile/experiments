@@ -9,76 +9,94 @@
 <body>
 
     <div id="app" class="calc">
-        <div class="container">
+        <div class="container calc__container">
 
             <!--owner-->
             <div class="row calc__row">
-                <div class="col-md-6">Владелец ТС</div>
                 <div class="col-md-6">
-                    <select class="calc__list form-control" name="owner" id="owner">
+                    <h3 class="calc__title">Владелец ТС</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="owner" id="owner" v-model="ownerValue">
                         <option v-for="item in owner" :value="item.value" v-text="item.name"></option>
                     </select>
-                    <button class="calc__change">изменить</button>
+                    <button type="button" class="calc__change btn btn-default" v-show="show">изменить</button>
                 </div>
             </div>
 
             <!--conditions-->
             <div class="row calc__row">
-                <div class="col-md-6">Условия страхования</div>
                 <div class="col-md-6">
-                    <select class="calc__list form-control" name="condition_1" id="condition_1">
-                        <option v-for="item in condition_1" v-text="item.name" :value="item.value"></option>
+                    <h3 class="calc__title">Условия страхования</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="conditionOne" id="conditionOne" v-model="conditionOneValue">
+                        <option v-for="item in conditionOne" v-text="item.name" :value="item.value"></option>
                     </select>
-                    <select class="calc__list form-control" name="condition_2" id="condition_2">
-                        <option v-for="item in condition_2" v-text="item.name" :value="item.value"></option>
+                    <select class="calc__list form-control" name="conditionTwo" id="conditionTwo" v-model="conditionTwoValue">
+                        <option v-for="item in conditionTwo" v-text="item.name" :value="item.value"></option>
                     </select>
+                    <button type="button" class="calc__change btn btn-default">изменить</button>
                 </div>
             </div>
 
             <!--vehicle-->
             <div class="row calc__row">
-                <div class="col-md-6">Тип ТС</div>
                 <div class="col-md-6">
-                    <select class="calc__list form-control" name="vehicle" id="vehicle">
+                    <h3 class="calc__title">Тип ТС</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="vehicle" id="vehicle" v-model="vehicleValue">
                         <option v-for="item in vehicle" v-text="item.name" :value="item.value"></option>
                     </select>
+                    <button type="button" class="calc__change btn btn-default">изменить</button>
                 </div>
             </div>
 
             <!--power-->
             <div class="row calc__row">
-                <div class="col-md-6">Мощность двигателя</div>
                 <div class="col-md-6">
-                    <select class="calc__list form-control" name="power" id="power">
+                    <h3 class="calc__title">Мощность двигателя</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="power" id="power" v-model="powerValue">
                         <option v-for="item in power" v-text="item.name" :value="item.value"></option>
                     </select>
+                    <button type="button" class="calc__change btn btn-default">изменить</button>
                 </div>
             </div>
 
             <!--trailer-->
             <div class="row calc__row">
-                <div class="col-md-6">Будет использоваться с прицепом</div>
                 <div class="col-md-6">
-                    <select class="calc__list form-control" name="trailer" id="trailer">
+                    <h3 class="calc__title">Будет использоваться с прицепом</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="trailer" id="trailer" v-model="trailerValue">
                         <option v-for="item in trailer" v-text="item.name" :value="item.value"></option>
                     </select>
+                    <button type="button" class="calc__change btn btn-default">изменить</button>
                 </div>
             </div>
 
             <!--region-->
             <div class="row calc__row">
-                <div class="col-md-6">Место регистрации собственника</div>
                 <div class="col-md-6">
-                    <select class="calc__list form-control" name="region" id="region">
+                    <h3 class="calc__title">Место регистрации собственника</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="region" id="region" v-model="regionValue">
                         <option v-for="item in region" v-text="item.name" :value="item.value"></option>
                     </select>
-                    <button class="calc__change">изменить</button>
+                    <button type="button" class="calc__change btn btn-default">изменить</button>
                 </div>
             </div>
 
             <!--city-->
             <div class="row calc__row">
-                <div class="col-md-6">Уточните город</div>
+                <div class="col-md-6">
+                    <h3 class="calc__title">Уточните город</h3>
+                </div>
                 <div class="col-md-6">
                     <div class="calc__info">
 
@@ -127,422 +145,270 @@
                         </select>
 
                         <select class="calc__list form-control" name="group13" id="group13">
-                            <option v-for="item in group12" v-text="item.name" :value="item.value"></option>
+                            <option v-for="item in group13" v-text="item.name" :value="item.value"></option>
                         </select>
 
                         <select class="calc__list form-control" name="group14" id="group14">
                             <option v-for="item in group14" v-text="item.name" :value="item.value"></option>
                         </select>
 
-                        <select class="calc__list form-control" name="city-16" id="city-16">
-                            <option value="-1">Не выбран</option>
-                            <option value="16_1">Владикавказ</option>
-                            <option value="16_2">прочие города и населенные пункты</option>
+                        <select class="calc__list form-control" name="group15" id="group15">
+                            <option v-for="item in group15" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-17" id="city-17">
-                            <option value="-1">Не выбран</option>
-                            <option value="17_1">Альметьевск, Зеленодольск, Нижнекамск</option>
-                            <option value="17_2">Бугульма, Лениногорск, Чистополь</option>
-                            <option value="17_3">Елабуга</option>
-                            <option value="17_4">Казань</option>
-                            <option value="17_5">Набережные Челны</option>
-                            <option value="17_6">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group16" id="group16">
+                            <option v-for="item in group16" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-18" id="city-18">
-                            <option value="-1">Не выбран</option>
-                            <option value="18_1">Кызыл</option>
-                            <option value="18_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group17" id="group17">
+                            <option v-for="item in group17" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-19" id="city-19">
-                            <option value="-1">Не выбран</option>
-                            <option value="19_1">Воткинск</option>
-                            <option value="19_2">Глазов, Сарапул</option>
-                            <option value="19_3">Ижевск</option>
-                            <option value="19_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group18" id="group18">
+                            <option v-for="item in group18" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-20" id="city-20">
-                            <option value="-1">Не выбран</option>
-                            <option value="20_1">Абакан, Саяногорск, Черногорск</option>
-                            <option value="20_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group19" id="group19">
+                            <option v-for="item in group19" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-22" id="city-22">
-                            <option value="-1">Не выбран</option>
-                            <option value="22_1">Канаш</option>
-                            <option value="22_2">Новочебоксарск</option>
-                            <option value="22_3">Чебоксары</option>
-                            <option value="22_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group20" id="group20">
+                            <option v-for="item in group20" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-23" id="city-23">
-                            <option value="-1">Не выбран</option>
-                            <option value="23_1">Барнаул</option>
-                            <option value="23_2">Бийск</option>
-                            <option value="23_3">Заринск, Новоалтайск, Рубцовск</option>
-                            <option value="23_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group21" id="group21">
+                            <option v-for="item in group21" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-24" id="city-24">
-                            <option value="-1">Не выбран</option>
-                            <option value="24_1">Краснокаменск</option>
-                            <option value="24_2">Чита</option>
-                            <option value="24_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group22" id="group22">
+                            <option v-for="item in group22" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-25" id="city-25">
-                            <option value="-1">Не выбран</option>
-                            <option value="25_1">Петропавловск-Камчатский</option>
-                            <option value="25_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group23" id="group23">
+                            <option v-for="item in group23" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-26" id="city-26">
-                            <option value="-1">Не выбран</option>
-                            <option value="26_1">Анапа, Геленджик</option>
-                            <option value="26_2">Армавир, Сочи, Туапсе</option>
-                            <option value="26_3">Белореченск, Ейск, Кропоткин, Крымск, Курганинск, Лабинск, Славянск-на-Кубани, Тимашевск, Тихорецк</option>
-                            <option value="26_4">Краснодар, Новороссийск</option>
-                            <option value="26_5">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group24" id="group24">
+                            <option v-for="item in group24" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-27" id="city-27">
-                            <option value="-1">Не выбран</option>
-                            <option value="27_1">Ачинск, Зеленогорск</option>
-                            <option value="27_2">Железногорск, Норильск</option>
-                            <option value="27_3">Канск, Лесосибирск, Минусинск, Назарово</option>
-                            <option value="27_4">Красноярск</option>
-                            <option value="27_5">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group25" id="group25">
+                            <option v-for="item in group25" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-28" id="city-28">
-                            <option value="-1">Не выбран</option>
-                            <option value="28_1">Березники, Краснокамск</option>
-                            <option value="28_2">Лысьва, Чайковский</option>
-                            <option value="28_3">Пермь</option>
-                            <option value="28_4">Соликамск</option>
-                            <option value="28_5">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group26" id="group26">
+                            <option v-for="item in group26" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-29" id="city-29">
-                            <option value="-1">Не выбран</option>
-                            <option value="29_1">Владивосток</option>
-                            <option value="29_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group27" id="group27">
+                            <option v-for="item in group27" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-30" id="city-30">
-                            <option value="-1">Не выбран</option>
-                            <option value="30_1">Буденновск, Георгиевск, Ессентуки, Минеральные воды, Невинномысск, Пятигорск</option>
-                            <option value="30_2">Кисловодск, Михайловск, Ставрополь</option>
-                            <option value="30_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group28" id="group28">
+                            <option v-for="item in group28" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-31" id="city-31">
-                            <option value="-1">Не выбран</option>
-                            <option value="31_1">Амурск</option>
-                            <option value="31_2">Комсомольск-на-Амуре</option>
-                            <option value="31_3">Хабаровск</option>
-                            <option value="31_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group29" id="group29">
+                            <option v-for="item in group29" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-32" id="city-32">
-                            <option value="-1">Не выбран</option>
-                            <option value="32_1">Белогорск, Свободный</option>
-                            <option value="32_2">Благовещенск</option>
-                            <option value="32_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group30" id="group30">
+                            <option v-for="item in group30" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-33" id="city-33">
-                            <option value="-1">Не выбран</option>
-                            <option value="33_1">Архангельск</option>
-                            <option value="33_2">Котлас</option>
-                            <option value="33_3">Северодвинск</option>
-                            <option value="33_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group31" id="group31">
+                            <option v-for="item in group31" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-34" id="city-34">
-                            <option value="-1">Не выбран</option>
-                            <option value="34_1">Астрахань</option>
-                            <option value="34_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group32" id="group32">
+                            <option v-for="item in group32" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-35" id="city-35">
-                            <option value="-1">Не выбран</option>
-                            <option value="35_1">Белгород</option>
-                            <option value="35_2">Губкин, Старый Оскол</option>
-                            <option value="35_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group33" id="group33">
+                            <option v-for="item in group33" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-36" id="city-36">
-                            <option value="-1">Не выбран</option>
-                            <option value="36_1">Брянск</option>
-                            <option value="36_2">Клинцы</option>
-                            <option value="36_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group34" id="group34">
+                            <option v-for="item in group34" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-37" id="city-37">
-                            <option value="-1">Не выбран</option>
-                            <option value="37_1">Владимир</option>
-                            <option value="37_2">Гусь-Хрустальный</option>
-                            <option value="37_3">Муром</option>
-                            <option value="37_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group35" id="group35">
+                            <option v-for="item in group35" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-38" id="city-38">
-                            <option value="-1">Не выбран</option>
-                            <option value="38_1">Волгоград</option>
-                            <option value="38_2">Волжский</option>
-                            <option value="38_3">Камышин, Михайловка</option>
-                            <option value="38_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group36" id="group36">
+                            <option v-for="item in group36" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-39" id="city-39">
-                            <option value="-1">Не выбран</option>
-                            <option value="39_1">Вологда</option>
-                            <option value="39_2">Череповец</option>
-                            <option value="39_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group37" id="group37">
+                            <option v-for="item in group37" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-40" id="city-40">
-                            <option value="-1">Не выбран</option>
-                            <option value="40_1">Борисоглебск, Лиски, Россошь</option>
-                            <option value="40_2">Воронеж</option>
-                            <option value="40_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group38" id="group38">
+                            <option v-for="item in group38" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-41" id="city-41">
-                            <option value="-1">Не выбран</option>
-                            <option value="41_1">Иваново</option>
-                            <option value="41_2">Кинешма</option>
-                            <option value="41_3">Шуя</option>
-                            <option value="41_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group39" id="group39">
+                            <option v-for="item in group39" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-42" id="city-42">
-                            <option value="-1">Не выбран</option>
-                            <option value="42_1">Ангарск</option>
-                            <option value="42_2">Братск, Тулун, Усть-Илимск, Усть-Кут, Черемхово</option>
-                            <option value="42_3">Иркутск</option>
-                            <option value="42_4">Усолье-Сибирское</option>
-                            <option value="42_5">Шелехов</option>
-                            <option value="42_6">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group40" id="group40">
+                            <option v-for="item in group40" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-43" id="city-43">
-                            <option value="-1">Не выбран</option>
-                            <option value="43_1">Калининград</option>
-                            <option value="43_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group41" id="group41">
+                            <option v-for="item in group41" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-44" id="city-44">
-                            <option value="-1">Не выбран</option>
-                            <option value="44_1">Калуга</option>
-                            <option value="44_2">Обнинск</option>
-                            <option value="44_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group42" id="group42">
+                            <option v-for="item in group42" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-45" id="city-45">
-                            <option value="-1">Не выбран</option>
-                            <option value="45_1">Анжеро-Судженск, Киселевск, Юрга</option>
-                            <option value="45_2">Белово, Березовский, Междуреченск, Осинники, Прокопьевск</option>
-                            <option value="45_3">Кемерово</option>
-                            <option value="45_4">Новокузнецк</option>
-                            <option value="45_5">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group43" id="group43">
+                            <option v-for="item in group43" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-46" id="city-46">
-                            <option value="-1">Не выбран</option>
-                            <option value="46_1">Киров</option>
-                            <option value="46_2">Кирово-Чепецк</option>
-                            <option value="46_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group44" id="group44">
+                            <option v-for="item in group44" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-47" id="city-47">
-                            <option value="-1">Не выбран</option>
-                            <option value="47_1">Кострома</option>
-                            <option value="47_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group45" id="group45">
+                            <option v-for="item in group45" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-48" id="city-48">
-                            <option value="-1">Не выбран</option>
-                            <option value="48_1">Курган</option>
-                            <option value="48_2">Шадринск</option>
-                            <option value="48_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group46" id="group46">
+                            <option v-for="item in group46" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="scalc__list form-control" name="city-49" id="city-49">
-                            <option value="-1">Не выбран</option>
-                            <option value="49_1">Железногорск</option>
-                            <option value="49_2">Курск</option>
-                            <option value="49_3">прочие города и населенные пункты</option>
+
+                        <select class="scalc__list form-control" name="group47" id="group47">
+                            <option v-for="item in group47" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-51" id="city-51">
-                            <option value="-1">Не выбран</option>
-                            <option value="51_1">Елец</option>
-                            <option value="51_2">Липецк</option>
-                            <option value="51_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group48" id="group48">
+                            <option v-for="item in group48" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-52" id="city-52">
-                            <option value="-1">Не выбран</option>
-                            <option value="52_1">Магадан</option>
-                            <option value="52_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group49" id="group49">
+                            <option v-for="item in group49" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-54" id="city-54">
-                            <option value="-1">Не выбран</option>
-                            <option value="54_1">Апатиты, Мончегорск</option>
-                            <option value="54_2">Мурманск</option>
-                            <option value="54_3">Североморск</option>
-                            <option value="54_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group50" id="group50">
+                            <option v-for="item in group50" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-55" id="city-55">
-                            <option value="-1">Не выбран</option>
-                            <option value="55_1">Арзамас, Выкса, Саров</option>
-                            <option value="55_2">Балахна, Бор, Дзержинск</option>
-                            <option value="55_3">Кстово</option>
-                            <option value="55_4">Нижний Новгород</option>
-                            <option value="55_5">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group51" id="group51">
+                            <option v-for="item in group51" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-56" id="city-56">
-                            <option value="-1">Не выбран</option>
-                            <option value="56_1">Боровичи</option>
-                            <option value="56_2">Великий Новгород</option>
-                            <option value="56_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group52" id="group52">
+                            <option v-for="item in group52" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-57" id="city-57">
-                            <option value="-1">Не выбран</option>
-                            <option value="57_1">Бердск</option>
-                            <option value="57_2">Искитим</option>
-                            <option value="57_3">Куйбышев</option>
-                            <option value="57_4">Новосибирск</option>
-                            <option value="57_5">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group53" id="group53">
+                            <option v-for="item in group53" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-58" id="city-58">
-                            <option value="-1">Не выбран</option>
-                            <option value="58_1">Омск</option>
-                            <option value="58_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group54" id="group54">
+                            <option v-for="item in group54" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-59" id="city-59">
-                            <option value="-1">Не выбран</option>
-                            <option value="59_1">Бугуруслан, Бузулук, Новотроицк</option>
-                            <option value="59_2">Оренбург</option>
-                            <option value="59_3">Орск</option>
-                            <option value="59_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group55" id="group55">
+                            <option v-for="item in group55" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-60" id="city-60">
-                            <option value="-1">Не выбран</option>
-                            <option value="60_1">Ливны, Мценск</option>
-                            <option value="60_2">Орел</option>
-                            <option value="60_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group56" id="group56">
+                            <option v-for="item in group56" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-61" id="city-61">
-                            <option value="-1">Не выбран</option>
-                            <option value="61_1">Заречный</option>
-                            <option value="61_2">Кузнецк</option>
-                            <option value="61_3">Пенза</option>
-                            <option value="61_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group57" id="group57">
+                            <option v-for="item in group57" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-62" id="city-62">
-                            <option value="-1">Не выбран</option>
-                            <option value="62_1">Великие Луки</option>
-                            <option value="62_2">Псков</option>
-                            <option value="62_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group58" id="group58">
+                            <option v-for="item in group58" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="scalc__list form-control" name="city-63" id="city-63">
-                            <option value="-1">Не выбран</option>
-                            <option value="63_1">Азов</option>
-                            <option value="63_2">Батайск</option>
-                            <option value="63_3">Волгодонск, Гуково, Каменск-Шахтинский, Новочеркасск, Новошахтинск, Сальск, Таганрог</option>
-                            <option value="63_4">Ростов-на-Дону</option>
-                            <option value="63_5">Шахты</option>
-                            <option value="63_6">прочие города и населенные пункты</option>
+
+                        <select class="scalc__list form-control" name="group59" id="group59">
+                            <option v-for="item in group59" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-64" id="city-64">
-                            <option value="-1">Не выбран</option>
-                            <option value="64_1">Рязань</option>
-                            <option value="64_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group60" id="group60">
+                            <option v-for="item in group60" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-65" id="city-65">
-                            <option value="-1">Не выбран</option>
-                            <option value="65_1">Новокуйбышевск, Сызрань</option>
-                            <option value="65_2">Самара</option>
-                            <option value="65_3">Тольятти</option>
-                            <option value="65_4">Чапаевск</option>
-                            <option value="65_5">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group61" id="group61">
+                            <option v-for="item in group61" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="scalc__list form-control" name="city-66" id="city-66">
-                            <option value="-1">Не выбран</option>
-                            <option value="66_1">Балаково, Балашов, Вольск</option>
-                            <option value="66_2">Саратов</option>
-                            <option value="66_3">Энгельс</option>
-                            <option value="66_4">прочие города и населенные пункты</option>
+
+                        <select class="scalc__list form-control" name="group62" id="group62">
+                            <option v-for="item in group62" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-67" id="city-67">
-                            <option value="-1">Не выбран</option>
-                            <option value="67_1">Южно-Сахалинск</option>
-                            <option value="67_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group63" id="group63">
+                            <option v-for="item in group63" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-68" id="city-68">
-                            <option value="-1">Не выбран</option>
-                            <option value="68_1">Асбест, Ревда</option>
-                            <option value="68_2">Березовский, Верхняя Пышма, Новоуральск, Первоуральск</option>
-                            <option value="68_3">Верхняя Салда, Полевской</option>
-                            <option value="68_4">Екатеринбург</option>
-                            <option value="68_5">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group64" id="group64">
+                            <option v-for="item in group64" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-69" id="city-69">
-                            <option value="-1">Не выбран</option>
-                            <option value="69_1">Вязьма, Рославль, Сафоново, Ярцево</option>
-                            <option value="69_2">Смоленск</option>
-                            <option value="69_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group65" id="group65">
+                            <option v-for="item in group65" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-70" id="city-70">
-                            <option value="-1">Не выбран</option>
-                            <option value="70_1">Мичуринск</option>
-                            <option value="70_2">Тамбов</option>
-                            <option value="70_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group66" id="group66">
+                            <option v-for="item in group66" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-71" id="city-71">
-                            <option value="-1">Не выбран</option>
-                            <option value="71_1">Вышний Волочек, Кимры, Ржев</option>
-                            <option value="71_2">Тверь</option>
-                            <option value="71_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group67" id="group67">
+                            <option v-for="item in group67" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-72" id="city-72">
-                            <option value="-1">Не выбран</option>
-                            <option value="72_1">Северск</option>
-                            <option value="72_2">Томск</option>
-                            <option value="72_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group68" id="group68">
+                            <option v-for="item in group68" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-73" id="city-73">
-                            <option value="-1">Не выбран</option>
-                            <option value="73_1">Алексин, Ефремов, Новомосковск</option>
-                            <option value="73_2">Тула</option>
-                            <option value="73_3">Узловая, Щекино</option>
-                            <option value="73_4">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group69" id="group69">
+                            <option v-for="item in group69" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-74" id="city-74">
-                            <option value="-1">Не выбран</option>
-                            <option value="74_1">Тобольск</option>
-                            <option value="74_2">Тюмень</option>
-                            <option value="74_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group70" id="group70">
+                            <option v-for="item in group70" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-75" id="city-75">
-                            <option value="-1">Не выбран</option>
-                            <option value="75_1">Димитровград</option>
-                            <option value="75_2">Ульяновск</option>
-                            <option value="75_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group71" id="group71">
+                            <option v-for="item in group71" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-76" id="city-76">
-                            <option value="-1">Не выбран</option>
-                            <option value="76_1">Златоуст, Миасс</option>
-                            <option value="76_2">Копейск</option>
-                            <option value="76_3">Магнитогорск</option>
-                            <option value="76_4">Сатка, Чебаркуль</option>
-                            <option value="76_5">Челябинск</option>
-                            <option value="76_6">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group72" id="group72">
+                            <option v-for="item in group72" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-77" id="city-77">
-                            <option value="-1">Не выбран</option>
-                            <option value="77_1">Ярославль</option>
-                            <option value="77_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group73" id="group73">
+                            <option v-for="item in group73" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-81" id="city-81">
-                            <option value="-1">Не выбран</option>
-                            <option value="81_1">Биробиджан</option>
-                            <option value="81_2">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group74" id="group74">
+                            <option v-for="item in group74" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-83" id="city-83">
-                            <option value="-1">Не выбран</option>
-                            <option value="83_1">Когалым</option>
-                            <option value="83_2">Нефтеюганск, Нягань</option>
-                            <option value="83_3">Сургут</option>
-                            <option value="83_4">Нижневартовск</option>
-                            <option value="83_5">Ханты-Мансийск</option>
-                            <option value="83_6">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group75" id="group75">
+                            <option v-for="item in group75" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <select class="calc__list form-control" name="city-85" id="city-85">
-                            <option value="-1">Не выбран</option>
-                            <option value="85_1">Новый Уренгой</option>
-                            <option value="85_2">Ноябрьск</option>
-                            <option value="85_3">прочие города и населенные пункты</option>
+
+                        <select class="calc__list form-control" name="group76" id="group76">
+                            <option v-for="item in group76" v-text="item.name" :value="item.value"></option>
                         </select>
-                        <button type="button" class="btn calc__change">изменить</button>
+
+                        <button class="calc__change btn btn-default">изменить</button>
                     </div>
                 </div>
             </div>
 
             <div class="row calc__row">
-                <div class="col-md-6">Период использования</div>
+                <div class="col-md-6">
+                    <h3 class="calc__title">Период использования</h3>
+                </div>
                 <div class="col-md-6">
                     <select class="sel" name="period-fl" id="period-fl">
                         <option value="-1">Не выбран</option>
@@ -559,7 +425,9 @@
             </div>
 
             <div class="row calc__row">
-                <div class="col-md-6">Период использования</div>
+                <div class="col-md-6">
+                    <h3 class="calc__title">Период использования</h3>
+                </div>
                 <div class="col-md-6">
                     <select class="sel" name="period-fl" id="period-fl">
                         <option value="-1">Не выбран</option>
@@ -576,7 +444,9 @@
             </div>
 
             <div class="row calc__row">
-                <div class="col-md-6">Период использования</div>
+                <div class="col-md-6">
+                    <h3 class="calc__title">Период использования</h3>
+                </div>
                 <div class="col-md-6">
                     <select class="sel" name="period-ul" id="period-ul">
                         <option value="-1">Не выбран</option>
@@ -589,86 +459,67 @@
                 </div>
             </div>
 
+            <!--insurance-->
             <div class="row calc__row">
-                <div class="col-md-6">Срок страхования</div>
                 <div class="col-md-6">
-                    <select class="sel" name="perion-in" id="period-in">
-                        <option value="-1">Не выбран</option>
-                        <option value="10">1 год</option>
-                        <option value="9">9 месяцев</option>
-                        <option value="8">8 месяцев</option>
-                        <option value="7">7 месяцев</option>
-                        <option value="6">6 месяцев</option>
-                        <option value="5">5 месяцев</option>
-                        <option value="4">4 месяца</option>
-                        <option value="3">3 месяца</option>
-                        <option value="2">2 месяца</option>
-                        <option value="1">от 16 дней до 1 месяца</option>
-                        <option value="0">от 5 до 15 дней</option>
+                    <h3 class="calc__title">Срок страхования</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="insurance" id="insurance">
+                        <option v-for="item in insurance" v-text="item.name" :value="item.value"></option>
                     </select>
                 </div>
             </div>
 
+            <!--drive-->
             <div class="row calc__row">
-                <div class="col-md-6">Допущенны к управлению</div>
                 <div class="col-md-6">
-                    <select class="sel" name="spisok" id="spisok">
-                        <option value="-1">Не выбран</option>
-                        <option value="1">ограниченный список водителей</option>
-                        <option value="2">без ограничения</option>
+                    <h3 class="calc__title">Допущенны к управлению</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="drive" id="drive">
+                        <option v-for="item in drive" v-text="item.name" :value="item.value"></option>
                     </select>
                 </div>
             </div>
 
+            <!--experience-->
             <div class="row calc__row">
-                <div class="col-md-6">Минимальный возраст и стаж</div>
                 <div class="col-md-6">
-                    <select class="sel" name="voditeli" id="voditeli">
-                        <option value="-1">Не выбран</option>
-                        <option value="0">возраст больше 22 лет, стаж свыше 3 лет</option>
-                        <option value="1">возраст больше 22 лет, стаж до 3 лет</option>
-                        <option value="2">возраст до 22 лет, стаж свыше 3 лет</option>
-                        <option value="3">возраст до 22 лет, стаж до 3 лет</option>
+                    <h3 class="calc__title">Минимальный возраст и стаж</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="experience" id="experience">
+                        <option v-for="item in experience" v-text="item.name" :value="item.value"></option>
                     </select>
                 </div>
             </div>
 
+            <!--classVehicle-->
             <div class="row calc__row">
-                <div class="col-md-6">Класс</div>
                 <div class="col-md-6">
-                    <select class="sel" name="Kbm" id="Kbm">
-                        <option value="-1">Не выбран</option>
-                        <option value="def">не страховался ранее</option>
-                        <option value="m">М</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
+                    <h3 class="calc__title">Класс</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="classVehicle" id="classVehicle">
+                        <option v-for="item in classVehicle" v-text="item.name" :value="item.value"></option>
                     </select>
                 </div>
             </div>
 
+            <!--violations-->
             <div class="row calc__row">
-                <div class="col-md-6">Нарушения условий страхования</div>
                 <div class="col-md-6">
-                    <select class="sel" name="narusheniya" id="narusheniya">
-                        <option value="-1">Не выбран</option>
-                        <option value="1">нет</option>
-                        <option value="2">да</option>
+                    <h3 class="calc__title">Нарушения условий страхования</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="calc__list form-control" name="violations" id="violations">
+                        <option v-for="item in violations" v-text="item.name" :value="item.value"></option>
                     </select>
                 </div>
             </div>
 
+            <!--progress-bar-->
             <div class="row calc__row">
                 <div class="col-md-12">
                     <div class="calc__progress-bar"></div>
@@ -677,10 +528,10 @@
 
             <div class="row calc__row">
                 <div class="col-md-6">
-                    <button class="btn"></button>
+                    <button type="button" class="btn btn-default">button</button>
                 </div>
                 <div class="col-md-6">
-                    <button class="btn calc__calculate"></button>
+                    <button type="button" class="btn btn-default calc__calculate">button</button>
                 </div>
             </div>
 
