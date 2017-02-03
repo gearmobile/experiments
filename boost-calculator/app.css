@@ -1,0 +1,66 @@
+body {
+    padding: 20px;
+    background-color: #232428;
+    color: white;
+}
+
+#app .nav-tabs {
+    border-bottom: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#app .nav-tabs li {
+    margin-bottom: 0;
+    display: inline-block;
+    padding: 0 5px;
+    float: none;
+}
+
+#app .nav-tabs a {
+    color: white;
+    padding: 7px 30px 6px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 30px;
+    display: inline-block;
+    margin-right: 0;
+}
+
+#app .nav-tabs li.active a{
+    background-color: #2776dc;
+    border: 2px solid white;
+}
+
+#app .tab-pane {
+    padding: 20px 40px;
+}
+
+#app .app__title {
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+#app .app__input {
+    color: #fff;
+    background-color: rgba(255,255,255,0.1);
+    font-size: 42px;
+    font-weight: 500;
+    height: 64px;
+    width: 132px;
+}
+
+#app .app__column {
+    text-align: center;
+}
+
+#app .app__label {
+    text-transform: uppercase;
+    display: block;
+    color: #ccc;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
