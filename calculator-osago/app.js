@@ -683,8 +683,9 @@ const app = new Vue({
     // -----------------------
   },
   methods: {
-    changeSelect(value) {
-      this.value = 0;
+    changeSelectOwner() {
+      this.ownerValue = 0;
+      this.progress = 0;
     },
   },
 });
