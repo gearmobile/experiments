@@ -20,7 +20,7 @@
                     <select class="calc__list form-control" name="owner" id="owner" v-model="ownerValue">
                         <option v-for="item in owner" :value="item.value" v-text="item.name"></option>
                     </select>
-                    <button type="button" class="calc__change btn btn-default" v-show="show">изменить</button>
+                    <button type="button" class="calc__change btn btn-default" v-show="ownerValue" v-on:click="changeSelect(ownerValue)">изменить</button>
                 </div>
             </div>
 

@@ -2,25 +2,25 @@
 const app = new Vue({
   data: {
     owner: [
-      { name: 'не выбрано', value: -1 },
+      { name: 'не выбрано', value: 0 },
       { name: 'физическое лицо', value: 1 },
       { name: 'юридическое лицо', value: 2 },
     ],
     conditionOne: [
-      { name: 'не выбрано', value: -1 },
-      { name: 'стандартные', value: 0 },
-      { name: 'транзит', value: 1 },
-      { name: 'иностранец', value: 2 },
+      { name: 'не выбрано', value: 0 },
+      { name: 'стандартные', value: 1 },
+      { name: 'транзит', value: 2 },
+      { name: 'иностранец', value: 3 },
     ],
     conditionTwo: [
-      { name: 'не выбрано', value: -1 },
-      { name: 'стандартные', value: 0 },
-      { name: 'транзит', value: 1 },
-      { name: 'иностранец', value: 2 },
-      { name: 'спецтехника', value: 3 },
+      { name: 'не выбрано', value: 0 },
+      { name: 'стандартные', value: 1 },
+      { name: 'транзит', value: 2 },
+      { name: 'иностранец', value: 3 },
+      { name: 'спецтехника', value: 4 },
     ],
     vehicle: [
-      { name: 'не выбрано', value: -1 },
+      { name: 'не выбрано', value: 0 },
       { name: 'мотоциклы, мопеды, квадроциклы', value: 'a' },
       { name: 'легковой автомобиль', value: 'b' },
       { name: 'легковое такси', value: 'bt' },
@@ -34,13 +34,13 @@ const app = new Vue({
       { name: 'трактора', value: 'tr' },
     ],
     power: [
-      { name: 'не выбрано', value: -1 },
-      { name: 'до 50 л.с. включительно', value: 0 },
-      { name: 'свыше 50 до 70 л.с. включительно', value: 1 },
-      { name: 'свыше 70 до 100 л.с. включительно', value: 2 },
-      { name: 'свыше 100 до 120 л.с. включительно', value: 3 },
-      { name: 'свыше 120 до 150 л.с. включительно', value: 4 },
-      { name: 'свыше 150 л.с.', value: 5 },
+      { name: 'не выбрано', value: 0 },
+      { name: 'до 50 л.с. включительно', value: 1 },
+      { name: 'свыше 50 до 70 л.с. включительно', value: 2 },
+      { name: 'свыше 70 до 100 л.с. включительно', value: 3 },
+      { name: 'свыше 100 до 120 л.с. включительно', value: 4 },
+      { name: 'свыше 120 до 150 л.с. включительно', value: 5 },
+      { name: 'свыше 150 л.с.', value: 6 },
     ],
     trailer: [
       { name: 'не выбрано', value: -1 },
@@ -640,7 +640,7 @@ const app = new Vue({
     classVehicle: [
       { name: 'не выбран', value: -1 },
       { name: 'не страховался ранее', value: 'def' },
-      { name: 'М', value: 'm'  },
+      { name: 'М', value: 'm' },
       { name: '1', value: 1 },
       { name: '2', value: 2 },
       { name: '3', value: 3 },
@@ -667,13 +667,13 @@ const app = new Vue({
         { name: '3 месяцев', value: 3 },
     ],
     violations: [
-      { name: 'не выбран', value: -1 },
+      { name: 'не выбран', value: 0 },
       { name: 'нет', value: 1 },
       { name: 'да', value: 2 },
     ],
     // -----------------------
     show: false,
-    ownerValue: -1,
+    ownerValue: 0,
     conditionOneValue: -1,
     conditionTwoValue: -1,
     vehicleValue: -1,
@@ -681,6 +681,11 @@ const app = new Vue({
     trailerValue: -1,
     regionValue: -1,
     // -----------------------
+  },
+  methods: {
+    changeSelect(value) {
+      this.value = 0;
+    },
   },
 });
 
