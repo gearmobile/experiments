@@ -734,6 +734,14 @@ const app = new Vue({
       this.violationsValue = 0;
     }
   },
+  computed: {
+    condOneShow: function () {
+      return this.ownerValue === 1;
+    },
+    condTwoShow: function () {
+      return this.ownerValue === 2;
+    }
+  }
 });
 
 app.$mount('#app');

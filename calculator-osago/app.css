@@ -1,5 +1,13 @@
 .calc {}
 
+.calc__caption {
+  margin: 0 0 60px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: darkslategrey;
+}
+
 .calc__container {
   padding-top: 20px;
 }
