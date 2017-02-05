@@ -91,7 +91,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="trailer" id="trailer" v-model="trailerValue">
+                        <select class="calc__list form-control" name="trailer" id="trailer" v-model="trailerValue" @changeTrailer="chgTrailer">
                             <option v-for="item in trailer" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
@@ -431,7 +431,7 @@
                 </div>
             </div>
 
-            <!--period-->
+            <!--period of operation-->
             <div class="row calc__row">
                 <div class="col-md-6">
                     <h3 class="calc__title">Период использования ТС</h3>
@@ -448,7 +448,7 @@
                 </div>
             </div>
 
-            <!--insurance-->
+            <!--period of insurance-->
             <div class="row calc__row">
                 <div class="col-md-6">
                     <h3 class="calc__title">Срок страхования ТС</h3>
@@ -472,7 +472,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="drivers" id="drivers" v-model="driversValue">
+                        <select class="calc__list form-control" name="drivers" id="drivers" v-model="driversValue" @change="chgDrivers">
                             <option v-for="item in drivers" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
@@ -489,7 +489,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="experience" id="experience" v-model="experienceValue">
+                        <select class="calc__list form-control" name="experience" id="experience" v-model="experienceValue" @change="chgExperience">
                             <option v-for="item in experience" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
@@ -499,19 +499,19 @@
                 </div>
             </div>
 
-            <!--classVehicle-->
+            <!--bonusMalus-->
             <div class="row calc__row">
                 <div class="col-md-6">
                     <h3 class="calc__title">Класс за безаварийную езду</h3>
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="classVehicle" id="classVehicle" v-model="classVehicleValue">
-                            <option v-for="item in classVehicle" v-text="item.name" :value="item.value"></option>
+                        <select class="calc__list form-control" name="bonusMalus" id="bonusMalus" v-model="bonusMalusValue" @change="chgBonusMalus">
+                            <option v-for="item in bonusMalus" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <button class="calc__change btn btn-default" v-show="classVehicleValue" @click="changeSelectClassVehicle">изменить</button>
+                        <button class="calc__change btn btn-default" v-show="bonusMalusValue" @click="changeSelectBonusMalus">изменить</button>
                     </div>
                 </div>
             </div>
@@ -523,7 +523,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="violations" id="violations" v-model="violationsValue">
+                        <select class="calc__list form-control" name="violations" id="violations" v-model="violationsValue" @change="chgViolations">
                             <option v-for="item in violations" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>

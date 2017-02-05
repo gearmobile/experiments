@@ -44,8 +44,13 @@ const app = new Vue({
     ],
     trailer: [
       { name: 'не выбрано', value: 0 },
-      { name: 'нет', value: 1 },
-      { name: 'да', value: 2 },
+      { name: 'Прицепы к легковым автомобилям, принадлежащим юридическим лицам, к мотоциклам и мотороллерам', value: 1 },
+      { name: 'Прицепы к грузовым автомобилям с разрешенной максимальной массой 16 тонн и менее, полуприцепы, прицепы-роспуски', value: 2 },
+      { name: 'Прицепы к грузовым автомобилям с разрешенной максимальной массой более 16 тонн, полуприцепы, прицепы-роспуски', value: 2 },
+      { name: 'Прицепы к тракторам, самоходным дорожно-строительным и иным машинам, за исключением транспортных средств, не имеющих колесных движителей', value: 3 },
+      { name: 'Прицепы к другим типам (категориям) и назначению транспортных средств', value: 4 },
+      // { name: '', value: 5 },
+      // { name: '', value: 6 },
     ],
     region: [
       { name: 'не выбрано', value: 0 },
@@ -613,33 +618,33 @@ const app = new Vue({
     ],
     drivers: [
       { name: 'не выбран', value: 0 },
-      { name: 'ограниченный список водителей', value: 1 },
-      { name: 'без ограничения', value: 2 },
+      { name: 'ограниченное число водителей', value: 1 },
+      { name: 'число водителей без ограничения', value: 2 },
     ],
     experience: [
       { name: 'не выбран', value: 0 },
-      { name: 'возраст больше 22 лет, стаж свыше 3 лет', value: 0 },
-      { name: 'возраст больше 22 лет, стаж до 3 лет', value: 1 },
-      { name: 'возраст до 22 лет, стаж свыше 3 лет', value: 2 },
-      { name: 'возраст до 22 лет, стаж до 3 лет', value: 3 },
+      { name: 'До 22 лет включительно со стажем вождения до 3 лет включительно', value: 1 },
+      { name: 'Более 22 лет со стажем вождения до 3 лет включительно', value: 2 },
+      { name: 'До 22 лет включительно со стажем вождения свыше 3 лет', value: 3 },
+      { name: 'Более 22 лет со стажем вождения свыше 3 лет', value: 4 },
     ],
-    classVehicle: [
+    bonusMalus: [
       { name: 'не выбран', value: 0 },
-      { name: 'не страховался ранее', value: 'def' },
-      { name: 'М', value: 'm' },
-      { name: '1', value: 1 },
-      { name: '2', value: 2 },
-      { name: '3', value: 3 },
-      { name: '4', value: 4 },
-      { name: '5', value: 5 },
-      { name: '6', value: 6 },
-      { name: '7', value: 7 },
-      { name: '8', value: 8 },
-      { name: '9', value: 9 },
-      { name: '10', value: 10 },
-      { name: '11', value: 11 },
-      { name: '12', value: 12 },
-      { name: '13', value: 13 },
+      { name: 'М', value: 'M' },
+      { name: '0', value: 1 },
+      { name: '1', value: 2 },
+      { name: '2', value: 3 },
+      { name: '3', value: 4 },
+      { name: '4', value: 5 },
+      { name: '5', value: 6 },
+      { name: '6', value: 7 },
+      { name: '7', value: 8 },
+      { name: '8', value: 9 },
+      { name: '9', value: 10 },
+      { name: '10', value: 11 },
+      { name: '11', value: 12 },
+      { name: '12', value: 13 },
+      { name: '13', value: 14 },
     ],
     period: [
       { name: 'не выбран', value: 0 },
@@ -680,11 +685,10 @@ const app = new Vue({
     trailerValue: 0,
     regionValue: 0,
     periodValue: 0,
-    // periodTwoValue: 0,
     insuranceValue: 0,
     driversValue: 0,
     experienceValue: 0,
-    classVehicleValue: 0,
+    bonusMalusValue: 0,
     violationsValue: 0,
     // -----------------------
 
@@ -699,7 +703,16 @@ const app = new Vue({
     // -------------------------------------------
 
     // -------------------------------------------
-    // ПЕРИОД ПРАКТИЧЕСКОГО ИСПОЛЬЗОВАНИЯ (КС):
+    // НАЛИЧИЕ ПРИЦЕПА В ДОГОВОРЕ ОСАГО (КПР)
+    // -------------------------------------------
+    KPR1: 1.16,
+    KPR2: 1.4,
+    KPR3: 1.25,
+    KPR4: 1.24,
+    KPR5: 1,
+
+    // -------------------------------------------
+    // КОЭФФИЦИЕНТ ПРАКТИЧЕСКОГО ИСПОЛЬЗОВАНИЯ ТС (КС):
     // -------------------------------------------
     КС1: .5,
     КС2: .6,
@@ -735,6 +748,45 @@ const app = new Vue({
     KM5: 1.4,
     KM6: 1.6,
 
+    // -------------------------------------------
+    // КОЭФФИЦИЕНТ ВОЗРАСТА И СТАЖА ВОДИТЕЛЯ (КВС):
+    // -------------------------------------------
+    KBC1: 1.8,
+    KBC2: 1.7,
+    KBC3: 1.6,
+    KBC4: 1,
+
+    // -------------------------------------------
+    // КОЭФФИЦИЕНТ ОГРАНИЧЕНИЕ НА КОЛИЧЕСТВО ДОПУЩЕННЫХ ЛИЦ (КО):
+    // -------------------------------------------
+    KO1: 1,
+    KO2: 1.8,
+
+    // -------------------------------------------
+    // КОЭФФИЦИЕНТ НАРУШЕНИЙ КН
+    // -------------------------------------------
+    KH1: 1.5,
+    KH2: 1.5,
+
+    // -------------------------------------------
+    // КОЭФФИЦИЕНТ БОНУС-МАЛУС (КБМ):
+    // -------------------------------------------
+    KBMM: 2.45,
+    KBM0: 2.3,
+    KBM1: 1.55,
+    KBM2: 1.4,
+    KBM3: 1,
+    KBM4: .95,
+    KBM5: .9,
+    KBM6: .85,
+    KBM7: .8,
+    KBM8: .75,
+    KBM9: .7,
+    KBM10: .65,
+    KBM11: .6,
+    KBM12: .55,
+    KBM13: .5,
+
     // -----------------------
     // ВЫЧИСЛЯЕМЫЕ КОЭФИЦИЕНТЫ
     // -----------------------
@@ -742,6 +794,11 @@ const app = new Vue({
     KM: 0,
     КС: 0,
     KP: 0,
+    KPR: 0,
+    KBC: 0,
+    KO: 0,
+    KH: 0,
+    KBM: 0,
 
     // -----------------------
   },
@@ -759,6 +816,7 @@ const app = new Vue({
     },
     changeSelectTrailer() {
       this.trailerValue = 0;
+      this.KPR = 0;
     },
     changeSelectRegion() {
       this.regionValue = 0;
@@ -767,24 +825,25 @@ const app = new Vue({
       this.periodValue = 0;
       this.КС = 0;
     },
-    // changeSelectPeriodTwo() {
-    //   this.periodTwoValue = 0;
-    // },
     changeSelectInsurance() {
       this.insuranceValue = 0;
       this.KP = 0;
     },
     changeSelectDrivers() {
       this.driversValue = 0;
+      this.KO = 0;
     },
     changeSelectExperience() {
       this.experienceValue = 0;
+      this.KBC = 0;
     },
-    changeSelectClassVehicle() {
-      this.classVehicleValue = 0;
+    changeSelectBonusMalus() {
+      this.bonusMalusValue = 0;
+      this.KBM = 0;
     },
     changeSelectViolations() {
       this.violationsValue = 0;
+      this.KH = 0;
     },
     chgOwner() {
       switch ( this.ownerValue ) {
@@ -889,6 +948,126 @@ const app = new Vue({
           break;
         default:
           this.KP = 0;
+      }
+    },
+    chgTrailer() {
+      switch ( this.trailerValue ) {
+        case 1:
+          this.KPR = this.KPR1;
+          break;
+        case 2:
+          this.KPR = this.KPR2;
+          break;
+        case 3:
+          this.KPR = this.KPR3;
+          break;
+        case 4:
+          this.KPR = this.KPR4;
+          break;
+        case 5:
+          this.KPR = this.KPR5;
+          break;
+        default:
+          this.KPR = 0;
+      }
+    },
+    chgExperience() {
+      switch ( this.experienceValue ) {
+        case 1:
+          this.KBC = this.KBC1;
+          break;
+        case 2:
+          this.KBC = this.KBC2;
+          break;
+        case 3:
+          this.KBC = this.KBC3;
+          break;
+        case 4:
+          this.KBC = this.KBC4;
+          break;
+        default:
+          this.KBC = 0;
+      }
+    },
+    chgDrivers() {
+      switch ( this.driversValue ) {
+        case 1:
+          this.KO = this.KO1;
+          break;
+        case 2:
+          this.KO = this.KO2;
+          break;
+        default:
+          this.KO = 0;
+      }
+    },
+    chgViolations() {
+      switch ( this.violationsValue ) {
+        case 1:
+          this.KH = this.KH1;
+          break;
+        case 2:
+          this.KH = this.KH2;
+          break;
+        default:
+          this.KH = 0;
+      }
+    },
+    chgBonusMalus() {
+      switch ( this.bonusMalusValue ) {
+        case 'M':
+          this.KBM = this.KBMM;
+          break;
+        case 1:
+          this.KBM = this.KBM0;
+          break;
+        case 2:
+          this.KBM = this.KBM1;
+          break;
+        case 3:
+          this.KBM = this.KBM2;
+          break;
+        case 4:
+          this.KBM = this.KBM3;
+          break;
+        case 5:
+          this.KBM = this.KBM4;
+          break;
+        case 6:
+          this.KBM = this.KBM5;
+          break;
+        case 7:
+          this.KBM = this.KBM6;
+          break;
+        case 8:
+          this.KBM = this.KBM7;
+          break;
+        case 9:
+          this.KBM = this.KBM8;
+          break;
+        case 10:
+          this.KBM = this.KBM9;
+          break;
+        case 11:
+          this.KBM = this.KBM10;
+          break;
+        case 12:
+          this.KBM = this.KBM11;
+          break;
+        case 13:
+          this.KBM = this.KBM12;
+          break;
+        case 14:
+          this.KBM = this.KBM13;
+          break;
+        // case 14:
+        //   this.KBM = this.KBM14;
+        //   break;
+        // case 15:
+        //   this.KBM = this.KBM15;
+        //   break;
+        default:
+          this.KBM = 0;
       }
     }
   },
