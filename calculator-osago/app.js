@@ -184,7 +184,7 @@ const app = new Vue({
       { name: 'не выбран', value: 0 },
       { name: 'Сыктывкар', value: '10-1' },
       { name: 'Ухта', value: '10-2' },
-      { name: 'прочие города и населенные пункты', value: '' },
+      { name: 'прочие города и населенные пункты', value: '10-3' },
     ],
     group11: [
       { name: 'не выбран', value: 0 },
@@ -611,20 +611,6 @@ const app = new Vue({
       { name: 'Ноябрьск', value: '76-2' },
       { name: 'прочие города и населенные пункты', value: '76-3' },
     ],
-    insurance: [
-      { name: 'не выбран', value: 0 },
-      { name: '1 год', value: 10 },
-      { name: '9 месяцев', value: 9 },
-      { name: '8 месяцев', value: 8 },
-      { name: '7 месяцев', value: 7 },
-      { name: '6 месяцев', value: 6 },
-      { name: '5 месяцев', value: 5 },
-      { name: '4 месяца', value: 4 },
-      { name: '3 месяца', value: 3 },
-      { name: '2 месяца', value: 2 },
-      { name: 'от 16 дней до 1 месяца', value: 1 },
-      { name: 'от 5 до 15 дней', value: 0 },
-    ],
     drivers: [
       { name: 'не выбран', value: 0 },
       { name: 'ограниченный список водителей', value: 1 },
@@ -655,24 +641,30 @@ const app = new Vue({
       { name: '12', value: 12 },
       { name: '13', value: 13 },
     ],
-    periodOne: [
-        { name: 'не выбран', value: 0 },
-        { name: '1 год', value: 10 },
-        { name: '9 месяцев', value: 9 },
-        { name: '8 месяцев', value: 8 },
-        { name: '7 месяцев', value: 7 },
-        { name: '6 месяцев', value: 6 },
-        { name: '5 месяцев', value: 5 },
-        { name: '4 месяца', value: 4 },
-        { name: '3 месяца', value: 3 },
-    ],
-    periodTwo: [
+    period: [
       { name: 'не выбран', value: 0 },
-      { name: '1 год', value: 10 },
-      { name: '9 месяцев', value: 9 },
-      { name: '8 месяцев', value: 8 },
-      { name: '7 месяцев', value: 7 },
-      { name: '6 месяцев', value: 6 },
+      { name: '3 месяца', value: 1 },
+      { name: '4 месяца', value: 2 },
+      { name: '5 месяцев', value: 3 },
+      { name: '6 месяцев', value: 4 },
+      { name: '7 месяцев', value: 5 },
+      { name: '8 месяцев', value: 6 },
+      { name: '9 месяцев', value: 7 },
+      { name: '10 месяцев и более', value: 8 },
+    ],
+    insurance: [
+      { name: 'не выбран', value: 0 },
+      { name: 'от 5 до 15 дней', value: 1 },
+      { name: 'от 16 дней до 1 месяца', value: 2 },
+      { name: '2 месяца', value: 3 },
+      { name: '3 месяца', value: 4 },
+      { name: '4 месяца', value: 5 },
+      { name: '5 месяцев', value: 6 },
+      { name: '6 месяцев', value: 7 },
+      { name: '7 месяцев', value: 8 },
+      { name: '8 месяцев', value: 9 },
+      { name: '9 месяцев', value: 10 },
+      { name: '10 месяцев и более', value: 11 },
     ],
     violations: [
       { name: 'не выбран', value: 0 },
@@ -687,24 +679,83 @@ const app = new Vue({
     powerValue: 0,
     trailerValue: 0,
     regionValue: 0,
-    periodOneValue: 0,
-    periodTwoValue: 0,
+    periodValue: 0,
+    // periodTwoValue: 0,
     insuranceValue: 0,
     driversValue: 0,
     experienceValue: 0,
     classVehicleValue: 0,
-    violationsValue: 0
+    violationsValue: 0,
+    // -----------------------
+
+    // -------------------------------------------
+    // БАЗОВАЯ ТАРИФНАЯ СТАВКА (ТБ):
+    // -------------------------------------------
+    TB1: 3432,
+    TB2: 2000,
+
+    // -------------------------------------------
+    // МЕСТО РЕГИСТРАЦИИ СОБСТВЕННИКА (КТ):
+    // -------------------------------------------
+
+    // -------------------------------------------
+    // ПЕРИОД ПРАКТИЧЕСКОГО ИСПОЛЬЗОВАНИЯ (КС):
+    // -------------------------------------------
+    КС1: .5,
+    КС2: .6,
+    КС3: .65,
+    КС4: .7,
+    КС5: .8,
+    КС6: .9,
+    КС7: .95,
+    КС8: 1,
+
+    // -------------------------------------------
+    // ПЕРИОД ДЕЙСТВИЯ СТРАХОВОГО ПОЛИСА (КП):
+    // -------------------------------------------
+    KP1: .2,
+    KP2: .3,
+    KP3: .4,
+    KP4: .5,
+    KP5: .6,
+    KP6: .65,
+    KP7: .7,
+    KP8: .8,
+    KP9: .9,
+    KP10: .95,
+    KP11: 1,
+
+    // -------------------------------------------
+    // МОЩНОСТЬ ДВИГАТЕЛЯ (КМ):
+    // -------------------------------------------
+    KM1: .6,
+    KM2: .9,
+    KM3: 1,
+    KM4: 1.2,
+    KM5: 1.4,
+    KM6: 1.6,
+
+    // -----------------------
+    // ВЫЧИСЛЯЕМЫЕ КОЭФИЦИЕНТЫ
+    // -----------------------
+    TB: 0,
+    KM: 0,
+    КС: 0,
+    KP: 0,
+
     // -----------------------
   },
   methods: {
     changeSelectOwner() {
       this.ownerValue = 0;
+      this.TB = 0;
     },
     changeSelectVehicle() {
       this.vehicleValue = 0;
     },
     changeSelectPower() {
       this.powerValue = 0;
+      this.KM = 0;
     },
     changeSelectTrailer() {
       this.trailerValue = 0;
@@ -712,14 +763,16 @@ const app = new Vue({
     changeSelectRegion() {
       this.regionValue = 0;
     },
-    changeSelectPeriodOne() {
-      this.periodOneValue = 0;
+    changeSelectPeriod() {
+      this.periodValue = 0;
+      this.КС = 0;
     },
-    changeSelectPeriodTwo() {
-      this.periodTwoValue = 0;
-    },
+    // changeSelectPeriodTwo() {
+    //   this.periodTwoValue = 0;
+    // },
     changeSelectInsurance() {
       this.insuranceValue = 0;
+      this.KP = 0;
     },
     changeSelectDrivers() {
       this.driversValue = 0;
@@ -732,6 +785,111 @@ const app = new Vue({
     },
     changeSelectViolations() {
       this.violationsValue = 0;
+    },
+    chgOwner() {
+      switch ( this.ownerValue ) {
+        case 1:
+          this.TB = this.TB1;
+          break;
+        case 2:
+          this.TB = this.TB2;
+          break;
+        default:
+          this.TB = 0;
+      }
+    },
+    chgPower() {
+      switch ( this.powerValue ) {
+        case 1:
+          this.KM = this.KM1;
+          break;
+        case 2:
+          this.KM = this.KM2;
+          break;
+        case 3:
+          this.KM = this.KM3;
+          break;
+        case 4:
+          this.KM = this.KM4;
+          break;
+        case 5:
+          this.KM = this.KM5;
+          break;
+        case 6:
+          this.KM = this.KM6;
+          break;
+        default:
+          this.KM = 0;
+      }
+    },
+    chgPeriod() {
+      switch ( this.periodValue ) {
+        case 1:
+          this.КС = this.КС1;
+          break;
+        case 2:
+          this.КС = this.КС2;
+          break;
+        case 3:
+          this.КС = this.КС3;
+          break;
+        case 4:
+          this.КС = this.КС4;
+          break;
+        case 5:
+          this.КС = this.КС5;
+          break;
+        case 6:
+          this.КС = this.КС6;
+          break;
+        case 7:
+          this.КС = this.КС7;
+          break;
+        case 8:
+          this.КС = this.КС8;
+          break;
+        default:
+          this.КС = 0;
+      }
+    },
+    chgInsurance() {
+      switch ( this.insuranceValue ) {
+        case 1:
+          this.KP = this.KP1;
+          break;
+        case 2:
+          this.KP = this.KP2;
+          break;
+        case 3:
+          this.KP = this.KP3;
+          break;
+        case 4:
+          this.KP = this.KP4;
+          break;
+        case 5:
+          this.KP = this.KP5;
+          break;
+        case 6:
+          this.KP = this.KP6;
+          break;
+        case 7:
+          this.KP = this.KP7;
+          break;
+        case 8:
+          this.KP = this.KP8;
+          break;
+        case 9:
+          this.KP = this.KP9;
+          break;
+        case 10:
+          this.KP = this.KP10;
+          break;
+        case 11:
+          this.KP = this.KP11;
+          break;
+        default:
+          this.KP = 0;
+      }
     }
   },
   computed: {
