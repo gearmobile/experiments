@@ -1,4 +1,10 @@
 // https://www.bonus-malus.ru/osago/kalkuljator.html
+// https://www.vbr.ru/strahovanie/help/osago/formula-rascheta-osago/regionalnye-kojefficienty-strahovyh-tarifov/
+// http://polisgid.ru/stati-osago/tarify-osago/
+// http://www.4sure.ru/inform/aboutinsure/23-kojefficient-territorii
+// http://avtoedet.ru/formula-rascheta-osago/
+
+
 const app = new Vue({
   data: {
     owner: [
