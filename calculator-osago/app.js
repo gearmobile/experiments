@@ -79,7 +79,7 @@ const regionRegistrationData = [
     { name: 'Бийск', value: 12 },
     { name: 'Заринск, Новоалтайск, Рубцовск', value: 13 },
     { name: 'прочие города и населенные пункты', value: 14 },
-],
+  ],
   [
     { name: 'не выбран', value: 0 },
     { name: 'Благовещенск', value: 21 },
@@ -330,7 +330,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getTrailerRatio() {
+    getTrailerRatio() { // checked
       for ( let i = 0; i < this.trailer.length; i++ ) {
         if ( this.trailer[i].value === this.trailerValue ) {
           this.KPR = this.trailer[i].ratio;
