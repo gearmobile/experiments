@@ -124,34 +124,12 @@
                     <h3 class="calc__title">Уточните город</h3>
                 </div>
                 <div class="col-md-6">
-                    <div class="col-md-8">
-
+                    <div class="col-md-8 city">
                         <template v-for="( item,index ) in regionRegistration">
-                            <select class="calc__list form-control" :name="index" :id="index">
+                            <select class="city-group form-control" :name="'group'+index" :id="'group'+index">
                                 <option v-for="element in item" :value="element.value" v-text="element.name"></option>
                             </select>
                         </template>
-
-                        <!--<select class="calc__list form-control" name="group1" id="group1" v-show="group1Show">
-                            <option v-for="item in regionRegistration[0]" v-text="item.name" :value="item.value"></option>
-                        </select>-->
-
-                        <!--<select class="calc__list form-control" name="group2" id="group2" v-show="group2Show">
-                            <option v-for="item in regionRegistration[1]" v-text="item.name" :value="item.value"></option>
-                        </select>
-
-                        <select class="calc__list form-control" name="group3" id="group3" v-show="group3Show">
-                            <option v-for="item in regionRegistration[2]" v-text="item.name" :value="item.value"></option>
-                        </select>
-
-                        <select class="calc__list form-control" name="group4" id="group4" v-show="group4Show">
-                            <option v-for="item in regionRegistration[3]" v-text="item.name" :value="item.value"></option>
-                        </select>
-
-                        <select class="calc__list form-control" name="group5" id="group5" v-show="group5Show">
-                            <option v-for="item in regionRegistration[4]" v-text="item.name" :value="item.value"></option>
-                        </select>-->
-
                     </div>
                     <div class="col-md-4">
                         <button class="calc__change btn btn-default">изменить</button>
