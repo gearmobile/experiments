@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magic Cities</title>
+</head>
+<body>
+
+    <div id="app">
+        <select class="region" v-model="regionValue">
+            <option v-for="item in regions" :value="item.value" v-text="item.name"></option>
+        </select>
+        <select>
+            <option v-for="item in currGroup" :value="item.value" v-text="item.name"></option>
+        </select>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="../library/scripts/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

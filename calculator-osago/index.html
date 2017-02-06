@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8 city">
-                        <template v-for="( item,index ) in regionRegistration">
+                        <template v-for="( item, index ) in regionRegistration">
                             <select class="city-group form-control" :name="'group'+index" :id="'group'+index">
                                 <option v-for="element in item" :value="element.value" v-text="element.name"></option>
                             </select>
