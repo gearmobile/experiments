@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="owner" id="owner" v-model="ownerValue" @change="chgOwner">
+                        <select class="calc__list form-control" name="owner" id="owner" v-model="ownerValue" @change="getOwnerRatio">
                             <option v-for="item in owner" :value="item.value" v-text="item.name"></option>
                         </select>
                     </div>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="power" id="power" v-model="powerValue" @change="chgPower">
+                        <select class="calc__list form-control" name="power" id="power" v-model="powerValue" @change="getPowerRatio">
                             <option v-for="item in power" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
@@ -87,11 +87,11 @@
             <!--trailer-->
             <div class="row calc__row">
                 <div class="col-md-6">
-                    <h3 class="calc__title">Будет использоваться с прицепом</h3>
+                    <h3 class="calc__title">Наличие \ отсутствие прицепа</h3>
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="trailer" id="trailer" v-model="trailerValue" @changeTrailer="chgTrailer">
+                        <select class="calc__list form-control" name="trailer" id="trailer" v-model="trailerValue" @change="getTrailerRatio">
                             <option v-for="item in trailer" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
@@ -125,7 +125,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="group1" id="group1" v-show="group1Show">
+                        <template v-for="item in regionRegistration"></template>
+                        <!--<city></city>-->
+
+                        <!--<select class="calc__list form-control" name="group1" id="group1" v-show="group1Show">
                             <option v-for="item in group1" v-text="item.name" :value="item.value"></option>
                         </select>
 
@@ -143,289 +146,8 @@
 
                         <select class="calc__list form-control" name="group5" id="group5" v-show="group5Show">
                             <option v-for="item in group5" v-text="item.name" :value="item.value"></option>
-                        </select>
+                        </select>-->
 
-                        <!---->
-
-                        <!--<select class="calc__list form-control" name="group7" id="group7">-->
-                            <!--<option v-for="item in group7" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group8" id="group8">-->
-                            <!--<option v-for="item in group8" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group9" id="group9">-->
-                            <!--<option v-for="item in group9" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group10" id="group10">-->
-                            <!--<option v-for="item in group10" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group11" id="group11">-->
-                            <!--<option v-for="item in group11" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group12" id="group12">-->
-                            <!--<option v-for="item in group12" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group13" id="group13">-->
-                            <!--<option v-for="item in group13" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group14" id="group14">-->
-                            <!--<option v-for="item in group14" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group15" id="group15">-->
-                            <!--<option v-for="item in group15" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group16" id="group16">-->
-                            <!--<option v-for="item in group16" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group17" id="group17">-->
-                            <!--<option v-for="item in group17" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group18" id="group18">-->
-                            <!--<option v-for="item in group18" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group19" id="group19">-->
-                            <!--<option v-for="item in group19" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group20" id="group20">-->
-                            <!--<option v-for="item in group20" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group21" id="group21">-->
-                            <!--<option v-for="item in group21" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group22" id="group22">-->
-                            <!--<option v-for="item in group22" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group23" id="group23">-->
-                            <!--<option v-for="item in group23" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group24" id="group24">-->
-                            <!--<option v-for="item in group24" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group25" id="group25">-->
-                            <!--<option v-for="item in group25" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group26" id="group26">-->
-                            <!--<option v-for="item in group26" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group27" id="group27">-->
-                            <!--<option v-for="item in group27" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group28" id="group28">-->
-                            <!--<option v-for="item in group28" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group29" id="group29">-->
-                            <!--<option v-for="item in group29" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group30" id="group30">-->
-                            <!--<option v-for="item in group30" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group31" id="group31">-->
-                            <!--<option v-for="item in group31" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group32" id="group32">-->
-                            <!--<option v-for="item in group32" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group33" id="group33">-->
-                            <!--<option v-for="item in group33" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group34" id="group34">-->
-                            <!--<option v-for="item in group34" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group35" id="group35">-->
-                            <!--<option v-for="item in group35" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group36" id="group36">-->
-                            <!--<option v-for="item in group36" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group37" id="group37">-->
-                            <!--<option v-for="item in group37" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group38" id="group38">-->
-                            <!--<option v-for="item in group38" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group39" id="group39">-->
-                            <!--<option v-for="item in group39" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group40" id="group40">-->
-                            <!--<option v-for="item in group40" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group41" id="group41">-->
-                            <!--<option v-for="item in group41" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group42" id="group42">-->
-                            <!--<option v-for="item in group42" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group43" id="group43">-->
-                            <!--<option v-for="item in group43" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group44" id="group44">-->
-                            <!--<option v-for="item in group44" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group45" id="group45">-->
-                            <!--<option v-for="item in group45" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group46" id="group46">-->
-                            <!--<option v-for="item in group46" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="scalc__list form-control" name="group47" id="group47">-->
-                            <!--<option v-for="item in group47" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group48" id="group48">-->
-                            <!--<option v-for="item in group48" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group49" id="group49">-->
-                            <!--<option v-for="item in group49" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group50" id="group50">-->
-                            <!--<option v-for="item in group50" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group51" id="group51">-->
-                            <!--<option v-for="item in group51" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group52" id="group52">-->
-                            <!--<option v-for="item in group52" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group53" id="group53">-->
-                            <!--<option v-for="item in group53" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group54" id="group54">-->
-                            <!--<option v-for="item in group54" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group55" id="group55">-->
-                            <!--<option v-for="item in group55" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group56" id="group56">-->
-                            <!--<option v-for="item in group56" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group57" id="group57">-->
-                            <!--<option v-for="item in group57" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group58" id="group58">-->
-                            <!--<option v-for="item in group58" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="scalc__list form-control" name="group59" id="group59">-->
-                            <!--<option v-for="item in group59" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group60" id="group60">-->
-                            <!--<option v-for="item in group60" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group61" id="group61">-->
-                            <!--<option v-for="item in group61" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="scalc__list form-control" name="group62" id="group62">-->
-                            <!--<option v-for="item in group62" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group63" id="group63">-->
-                            <!--<option v-for="item in group63" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group64" id="group64">-->
-                            <!--<option v-for="item in group64" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group65" id="group65">-->
-                            <!--<option v-for="item in group65" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group66" id="group66">-->
-                            <!--<option v-for="item in group66" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group67" id="group67">-->
-                            <!--<option v-for="item in group67" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group68" id="group68">-->
-                            <!--<option v-for="item in group68" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group69" id="group69">-->
-                            <!--<option v-for="item in group69" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group70" id="group70">-->
-                            <!--<option v-for="item in group70" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group71" id="group71">-->
-                            <!--<option v-for="item in group71" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group72" id="group72">-->
-                            <!--<option v-for="item in group72" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group73" id="group73">-->
-                            <!--<option v-for="item in group73" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group74" id="group74">-->
-                            <!--<option v-for="item in group74" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group75" id="group75">-->
-                            <!--<option v-for="item in group75" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
-
-                        <!--<select class="calc__list form-control" name="group76" id="group76">-->
-                            <!--<option v-for="item in group76" v-text="item.name" :value="item.value"></option>-->
-                        <!--</select>-->
                     </div>
                     <div class="col-md-4">
                         <button class="calc__change btn btn-default">изменить</button>
@@ -433,36 +155,36 @@
                 </div>
             </div>
 
-            <!--period of operation-->
+            <!--period exploitation-->
             <div class="row calc__row">
                 <div class="col-md-6">
-                    <h3 class="calc__title">Период использования ТС</h3>
+                    <h3 class="calc__title">Период эксплуатации ТС</h3>
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="period" id="period" v-model="periodValue" @change="chgPeriod">
-                            <option v-for="item in period" v-text="item.name" :value="item.value"></option>
+                        <select class="calc__list form-control" name="periodExploitation" id="periodExploitation" v-model="periodExploitationValue" @change="getPeriodExpRatio">
+                            <option v-for="item in periodExploitation" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <button class="calc__change btn btn-default" v-show="periodValue" @click="changeSelectPeriod">изменить</button>
+                        <button class="calc__change btn btn-default" v-show="periodExploitationValue" @click="changeSelectPeriod">изменить</button>
                     </div>
                 </div>
             </div>
 
-            <!--period of insurance-->
+            <!--period insurance-->
             <div class="row calc__row">
                 <div class="col-md-6">
                     <h3 class="calc__title">Срок страхования ТС</h3>
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="insurance" id="insurance" v-model="insuranceValue" @change="chgInsurance">
-                            <option v-for="item in insurance" v-text="item.name" :value="item.value"></option>
+                        <select class="calc__list form-control" name="periodInsurance" id="periodInsurance" v-model="periodInsuranceValue" @change="getPeriodInsRatio">
+                            <option v-for="item in periodInsurance" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <button class="calc__change btn btn-default" v-show="insuranceValue" @click="changeSelectInsurance">изменить</button>
+                        <button class="calc__change btn btn-default" v-show="periodInsuranceValue" @click="changeSelectInsurance">изменить</button>
                     </div>
                 </div>
             </div>
@@ -474,7 +196,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="drivers" id="drivers" v-model="driversValue" @change="chgDrivers">
+                        <select class="calc__list form-control" name="drivers" id="drivers" v-model="driversValue" @change="getDriversRatio">
                             <option v-for="item in drivers" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
@@ -491,7 +213,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="experience" id="experience" v-model="experienceValue" @change="chgExperience">
+                        <select class="calc__list form-control" name="experience" id="experience" v-model="experienceValue" @change="getExperienceRatio">
                             <option v-for="item in experience" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
@@ -508,7 +230,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="bonusMalus" id="bonusMalus" v-model="bonusMalusValue" @change="chgBonusMalus">
+                        <select class="calc__list form-control" name="bonusMalus" id="bonusMalus" v-model="bonusMalusValue" @change="getBonusMalusRatio">
                             <option v-for="item in bonusMalus" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
@@ -525,7 +247,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
-                        <select class="calc__list form-control" name="violations" id="violations" v-model="violationsValue" @change="chgViolations">
+                        <select class="calc__list form-control" name="violations" id="violations" v-model="violationsValue" @change="getViolationsRatio">
                             <option v-for="item in violations" v-text="item.name" :value="item.value"></option>
                         </select>
                     </div>
