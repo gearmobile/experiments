@@ -47,25 +47,8 @@
                 </div>
             </div>
 
-            <!--vehicle category-->
-            <div class="row calc__row">
-                <div class="col-md-6">
-                    <h3 class="calc__title">Категория ТС:</h3>
-                </div>
-                <div class="col-md-6">
-                    <div class="col-md-8">
-                        <select class="calc__list form-control" name="vehicle" id="vehicle" v-model="vehicleValue">
-                            <option v-for="item in vehicle" v-text="item.name" :value="item.value"></option>
-                        </select>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="calc__change btn btn-default" v-show="vehicleValue" @click="changeSelectVehicle">изменить</button>
-                    </div>
-                </div>
-            </div>
-
             <!--region-->
-            <div class="row calc__row">
+            <div class="row calc__row" v-show="showRegion">
                 <div class="col-md-6">
                     <h3 class="calc__title">Место регистрации ТС:</h3>
                 </div>
@@ -83,7 +66,7 @@
             </div>
 
             <!--city-->
-            <div class="row calc__row">
+            <div class="row calc__row" v-show="regionValue">
                 <div class="col-md-6">
                     <h3 class="calc__title">Уточните город регистрации ТС:</h3>
                 </div>
@@ -101,7 +84,7 @@
             </div>
 
             <!--bonusMalus-->
-            <div class="row calc__row">
+            <div class="row calc__row" v-show="currCity">
                 <div class="col-md-6">
                     <h3 class="calc__title">Класс за безаварийную езду</h3>
                 </div>
@@ -113,6 +96,23 @@
                     </div>
                     <div class="col-md-4">
                         <button class="calc__change btn btn-default" v-show="bonusMalusValue" @click="changeSelectBonusMalus">изменить</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--vehicle category-->
+            <div class="row calc__row" v-show="conditionValue">
+                <div class="col-md-6">
+                    <h3 class="calc__title">Категория ТС:</h3>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-md-8">
+                        <select class="calc__list form-control" name="vehicle" id="vehicle" v-model="vehicleValue">
+                            <option v-for="item in vehicle" v-text="item.name" :value="item.value"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="calc__change btn btn-default" v-show="vehicleValue" @click="changeSelectVehicle">изменить</button>
                     </div>
                 </div>
             </div>
