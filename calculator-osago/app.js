@@ -293,7 +293,7 @@ const regionRegistrationData = [
   ],
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: 'прочие города и населенные пункты', value: 2, ratio: 1 },
+    { name: 'прочие города и населенные пункты', value: 1, ratio: 1 },
   ],
   [
     { name: 'не выбран', value: 0, ratio: 0 },
