@@ -75,9 +75,37 @@ const regionData = [
   { name: 'Ивановская область', value: 12 },
   { name: 'Иркутская область', value: 13 },
   // ------------------
-  { name: 'Кабардино-Балкарская Республика', value: 11 },
-  { name: 'Калининградская область', value: 12 },
-  { name: 'Калужская область', value: 13 },
+  { name: 'Кабардино-Балкарская Республика', value: 14 },
+  { name: 'Калининградская область', value: 15 },
+  { name: 'Калужская область', value: 16 },
+  // ------------------
+  { name: 'Камчатский край', value: 17 },
+  { name: 'Карачаево-Черкесская Республика', value: 18 },
+  { name: 'Кемеровская область', value: 19 },
+  // ------------------
+  { name: 'Кировская область', value: 20 },
+  { name: 'Костромская область', value: 21 },
+  { name: 'Краснодарский край', value: 22 },
+  // ------------------
+  { name: 'Красноярский край', value: 23 },
+  { name: 'Курганская область', value: 24 },
+  { name: 'Курская область', value: 25 },
+  // ------------------
+  { name: '', value: 26 },
+  { name: '', value: 27 },
+  { name: '', value: 28 },
+  // ------------------
+  { name: '', value: 29 },
+  { name: '', value: 30 },
+  { name: '', value: 31 },
+  // ------------------
+  { name: '', value: 32 },
+  { name: '', value: 33 },
+  { name: '', value: 34 },
+  // ------------------
+  { name: '', value: 35 },
+  { name: '', value: 36 },
+  { name: '', value: 37 },
   // ------------------
 ];
 
@@ -194,6 +222,160 @@ const regionRegistrationData = [
     { name: 'Обнинск', value: 1, ratio: 1.3 },
     { name: 'Калуга', value: 1, ratio: 1.2 },
     { name: 'прочие города и населенные пункты', value: 3, ratio: 0.9 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Петропавловск-Камчатский', value: 1, ratio: 1.3 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 1 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 1 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Кемерово', value: 1, ratio: 1.9 },
+    { name: 'Новокузнецк', value: 2, ratio: 1.8 },
+    { name: 'Белово, Березовский, Осинники, Прокопьевск, Междуреченск', value: 3, ratio: 1.3 },
+    { name: 'Анжеро-Судженск, Киселевск, Юрга', value: 4, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 1.1 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Киров', value: 1, ratio: 1.4 },
+    { name: 'Кирово-Чепецк', value: 1, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Кострома', value: 1, ratio: 1.3 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Краснодар, Новороссийск', value: 1, ratio: 1.8 },
+    { name: 'Анапа, Геленджик', value: 2, ratio: 1.3 },
+    { name: 'Армавир, Сочи, Туапсе', value: 3, ratio: 1.2 },
+    { name: 'Белореченск, Ейск, Кропоткин, Крымск, Курганинск, Лабинск, Славянск-на-Кубани, Тимашевск, Тихорецк', value: 4, ratio: 1.1 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Красноярск', value: 1, ratio: 1.8 },
+    { name: 'Железногорск, Норильск', value: 1, ratio: 1.3 },
+    { name: 'Ачинск, Зеленогорск', value: 1, ratio: 1.1 },
+    { name: 'Канск, Лесосибирск, Минусинск, Назарово', value: 1, ratio: 1 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.9 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Курган', value: 1, ratio: 1.4 },
+    { name: 'Шадринск', value: 1, ratio: 1.1 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.6 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Курск', value: 1, ratio: 1.2 },
+    { name: 'Железногорск', value: 2, ratio: 1 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 0.7 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.4 },
+    { name: '', value: 1, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.3 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.8 },
+    { name: '', value: 2, ratio: 1.3 },
+    { name: '', value: 3, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.4 },
+    { name: '', value: 1, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.3 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.8 },
+    { name: '', value: 2, ratio: 1.3 },
+    { name: '', value: 3, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.4 },
+    { name: '', value: 1, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.3 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.8 },
+    { name: '', value: 2, ratio: 1.3 },
+    { name: '', value: 3, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.4 },
+    { name: '', value: 1, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.3 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.8 },
+    { name: '', value: 2, ratio: 1.3 },
+    { name: '', value: 3, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.4 },
+    { name: '', value: 1, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.3 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: '', value: 1, ratio: 1.8 },
+    { name: '', value: 2, ratio: 1.3 },
+    { name: '', value: 3, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
   ],
   // -------------
 ];
