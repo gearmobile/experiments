@@ -204,6 +204,8 @@ const violationsData = [
 
 const app = new Vue({
   data: {
+    // datas
+    // ----------------------------------
     owner: ownerData,
     conditionOne: conditionOneData,
     conditionTwo: conditionTwoData,
@@ -218,8 +220,8 @@ const app = new Vue({
     periodExploitation: periodExploitationData,
     periodInsurance: periodInsuranceData,
     violations: violationsData,
-    // ПЕРЕМЕННЫЕ
-    // --------------------------------------------------------------------------
+    // variables
+    // -----------------------------------
     ownerValue: 0,
     conditionOneValue: 0,
     conditionTwoValue: 0,
@@ -227,6 +229,7 @@ const app = new Vue({
     powerValue: 0,
     trailerValue: 0,
     regionValue: 0,
+    currCity: 0,
     periodExploitationValue: 0,
     periodInsuranceValue: 0,
     driversValue: 0,
@@ -265,6 +268,9 @@ const app = new Vue({
     },
     changeSelectRegion() {
       this.regionValue = 0;
+    },
+    resetCurrCity() {
+      this.currCity = 0;
     },
     changeSelectPeriod() {
       this.periodValue = 0;

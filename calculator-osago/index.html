@@ -127,12 +127,12 @@
                 <div class="col-md-6">
                     <div class="col-md-8 city">
                         <!-- get cities of selected region -->
-                        <select class="city-group form-control" name="city-group" id="city-group">
+                        <select class="city-group form-control" name="city-group" id="city-group" v-model="currCity">
                             <option v-for="item in currGroup" :value="item.value" v-text="item.name"></option>
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <button class="calc__change btn btn-default">изменить</button>
+                        <button class="calc__change btn btn-default" v-show="currCity" @click="resetCurrCity">изменить</button>
                     </div>
                 </div>
             </div>
