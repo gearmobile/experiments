@@ -147,9 +147,29 @@ const regionData = [
   { name: 'Смоленская область', value: 66 },
   { name: 'Ставропольский край', value: 67 },
   // ------------------
-  { name: '', value: 68 },
-  { name: '', value: 69 },
-  { name: '', value: 70 },
+  { name: 'Тамбовская область', value: 68 },
+  { name: 'Тверская область', value: 69 },
+  { name: 'Томская область', value: 70 },
+  // ------------------
+  { name: 'Тульская область', value: 71 },
+  { name: 'Тюменская область', value: 72 },
+  { name: 'Удмуртская Республика', value: 73 },
+  // ------------------
+  { name: 'Ульяновская область', value: 74 },
+  { name: 'Хабаровский край', value: 75 },
+  { name: 'Ханты-Мансийский автономный округ', value: 76 },
+  // ------------------
+  { name: 'Челябинская область', value: 77 },
+  { name: 'Чеченская Республика', value: 78 },
+  { name: 'Чувашская Республика', value: 79 },
+  // ------------------
+  { name: 'Чукотский автономный округ', value: 80 },
+  { name: 'Ямало-Ненецкий автономный округ', value: 81 },
+  { name: 'Ярославская область', value: 82 },
+  // ------------------
+  { name: 'Байконур', value: 83 },
+  // { name: '', value: 84 },
+  // { name: '', value: 85 },
   // ------------------
 ];
 
@@ -594,97 +614,107 @@ const regionRegistrationData = [
   // -------------
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.4 },
-    { name: '', value: 1, ratio: 1.2 },
+    { name: 'Тамбов', value: 1, ratio: 1.2 },
+    { name: 'Мичуринск', value: 1, ratio: 1 },
     { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
   ],
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.3 },
-    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+    { name: 'Тверь', value: 1, ratio: 1.5 },
+    { name: 'Вышний Волочек, Кимры, Ржев', value: 1, ratio: 1 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
   ],
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.8 },
-    { name: '', value: 2, ratio: 1.3 },
-    { name: '', value: 3, ratio: 1.2 },
-    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+    { name: 'Томск', value: 1, ratio: 1.6 },
+    { name: 'Северск', value: 2, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 0.9 },
   ],
   // -------------
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.4 },
-    { name: '', value: 1, ratio: 1.2 },
-    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
+    { name: 'Тула', value: 1, ratio: 1.5 },
+    { name: 'Узловая, Щекино', value: 1, ratio: 1.2 },
+    { name: 'Алексин, Ефремов, Новомосковск', value: 1, ratio: 1 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.9 },
   ],
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.3 },
-    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+    { name: 'Тюмень', value: 1, ratio: 2 },
+    { name: 'Тобольск', value: 1, ratio: 1.3 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 1.1 },
   ],
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.8 },
-    { name: '', value: 2, ratio: 1.3 },
-    { name: '', value: 3, ratio: 1.2 },
-    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
-  ],
-  // -------------
-  [
-    { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.4 },
-    { name: '', value: 1, ratio: 1.2 },
-    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
-  ],
-  [
-    { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.3 },
-    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
-  ],
-  [
-    { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.8 },
-    { name: '', value: 2, ratio: 1.3 },
-    { name: '', value: 3, ratio: 1.2 },
-    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+    { name: 'Ижевск', value: 1, ratio: 1.6 },
+    { name: 'Воткинск', value: 2, ratio: 1.1 },
+    { name: 'Глазов, Сарапул', value: 3, ratio: 1 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 0.8 },
   ],
   // -------------
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.4 },
-    { name: '', value: 1, ratio: 1.2 },
+    { name: 'Ульяновск', value: 1, ratio: 1.5 },
+    { name: 'Димитровград', value: 1, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.9 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Хабаровск', value: 1, ratio: 1.7 },
+    { name: 'Комсомольск-на-Амуре', value: 1, ratio: 1.3 },
+    { name: 'Амурск', value: 1, ratio: 1 },
     { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
   ],
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.3 },
-    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
-  ],
-  [
-    { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.8 },
-    { name: '', value: 2, ratio: 1.3 },
-    { name: '', value: 3, ratio: 1.2 },
-    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+    { name: 'Сургут', value: 1, ratio: 2 },
+    { name: 'Нижневартовск', value: 2, ratio: 1.8 },
+    { name: 'Ханты-Мансийск', value: 3, ratio: 1.5 },
+    { name: 'Нефтеюганск, Нягань', value: 3, ratio: 1.3 },
+    { name: 'Когалым', value: 3, ratio: 1 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 1.1 },
   ],
   // -------------
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.4 },
-    { name: '', value: 1, ratio: 1.2 },
+    { name: 'Челябинск', value: 1, ratio: 2.1 },
+    { name: 'Магнитогорск', value: 1, ratio: 1.8 },
+    { name: 'Копейск', value: 1, ratio: 1.6 },
+    { name: 'Златоуст, Миасс', value: 1, ratio: 1.4 },
+    { name: 'Сатка, Чебаркуль', value: 1, ratio: 1.2 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 1 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 0.6 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Чебоксары', value: 1, ratio: 1.7 },
+    { name: 'Новочебоксарск', value: 1, ratio: 1.2 },
+    { name: 'Канаш', value: 1, ratio: 1.1 },
     { name: 'прочие города и населенные пункты', value: 2, ratio: 0.8 },
   ],
+  // -------------
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.3 },
-    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.7 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 0.6 },
   ],
   [
     { name: 'не выбран', value: 0, ratio: 0 },
-    { name: '', value: 1, ratio: 1.8 },
-    { name: '', value: 2, ratio: 1.3 },
-    { name: '', value: 3, ratio: 1.2 },
-    { name: 'прочие города и населенные пункты', value: 5, ratio: 1 },
+    { name: 'Ноябрьск', value: 1, ratio: 1.7 },
+    { name: 'Новый Уренгой', value: 1, ratio: 1 },
+    { name: 'прочие города и населенные пункты', value: 2, ratio: 1.1 },
+  ],
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'Ярославль', value: 1, ratio: 1.5 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 0.9 },
+  ],
+  // -------------
+  [
+    { name: 'не выбран', value: 0, ratio: 0 },
+    { name: 'прочие города и населенные пункты', value: 5, ratio: 0.6 },
   ],
   // -------------
 ];
