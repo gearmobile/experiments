@@ -40,17 +40,17 @@ const trailerData = [
 
 const vehicleData = [
   { name: 'не выбрано', value: 0 },
-  { name: 'мотоциклы, мопеды, квадроциклы', value: 'a' },
-  { name: 'легковой автомобиль', value: 'b' },
-  { name: 'легковое такси', value: 'bt' },
-  { name: 'грузовой автомобиль, max 16 тонн и менее', value: 'c' },
-  { name: 'грузовой автомобиль, max 16 тонн и более', value: 'cm' },
-  { name: 'автобусы до 16 пассажиров включительно', value: 'd' },
-  { name: 'автобусы более 16 пассажиров', value: 'dm' },
-  { name: 'маршрутные автобусы', value: 'dt' },
-  { name: 'троллейбусы', value: 'tb' },
-  { name: 'трамваи', value: 'tm' },
-  { name: 'трактора', value: 'tr' },
+  { name: 'мотоциклы, мопеды, квадроциклы', value: 1 },
+  { name: 'легковой автомобиль', value: 2 },
+  { name: 'легковое такси', value: 3 },
+  { name: 'грузовой автомобиль 16 тонн и менее', value: 4 },
+  { name: 'грузовой автомобиль 16 тонн и более', value: 5 },
+  { name: 'автобусы до 16 пассажиров включительно', value: 6 },
+  { name: 'автобусы более 16 пассажиров', value: 7 },
+  { name: 'маршрутные автобусы', value: 8 },
+  { name: 'троллейбусы', value: 9 },
+  { name: 'трамваи', value: 10 },
+  { name: 'трактора', value: 11 },
 ];
 
 // -------------------------------------------
@@ -864,7 +864,7 @@ const app = new Vue({
     KO: 0, // кол-во водителей
     KH: 0, // нарушения
     KBM: 0, // бонус-малус
-    KT: 0, // территорияльный коэффициент
+    KT: 0, // территориальный коэффициент
     // -----------------------
   },
   methods: {
@@ -886,8 +886,9 @@ const app = new Vue({
     changeSelectRegion() {
       this.regionValue = 0;
     },
-    resetCurrCity() {
+    changeSelectCity() {
       this.currCity = 0;
+      this.КT = 0;
     },
     changeSelectPeriod() {
       this.periodValue = 0;
@@ -987,6 +988,13 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
+    getCityRatio() {
+      for (let i = 0; i < this.currGroup.length; i += 1) {
+        if (this.currGroup[i].value === this.currCity) {
+          this.KT = this.currGroup[i].ratio;
+        }
+      }
+    },
   },
   computed: {
     condOneShow() {
