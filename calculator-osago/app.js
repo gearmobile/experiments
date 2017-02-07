@@ -874,6 +874,9 @@ const app = new Vue({
       this.ownerValue = 0;
       this.TB = 0;
     },
+    changeSelectCondition() {
+      this.conditionValue = 0;
+    },
     changeSelectVehicle() {
       this.vehicleValue = 0;
     },
