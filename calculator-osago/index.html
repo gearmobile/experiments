@@ -108,6 +108,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8">
+                        <!-- select region -->
                         <select class="calc__list form-control" name="region" id="region" v-model="regionValue">
                             <option v-for="item in region" v-text="item.name" :value="item.value"></option>
                         </select>
@@ -125,11 +126,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="col-md-8 city">
-                        <template v-for="( item, index ) in regionRegistration">
-                            <select class="city-group form-control" :name="'group'+index" :id="'group'+index">
-                                <option v-for="element in item" :value="element.value" v-text="element.name"></option>
-                            </select>
-                        </template>
+                        <!-- get cities of selected region -->
+                        <select class="city-group form-control" name="city-group" id="city-group">
+                            <option v-for="item in currGroup" :value="item.value" v-text="item.name"></option>
+                        </select>
                     </div>
                     <div class="col-md-4">
                         <button class="calc__change btn btn-default">изменить</button>

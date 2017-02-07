@@ -4,17 +4,13 @@
 // http://www.4sure.ru/inform/aboutinsure/23-kojefficient-territorii
 // http://avtoedet.ru/formula-rascheta-osago/
 
-Vue.component( 'city', {
-  template: '<select class="calc__list form-control"></select>'
-})
-
 // -------------------------------------------
 // МОЩНОСТЬ ДВИГАТЕЛЯ (КМ):
 // -------------------------------------------
 const powerData = [
   { name: 'не выбрано', value: 0, ratio: 0 },
-  { name: 'до 50 л.с. включительно', value: 1, ratio: .6 },
-  { name: 'свыше 50 до 70 л.с. включительно', value: 2, ratio: .9 },
+  { name: 'до 50 л.с. включительно', value: 1, ratio: 0.6 },
+  { name: 'свыше 50 до 70 л.с. включительно', value: 2, ratio: 0.9 },
   { name: 'свыше 70 до 100 л.с. включительно', value: 3, ratio: 1 },
   { name: 'свыше 100 до 120 л.с. включительно', value: 4, ratio: 1.2 },
   { name: 'свыше 120 до 150 л.с. включительно', value: 5, ratio: 1.4 },
@@ -61,12 +57,11 @@ const vehicleData = [
 // МЕСТО ПРОЖИВАНИЯ СОБСТВЕННИКА:
 // -------------------------------------------
 const regionData = [
-  { name: 'не выбрано', value: 0 },
-  { name: 'Алтайский край', value: 1 },
-  { name: 'Амурская область', value: 2 },
-  { name: 'Архангельская область', value: 3 },
-  { name: 'Астраханская область', value: 4 },
-  { name: 'Белгородская область', value: 5 },
+  { name: 'Алтайский край', value: 0 },
+  { name: 'Амурская область', value: 1 },
+  { name: 'Архангельская область', value: 2 },
+  { name: 'Астраханская область', value: 3 },
+  { name: 'Белгородская область', value: 4 },
 ];
 
 // -------------------------------------------
@@ -75,35 +70,35 @@ const regionData = [
 const regionRegistrationData = [
   [
     { name: 'не выбран', value: 0 },
-    { name: 'Барнаул', value: 11 },
-    { name: 'Бийск', value: 12 },
-    { name: 'Заринск, Новоалтайск, Рубцовск', value: 13 },
-    { name: 'прочие города и населенные пункты', value: 14 },
+    { name: 'Барнаул', value: 1 },
+    { name: 'Бийск', value: 2 },
+    { name: 'Заринск, Новоалтайск, Рубцовск', value: 3 },
+    { name: 'прочие города и населенные пункты', value: 4 },
   ],
   [
     { name: 'не выбран', value: 0 },
-    { name: 'Благовещенск', value: 21 },
-    { name: 'Белогорск, Свободный', value: 22 },
-    { name: 'прочие города и населенные пункты', value: 23 },
+    { name: 'Благовещенск', value: 1 },
+    { name: 'Белогорск, Свободный', value: 2 },
+    { name: 'прочие города и населенные пункты', value: 3 },
   ],
   [
     { name: 'не выбран', value: 0 },
-    { name: 'Архангельск', value: 31 },
-    { name: 'Северодвинск', value: 32 },
-    { name: 'Котлас', value: 33 },
-    { name: 'прочие города и населенные пункты', value: 34 },
+    { name: 'Архангельск', value: 1 },
+    { name: 'Северодвинск', value: 2 },
+    { name: 'Котлас', value: 3 },
+    { name: 'прочие города и населенные пункты', value: 4 },
   ],
   [
     { name: 'не выбран', value: 0 },
-    { name: 'Астрахань', value: 41 },
-    { name: 'прочие города и населенные пункты', value: 42 },
+    { name: 'Астрахань', value: 1 },
+    { name: 'прочие города и населенные пункты', value: 2 },
   ],
   [
     { name: 'не выбран', value: 0 },
-    { name: 'Белгород', value: 51 },
-    { name: 'Губкин, Старый Оскол', value: 52 },
-    { name: 'прочие города и населенные пункты', value: 53 },
-  ]
+    { name: 'Белгород', value: 1 },
+    { name: 'Губкин, Старый Оскол', value: 2 },
+    { name: 'прочие города и населенные пункты', value: 3 },
+  ],
 ];
 
 const conditionOneData = [
@@ -147,20 +142,20 @@ const experienceData = [
 const bonusMalusData = [
   { name: 'не выбран', value: 0, ratio: 0 },
   { name: 'М', value: 'M', ratio: 2.45 },
-  { name: '0', value: 1, ratio:  2.3 },
+  { name: '0', value: 1, ratio: 2.3 },
   { name: '1', value: 2, ratio: 1.55 },
   { name: '2', value: 3, ratio: 1.4 },
   { name: '3', value: 4, ratio: 1 },
-  { name: '4', value: 5, ratio: .95 },
-  { name: '5', value: 6, ratio: .9 },
-  { name: '6', value: 7, ratio: .85 },
-  { name: '7', value: 8, ratio: .8 },
-  { name: '8', value: 9, ratio: .75 },
-  { name: '9', value: 10, ratio: .7 },
-  { name: '10', value: 11, ratio: .65 },
-  { name: '11', value: 12, ratio: .6 },
-  { name: '12', value: 13, ratio: .55 },
-  { name: '13', value: 14, ratio: .5 },
+  { name: '4', value: 5, ratio: 0.95 },
+  { name: '5', value: 6, ratio: 0.9 },
+  { name: '6', value: 7, ratio: 0.85 },
+  { name: '7', value: 8, ratio: 0.8 },
+  { name: '8', value: 9, ratio: 0.75 },
+  { name: '9', value: 10, ratio: 0.7 },
+  { name: '10', value: 11, ratio: 0.65 },
+  { name: '11', value: 12, ratio: 0.6 },
+  { name: '12', value: 13, ratio: 0.55 },
+  { name: '13', value: 14, ratio: 0.5 },
 ];
 
 // -------------------------------------------
@@ -168,13 +163,13 @@ const bonusMalusData = [
 // -------------------------------------------
 const periodExploitationData = [
   { name: 'не выбран', value: 0, ratio: 0 },
-  { name: '3 месяца', value: 1, ratio: .5 },
-  { name: '4 месяца', value: 2, ratio: .6 },
-  { name: '5 месяцев', value: 3, ratio: .65 },
-  { name: '6 месяцев', value: 4, ratio: .7 },
-  { name: '7 месяцев', value: 5, ratio: .8 },
-  { name: '8 месяцев', value: 6, ratio: .9 },
-  { name: '9 месяцев', value: 7, ratio: .95 },
+  { name: '3 месяца', value: 1, ratio: 0.5 },
+  { name: '4 месяца', value: 2, ratio: 0.6 },
+  { name: '5 месяцев', value: 3, ratio: 0.65 },
+  { name: '6 месяцев', value: 4, ratio: 0.7 },
+  { name: '7 месяцев', value: 5, ratio: 0.8 },
+  { name: '8 месяцев', value: 6, ratio: 0.9 },
+  { name: '9 месяцев', value: 7, ratio: 0.95 },
   { name: '10 месяцев и более', value: 8, ratio: 1 },
 ];
 
@@ -183,16 +178,16 @@ const periodExploitationData = [
 // -------------------------------------------
 const periodInsuranceData = [
   { name: 'не выбран', value: 0, ratio: 0 },
-  { name: 'от 5 до 15 дней', value: 1, ratio: .2 },
-  { name: 'от 16 дней до 1 месяца', value: 2, ratio: .3 },
-  { name: '2 месяца', value: 3, ratio: .4 },
-  { name: '3 месяца', value: 4, ratio: .5 },
-  { name: '4 месяца', value: 5, ratio: .6 },
-  { name: '5 месяцев', value: 6, ratio: .65 },
-  { name: '6 месяцев', value: 7, ratio: .7 },
-  { name: '7 месяцев', value: 8, ratio: .8 },
-  { name: '8 месяцев', value: 9, ratio: .9 },
-  { name: '9 месяцев', value: 10, ratio: .95 },
+  { name: 'от 5 до 15 дней', value: 1, ratio: 0.2 },
+  { name: 'от 16 дней до 1 месяца', value: 2, ratio: 0.3 },
+  { name: '2 месяца', value: 3, ratio: 0.4 },
+  { name: '3 месяца', value: 4, ratio: 0.5 },
+  { name: '4 месяца', value: 5, ratio: 0.6 },
+  { name: '5 месяцев', value: 6, ratio: 0.65 },
+  { name: '6 месяцев', value: 7, ratio: 0.7 },
+  { name: '7 месяцев', value: 8, ratio: 0.8 },
+  { name: '8 месяцев', value: 9, ratio: 0.9 },
+  { name: '9 месяцев', value: 10, ratio: 0.95 },
   { name: '10 месяцев и более', value: 11, ratio: 1 },
 ];
 
@@ -250,7 +245,6 @@ const app = new Vue({
     KO: 0, // кол-во водителей
     KH: 0, // нарушения
     KBM: 0, // бонус-малус
-
     // -----------------------
   },
   methods: {
@@ -299,72 +293,72 @@ const app = new Vue({
 
     // ----------------------------------------
     getOwnerRatio() { // checked
-      for ( let i = 0; i < this.owner.length; i++ ) {
-        if ( this.owner[i].value === this.ownerValue ) {
+      for (let i = 0; i < this.owner.length; i += 1) {
+        if (this.owner[i].value === this.ownerValue) {
           this.TB = this.owner[i].ratio;
         }
       }
     },
     // ----------------------------------------
     getPowerRatio() { // checked
-      for ( let i = 0; i < this.power.length; i++ ) {
-        if ( this.power[i].value === this.powerValue ) {
+      for (let i = 0; i < this.power.length; i += 1) {
+        if (this.power[i].value === this.powerValue) {
           this.KM = this.power[i].ratio;
         }
       }
     },
     // ----------------------------------------
     getPeriodExpRatio() { // checked
-      for ( let i = 0; i < this.periodExploitation.length; i++ ) {
-        if ( this.periodExploitation[i].value === this.periodExploitationValue ) {
+      for (let i = 0; i < this.periodExploitation.length; i += 1) {
+        if (this.periodExploitation[i].value === this.periodExploitationValue) {
           this.КС = this.periodExploitation[i].ratio;
         }
       }
     },
     // ----------------------------------------
     getPeriodInsRatio() { // checked
-      for ( let i = 0; i < this.periodInsurance.length; i++ ) {
-        if ( this.periodInsurance[i].value === this.periodInsuranceValue ) {
+      for (let i = 0; i < this.periodInsurance.length; i += 1) {
+        if (this.periodInsurance[i].value === this.periodInsuranceValue) {
           this.KP = this.periodInsurance[i].ratio;
         }
       }
     },
     // ----------------------------------------
     getTrailerRatio() { // checked
-      for ( let i = 0; i < this.trailer.length; i++ ) {
-        if ( this.trailer[i].value === this.trailerValue ) {
+      for (let i = 0; i < this.trailer.length; i += 1) {
+        if (this.trailer[i].value === this.trailerValue) {
           this.KPR = this.trailer[i].ratio;
         }
       }
     },
     // ----------------------------------------
     getExperienceRatio() { // checked
-      for ( let i = 0; i < this.experience.length; i++ ) {
-        if ( this.experience[i].value === this.experienceValue ) {
+      for (let i = 0; i < this.experience.length; i += 1) {
+        if (this.experience[i].value === this.experienceValue) {
           this.KBC = this.experience[i].ratio;
         }
       }
-    }, 
+    },
     // ----------------------------------------
     getDriversRatio() { // checked
-      for ( let i = 0; i < this.drivers.length; i++ ) {
-        if ( this.drivers[i].value === this.driversValue ) {
+      for (let i = 0; i < this.drivers.length; i += 1) {
+        if (this.drivers[i].value === this.driversValue) {
           this.KO = this.drivers[i].ratio;
         }
       }
     },
     // ----------------------------------------
     getViolationsRatio() { // checked
-      for ( let i = 0; i < this.violations.length; i++ ) {
-        if ( this.violations[i].value === this.violationsValue ) {
+      for (let i = 0; i < this.violations.length; i += 1) {
+        if (this.violations[i].value === this.violationsValue) {
           this.KH = this.violations[i].ratio;
         }
       }
     },
     // ----------------------------------------
     getBonusMalusRatio() { // checked
-      for ( let i = 0; i < this.bonusMalus.length; i++ ) {
-        if ( this.bonusMalus[i].value === this.bonusMalusValue ) {
+      for (let i = 0; i < this.bonusMalus.length; i += 1) {
+        if (this.bonusMalus[i].value === this.bonusMalusValue) {
           this.KBM = this.bonusMalus[i].ratio;
         }
       }
@@ -372,28 +366,31 @@ const app = new Vue({
     // ----------------------------------------
   },
   computed: {
-    condOneShow: function () {
+    condOneShow() {
       return this.ownerValue === 1;
     },
-    condTwoShow: function () {
+    condTwoShow() {
       return this.ownerValue === 2;
     },
-    group1Show: function () {
+    group1Show() {
       return this.regionValue === 1;
     },
-    group2Show: function () {
+    group2Show() {
       return this.regionValue === 2;
     },
-    group3Show: function () {
+    group3Show() {
       return this.regionValue === 3;
     },
-    group4Show: function () {
+    group4Show() {
       return this.regionValue === 4;
     },
-    group5Show: function () {
+    group5Show() {
       return this.regionValue === 5;
-    }
-  }
+    },
+    currGroup() {
+      return this.regionRegistration[this.regionValue];
+    },
+  },
 });
 
 app.$mount('#app');
