@@ -3,13 +3,14 @@
     <!--<img src="./assets/logo.png">-->
     <button @click="chgUserAgeUp">increment user age</button>
     <button @click="chgUserAgeDown">decrement user age</button>
-    <!--<p @parentName="surname = $event"></p>-->
-    <hello :userName="name" @parentName="surname = $event"></hello>
+    <hello :userName="name" :userAge="age"></hello>
+    <child @chgParent="surname = $event"></child>
   </div>
 </template>
 
 <script>
 import Hello from './components/Hello';
+import Child from './components/Child';
 
 export default {
   name: 'app',
@@ -17,11 +18,12 @@ export default {
     return {
       age: 29,
       name: 'john',
-      surname: 'aaronson',
+      surname: 'loremdolor',
     };
   },
   components: {
     Hello,
+    Child,
   },
   methods: {
     chgUserAgeUp() {
