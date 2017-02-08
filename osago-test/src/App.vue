@@ -1,47 +1,75 @@
 <template>
   <div id="app">
-    <form action="#">
-      <div>
-        <label for="first">show first</label>
-        <input type="checkbox" v-model="checkOne">
-      </div>
-      <div>
-        <label for="first">show second</label>
-        <input type="checkbox" v-model="checkTwo">
-      </div>
-    </form>
-    <first v-if="checkOne"></first>
-    <second v-if="checkTwo"></second>
+    <div class="container calc__container">
+      <h2 class="calc__caption">Калькулятор ОСАГО 2017</h2>
+      <owner></owner>
+      <condition></condition>
+      <vehicle></vehicle>
+      <personOne></personOne>
+      <progressBar></progressBar>
+      <calculate></calculate>
+      <totalSum></totalSum>
+    </div>
   </div>
 </template>
 
 <script>
 
-import first from './components/first';
-import second from './components/second';
+import owner from './components/modules/owner';
+import condition from './components/modules/condition';
+import vehicle from './components/modules/vehicle';
+import personOne from './components/personOne';
+import progressBar from './components/modules/progressBar';
+import calculate from './components/modules/calculate';
+import totalSum from './components/modules/totalSum';
 
 export default {
   name: 'app',
   data() {
     return {
-      checkOne: false,
-      checkTwo: false,
+      // regionValue: 0,
     };
   },
   components: {
-    first,
-    second,
+    owner,
+    condition,
+    vehicle,
+    personOne,
+    progressBar,
+    calculate,
+    totalSum,
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+  .calc__caption {
+    margin: 0 0 60px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: darkslategrey;
+  }
+
+  .calc__container {
+    padding-top: 20px;
+  }
+
+  .calc__row {
+    margin-bottom: 60px;
+  }
+
+  .calc__title {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: forestgreen;
+  }
 </style>

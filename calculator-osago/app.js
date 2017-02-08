@@ -927,7 +927,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getPowerRatio() { // checked
+    getPowerRatio() {
       for (let i = 0; i < this.power.length; i += 1) {
         if (this.power[i].value === this.powerValue) {
           this.KM = this.power[i].ratio;
@@ -935,7 +935,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getPeriodExpRatio() { // checked
+    getPeriodExpRatio() {
       for (let i = 0; i < this.periodExploitation.length; i += 1) {
         if (this.periodExploitation[i].value === this.periodExploitationValue) {
           this.КС = this.periodExploitation[i].ratio;
@@ -943,7 +943,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getPeriodInsRatio() { // checked
+    getPeriodInsRatio() {
       for (let i = 0; i < this.periodInsurance.length; i += 1) {
         if (this.periodInsurance[i].value === this.periodInsuranceValue) {
           this.KP = this.periodInsurance[i].ratio;
@@ -951,7 +951,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getTrailerRatio() { // checked
+    getTrailerRatio() {
       for (let i = 0; i < this.trailer.length; i += 1) {
         if (this.trailer[i].value === this.trailerValue) {
           this.KPR = this.trailer[i].ratio;
@@ -959,7 +959,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getExperienceRatio() { // checked
+    getExperienceRatio() {
       for (let i = 0; i < this.experience.length; i += 1) {
         if (this.experience[i].value === this.experienceValue) {
           this.KBC = this.experience[i].ratio;
@@ -967,7 +967,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getDriversRatio() { // checked
+    getDriversRatio() {
       for (let i = 0; i < this.drivers.length; i += 1) {
         if (this.drivers[i].value === this.driversValue) {
           this.KO = this.drivers[i].ratio;
@@ -975,7 +975,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getViolationsRatio() { // checked
+    getViolationsRatio() {
       for (let i = 0; i < this.violations.length; i += 1) {
         if (this.violations[i].value === this.violationsValue) {
           this.KH = this.violations[i].ratio;
@@ -983,7 +983,7 @@ const app = new Vue({
       }
     },
     // ----------------------------------------
-    getBonusMalusRatio() { // checked
+    getBonusMalusRatio() {
       for (let i = 0; i < this.bonusMalus.length; i += 1) {
         if (this.bonusMalus[i].value === this.bonusMalusValue) {
           this.KBM = this.bonusMalus[i].ratio;
