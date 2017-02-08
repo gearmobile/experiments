@@ -40,17 +40,17 @@ const trailerData = [
 // -------------------------------------------
 const vehicleData = [
   { name: 'Не выбрано', value: 0 },
-  { name: 'Легковые автомобили', value: 2 },
-  { name: 'Легковые такси', value: 3 },
-  { name: 'Маршрутные автобусы', value: 8 },
-  { name: 'Автобусы до 16 пассажиров включительно', value: 6 },
-  { name: 'Автобусы более 16 пассажиров', value: 7 },
-  { name: 'Грузовые авто 16 тонн и менее', value: 4 },
-  { name: 'Грузовые авто 16 тонн и более', value: 5 },
-  { name: 'Тракторы и строительная техника', value: 11 },
-  { name: 'Мотоциклы, мопеды, квадроциклы', value: 1 },
-  { name: 'Троллейбусы', value: 9 },
-  { name: 'Трамваи', value: 10 },
+  { name: 'Легковые автомобили', value: 1 },
+  { name: 'Легковые такси', value: 2 },
+  { name: 'Маршрутные автобусы', value: 3 },
+  { name: 'Автобусы до 16 пассажиров включительно', value: 4 },
+  { name: 'Автобусы более 16 пассажиров', value: 5 },
+  { name: 'Грузовые авто 16 тонн и менее', value: 6 },
+  { name: 'Грузовые авто 16 тонн и более', value: 7 },
+  { name: 'Тракторы и строительная техника', value: 8 },
+  { name: 'Мотоциклы, мопеды, квадроциклы', value: 9 },
+  { name: 'Троллейбусы', value: 10 },
+  { name: 'Трамваи', value: 11 },
 ];
 // -------------------------------------------
 // МЕСТО ПРОЖИВАНИЯ СОБСТВЕННИКА:
@@ -1021,8 +1021,64 @@ const app = new Vue({
     currCondition() {
       return this.condition[this.ownerValue];
     },
+    stateOne() {
+      return this.ownerValue;
+    },
+    stateTwo() {
+      return this.conditionValue;
+    },
+    stateThree() {
+      if (this.vehicleValue > 0 && this.vehicleValue <= 2) {
+        return 1;
+      } else if (this.vehicleValue > 2) {
+        return 2;
+      }
+      return 0;
+    },
     showRegion() {
-      return (this.conditionValue === 1 || this.conditionValue === 3);
+      if ((this.stateTwo === 1 && this.stateThree !== 0) || (this.stateTwo === 3 && this.stateThree !== 0)) {
+        return true;
+      }
+      return false;
+    },
+    showCity() {
+      return this.regionValue;
+    },
+    showBonusMalus() {
+      if ((this.stateTwo === 1 && this.currCity !== 0) || (this.stateTwo === 3 && this.currCity !== 0)) {
+        return true;
+      }
+      return false;
+    },
+    showExperience() {
+      return this.bonusMalusValue;
+    },
+    showDrivers() {
+      return this.experienceValue;
+    },
+    showPeriodExploitation() {
+      if (this.powerValue || this.trailerValue) {
+        return true;
+      }
+      return false;
+    },
+    showViolations() {
+      if (this.showPeriodExploitation) { // ?
+        return true;
+      }
+      return false;
+    },
+    showPower() {
+      if (this.stateThree === 1 && this.driversValue !== 0) {
+        return true;
+      }
+      return false;
+    },
+    showTrailer() {
+      if (this.stateThree === 2 && this.driversValue !== 0) {
+        return true;
+      }
+      return false;
     },
   },
 });
