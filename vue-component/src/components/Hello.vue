@@ -3,7 +3,6 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <h3>{{ reverseName() }}</h3>
-    <button @click="chgParentName">create event</button>
 </template>
 
 <script>
@@ -22,17 +21,10 @@ export default {
     userName: {
       type: String,
     },
-    parName: {
-      type: String,
-      default: 'johnson',
-    },
   },
   methods: {
     reverseName() {
       return this.userName.split('').reverse().join('');
-    },
-    chgParentName() {
-      this.$emit('parentName', this.parName);
     },
   },
 };
