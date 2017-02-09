@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <div>{{ parentProp }}</div>
-    <uno :unoProp="parentProp" @unoChgPar="parentProp = $event"></uno>
-    <duo :duoProp="parentProp"></duo>
+    <uno></uno>
+    <duo></duo>
   </div>
 </template>
 
@@ -12,11 +11,6 @@ import Duo from './components/duo';
 
 export default {
   name: 'app',
-  data() {
-    return {
-      parentProp: 'parent prop',
-    };
-  },
   components: {
     Uno,
     Duo,
@@ -32,8 +26,11 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
-    background-color: deepskyblue;
-    overflow: hidden;
-    padding: 100px 0;
+  }
+  section {
+    width: 48%;
+    height: 200px;
+    float: left;
+    margin: 1%;
   }
 </style>
