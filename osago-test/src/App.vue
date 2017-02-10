@@ -42,9 +42,12 @@ export default {
   name: 'app',
   data() {
     return {
-      stateOne: 0,
-      stateTwo: 0,
-      stateThree: 0,
+      state: {
+        stateOne: 0,
+        stateTwo: 0,
+        stateThree: 0,
+      },
+      ratio: {},
     };
   },
   components: {
@@ -65,38 +68,38 @@ export default {
   },
   computed: {
     person1() {
-      return this.stateOne === 1 && this.stateTwo === 1 && this.stateThree === 1;
+      return this.state.stateOne === 1 && this.state.stateTwo === 1 && this.state.stateThree === 1;
     },
     person2() {
-      return this.stateOne === 1 && this.stateTwo === 1 && this.stateThree === 2;
+      return this.state.stateOne === 1 && this.state.stateTwo === 1 && this.state.stateThree === 2;
     },
     person3() {
-      return this.stateOne === 1 && this.stateTwo === 2 && this.stateThree === 1;
+      return this.state.stateOne === 1 && this.state.stateTwo === 2 && this.state.stateThree === 1;
     },
     person4() {
-      return this.stateOne === 1 && this.stateTwo === 2 && this.stateThree === 2;
+      return this.state.stateOne === 1 && this.state.stateTwo === 2 && this.state.stateThree === 2;
     },
     person5() {
-      return this.stateOne === 1 && this.stateTwo === 3 && this.stateThree === 1;
+      return this.state.stateOne === 1 && this.state.stateTwo === 3 && this.state.stateThree === 1;
     },
     person6() {
-      return this.stateOne === 1 && this.stateTwo === 3 && this.stateThree === 2;
+      return this.state.stateOne === 1 && this.state.stateTwo === 3 && this.state.stateThree === 2;
     },
   },
   created() {
     eventBus.$on('chgOwnerValue', (data) => {
-      this.stateOne = data;
+      this.state.stateOne = data;
     });
     eventBus.$on('chgConditionValue', (data) => {
-      this.stateTwo = data;
+      this.state.stateTwo = data;
     });
     eventBus.$on('chgVehicleValue', (data) => {
       if (data > 0 && data <= 2) {
-        this.stateThree = 1;
+        this.state.stateThree = 1;
       } else if (data > 2) {
-        this.stateThree = 2;
+        this.state.stateThree = 2;
       } else {
-        this.stateThree = 0;
+        this.state.stateThree = 0;
       }
     });
   },
