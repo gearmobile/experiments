@@ -34,7 +34,7 @@
       { name: 'Стандартные', value: 1 },
       { name: 'Транзит', value: 2 },
       { name: 'Иностранец', value: 3 },
-      // { name: 'Спецтехника', value: 4 },
+      { name: 'Спецтехника', value: 4 },
     ],
   ];
   export default {
