@@ -64,7 +64,8 @@ export default {
         KO: 0, // кол-во водителей
         KBC: 0, // стаж водителя
         KM: 0, // мощность двигателя
-        TB: 0, // базовый тариф
+        TBMIN: 0, // минимальный базовый тариф
+        TBMAX: 0, // максимальный базовый тариф
         КС: 0, // период эксплуатации
         KP: 0, // период страхования
         KH: 0, // нарушения
@@ -170,6 +171,8 @@ export default {
     eventBus.$on('fetchPowerRatio', (data) => { this.ratio.KM = data; });
     eventBus.$on('fetchViolationRatio', (data) => { this.ratio.KH = data; });
     eventBus.$on('fetchTrailerRatio', (data) => { this.ratio.KPR = data; });
+    eventBus.$on('fetchMinVehicleRatio', (data) => { this.ratio.TBMIN = data; });
+    eventBus.$on('fetchMaxVehicleRatio', (data) => { this.ratio.TBMAX = data; });
   },
 };
 </script>
