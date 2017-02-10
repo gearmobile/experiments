@@ -10,7 +10,7 @@
         </select>
       </div>
       <div class="col-md-4">
-        <button type="button" class="calc__change btn btn-default" v-show="conditionValue" @click="changeSelectCondition">изменить</button>
+        <button type="button" class="calc__change btn btn-default" v-show="conditionValue" @click="clearSelectCondition">изменить</button>
       </div>
     </div>
   </div>
@@ -47,8 +47,9 @@
       };
     },
     methods: {
-      changeSelectCondition() {
+      clearSelectCondition() {
         this.conditionValue = 0;
+        eventBus.$emit('clrStateTwo', this.conditionValue);
       },
       chgConditionalValue() {
         eventBus.$emit('chgConditionValue', this.conditionValue);

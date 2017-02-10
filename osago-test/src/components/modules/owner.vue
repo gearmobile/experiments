@@ -37,6 +37,7 @@
       changeSelectOwner() {
         this.ownerValue = 0;
         this.TB = 0;
+        eventBus.$emit('clrStateOne', this.TB);
       },
       getOwnerRatio() {
         for (let i = 0; i < this.owner.length; i += 1) {

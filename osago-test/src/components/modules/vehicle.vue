@@ -10,7 +10,7 @@
         </select>
       </div>
       <div class="col-md-4">
-        <button type="button" class="calc__change btn btn-default" v-show="vehicleValue" @click="changeSelectVehicle">изменить</button>
+        <button type="button" class="calc__change btn btn-default" v-show="vehicleValue" @click="clearSelectVehicle">изменить</button>
       </div>
     </div>
   </div>
@@ -42,8 +42,9 @@
       };
     },
     methods: {
-      changeSelectVehicle() {
+      clearSelectVehicle() {
         this.vehicleValue = 0;
+        eventBus.$emit('clrStateThree', this.vehicleValue);
       },
       chgVehicleValue() {
         eventBus.$emit('chgVehicleValue', this.vehicleValue);
