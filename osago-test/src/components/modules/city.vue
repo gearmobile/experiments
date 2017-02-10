@@ -570,6 +570,7 @@
       return {
         city: cityData,
         cityValue: 0,
+        regionValue: 0,
         KT: 0, // территориальный коэффициент
       };
     },
@@ -594,7 +595,7 @@
     },
     created() {
       eventBus.$on('fetchRegionValue', (data) => {
-        this.cityValue = data;
+        this.regionValue = data;
       });
     },
   };

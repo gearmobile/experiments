@@ -5,18 +5,18 @@
       <owner></owner>
       <condition></condition>
       <vehicle></vehicle>
-      <person-one v-if="person1"></person-one>
-      <person-two v-if="person2"></person-two>
-      <person-three v-if="person3"></person-three>
-      <person-four v-if="person4"></person-four>
-      <person-five v-if="person5"></person-five>
-      <person-six v-if="person6"></person-six>
-      <enterprise-one v-if="enterprise1"></enterprise-one>
-      <enterprise-two v-if="enterprise2"></enterprise-two>
-      <enterprise-three v-if="enterprise3"></enterprise-three>
-      <enterprise-four v-if="enterprise4"></enterprise-four>
-      <enterprise-five v-if="enterprise5"></enterprise-five>
-      <enterprise-six v-if="enterprise6"></enterprise-dix>
+      <person-one v-show="person1"></person-one>
+      <person-two v-show="person2"></person-two>
+      <person-three v-show="person3"></person-three>
+      <person-four v-show="person4"></person-four>
+      <person-five v-show="person5"></person-five>
+      <person-six v-show="person6"></person-six>
+      <enterprise-one v-show="enterprise1"></enterprise-one>
+      <enterprise-two v-show="enterprise2"></enterprise-two>
+      <enterprise-three v-show="enterprise3"></enterprise-three>
+      <enterprise-four v-show="enterprise4"></enterprise-four>
+      <enterprise-five v-show="enterprise5"></enterprise-five>
+      <enterprise-six v-show="enterprise6"></enterprise-dix>
       <progress-bar></progress-bar>
       <calculate></calculate>
       <total-sum></total-sum>
