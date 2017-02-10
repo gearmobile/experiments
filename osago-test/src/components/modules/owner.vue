@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const ownerData = [
     { name: 'Не выбрано', value: 0, ratio: 0 },
     { name: 'Физическое лицо', value: 1, ratio: 1200 },
@@ -42,6 +44,7 @@
             this.TB = this.owner[i].ratio;
           }
         }
+        eventBus.$emit('chgOwnerValue', this.ownerValue);
       },
     },
   };

@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-6">
       <div class="col-md-8">
-        <select class="calc__list form-control" name="vehicle" id="vehicle" v-model="vehicleValue">
+        <select class="calc__list form-control" name="vehicle" id="vehicle" v-model="vehicleValue" @change="chgVehicleValue">
           <option v-for="item in vehicle" v-text="item.name" :value="item.value"></option>
         </select>
       </div>
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+  
   const vehicleData = [
     { name: 'Не выбрано', value: 0 },
     { name: 'Легковые автомобили', value: 1 },
@@ -42,6 +44,9 @@
     methods: {
       changeSelectVehicle() {
         this.vehicleValue = 0;
+      },
+      chgVehicleValue() {
+        eventBus.$emit('chgVehicleValue', this.vehicleValue);
       },
     },
   };

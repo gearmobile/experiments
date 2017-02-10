@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-6">
       <div class="col-md-8">
-        <select class="calc__list form-control" name="condition" id="condition" v-model="conditionValue">
+        <select class="calc__list form-control" name="condition" id="condition" v-model="conditionValue" @change="chgConditionalValue">
           <option v-for="item in currCondition" v-text="item.name" :value="item.value"></option>
         </select>
       </div>
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const conditionData = [
     [
       { name: 'Не выбрано', value: 0 },
@@ -32,7 +34,7 @@
       { name: 'Стандартные', value: 1 },
       { name: 'Транзит', value: 2 },
       { name: 'Иностранец', value: 3 },
-      { name: 'Спецтехника', value: 4 },
+      // { name: 'Спецтехника', value: 4 },
     ],
   ];
   export default {
@@ -41,17 +43,26 @@
       return {
         condition: conditionData,
         conditionValue: 0,
+        ownerValue: 0,
       };
     },
     methods: {
       changeSelectCondition() {
         this.conditionValue = 0;
       },
+      chgConditionalValue() {
+        eventBus.$emit('chgConditionValue', this.conditionValue);
+      },
     },
     computed: {
       currCondition() {
         return this.condition[this.ownerValue];
       },
+    },
+    created() {
+      eventBus.$on('chgOwnerValue', (data) => {
+        this.ownerValue = data;
+      });
     },
   };
 </script>

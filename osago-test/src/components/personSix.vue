@@ -1,5 +1,6 @@
 <template>
-  <section class="first">
+  <section class="person-six">
+    <h1>person6</h1>
     <region></region>
     <city></city>
     <bonusmalus></bonusmalus>
@@ -26,7 +27,7 @@
   import periodInsurance from './modules/periodInsurance';
 
   export default {
-    name: 'first',
+    name: 'person-six',
     components: {
       region,
       city,

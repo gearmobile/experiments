@@ -14,7 +14,13 @@
             <input class="form-control" v-model="user.useremail" type="email" name="email" id="email" placeholder="enter your email">
           </div>
           <div class="form-group">
-            <button class="btn btn-primary" @click="submit">submit</button>
+            <button class="btn btn-primary" @click="sendData">send data</button>
+            <button class="btn btn-primary" @click="fetchData">fetch data</button>
+          </div>
+          <div class="form-group">
+            <ul class="list-group">
+              <li class="list-group-item" v-for="item in users">{{ item.username }} - {{ item.useremail }}</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -31,17 +37,30 @@
           username: '',
           useremail: '',
         },
+        users: [],
       };
     },
     methods: {
-      submit() {
-        const url = 'https://vueresource-8a4dd.firebaseio.com/';
+      sendData() {
+        // const url = 'https://vueresource-8a4dd.firebaseio.com/';
         this
-          .$http.post(url+'data.json', this.user)
+          .$http.post('', this.user)
           .then(response => {
             console.log(response);
           }, error => {
             console.log(error);
+          });
+      },
+      fetchData() {
+        // const url = 'https://vueresource-8a4dd.firebaseio.com/';
+        this.$http.get('')
+          .then(response => { return response.json() })
+          .then(data => {
+            const resultArr = [];
+            for (let key in data) {
+              resultArr.push(data[key]);
+            }
+            this.users = resultArr;
           });
       },
     },

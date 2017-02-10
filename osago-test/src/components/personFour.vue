@@ -1,5 +1,6 @@
 <template>
-  <section class="first">
+  <section class="person-four">
+    <h1>person4</h1>
     <!--<region></region>
     <city></city>
     <bonusmalus></bonusmalus>
@@ -36,7 +37,7 @@
   import trailer from './modules/trailer';
 
   export default {
-    name: 'first',
+    name: 'person-four',
     components: {
       // region,
       // city,

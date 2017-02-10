@@ -11,6 +11,11 @@ import Duo from './components/duo';
 
 export default {
   name: 'app',
+  // data() {
+  //   return {
+  //     stateOne: 0,
+  //   };
+  // },
   components: {
     Uno,
     Duo,

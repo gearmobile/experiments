@@ -1,5 +1,6 @@
 <template>
-  <section class="first">
+  <section class="person-three">
+    <h1>person3</h1>
     <!--<region></region>
     <city></city>
     <bonusmalus></bonusmalus>
@@ -34,7 +35,7 @@
   import power from './modules/power';
 
   export default {
-    name: 'first',
+    name: 'person-three',
     components: {
       // region,
       // city,
