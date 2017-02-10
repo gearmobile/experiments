@@ -1,11 +1,11 @@
 <template>
   <div class="row calc__row">
     <div class="col-md-6">
-      <h3 class="calc__title">Место регистрации ТС:</h3>
+      <h3 class="calc__title">Область или край регистрации ТС:</h3>
     </div>
     <div class="col-md-6">
       <div class="col-md-8">
-        <select class="calc__list form-control" name="region" id="region" v-model="regionValue">
+        <select class="calc__list form-control" name="region" id="region" v-model="regionValue" @change="chgRegionValue">
           <option v-for="item in region" v-text="item.name" :value="item.value"></option>
         </select>
       </div>
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const regionData = [
     { name: 'Не выбран', value: 0 },
     { name: 'Алтайский край', value: 1 },
@@ -109,12 +111,14 @@
       return {
         region: regionData,
         regionValue: 0,
-        KT: 0, // территориальный коэффициент
       };
     },
     methods: {
       changeSelectRegion() {
         this.regionValue = 0;
+      },
+      chgRegionValue() {
+        eventBus.$emit('fetchRegionValue', this.regionValue);
       },
     },
   };

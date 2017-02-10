@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const violationsData = [
     { name: 'Не выбран', value: 0, ratio: 0 },
     { name: 'Нет', value: 1, ratio: 1.5 },
@@ -42,6 +44,7 @@
             this.KH = this.violations[i].ratio;
           }
         }
+        eventBus.$emit('fetchViolationRatio', this.KH);
       },
     },
   };

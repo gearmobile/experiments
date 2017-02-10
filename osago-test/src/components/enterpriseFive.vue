@@ -9,8 +9,6 @@
     <violations></violations>
     <power></power>
     <trailer></trailer>
-    <!--<periodExploitation></periodExploitation>-->
-    <!--<experience></experience>-->
   </section>
 </template>
 
@@ -23,8 +21,6 @@
   import violations from './modules/violations';
   import power from './modules/power';
   import trailer from './modules/trailer';
-  // import experience from './modules/experience';
-  // import periodExploitation from './modules/periodExploitation';
 
   export default {
     name: 'enterprise-five',
@@ -37,8 +33,6 @@
       violations,
       power,
       trailer,
-      // experience,
-      // periodExploitation,
     },
   };
 </script>

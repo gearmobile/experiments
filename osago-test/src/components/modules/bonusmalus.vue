@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const bonusMalusData = [
     { name: 'Не выбран', value: 0, ratio: 0 },
     { name: 'М', value: 'M', ratio: 2.45 },
@@ -51,6 +53,7 @@
             this.KBM = this.bonusMalus[i].ratio;
           }
         }
+        eventBus.$emit('fetchBonusMalusRatio', this.KBM);
       },
       changeSelectBonusMalus() {
         this.bonusMalusValue = 0;

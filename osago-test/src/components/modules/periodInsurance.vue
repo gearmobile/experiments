@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const periodInsuranceData = [
     { name: 'Не выбран', value: 0, ratio: 0 },
     { name: 'от 5 до 15 дней', value: 1, ratio: 0.2 },
@@ -51,6 +53,7 @@
             this.KP = this.periodInsurance[i].ratio;
           }
         }
+        eventBus.$emit('fetchperiodInsuranceRatio', this.KP);
       },
     },
   };

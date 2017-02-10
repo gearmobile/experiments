@@ -5,24 +5,21 @@
       <owner></owner>
       <condition></condition>
       <vehicle></vehicle>
-      <!---->
-      <personOne v-if="person1"></personOne>
-      <personTwo v-if="person2"></personTwo>
-      <personThree v-if="person3"></personThree>
-      <personFour v-if="person4"></personFour>
-      <personFive v-if="person5"></personFive>
-      <personSix v-if="person6"></personSix>
-      <!---->
-      <enterpriseOne v-if="enterprise1"></enterpriseOne>
-      <enterpriseTwo v-if="enterprise2"></enterpriseTwo>
-      <enterpriseThree v-if="enterprise3"></enterpriseThree>
-      <enterpriseFour v-if="enterprise4"></enterpriseFour>
-      <enterpriseFive v-if="enterprise5"></enterpriseFive>
-      <enterpriseSix v-if="enterprise6"></enterpriseSix>
-      <!---->
-      <progressBar></progressBar>
+      <person-one v-if="person1"></person-one>
+      <person-two v-if="person2"></person-two>
+      <person-three v-if="person3"></person-three>
+      <person-four v-if="person4"></person-four>
+      <person-five v-if="person5"></person-five>
+      <person-six v-if="person6"></person-six>
+      <enterprise-one v-if="enterprise1"></enterprise-one>
+      <enterprise-two v-if="enterprise2"></enterprise-two>
+      <enterprise-three v-if="enterprise3"></enterprise-three>
+      <enterprise-four v-if="enterprise4"></enterprise-four>
+      <enterprise-five v-if="enterprise5"></enterprise-five>
+      <enterprise-six v-if="enterprise6"></enterprise-dix>
+      <progress-bar></progress-bar>
       <calculate></calculate>
-      <totalSum></totalSum>
+      <total-sum></total-sum>
     </div>
   </div>
 </template>
@@ -61,7 +58,17 @@ export default {
         stateTwo: 0,
         stateThree: 0,
       },
-      ratio: {},
+      ratio: {
+        KBM: 0,
+        KT: 0,
+        KO: 0,
+        KBC: 0,
+        TB: 0,
+        КС: 0,
+        KP: 0,
+        KH: 0,
+        KPR: 0,
+      },
     };
   },
   components: {
@@ -151,6 +158,17 @@ export default {
     eventBus.$on('clrStateThree', (data) => {
       this.state.stateThree = data;
     });
+    // fetch ratios
+    eventBus.$on('fetchBonusMalusRatio', this.ratio.KB);
+    eventBus.$on('fetchCityRatio', this.ratio.KT);
+    eventBus.$on('fetchDriverRatio', this.ratio.KO);
+    eventBus.$on('fetchExperienceRatio', this.ratio.KBC);
+    eventBus.$on('fetchOwnerRatio', this.ratio.TB);
+    eventBus.$on('fetchPeriodExpRatio', this.ratio.КС);
+    eventBus.$on('fetchperiodInsuranceRatio', this.ratio.KP);
+    eventBus.$on('fetchPowerRatio', this.ratio.KM);
+    eventBus.$on('fetchViolationRatio', this.ratio.KH);
+    eventBus.$on('fetchTrailerRatio', this.ratio.KPR);
   },
 };
 </script>

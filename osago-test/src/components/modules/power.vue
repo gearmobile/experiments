@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const powerData = [
     { name: 'Не выбрано', value: 0, ratio: 0 },
     { name: 'До 50 л.с. включительно', value: 1, ratio: 0.6 },
@@ -46,6 +48,7 @@
             this.KM = this.power[i].ratio;
           }
         }
+        eventBus.$emit('fetchPowerRatio', this.KM);
       },
     },
   };

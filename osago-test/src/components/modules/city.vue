@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const cityData = [
     [
       { name: 'Не выбран', value: 0, ratio: 0 },
@@ -582,12 +584,18 @@
             this.KT = this.currCity[i].ratio;
           }
         }
+        eventBus.$emit('fetchCityRatio', this.KT);
       },
     },
     computed: {
       currCity() {
         return this.city[this.regionValue];
       },
+    },
+    created() {
+      eventBus.$on('fetchRegionValue', (data) => {
+        this.cityValue = data;
+      });
     },
   };
 </script>

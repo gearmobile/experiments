@@ -46,6 +46,7 @@
           }
         }
         eventBus.$emit('chgOwnerValue', this.ownerValue);
+        eventBus.$on('fetchOwnerRatio', this.TB);
       },
     },
   };

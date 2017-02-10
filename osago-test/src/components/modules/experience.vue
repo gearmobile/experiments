@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const experienceData = [
     { name: 'Не выбран', value: 0, ratio: 0 },
     { name: 'До 22 лет включительно со стажем вождения до 3 лет включительно', value: 1, ratio: 1.8 },
@@ -43,6 +45,7 @@
             this.KBC = this.experience[i].ratio;
           }
         }
+        eventBus.$on('fetchExperienceRatio', this.KBC);
       },
     },
   };

@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const trailerData = [
     { name: 'Не выбрано', value: 0, ratio: 0 },
     { name: 'Прицепы к мотоциклам и мотороллерам', value: 1, ratio: 1.16 },
@@ -41,6 +43,7 @@
             this.KPR = this.trailer[i].ratio;
           }
         }
+        eventBus.$emit('fetchTrailerRatio', this.KPR);
       },
       changeSelectTrailer() {
         this.trailerValue = 0;

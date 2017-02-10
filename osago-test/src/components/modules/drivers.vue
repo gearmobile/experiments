@@ -17,6 +17,8 @@
 </template>
 
 <script>
+  import eventBus from '../../main';
+
   const driversData = [
     { name: 'Не выбран', value: 0, ratio: 0 },
     { name: 'Ограниченное число водителей', value: 1, ratio: 1 },
@@ -38,6 +40,7 @@
             this.KO = this.drivers[i].ratio;
           }
         }
+        eventBus.$emit('fetchDriverRatio', this.KO);
       },
       changeSelectDrivers() {
         this.driversValue = 0;

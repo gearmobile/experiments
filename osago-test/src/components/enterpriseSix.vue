@@ -8,9 +8,6 @@
     <periodInsurance></periodInsurance>
     <violations></violations>
     <trailer></trailer>
-    <!--<experience></experience>-->
-    <!--<power></power>-->
-    <!--<periodExploitation></periodExploitation>-->
   </section>
 </template>
 
@@ -22,9 +19,6 @@
   import periodInsurance from './modules/periodInsurance';
   import violations from './modules/violations';
   import trailer from './modules/trailer';
-  // import experience from './modules/experience';
-  // import power from './modules/power';
-  // import periodExploitation from './modules/periodExploitation';
 
   export default {
     name: 'enterprise-six',
@@ -36,9 +30,6 @@
       periodInsurance,
       violations,
       trailer,
-      // experience,
-      // power,
-      // periodExploitation,
     },
   };
 </script>

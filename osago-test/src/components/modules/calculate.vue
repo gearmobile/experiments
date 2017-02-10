@@ -4,7 +4,7 @@
       <button type="button" class="btn btn-default">button</button>
     </div>
     <div class="col-md-6">
-      <button type="button" class="btn btn-default calc__calculate">button</button>
+      <button type="button" class="btn btn-default calc__calculate" @click="getSum">calculate</button>
     </div>
   </div>
 </template>
@@ -16,6 +16,11 @@
       return {
         //
       };
+    },
+    methods: {
+      getSum() {
+        //
+      },
     },
   };
 </script>
