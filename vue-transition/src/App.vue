@@ -12,6 +12,9 @@
           <transition name="slide">
             <div class="alert alert-info" v-if="showAlert">this is some info</div>
           </transition>
+          <transition name="combo">
+            <div class="alert alert-info" v-if="showAlert">this is some info</div>
+          </transition>
         </div>
       </div>
     </div>
@@ -81,5 +84,36 @@ export default {
     to {
       transform: translateY( 20px )
     }
+  }
+  @keyframes slide-in-left {
+    from {
+      transform: translateX( 200px )
+    }
+    to {
+      transform: translateX( 0 )
+    }
+  }
+  @keyframes slide-out-left {
+    from {
+      transform: translateX( 0 )
+    }
+    to {
+      transform: translateX( 200px )
+    }
+  }
+  .combo-enter {
+    opacity: 0;
+  }
+  .combo-enter-active {
+    transition: opacity 2s;
+    animation: slide-in-left 1s ease-in-out forwards;
+  }
+  .combo-leave {
+    /**/
+  }
+  .combo-leave-active {
+    transition: opacity 2s;
+    opacity: 0;
+    animation: slide-out-left 1s ease-in-out forwards;
   }
 </style>
