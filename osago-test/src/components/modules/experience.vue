@@ -45,7 +45,7 @@
             this.KBC = this.experience[i].ratio;
           }
         }
-        eventBus.$on('fetchExperienceRatio', this.KBC);
+        eventBus.$emit('fetchExperienceRatio', this.KBC);
       },
     },
   };

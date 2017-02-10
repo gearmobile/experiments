@@ -59,15 +59,16 @@ export default {
         stateThree: 0,
       },
       ratio: {
-        KBM: 0,
-        KT: 0,
-        KO: 0,
-        KBC: 0,
-        TB: 0,
-        КС: 0,
-        KP: 0,
-        KH: 0,
-        KPR: 0,
+        KBM: 0, // бонус малус
+        KT: 0, // территориальный коэфициент
+        KO: 0, // кол-во водителей
+        KBC: 0, // стаж водителя
+        KM: 0, // мощность двигателя
+        TB: 0, // базовый тариф
+        КС: 0, // период эксплуатации
+        KP: 0, // период страхования
+        KH: 0, // нарушения
+        KPR: 0, // наличие прицепа
       },
     };
   },
@@ -159,16 +160,16 @@ export default {
       this.state.stateThree = data;
     });
     // fetch ratios
-    eventBus.$on('fetchBonusMalusRatio', this.ratio.KB);
-    eventBus.$on('fetchCityRatio', this.ratio.KT);
-    eventBus.$on('fetchDriverRatio', this.ratio.KO);
-    eventBus.$on('fetchExperienceRatio', this.ratio.KBC);
-    eventBus.$on('fetchOwnerRatio', this.ratio.TB);
-    eventBus.$on('fetchPeriodExpRatio', this.ratio.КС);
-    eventBus.$on('fetchperiodInsuranceRatio', this.ratio.KP);
-    eventBus.$on('fetchPowerRatio', this.ratio.KM);
-    eventBus.$on('fetchViolationRatio', this.ratio.KH);
-    eventBus.$on('fetchTrailerRatio', this.ratio.KPR);
+    eventBus.$on('fetchBonusMalusRatio', (data) => { this.ratio.KBM = data; });
+    eventBus.$on('fetchCityRatio', (data) => { this.ratio.KT = data; });
+    eventBus.$on('fetchDriverRatio', (data) => { this.ratio.KO = data; });
+    eventBus.$on('fetchExperienceRatio', (data) => { this.ratio.KBC = data; });
+    eventBus.$on('fetchOwnerRatio', (data) => { this.ratio.TB = data; });
+    eventBus.$on('fetchPeriodExpRatio', (data) => { this.ratio.КС = data; });
+    eventBus.$on('fetchperiodInsuranceRatio', (data) => { this.ratio.KP = data; });
+    eventBus.$on('fetchPowerRatio', (data) => { this.ratio.KM = data; });
+    eventBus.$on('fetchViolationRatio', (data) => { this.ratio.KH = data; });
+    eventBus.$on('fetchTrailerRatio', (data) => { this.ratio.KPR = data; });
   },
 };
 </script>
