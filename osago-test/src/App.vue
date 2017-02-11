@@ -5,21 +5,23 @@
       <owner></owner>
       <condition></condition>
       <vehicle></vehicle>
-      <person-one v-show="person1"></person-one>
-      <person-two v-show="person2"></person-two>
-      <person-three v-show="person3"></person-three>
-      <person-four v-show="person4"></person-four>
-      <person-five v-show="person5"></person-five>
-      <person-six v-show="person6"></person-six>
-      <enterprise-one v-show="enterprise1"></enterprise-one>
-      <enterprise-two v-show="enterprise2"></enterprise-two>
-      <enterprise-three v-show="enterprise3"></enterprise-three>
-      <enterprise-four v-show="enterprise4"></enterprise-four>
-      <enterprise-five v-show="enterprise5"></enterprise-five>
-      <enterprise-six v-show="enterprise6"></enterprise-dix>
-      <progress-bar></progress-bar>
-      <calculate></calculate>
-      <total-sum></total-sum>
+      <template>
+        <person-one v-show="person1"></person-one>
+        <person-two v-show="person2"></person-two>
+        <person-three v-show="person3"></person-three>
+        <person-four v-show="person4"></person-four>
+        <person-five v-show="person5"></person-five>
+        <person-six v-show="person6"></person-six>
+        <enterprise-one v-show="enterprise1"></enterprise-one>
+        <enterprise-two v-show="enterprise2"></enterprise-two>
+        <enterprise-three v-show="enterprise3"></enterprise-three>
+        <enterprise-four v-show="enterprise4"></enterprise-four>
+        <enterprise-five v-show="enterprise5"></enterprise-five>
+        <enterprise-six v-show="enterprise6"></enterprise-dix>
+      </template>
+      <!--<progressBar></progressBar>-->
+      <calculate :status="status"></calculate>
+      <totalSum></totalSum>
     </div>
   </div>
 </template>
@@ -58,19 +60,6 @@ export default {
         stateTwo: 0,
         stateThree: 0,
       },
-      ratio: {
-        KBM: 0, // бонус малус
-        KT: 0, // территориальный коэфициент
-        KO: 0, // кол-во водителей
-        KBC: 0, // стаж водителя
-        KM: 0, // мощность двигателя
-        TBMIN: 0, // минимальный базовый тариф
-        TBMAX: 0, // максимальный базовый тариф
-        КС: 0, // период эксплуатации
-        KP: 0, // период страхования
-        KH: 0, // нарушения
-        KPR: 0, // наличие прицепа
-      },
     };
   },
   components: {
@@ -97,6 +86,33 @@ export default {
     totalSum,
   },
   computed: {
+    status() {
+      if (this.person1) {
+        return 1;
+      } else if (this.person2) {
+        return 2;
+      } else if (this.person3) {
+        return 3;
+      } else if (this.person4) {
+        return 4;
+      } else if (this.person5) {
+        return 5;
+      } else if (this.person6) {
+        return 6;
+      } else if (this.enterprise1) {
+        return 7;
+      } else if (this.enterprise2) {
+        return 8;
+      } else if (this.enterprise3) {
+        return 9;
+      } else if (this.enterprise4) {
+        return 10;
+      } else if (this.enterprise5) {
+        return 11;
+      } else if (this.enterprise6) {
+        return 12;
+      }
+    },
     person1() {
       return this.state.stateOne === 1 && this.state.stateTwo === 1 && this.state.stateThree === 1;
     },
@@ -154,25 +170,8 @@ export default {
     eventBus.$on('clrStateOne', (data) => {
       this.statestateOne = data;
     });
-    eventBus.$on('clrStateTwo', (data) => {
-      this.state.stateTwo = data;
-    });
-    eventBus.$on('clrStateThree', (data) => {
-      this.state.stateThree = data;
-    });
-    // fetch ratios
-    eventBus.$on('fetchBonusMalusRatio', (data) => { this.ratio.KBM = data; });
-    eventBus.$on('fetchCityRatio', (data) => { this.ratio.KT = data; });
-    eventBus.$on('fetchDriverRatio', (data) => { this.ratio.KO = data; });
-    eventBus.$on('fetchExperienceRatio', (data) => { this.ratio.KBC = data; });
-    eventBus.$on('fetchOwnerRatio', (data) => { this.ratio.TB = data; });
-    eventBus.$on('fetchPeriodExpRatio', (data) => { this.ratio.КС = data; });
-    eventBus.$on('fetchperiodInsuranceRatio', (data) => { this.ratio.KP = data; });
-    eventBus.$on('fetchPowerRatio', (data) => { this.ratio.KM = data; });
-    eventBus.$on('fetchViolationRatio', (data) => { this.ratio.KH = data; });
-    eventBus.$on('fetchTrailerRatio', (data) => { this.ratio.KPR = data; });
-    eventBus.$on('fetchMinVehicleRatio', (data) => { this.ratio.TBMIN = data; });
-    eventBus.$on('fetchMaxVehicleRatio', (data) => { this.ratio.TBMAX = data; });
+    eventBus.$on('clrStateTwo', (data) => { this.state.stateTwo = data; });
+    eventBus.$on('clrStateThree', (data) => { this.state.stateThree = data; });
   },
 };
 </script>

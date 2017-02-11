@@ -570,6 +570,7 @@
         city: cityData,
         cityValue: 0,
         regionValue: 0,
+        conditionValue: 0,
         KT: 0, // территориальный коэффициент
       };
     },
@@ -579,11 +580,20 @@
         this.КT = 0;
       },
       getCityRatio() {
-        for (let i = 0; i < this.currCity.length; i += 1) {
-          if (this.currCity[i].value === this.cityValue) {
-            this.KT = this.currCity[i].ratio;
+        if (this.conditionValue !== 8) {
+          for (let i = 0; i < this.currCity.length; i += 1) {
+            if (this.currCity[i].value === this.cityValue) {
+              this.KT = this.currCity[i].ratio;
+            }
+          }
+        } else if (this.conditionValue === 8) {
+          for (let i = 0; i < this.currCity.length; i += 1) {
+            if (this.currCity[i].value === this.cityValue) {
+              this.KT = this.currCity[i].ratioSpec;
+            }
           }
         }
+
         eventBus.$emit('fetchCityRatio', this.KT);
       },
     },
@@ -593,9 +603,8 @@
       },
     },
     created() {
-      eventBus.$on('fetchRegionValue', (data) => {
-        this.regionValue = data;
-      });
+      eventBus.$on('fetchRegionValue', (data) => { this.regionValue = data; });
+      eventBus.$on('chgConditionValue', (data) => { this.conditionValue = data; });
     },
   };
 </script>
