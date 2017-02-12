@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <navigation></navigation>
+    <navigation-main></navigation-main>
     <router-view></router-view>
   </div>
 </template>
@@ -16,7 +16,7 @@
       };
     },
     components: {
-      navigation: HeaderNav,
+      navigationMain: HeaderNav,
     },
   };
 </script>
