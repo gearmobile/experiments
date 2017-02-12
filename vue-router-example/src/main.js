@@ -9,7 +9,7 @@ const Router = new VueRouter({
   routes: Routes,
 });
 
-const app =new Vue({
+const app = new Vue({
   router: Router,
   render: h => h(App),
 });

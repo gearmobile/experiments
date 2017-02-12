@@ -1,5 +1,5 @@
 <template>
   <section>
-    <h2>home page</h2>
+    <h2>page uno</h2>
   </section>
 </template>

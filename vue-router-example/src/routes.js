@@ -1,25 +1,24 @@
 import Home from './components/home.vue';
-import compUno from './components/compUno.vue';
-import compDuo from './components/compDuo.vue';
-import compTre from './components/compTre.vue';
-import childUno from './components/compUnoChilds/compUnoChildUno.vue';
-import childDuo from './components/compUnoChilds/compUnoChildDuo.vue';
-import childTre from './components/compUnoChilds/compUnoChildTre.vue';
+import First from './components/first.vue';
+import Second from './components/second.vue';
+import Start from './components/sub/start.vue';
+import Uno from './components/sub/1uno.vue';
+import Duo from './components/sub/2duo.vue';
+import Tre from './components/sub/3tre.vue';
 
 const routes = [
   { path: '', component: Home },
+  { path: '/first', component: First },
   {
-    path: '/uno',
-    component: compUno,
+    path: '/second',
+    component: Second,
     children: [
-      { path: '/child-uno', component: childUno },
-      { path: '/child-duo', component: childDuo },
-      { path: '/child-tre', component: childTre },
+      { path: '', component: Start },
+      { path: '/uno', component: Uno },
+      { path: '/duo', component: Duo },
+      { path: '/tre', component: Tre },
     ],
   },
-  { path: '/duo', component: compDuo },
-  { path: '/tre', component: compTre },
 ];
 
 export default routes;
- 
