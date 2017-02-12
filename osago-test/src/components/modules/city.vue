@@ -18,6 +18,7 @@
 
 <script>
   import eventBus from '../../main';
+  // http://www.4sure.ru/inform/aboutinsure/23-kojefficient-territorii
 
   const cityData = [
     [
@@ -571,6 +572,7 @@
         city: cityData,
         cityValue: 0,
         regionValue: 0,
+        conditionValue: 0,
         KT: 0, // территориальный коэффициент
       };
     },
@@ -594,9 +596,8 @@
       },
     },
     created() {
-      eventBus.$on('fetchRegionValue', (data) => {
-        this.regionValue = data;
-      });
+      eventBus.$on('fetchRegionValue', (data) => { this.regionValue = data; });
+      eventBus.$on('chgConditionValue', (data) => { this.conditionValue = data; });
     },
   };
 </script>

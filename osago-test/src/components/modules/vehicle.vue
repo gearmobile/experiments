@@ -62,16 +62,28 @@
         eventBus.$emit('fetchMaxVehicleRatio', this.maxValue);
       },
       fetchVehicleValues() {
-        for (let i = 0; i < this.vehicle.length; i += 1) {
-          if (this.vehicle[i].value === this.vehicleValue && this.ownerValue > 2) {
-            this.minValue = this.vehicle[i].minRatio;
-            this.maxValue = this.vehicle[i].maxRatio;
-          } else if (this.vehicle[i].value === this.vehicleValue && this.ownerValue === 1) {
-            this.minValue = this.vehicle[i].minPerRatio;
-            this.maxValue = this.vehicle[i].maxPerRatio;
-          } else if (this.vehicle[i].value === this.vehicleValue && this.ownerValue === 2) {
-            this.minValue = this.vehicle[i].minEntRatio;
-            this.maxValue = this.vehicle[i].maxEntRatio;
+        if (this.vehicleValue >= 2) {
+          for (let i = 0; i < this.vehicle.length; i += 1) {
+            if (this.vehicle[i].value === this.vehicleValue) {
+              this.minValue = this.vehicle[i].minRatio;
+              this.maxValue = this.vehicle[i].maxRatio;
+            }
+          }
+        } else if (this.vehicleValue === 1) {
+          if (this.ownerValue === 1) {
+            for (let i = 0; i < this.vehicle.length; i += 1) {
+              if (this.vehicle[i].value === this.vehicleValue) {
+                this.minValue = this.vehicle[i].minPerRatio;
+                this.maxValue = this.vehicle[i].maxPerRatio;
+              }
+            }
+          } else if (this.ownerValue === 2) {
+            for (let i = 0; i < this.vehicle.length; i += 1) {
+              if (this.vehicle[i].value === this.vehicleValue) {
+                this.minValue = this.vehicle[i].minEntRatio;
+                this.maxValue = this.vehicle[i].maxEntRatio;
+              }
+            }
           }
         }
         eventBus.$emit('chgVehicleValue', this.vehicleValue);
