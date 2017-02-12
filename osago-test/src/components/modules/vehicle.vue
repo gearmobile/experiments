@@ -39,7 +39,7 @@
     // Транспортные средства категории 'Tm'
     { name: 'Трамваи', value: 11, minRatio: 1751, maxRatio: 2101 },
     // Спецтехника
-    { name: 'Тракторы и строительная техника', value: 8, minRatio: 1124, maxRatio: 1579 },
+    { name: 'Тракторы и другая спецтехника', value: 8, minRatio: 1124, maxRatio: 1579 },
   ];
   export default {
     name: 'vehicle',

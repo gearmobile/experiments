@@ -28,13 +28,14 @@
       { name: 'Стандартные', value: 1 },
       { name: 'Транзит', value: 2 },
       { name: 'Иностранец', value: 3 },
+      // { name: 'Спецтехника', value: 4 },
     ],
     [
       { name: 'Не выбрано', value: 0 },
       { name: 'Стандартные', value: 1 },
       { name: 'Транзит', value: 2 },
       { name: 'Иностранец', value: 3 },
-      { name: 'Спецтехника', value: 4 },
+      // { name: 'Спецтехника', value: 4 },
     ],
   ];
   export default {
@@ -61,9 +62,7 @@
       },
     },
     created() {
-      eventBus.$on('chgOwnerValue', (data) => {
-        this.ownerValue = data;
-      });
+      eventBus.$on('chgOwnerValue', (data) => { this.ownerValue = data; });
     },
   };
 </script>
