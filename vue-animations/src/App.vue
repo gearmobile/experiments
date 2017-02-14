@@ -7,11 +7,22 @@
           <hr>
           <button class="btn btn-primary" @click="showAlert">{{btnTitle}}</button>
           <hr>
-          <transition name="fadeMe">
+          <select name="select" id="select" v-model="currAnima" class="form-control">
+            <option value="fadeMe">Fade Effect</option>
+            <option value="anima">Slide Effect</option>
+          </select>
+          <hr>
+          <transition :name="currAnima">
             <div class="alert bg-success" v-show="show">{{alertTitle | toUpLetters}}</div>
           </transition>
           <transition name="anima" type="animation">
             <div class="alert bg-success" v-if="show">{{alertTitle | toUpLetters}}</div>
+          </transition>
+          <transition name="fadeMe" appear>
+            <div class="alert bg-success" v-show="show">{{alertTitle | toUpLetters}}</div>
+          </transition>
+          <transition enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
+            <div class="alert bg-success" v-show="show">{{alertTitle | toUpLetters}}</div>
           </transition>
         </div>
       </div>
@@ -27,7 +38,8 @@ export default {
       msg: 'Vue Animations',
       btnTitle: 'Show Block',
       alertTitle: 'this is some text',
-      show: false,
+      show: true,
+      currAnima: 'fadeMe',
     };
   },
   methods: {
