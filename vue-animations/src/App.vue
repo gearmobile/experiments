@@ -7,7 +7,7 @@
           <hr>
           <button class="btn btn-primary" @click="showAlert">{{btnTitle}}</button>
           <hr>
-          <select name="select" id="select" v-model="currAnima" class="form-control">
+          <!--<select name="select" id="select" v-model="currAnima" class="form-control">
             <option value="fadeMe">Fade Effect</option>
             <option value="anima">Slide Effect</option>
           </select>
@@ -23,7 +23,11 @@
           </transition>
           <transition enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
             <div class="alert bg-success" v-show="show">{{alertTitle | toUpLetters}}</div>
-          </transition>
+          </transition>-->
+          <!--<transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in">
+            <div class="alert alert-info" v-if="show" key="info">alert info block</div>
+            <div class="alert alert-warning" v-else key="warning">alert warning block</div>
+          </transition>-->
         </div>
       </div>
     </div>
