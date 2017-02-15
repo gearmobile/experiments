@@ -3,31 +3,16 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>{{msg}}</h2>
-          <hr>
-          <button class="btn btn-primary" @click="showAlert">{{btnTitle}}</button>
-          <hr>
-          <!--<select name="select" id="select" v-model="currAnima" class="form-control">
-            <option value="fadeMe">Fade Effect</option>
-            <option value="anima">Slide Effect</option>
-          </select>
-          <hr>
-          <transition :name="currAnima">
-            <div class="alert bg-success" v-show="show">{{alertTitle | toUpLetters}}</div>
-          </transition>
-          <transition name="anima" type="animation">
-            <div class="alert bg-success" v-if="show">{{alertTitle | toUpLetters}}</div>
-          </transition>
-          <transition name="fadeMe" appear>
-            <div class="alert bg-success" v-show="show">{{alertTitle | toUpLetters}}</div>
-          </transition>
-          <transition enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
-            <div class="alert bg-success" v-show="show">{{alertTitle | toUpLetters}}</div>
-          </transition>-->
-          <!--<transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" mode="out-in">
-            <div class="alert alert-info" v-if="show" key="info">alert info block</div>
-            <div class="alert alert-warning" v-else key="warning">alert warning block</div>
-          </transition>-->
+          <button class="btn btn-primary" @click="addItem">{{ btnAddTitle }}</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-group">
+            <transition-group name="slide">
+              <li class="list-group-item" v-for="( item, index ) in numbers" v-text="item" @click="removeItem( index )" :key="item"></li>
+            </transition-group>
+          </ul>
         </div>
       </div>
     </div>
@@ -39,22 +24,22 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Vue Animations',
-      btnTitle: 'Show Block',
-      alertTitle: 'this is some text',
-      show: true,
-      currAnima: 'fadeMe',
+      numbers: [ 1, 2, 3, 4, 5 ],
+      btnAddTitle: 'add item',
+      btnDelTitle: 'delete item',
     };
   },
   methods: {
     showAlert() {
       this.show = !this.show;
-    }
-  },
-  filters: {
-    toUpLetters(value) {
-      return value.toUpperCase();
-    }
+    },
+    addItem() {
+      let pos = Math.floor( Math.random() * this.numbers.length );
+      this.numbers.splice( pos, 0, this.numbers.length + 1 );
+    },
+    removeItem( index ) {
+      this.numbers.splice( index, 1 ); 
+    },
   },
 };
 </script>
@@ -68,47 +53,10 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
   }
-  .fadeMe-enter{
-    opacity: 0;
+  .row {
+    margin-bottom: 20px;
   }
-  .fadeMe-enter-active {
-    transition: opacity 1s ease-in-out;
-  }
-  .fadeMe-leave {
-    /**/
-  }
-  .fadeMe-leave-active {
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-  }
-  /* ======================================= */
-  .anima-enter {
-    opacity: 0;
-  }
-  .anima-enter-active {
-    animation: slideUp 1s forwards;
-    transition: opacity 1s ease-in-out;
-  }
-  /*.anima-leave {}*/
-  .anima-leave-active {
-    animation: slideDown 1s forwards;
-    transition: opacity 3s ease-in-out;
-    opacity: 0;
-  }
-  @keyframes slideUp {
-    0% {
-      transform: translateY(20px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  @keyframes slideDown {
-    0% {
-      transform: translateY(0px);
-    }
-    100% {
-      transform: translateY(20px);
-    }
+  .list-group-item {
+    cursor: pointer;
   }
 </style>
