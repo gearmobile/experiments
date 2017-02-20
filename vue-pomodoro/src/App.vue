@@ -92,22 +92,28 @@
           this.minutes = RESTING_TIME;
         }
       },
+      // start timer
       start() {
         this.status = STATES.STARTED;
         this.tick();
         this.interval = setInterval( this.tick, 1000 );
       },
+      // pause timer
       pause() {
         this.status = STATES.PAUSED;
         clearInterval( this.interval );
       },
+      // stop timer
       stop() {
         this.status = STATES.STOPPED;
         clearInterval( this.interval );
         this.minutes = WORKING_TIME;
         this.seconds = 0;
         this.pomodoroState = POMODORO_STATES.WORK;
-      }
+      },
+      showKitten() {
+        //
+      },
     },
   };
 </script>
