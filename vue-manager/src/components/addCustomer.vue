@@ -2,7 +2,7 @@
   <div class="add container">
     <h1 class="page-header">add customer</h1>
     <form action="#" @submit.prevent="addCustomer">
-      
+
       <div class="well">
         <h4>customer info</h4>
         <div class="form-group">
@@ -44,7 +44,7 @@
       </div>
 
       <div class="well">
-        <button type="button" class="btn btn-primary">submit</button>
+        <button type="submit" class="btn btn-primary">submit</button>
       </div>
 
     </form>
@@ -65,19 +65,21 @@
           city: '',
           state: '',
         },
-        alert: '',
       };
     },
     methods: {
       addCustomer() {
-        if (!this.firstName || !this.lastName || !this.email) {
-          console.log('enter required data');
+        if (!this.customer.firstName || !this.customer.lastName || !this.customer.email) {
+          // eslint-disable-next-line
+          console.log(this.customer);
         } else {
-          this.$http.post('https://customermanagerapp.firebaseio.com/data.json', this.customer)
+          this.$http.post('', this.customer)
             .then((response) => {
+              // eslint-disable-next-line
               console.log(response);
-              this.$router.push({ path: '/' });
+              this.$router.push({ path: '/', query: { message: 'Customer added' } });
             }, (error) => {
+              // eslint-disable-next-line
               console.log(error);
             });
         }

@@ -1,4 +1,4 @@
-# vue-router-example
+# vue-router-howto
 
 > A Vue.js project
 

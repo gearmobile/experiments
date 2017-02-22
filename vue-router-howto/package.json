@@ -1,5 +1,5 @@
 {
-  "name": "vue-router-example",
+  "name": "vue-router-howto",
   "description": "A Vue.js project",
   "version": "1.0.0",
   "author": "gearmobile <gearmobile@gmail.com>",
@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "vue": "^2.1.0",
-    "vue-router": "^2.2.0"
+    "vue-resource": "^1.2.0",
+    "vue-router": "^2.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

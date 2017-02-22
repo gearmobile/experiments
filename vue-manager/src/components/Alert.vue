@@ -1,6 +1,9 @@
 <template>
   <div class="alert container">
-    <div class="alert alert-warning" role="alert" v-if="alert">{{ alert }}</div>
+    <div v-if="alert" class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      {{ alert }}
+    </div>
   </div>
 </template>
 
@@ -9,8 +12,14 @@
     name: 'alert',
     data() {
       return {
-        alert: '',
+        //
       };
+    },
+    props: {
+      alert: {
+        type: String,
+        default: '',
+      },
     },
   };
 </script>
