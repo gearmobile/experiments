@@ -1,6 +1,7 @@
 <template>
   <section class="detail">
     <p>{{ title }}</p>
+    <p>{{ $route.params.user }}</p>
   </section>
 </template>
 
@@ -9,6 +10,7 @@
     data() {
       return {
         title: 'page user detail',
+        btn: 'forward',
       };
     },
   };

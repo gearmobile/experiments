@@ -1,6 +1,7 @@
 <template>
   <section class="start">
     <p>{{ title }}</p>
+    <p>{{ $route.params.user }}</p>
   </section>
 </template>
 

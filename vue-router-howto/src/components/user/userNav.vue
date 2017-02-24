@@ -1,11 +1,11 @@
 <template>
   <section>
     <ul class="user-nav nav nav-pills nav-justified">
-      <router-link active-class="active" tag="li" to="/duo" exact><a>{{ pageUno }}</a></router-link>
-      <router-link active-class="active" tag="li" to="/duo/user" exact><a>{{ pageDuo }}</a></router-link>
-      <router-link active-class="active" tag="li" to="/duo/user/edit"><a>{{ pageTre }}</a></router-link>
+      <router-link active-class="active" tag="li" to="/duo/1" exact><a>{{ pageUno }}</a></router-link>
+      <router-link active-class="active" tag="li" to="/duo/2" exact><a>{{ pageDuo }}</a></router-link>
+      <router-link active-class="active" tag="li" to="/duo/3"><a>{{ pageTre }}</a></router-link>
     </ul>
-  </section>
+  </section> 
 </template>
 
 <script>
