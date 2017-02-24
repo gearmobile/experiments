@@ -11,15 +11,10 @@
 </template>
 
 <script>
-  import appNav from './components/navigation.vue';
+  import appNav from './components/pageNavigation.vue';
 
   export default {
     name: 'app',
-    data() {
-      return {
-        //
-      };
-    },
     components: {
       appNav,
     },

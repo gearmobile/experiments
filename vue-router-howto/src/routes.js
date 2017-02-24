@@ -1,21 +1,22 @@
-import appHome from './components/home.vue';
-import appStart from './components/user/userStart.vue';
-import appUser from './components/user/user.vue';
-import appEdit from './components/user/userEdit.vue';
-import appDetails from './components/user/userDetail.vue';
+import pageFirst from './components/first.vue';
+import pageSecond from './components/second.vue';
+//
+import userPage from './components/users/user.vue';
+import userCard from './components/users/userCard.vue';
+import userEdit from './components/users/userCardEdit.vue';
 
 const routes = [
   {
-    path: '/',
-    component: appHome,
+    path: '',
+    component: pageFirst
   },
   {
-    path: '/user/:id',
-    component: appStart,
+    path: '/second',
+    component: pageSecond,
     children: [
-      { path: '', component: appUser },
-      { path: '/edit', component: appEdit },
-      { path: '/details', component: appDetails },
+      { path: '', name: 'user', component: userPage  },
+      { path: ':card', name: 'userCard', component: userCard  },
+      { path: ':card/edit', name: 'userEdit', component: userEdit  },
     ],
   },
 ];
