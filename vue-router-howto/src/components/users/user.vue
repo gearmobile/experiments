@@ -1,6 +1,9 @@
 <template>
   <section class="user">
     <h3>{{ title }}</h3>
+    <router-link tag="button" class="btn btn-primary" :to="'/second/' + $route.params.user">to page user</router-link>
+    <router-link tag="button" class="btn btn-primary" :to="'/second/' + $route.params.user + '/card'">to page user card</router-link>
+    <router-link tag="button" class="btn btn-primary" :to="'/second/' + $route.params.user + '/card/edit'">to page user card edit</router-link>
   </section>
 </template>
 
@@ -8,10 +11,10 @@
   export default {
     data() {
       return {
-        title: 'user page',
-      }
-    }
-  }
+        title: 'page start',
+      };
+    },
+  };
 </script>
 
 <style lang="scss" scoped>
