@@ -23,6 +23,7 @@
     .result {
         padding: 20px 0;
         background-color: paleturquoise;
+        margin: 10px 0;
     }
     .result__caption {
         font-size: 18px;
