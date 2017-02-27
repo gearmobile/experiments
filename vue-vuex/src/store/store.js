@@ -15,6 +15,14 @@ const store = new Vuex.Store({
       return state.counter + ' clicks';
     },
   },
+  mutations: {
+    increment: state => {
+      state.counter += 1;
+    },
+    decrement: state => {
+      state.counter -= 1;
+    },
+  },
 });
 
 export default store;
