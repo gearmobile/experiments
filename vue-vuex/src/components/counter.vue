@@ -7,11 +7,6 @@
 
 <script>
   export default {
-    data() {
-      return {
-        //
-      };
-    },
     methods: {
         increment() {
           this.$store.state.counter += 1;

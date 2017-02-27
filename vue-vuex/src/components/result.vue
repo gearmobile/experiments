@@ -6,14 +6,9 @@
 
 <script>
     export default {
-      data() {
-        return {
-          //
-        };
-      },
       computed: {
         counter() {
-          return this.$store.state.counter;
+          return this.$store.getters.doubleCounter;
         }
       }
     };

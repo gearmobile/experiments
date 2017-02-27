@@ -1,21 +1,20 @@
 <template>
-    <section class="result-another">
-        <h3 class="result-another__caption">{{ counter }}</h3>
-    </section>
+  <section class="result-another">
+    <h3>{{ stringCounter }}</h3>
+    <h3 class="result-another__caption">{{ doubleCounter }}</h3>
+    <h4>{{ string }}</h4>
+  </section>
 </template>
 
 <script>
+  import { mapGetters } from 'vuex';
   export default {
-    data() {
-      return {
-        //
-      };
-    },
     computed: {
-      counter() {
-        return this.$store.state.counter * 2;
-      }
-    }
+      ...mapGetters([ 'doubleCounter', 'stringCounter' ]),
+      string() {
+        return 'vue.js and vuex';
+      },
+    },
   };
 </script>
 
