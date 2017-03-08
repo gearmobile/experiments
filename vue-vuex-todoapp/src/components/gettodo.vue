@@ -1,5 +1,6 @@
 <template>
   <div id="gettodo" class="container">
+    <h3 class="gettodo-title">get todo here</h3>
     <input type="text" class="form-control" :value="newTodo" @change="getTodo" placeholder="I need to...">
     <button type="button" class="btn btn-primary" @click="addTodo">add todo</button>
   </div>
@@ -23,3 +24,9 @@
     }
   }
 </script>
+
+<style lang="css" scoped>
+  .gettodo-title {
+    text-transform: capitalize;
+  }
+</style>
