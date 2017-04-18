@@ -1,15 +1,14 @@
-<template>
+<template lang="pug">
   <!-- Don't drop "q-app" class -->
-  <div id="q-app">
-    <router-view></router-view>
-  </div>
+  #q-app
+    router-view
 </template>
 
 <script>
 /*
  * Root component
  */
-export default {}
+  export default {}
 </script>
 
 <style></style>
