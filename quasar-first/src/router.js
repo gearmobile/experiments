@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Login from './components/layout/login.vue'
+import Register from './components/layout/register.vue'
+
 Vue.use(VueRouter)
 
 function load (component) {
@@ -21,7 +24,9 @@ export default new VueRouter({
    */
 
   routes: [
-    { path: '/', component: load('Index') }, // Default
+    { path: '/', component: load('index') }, // Default
+    { path: '/login', component: Login }, // Login
+    { path: '/register', component: Register }, // Register
     { path: '*', component: load('Error404') } // Not found
   ]
 })
