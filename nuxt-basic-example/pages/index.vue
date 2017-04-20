@@ -25,7 +25,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .button {
     text-transform: capitalize;
   }

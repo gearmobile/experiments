@@ -17,5 +17,9 @@
 </script>
 
 <style lang="scss" scoped>
-// 
+  .caption {
+    text-transform: capitalize;
+    color: firebrick;
+    text-align: center;
+  }
 </style>
