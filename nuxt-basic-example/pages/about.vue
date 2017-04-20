@@ -2,7 +2,11 @@
   #about
     h1.caption {{ title }}
     nav.links
-      router-link.button.button--green( tag="a", to="/" ) go home
+      router-link.button.button--green( to="/" ) go home
+    nav.links
+      router-link.button.button--green( to="/index" ) main page
+      router-link.button.button--green( to="/history" ) history page
+      router-link.button.button--green( to="/command" ) command page
 </template>
 
 <script>

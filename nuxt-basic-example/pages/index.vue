@@ -5,8 +5,8 @@
       h1.title {{ title }}
       h2.subtitle {{ subtitle }}
       nav.links
-        router-link.button.button--green( to="/about", tag="a"  ) about
-        router-link.button.button--grey( to="/contacts", tag="a" ) contacts
+        router-link.button.button--green( to="/about" ) about
+        router-link.button.button--grey( to="/contacts" ) contacts
 </template>
 
 <script>

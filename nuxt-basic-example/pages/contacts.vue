@@ -2,7 +2,7 @@
   #contacts
     h1.caption {{ title }}
     nav.links
-      router-link.button.button--green( tag="a", to="/" ) go home
+      router-link.button.button--green( to="/" ) go home
 </template>
 
 <script>
@@ -19,6 +19,7 @@
 <style lang="scss" scoped>
   .caption {
     text-align: center;
+    text-transform: capitalize;
     color: forestgreen;
   }
 </style>
