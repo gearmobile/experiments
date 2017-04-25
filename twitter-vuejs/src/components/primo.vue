@@ -4,22 +4,26 @@
       h3.panel-title.text-center compose new tweet
     .panel-body
       form
+        
         // text section
         .form-group
           textarea.form-control( v-model="tweet" )
+        
         // choose file to upload
         .form-input
           input.form-control.hidden( type="file", ref="onUpload", @change="onChooseFile" )
+        
         // control section
         .form-group
           i.fa.fa-camera.fa-lg( aria-hidden="true", @click="onFileUpload" )
           span( :class="{ 'text-warning': charsUnderTwenty, 'text-danger': charsUnderTen }" ) {{ charsRemaining }}
           button.btn.btn-primary.pull-right( type="button", :disabled="tweetIsOutOfRange" ) submit
+        
         // upload photos section
         .form-group( v-if="isUpload" )
-          figure.twitter-image
-            i.fa.fa-times-circle-o.fa-3x.twitter-image__button( aria-hidden="true", @click="removePhoto" )
-            img( :src="photo" )
+          figure.twitter-image( v-for="(photo, index) in photos" )
+            i.fa.fa-times-circle-o.fa-3x.twitter-image__button( aria-hidden="true", @click="removePhoto(index)" )
+            img( :src="photo", :key="index" )
 </template>
 
 <script>
@@ -30,28 +34,31 @@
     data () {
       return {
         tweet: '',
-        photo: null
+        photos: []
       }
     },
     methods: {
       onFileUpload () {
         this.$refs.onUpload.click()
       },
-      removePhoto () {
-        this.photo = null
+      removePhoto (value) {
+        this.photos.splice(value, 1)
       },
       onChooseFile (event) {
         let self = this
-        let reader = new FileReader()
-        reader.onload = (event) => {
-          self.photo = event.target.result
+        let files = event.target.files
+        for (let i = 0; i < files.length; i++) {
+          let reader = new FileReader()
+          reader.onloadend = (evt) => {
+            self.photos.push(evt.target.result)
+          }
+          reader.readAsDataURL(files[i])
         }
-        reader.readAsDataURL(event.target.files[0])
       }
     },
     computed: {
       isUpload () {
-        return this.photo !== null
+        return this.photos.lenght > 0
       },
       tweetIsOutOfRange () {
         return this.charsRemaining === MAX_TWEET_LENGTH || this.charsRemaining < 0
@@ -78,10 +85,10 @@
     top: 20px;
     left: 20px;
     cursor: pointer;
-    color: teal;
+    color: firebrick;
   }
   .twitter-image__button:hover {
-    color: lightgreen;
+    color: salmon;
   }
   textarea {
     min-height: 120px;
