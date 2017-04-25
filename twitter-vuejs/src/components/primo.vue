@@ -1,28 +1,24 @@
 <template lang="pug">
   #primo.panel.panel-success
     .panel-heading
-      h3.panel-title compose new tweet
+      h3.panel-title.text-center compose new tweet
     .panel-body
       form
-
         // text section
         .form-group
           textarea.form-control( v-model="tweet" )
-
         // choose file to upload
         .form-input
           input.form-control.hidden( type="file", ref="onUpload", @change="onChooseFile" )
-
         // control section
         .form-group
           i.fa.fa-camera.fa-lg( aria-hidden="true", @click="onFileUpload" )
           span( :class="{ 'text-warning': charsUnderTwenty, 'text-danger': charsUnderTen }" ) {{ charsRemaining }}
           button.btn.btn-primary.pull-right( type="button", :disabled="tweetIsOutOfRange" ) submit
-
         // upload photos section
-        .form-group
-          figure( v-if="isUpload" )
-            i.fa.fa-times.fa-lg( aria-hidden="true", @click="removePhoto" )
+        .form-group( v-if="isUpload" )
+          figure.twitter-image
+            i.fa.fa-times-circle-o.fa-3x.twitter-image__button( aria-hidden="true", @click="removePhoto" )
             img( :src="photo" )
 </template>
 
@@ -34,8 +30,7 @@
     data () {
       return {
         tweet: '',
-        photo: '',
-        isShow: false
+        photo: null
       }
     },
     methods: {
@@ -75,6 +70,25 @@
 </script>
 
 <style scoped>
+  .twitter-image {
+    position: relative;
+  }
+  .twitter-image__button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: teal;
+  }
+  .twitter-image__button:hover {
+    color: lightgreen;
+  }
+  textarea {
+    min-height: 120px;
+  }
+  .panel-title {
+    text-transform: capitalize;
+  }
   .fa-camera {
     cursor: pointer;
     margin-right: 10px;
