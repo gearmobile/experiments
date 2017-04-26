@@ -5,3 +5,41 @@
 .app__button {
   text-transform: capitalize;
 }
+
+.app__list {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.app__item {
+  margin-bottom: 20px;
+}
+
+.app__item:last-child {
+  margin-bottom: 0;
+}
+
+.app__link {
+  display: flex;
+}
+
+.app__image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.app__button--write {
+  text-transform: capitalize;
+}
+
+.app__online {
+  color: forestgreen;
+}
+
+.app__row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}

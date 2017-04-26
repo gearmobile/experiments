@@ -14,15 +14,19 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h1 class="app__title text-center">VK API JavaScript</h1>
-          <button id="onGet" class="app__button btn btn-primary" role="button" type="button">get friends list</button>
-          <ul class="app__list list-unstyled"></ul>
+          <div class="row">
+            <div class="app__row col-md-6 col-md-offset-3">
+              <button id="onGet" class="app__button btn btn-success" role="button" type="button">get friends list</button>
+            </div>
+          </div>
+          <div class="row">
+            <ul id="list" class="app__list list-unstyled"></ul>
+          </div>
         </div>
       </div>
     </div>
-
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <script src="./script.js"></script> -->
     <script src="app-script.js"></script>
   </body>
 </html>
