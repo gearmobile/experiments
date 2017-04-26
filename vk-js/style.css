@@ -1,0 +1,7 @@
+.app__title {
+  color: forestgreen;
+}
+
+.app__button {
+  text-transform: capitalize;
+}

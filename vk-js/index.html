@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VK API JavaScript</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1 class="text-center">VK API JavaScript</h1>
-    <button id="onGet" class="btn btn-primary">get friends list</button>
-    <ul class="list-unstyled"></ul>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+    <div class="app container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class="app__title text-center">VK API JavaScript</h1>
+          <button id="onGet" class="app__button btn btn-primary" role="button" type="button">get friends list</button>
+          <ul class="app__list list-unstyled"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- <script src="./script.js"></script> -->
     <script src="app-script.js"></script>
