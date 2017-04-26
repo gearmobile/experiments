@@ -3,22 +3,24 @@
     .panel-heading
       h3.panel-title.text-center compose new tweet
     .panel-body
+
+      // form
       form
         
         // text section
         .form-group
           textarea.form-control( v-model="tweet" )
-        
+
         // choose file to upload
         .form-input
           input.form-control.hidden( type="file", ref="onUpload", @change="onChooseFile" )
-        
+
         // control section
         .form-group
           i.fa.fa-camera.fa-lg( aria-hidden="true", @click="onFileUpload" )
           span( :class="{ 'text-warning': charsUnderTwenty, 'text-danger': charsUnderTen }" ) {{ charsRemaining }}
           button.btn.btn-primary.pull-right( type="button", :disabled="tweetIsOutOfRange" ) submit
-        
+
         // upload photos section
         .form-group( v-if="isUpload" )
           figure.twitter-image( v-for="(photo, index) in photos" )
