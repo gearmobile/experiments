@@ -6,7 +6,7 @@
       q-tab( route="/", exact, replace ) home
     .row.gutter.auto
       .card.auto
-        .card-title user register
+        .card-title user login
         .card-content
           p.caption
             .stacked-label
@@ -16,7 +16,7 @@
             .stacked-label
               input.full-width( v-model="user.password" )
               label user password
-          button.full-width.primary.raised( @click="onSubmit" ) register
+          button.full-width.primary.raised( @click="onSubmit" ) login
 </template>
 
 <script>
@@ -38,7 +38,7 @@
           return false
         }
         else {
-          axios.post('POST /users', this.user)
+          axios.post('http://localhost:8080/users/login', this.user)
             .then(response => {
               console.log(response.data)
             })
