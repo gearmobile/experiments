@@ -9,12 +9,12 @@
         .card-title user register
         .card-content
           p.caption
-            .stacked-label
-              input.full-width( v-model="user.username" )
+            .floating-label
+              input.full-width( v-model="user.username", required )
               label user name
           p.caption
-            .stacked-label
-              input.full-width( v-model="user.password" )
+            .floating-label
+              input.full-width( v-model="user.password", required )
               label user password
           button.full-width.primary.raised( @click="onSubmit" ) register
 </template>
