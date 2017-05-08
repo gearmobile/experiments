@@ -5,18 +5,20 @@
     q-tabs( slot="navigation" )
       q-tab( route="/", exact, replace ) home
     .row.gutter.auto
-      .card.auto
-        .card-title user login
-        .card-content
-          p.caption
-            .floating-label
-              input.full-width( v-model="user.username", required )
-              label user name
-          p.caption
-            .floating-label
-              input.full-width( v-model="user.password", required )
-              label user password
-          button.full-width.primary.raised( @click="onSubmit" ) login
+      .layout-view
+        .layout-padding
+          .card.auto
+            .card-title user login
+            .card-content
+              p.caption
+                .floating-label
+                  input.full-width( v-model="user.username", required )
+                  label user name
+              p.caption
+                .floating-label
+                  input.full-width( v-model="user.password", required )
+                  label user password
+              button.full-width.primary.raised( @click="onSubmit" ) login
 </template>
 
 <script>
@@ -38,7 +40,7 @@
           return false
         }
         else {
-          axios.post('http://localhost:8080/users/login', this.user)
+          axios.post('http://localhost:5000/users/login', this.user)
             .then(response => {
               console.log(response.data)
             })
@@ -51,8 +53,11 @@
   }
 </script>
 
-<style lang="styl">
-  .card .card-title
-  .card label
-    text-transform: capitalize;
+<style lang="scss">
+  .card {
+    & .card-title,
+    & label {
+      text-transform: capitalize;
+    }
+  }
 </style>
