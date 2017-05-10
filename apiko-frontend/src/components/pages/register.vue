@@ -11,14 +11,22 @@
             .card-title user register
             .card-content
               p.caption
-                .floating-label
-                  input.full-width( v-model="user.username", required )
+                .stacked-label
+                  input.full-width( type="text", v-model.trim="user.username", pattern="^\S+\@\S+\.\S+$", required )
                   label user name
               p.caption
-                .floating-label
-                  input.full-width( v-model="user.password", required )
+                .stacked-label
+                  input.full-width( type="password", v-model.trim="user.password", pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,18}$", required )
                   label user password
-              button.full-width.primary.raised( @click="onSubmit" ) register
+              p.caption
+                .stacked-label
+                  input.full-width( type="text", v-model.trim="user.role", required )
+                  label user role
+              p.caption
+                .stacked-label
+                  input.full-width( type="text", v-model.trim="user.owner" )
+                  label user owner
+              button.full-width.primary.raised( @click="onSubmit" ) register user
 </template>
 
 <script>
@@ -28,21 +36,25 @@
     data () {
       return {
         user: {
-          username: '',
-          password: ''
+          username: null,
+          password: null,
+          role: null,
+          owner: null
         }
       }
     },
     methods: {
       onSubmit () {
-        if (!this.user.username || !this.user.password) {
+        if (!this.user.username || !this.user.password || !this.user.role) {
           console.log('The fields should not be empty!')
           return false
         }
         else {
           axios.post('http://localhost:5000/users', this.user)
             .then(response => {
-              console.log(response.data)
+              for (let key in this.user) {
+                this.user[key] = null
+              }
             })
             .catch(error => {
               console.log(error)

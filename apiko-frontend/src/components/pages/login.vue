@@ -11,14 +11,14 @@
             .card-title user login
             .card-content
               p.caption
-                .floating-label
-                  input.full-width( v-model="user.username", required )
+                .stacked-label
+                  input.full-width( type="text", v-model="user.username", pattern="^\S+\@\S+\.\S+$", required )
                   label user name
               p.caption
-                .floating-label
-                  input.full-width( v-model="user.password", required )
+                .stacked-label
+                  input.full-width( type="password", v-model="user.password", pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,18}$", required )
                   label user password
-              button.full-width.primary.raised( @click="onSubmit" ) login
+              button.full-width.primary.raised( @click="onSubmit" ) login user
 </template>
 
 <script>
