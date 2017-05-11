@@ -8,8 +8,8 @@
       q-tab( route="/users", exact, replace ) go back
       q-tab( route="/users/post/add", exact, replace ) user add
       q-tab( route="/users/post/login", exact, replace ) user login
-      q-tab( route="/users/post/password-check", exact, replace ) password check
-      q-tab( route="/users/post/password-reset", exact, replace ) password reset
+      q-tab( route="/users/post/password-check", exact, replace ) user password check
+      q-tab( route="/users/post/password-reset", exact, replace ) user password reset
     
     // CONTAINER SECTION
     .row.gutter.auto
