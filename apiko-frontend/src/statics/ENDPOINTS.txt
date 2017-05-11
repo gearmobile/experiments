@@ -1,0 +1,66 @@
+ENDPOINTS
+
+  USERS
+  --------------//
+
+    /GET
+      /users
+      /users/:id
+      /users/:id(\d+)
+      /users/exists/:username
+
+    /POST
+      /users
+      /users/login
+      /users/password/change/:id
+      /users/passowrd/reset/:id
+
+    /PUT
+      /users/:id
+
+    /DELETE
+      /users
+      /users/:id
+
+  FILES
+  --------------//
+
+    /GET
+      /files
+      /files/:id
+
+    /POST
+      /files
+
+    /PUT
+      /files/:id
+
+    /DELETE
+      /files/:id
+
+  SETUP
+  --------------//
+
+    /GET
+      /apiko/setup
+
+    /PUT
+      /apiko/setup
+
+  CORE
+  --------------//
+
+    /GET
+      /apiko/core
+
+  STATS
+  --------------//
+
+    /GET
+      /apiko/stats
+
+  REFERENCE
+  --------------//
+
+    /GET
+      /apiko/reference

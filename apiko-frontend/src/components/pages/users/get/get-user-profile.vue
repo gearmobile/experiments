@@ -1,26 +1,30 @@
 <template lang="pug">
   q-layout
+
+    // NAVIGATION SECTION
     .toolbar( slot="header" )
-      q-toolbar-title( :padding="1" ) Apiko
+      q-toolbar-title( :padding="1" ) Get User Profile
     q-tabs( slot="navigation" )
-      q-tab( route="/", exact, replace ) home
+      q-tab( route="/users/get", exact, replace ) go back
+
+    // CONTAINER SECTION
     .row.gutter.auto
       .layout-view
         .layout-padding
           
           // INPUT SECTION
           .card.auto
-            .card-title get user profile
+            .card-title.bg-secondary.text-white get user profile
             .card-content
               p.caption
                 .stacked-label
                   input.full-width( v-model.trim="id", pattern="^\d{1,10}$", required )
                   label user id
-              button.full-width.primary.raised( @click="onSubmit" ) get user profile
+              button.full-width.secondary.raised( @click="onSubmit" ) get user profile
           
           // OUTPUT SECTION
           .card.auto( v-if="user" )
-            .card-title user profile
+            .card-title.bg-positive.text-white user profile
             .card-content
               p User Name: {{ user.username }}
               p User ID: {{ user.id }}

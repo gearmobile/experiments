@@ -22,11 +22,51 @@ export default new VueRouter({
 
   routes: [
     { path: '/', component: load('Index') }, // default page
-    { path: '/login', component: load('pages/login') }, // login user
-    { path: '/register', component: load('pages/register') }, // register user
-    { path: '/get-users-list', component: load('pages/get-users-list') }, // get users list
-    { path: '/get-user-profile', component: load('pages/get-user-profile') }, // get user profile
-    { path: '/check-user', component: load('pages/check-user') }, // get user profile
+    // =================
+    // USERS
+    // =================
+    { path: '/users', component: load('pages/users/users') }, // users
+    // users get
+    { path: '/users/get', component: load('pages/users/get/get-index') }, // users get index
+    { path: '/users/get/list', component: load('pages/users/get/get-users-list') }, // users list
+    { path: '/users/get/profile', component: load('pages/users/get/get-user-profile') }, // user profile
+    { path: '/users/get/check', component: load('pages/users/get/get-user-check') }, // user check
+    // users post
+    { path: '/users/post', component: load('pages/users/post/post-index') }, // users post index
+    { path: '/users/post/add', component: load('pages/users/post/post-user-add') }, // user add
+    { path: '/users/post/login', component: load('pages/users/post/post-user-login') }, // user login
+    { path: '/users/post/password-check', component: load('pages/users/post/post-user-password-check') }, // user password check
+    { path: '/users/post/password-reset', component: load('pages/users/post/post-user-password-reset') }, // user password reset
+    // users put
+    { path: '/users/put', component: load('pages/users/put/put-index') }, // users put index
+    { path: '/users/put/update', component: load('pages/users/put/put-user-update') }, // users put update
+    // user delete
+    { path: '/users/delete', component: load('pages/users/delete/delete-index') }, // users delete index
+    { path: '/users/delete/user', component: load('pages/users/delete/delete-user-delete') }, // user delete
+    { path: '/users/delete/users', component: load('pages/users/delete/delete-users-delete') }, // users delete
+    // =================
+    // FILES
+    // =================
+    { path: '/files', component: load('pages/files/files') }, // files
+    // files get
+    //
+    // setup
+    { path: '/setup', component: load('pages/setup/setup') }, // setup
+    //
+    // core
+    { path: '/core', component: load('pages/core/core') }, // core
+    //
+    // stats
+    { path: '/stats', component: load('pages/stats/stats') }, // stats
+    //
+    // reference
+    { path: '/reference', component: load('pages/reference/reference') }, // reference
+    //
+    // { path: '/login', component: load('pages/login') }, // login user
+    // { path: '/register', component: load('pages/register') }, // register user
+    // { path: '/get-users-list', component: load('pages/get-users-list') }, // get users list
+    // { path: '/get-user-profile', component: load('pages/get-user-profile') }, // get user profile
+    // { path: '/check-user', component: load('pages/check-user') }, // get user profile
     { path: '*', component: load('Error404') } // not found page
   ]
 })

@@ -1,16 +1,20 @@
 <template lang="pug">
   q-layout
+
+    // NAVIGATION SECTION
     .toolbar( slot="header" )
-      q-toolbar-title( :padding="1" ) Apiko
+      q-toolbar-title( :padding="1" ) Get List Of Users
     q-tabs( slot="navigation" )
-      q-tab( route="/", exact, replace ) home
+      q-tab( route="/users/get", exact, replace ) go backs
+
+    // CONTAINER SECTION
     .row.gutter.auto
       .layout-view
         .layout-padding
           .card.auto
-            .card-title get users list
+            .card-title.bg-secondary.text-white get users list
             .card-content
-              button.full-width.primary.raised( @click="onSubmit" ) get list
+              button.full-width.secondary.raised( @click="onSubmit" ) get list
 </template>
 
 <script>
