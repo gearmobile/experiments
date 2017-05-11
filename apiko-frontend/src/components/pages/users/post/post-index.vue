@@ -7,7 +7,7 @@
     q-tabs( slot="navigation" )
       q-tab( route="/users", exact, replace ) go back
       q-tab( route="/users/post/add", exact, replace ) user add
-      q-tab( route="/users/post/login", exact, replace ) user profile
+      q-tab( route="/users/post/login", exact, replace ) user login
       q-tab( route="/users/post/password-check", exact, replace ) password check
       q-tab( route="/users/post/password-reset", exact, replace ) password reset
     
