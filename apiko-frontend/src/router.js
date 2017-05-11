@@ -35,7 +35,7 @@ export default new VueRouter({
     { path: '/users/post', component: load('pages/users/post/post-index') }, // users post index
     { path: '/users/post/add', component: load('pages/users/post/post-user-add') }, // user add
     { path: '/users/post/login', component: load('pages/users/post/post-user-login') }, // user login
-    { path: '/users/post/password-check', component: load('pages/users/post/post-user-password-check') }, // user password check
+    { path: '/users/post/password-change', component: load('pages/users/post/post-user-password-change') }, // user password change
     { path: '/users/post/password-reset', component: load('pages/users/post/post-user-password-reset') }, // user password reset
     // users put
     { path: '/users/put', component: load('pages/users/put/put-index') }, // users put index
