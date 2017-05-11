@@ -6,6 +6,7 @@
       q-tab( route="/get-users-list", exact, replace ) user list
       q-tab( route="/get-user-profile", exact, replace ) user profile
       q-tab( route="/register", exact, replace ) register new user
+      q-tab( route="/check-user", exact, replace ) check user
       q-tab( route="/login", exact, replace ) login
 </template>
 

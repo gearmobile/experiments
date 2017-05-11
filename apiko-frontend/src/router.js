@@ -26,6 +26,7 @@ export default new VueRouter({
     { path: '/register', component: load('pages/register') }, // register user
     { path: '/get-users-list', component: load('pages/get-users-list') }, // get users list
     { path: '/get-user-profile', component: load('pages/get-user-profile') }, // get user profile
+    { path: '/check-user', component: load('pages/check-user') }, // get user profile
     { path: '*', component: load('Error404') } // not found page
   ]
 })
