@@ -52,7 +52,15 @@ export default new VueRouter({
     { path: '/files/get', component: load('pages/files/get/get-index') }, // get index
     { path: '/files/get/file', component: load('pages/files/get/get-file') }, // get file
     { path: '/files/get/files-list', component: load('pages/files/get/get-files-list') }, // get files
-    //
+    // files post
+    { path: '/files/post', component: load('pages/files/post/post-index') }, // post index
+    { path: '/files/post/add', component: load('pages/files/post/post-file-add') }, // file add
+    // files put
+    { path: '/files/put', component: load('pages/files/put/put-index') }, // put index
+    { path: '/files/put/update', component: load('pages/files/put/put-file-update') }, // file update
+    // files delete
+    { path: '/files/delete', component: load('pages/files/delete/delete-index') }, // delete index
+    { path: '/files/delete/delete', component: load('pages/files/delete/delete-file-delete') }, // file delete
     //
     //
     //
