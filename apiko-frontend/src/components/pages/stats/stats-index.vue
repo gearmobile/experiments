@@ -5,7 +5,8 @@
     .toolbar( slot="header" )
       q-toolbar-title( :padding="1" ) Stats Section
     q-tabs( slot="navigation" )
-      q-tab( route="/", exact, replace ) home
+      q-tab( route="/", exact, replace ) go back
+      q-tab( route="/stats/stats", exact, replace ) get apiko stats
     
     // CONTAINER SECTION
     .row.gutter.auto

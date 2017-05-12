@@ -67,12 +67,16 @@ export default new VueRouter({
     { path: '/setup', component: load('pages/setup/setup-index') }, // setup index
     { path: '/setup/view', component: load('pages/setup/get/get-view-setup') }, // setup view
     { path: '/setup/update', component: load('pages/setup/put/put-update-setup') }, // setup update
-    //
-    // core
-    { path: '/core', component: load('pages/core/core') }, // core
-    //
-    // stats
-    { path: '/stats', component: load('pages/stats/stats') }, // stats
+    // =================
+    // CORE
+    // =================
+    { path: '/core', component: load('pages/core/core-index') }, // core index
+    { path: '/core/core', component: load('pages/core/get/get-core') }, // get core
+    // =================
+    // STATS
+    // =================
+    { path: '/stats', component: load('pages/stats/stats-index') }, // stats index
+    { path: '/stats/stats', component: load('pages/stats/get/get-stats') }, // get stats
     //
     // reference
     { path: '/reference', component: load('pages/reference/reference') }, // reference
