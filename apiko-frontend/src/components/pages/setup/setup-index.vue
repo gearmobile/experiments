@@ -5,7 +5,9 @@
     .toolbar( slot="header" )
       q-toolbar-title( :padding="1" ) Setup Section
     q-tabs( slot="navigation" )
-      q-tab( route="/", exact, replace ) home
+      q-tab( route="/", exact, replace ) go back
+      q-tab( route="/setup/view", exact, replace ) setup view
+      q-tab( route="/setup/update", exact, replace ) setup update
     
     // CONTAINER SECTION
     .row.gutter.auto

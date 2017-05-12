@@ -61,11 +61,12 @@ export default new VueRouter({
     // files delete
     { path: '/files/delete', component: load('pages/files/delete/delete-index') }, // delete index
     { path: '/files/delete/delete', component: load('pages/files/delete/delete-file-delete') }, // file delete
-    //
-    //
-    //
-    // setup
-    { path: '/setup', component: load('pages/setup/setup') }, // setup
+    // =================
+    // SETUP
+    // =================
+    { path: '/setup', component: load('pages/setup/setup-index') }, // setup index
+    { path: '/setup/view', component: load('pages/setup/get/get-view-setup') }, // setup view
+    { path: '/setup/update', component: load('pages/setup/put/put-update-setup') }, // setup update
     //
     // core
     { path: '/core', component: load('pages/core/core') }, // core
