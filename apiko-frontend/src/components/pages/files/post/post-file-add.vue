@@ -18,6 +18,10 @@
             .card-content
               p.caption
                 .stacked-label
+                  input.full-width( type="text", v-model.trim="file.id", pattern="^\d{1,10}$", required )
+                  label file id
+              p.caption
+                .stacked-label
                   input.full-width( type="text", v-model.trim="file.mime" )
                   label file type
               p.caption
@@ -32,10 +36,6 @@
                 .stacked-label
                   input.full-width( type="text", v-model.trim="file.owner" )
                   label file owner
-              p.caption
-                .stacked-label
-                  input.full-width( type="text", v-model.trim="file.id" )
-                  label file id
               button.full-width.secondary.raised( @click="onSubmit" ) add new file
 </template>
 
@@ -56,7 +56,7 @@
     },
     methods: {
       onSubmit () {
-        axios.post('http://localhost:5000/files', this.user)
+        axios.post('http://localhost:5000/files', this.file)
           .then(response => {
             console.log(response)
           })
