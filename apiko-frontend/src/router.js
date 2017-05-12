@@ -49,6 +49,12 @@ export default new VueRouter({
     // =================
     { path: '/files', component: load('pages/files/files') }, // files
     // files get
+    { path: '/files/get', component: load('pages/files/get/get-index') }, // get index
+    { path: '/files/get/file', component: load('pages/files/get/get-file') }, // get file
+    { path: '/files/get/files-list', component: load('pages/files/get/get-files-list') }, // get files
+    //
+    //
+    //
     //
     // setup
     { path: '/setup', component: load('pages/setup/setup') }, // setup
