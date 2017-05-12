@@ -5,7 +5,8 @@
     .toolbar( slot="header" )
       q-toolbar-title( :padding="1" ) Reference Section
     q-tabs( slot="navigation" )
-      q-tab( route="/", exact, replace ) home
+      q-tab( route="/", exact, replace ) go back
+      q-tab( route="/reference/reference", exact, replace ) get reference
     
     // CONTAINER SECTION
     .row.gutter.auto

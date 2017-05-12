@@ -77,15 +77,12 @@ export default new VueRouter({
     // =================
     { path: '/stats', component: load('pages/stats/stats-index') }, // stats index
     { path: '/stats/stats', component: load('pages/stats/get/get-stats') }, // get stats
+    // =================
+    // REFERENCE
+    // =================
+    { path: '/reference', component: load('pages/reference/reference-index') }, // reference index
+    { path: '/reference/reference', component: load('pages/reference/get/get-reference') }, // get reference
     //
-    // reference
-    { path: '/reference', component: load('pages/reference/reference') }, // reference
-    //
-    // { path: '/login', component: load('pages/login') }, // login user
-    // { path: '/register', component: load('pages/register') }, // register user
-    // { path: '/get-users-list', component: load('pages/get-users-list') }, // get users list
-    // { path: '/get-user-profile', component: load('pages/get-user-profile') }, // get user profile
-    // { path: '/check-user', component: load('pages/check-user') }, // get user profile
     { path: '*', component: load('Error404') } // not found page
   ]
 })
