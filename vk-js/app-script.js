@@ -1,7 +1,7 @@
 function getURL (method, params) {
   if (!method) throw new Error('Enter method')
   params = params || {}
-  params['access_token'] = '863746cb76963d8b71e0daf3c7629017d330b7aeeb2afe11678c51e2796da0fe14009a451c738012b2382'
+  params['access_token'] = '095b52caf14f7fa6919adc0dafb146b29a204c73952551da0a9d40ed0e3f72b4e6b735fcf57b08476b5f7'
   return 'https://api.vk.com/method/' + method + '?' + $.param(params)
 }
 
