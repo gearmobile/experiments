@@ -1,33 +1,32 @@
 <template lang="pug">
   #home
-    simplert
+    alert
       isUseRadius = true
       isUseIcon = true
-      ref = 'simplert'
+      ref = "alert-link"
     button( type="button", @click="openWindow()" ) alert info
 </template>
 
 <script>
-  import Simplert from 'vue2-simplert'
+  import Alert from 'vue2-simplert'
 
   export default {
     name: 'home',
     data () {
       return {
         config: {
-          title: 'Opened Simplert',
-          message: 'Now you can close this window',
-          type: 'info',
-          onClose: this.onClose
+          title: 'My First Alert',
+          message: 'First Alert in Vue.js',
+          type: 'info'
         }
       }
     },
     components: {
-      Simplert
+      Alert
     },
     methods: {
       openWindow () {
-        this.$refs.simplert.openSimplert(this.config)
+        this.$refs.alertLink.openSimplert(this.config)
       }
     }
   }
