@@ -1,9 +1,8 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <p>{{ msg | capitalize }}</p>
-    <p>{{ count + ' ' + getNoun(count, 'окно', 'окна', 'окон') }}</p>
-  </div>
+<template lang="pug">
+  #app
+    img( src="./assets/logo.png" )
+    p {{ msg | capitalize }}
+    p {{ count + ' ' + getNoun(count, 'окно', 'окна', 'окон') }}
 </template>
 
 <script>
@@ -15,7 +14,7 @@
     data () {
       return {
         msg: 'welcome to your vuejs app',
-        count: 3
+        count: 12
       }
     },
     filters,
