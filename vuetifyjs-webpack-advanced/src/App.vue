@@ -1,12 +1,20 @@
 <template lang='pug'>
-  
-  grid
 
+  v-app
+  
+    grid
+    alert
+    breadcrumbs
+    lists
       
 </template>
 
 <script>
   import grid from './components/grid.vue'
+  import alert from './components/alert.vue'
+  import breadcrumbs from './components/breadcrumbs.vue'
+  import lists from './components/lists.vue'
+
   export default {
     data () {
       return {
@@ -14,7 +22,10 @@
       }
     },
     components: {
-      grid
+      grid,
+      alert,
+      breadcrumbs,
+      lists
     }
   }
 </script>
