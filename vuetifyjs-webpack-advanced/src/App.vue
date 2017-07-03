@@ -6,6 +6,8 @@
     alert
     breadcrumbs
     lists
+    cards
+    buttons
       
 </template>
 
@@ -14,6 +16,8 @@
   import alert from './components/alert.vue'
   import breadcrumbs from './components/breadcrumbs.vue'
   import lists from './components/lists.vue'
+  import cards from './components/card.vue'
+  import buttons from './components/button.vue'
 
   export default {
     data () {
@@ -25,7 +29,9 @@
       grid,
       alert,
       breadcrumbs,
-      lists
+      lists,
+      cards,
+      buttons
     }
   }
 </script>
