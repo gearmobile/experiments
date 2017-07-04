@@ -7,6 +7,7 @@
     app-breadcrumbs
     app-buttons
     app-icons
+    app-steppers
     app-cards
 
 
@@ -19,6 +20,7 @@
   import buttons from './components/buttons.vue'
   import icons from './components/icons.vue'
   import cards from './components/cards.vue'
+  import steppers from './components/steppers.vue'
 
   export default {
     components: {
@@ -27,7 +29,8 @@
       appBreadcrumbs: breadcrumbs,
       appButtons: buttons,
       appCards: cards,
-      appIcons: icons
+      appIcons: icons,
+      appSteppers: steppers
     }
   }
 </script>
