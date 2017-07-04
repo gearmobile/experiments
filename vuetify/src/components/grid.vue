@@ -55,15 +55,6 @@
 
 <script>
   export default {
-    name: 'grid',
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
-    }
+    name: 'grid'
   }
 </script>
-
-<style lang="stylus" scoped>
-  //
-</style>

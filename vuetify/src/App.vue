@@ -2,17 +2,20 @@
 
   v-app
   
-    app-grid
+    app-grids
+    app-alerts
 
       
 </template>
 
 <script>
-  import grid from './components/grid.vue'
+  import grids from './components/grid.vue'
+  import alerts from './components/alerts.vue'
 
   export default {
     components: {
-      appGrid: grid
+      appGrids: grids,
+      appAlerts: alerts
     }
   }
 </script>
