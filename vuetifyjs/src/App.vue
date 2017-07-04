@@ -6,6 +6,7 @@
     app-alerts
     app-breadcrumbs
     app-buttons
+    app-icons
     app-cards
 
 
@@ -16,6 +17,7 @@
   import alerts from './components/alerts.vue'
   import breadcrumbs from './components/breadcrumbs.vue'
   import buttons from './components/buttons.vue'
+  import icons from './components/icons.vue'
   import cards from './components/cards.vue'
 
   export default {
@@ -24,7 +26,8 @@
       appAlerts: alerts,
       appBreadcrumbs: breadcrumbs,
       appButtons: buttons,
-      appCards: cards
+      appCards: cards,
+      appIcons: icons
     }
   }
 </script>
