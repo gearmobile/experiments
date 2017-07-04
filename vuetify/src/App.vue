@@ -6,6 +6,7 @@
     app-alerts
     app-breadcrumbs
     app-buttons
+    app-cards
 
       
 </template>
@@ -15,13 +16,15 @@
   import alerts from './components/alerts.vue'
   import breadcrumbs from './components/breadcrumbs.vue'
   import buttons from './components/buttons.vue'
+  import cards from './components/cards.vue'
 
   export default {
     components: {
       appGrids: grids,
       appAlerts: alerts,
       appBreadcrumbs: breadcrumbs,
-      appButtons: buttons
+      appButtons: buttons,
+      appCards: cards
     }
   }
 </script>
