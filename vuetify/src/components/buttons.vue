@@ -219,6 +219,90 @@
           v-btn-toggle.hidden-md-and-down( :options="toggle_options_multiple", v-model="toggle_multiple", multiple )
           v-btn-toggle.hidden-sm-and-down( :options="toggle_options", v-model="toggle_exclusive" )
 
+    h4.text-xs-right.my-4
+      | #8 Floating
+
+    v-layout
+
+      v-flex( xs12 )
+        v-card
+          v-card-text.text-xs-center
+
+            h5.text-xs-right
+              | Floating buttons are round and usually contain an icon
+            
+            v-btn( floating, small, primary )
+              v-icon
+                | remove
+
+            v-btn.pink( floating, small )
+              v-icon( light )
+                | favorite
+
+            v-btn.indigo( floating )
+              v-icon( light )
+                | add
+
+            v-btn.teal( floating )
+              v-icon( light )
+                | list
+
+            v-btn.cyan( floating, large )
+              v-icon( light )
+                | edit
+
+            v-btn.purple( floating, large )
+              v-icon( light )
+                | android
+
+    h4.text-xs-right.my-4
+      | #9 Loaders
+
+    v-layout
+
+      v-flex( xs12 )
+        v-card
+          v-card-text.text-xs-center
+            
+            v-btn( light, secondary, :loading="loading", :disabled="loading", @click.native="loader = 'loading'" )
+              | accept terms
+
+            v-btn.blue-grey( light, :loading="loading1", :disabled="loading1", @click.native="loader = 'loading1'" )
+              | upload
+              v-icon( light, right )
+                | cloud_upload
+
+    h4.text-xs-right.my-4
+      | Outline, Round, Block
+
+    v-layout
+
+      v-flex( xs4 )
+        v-card
+          v-card-text.text-xs-center
+            v-btn.indigo--text( outline )
+              | outline button
+
+            v-btn.teal--text( icon, outline )
+              v-icon
+                | list
+
+            v-btn.indigo--text( icon, outline, large )
+              v-icon
+                | edit
+
+      v-flex( xs4 )
+        v-card
+          v-card-text.text-xs-center
+            v-btn( light, primary, round )
+              | rounded button
+
+      v-flex( xs4 )
+        v-card
+          v-card-text
+            v-btn( primary, light, block )
+              | block button
+
 
 </template>
 
@@ -226,6 +310,11 @@
   export default {
     data () {
       return {
+        // LOADING BUTTONS
+        loader: null,
+        loading: false,
+        loading1: false,
+        // DROPDOWN BUTTONS GROUP
         dropdown: [
           { text: 'State 1' },
           { text: 'State 2' },
@@ -292,6 +381,16 @@
           { text: 'Right', icon: 'format_align_right', value: 3 },
           { text: 'Justify', icon: 'format_align_justify', value: 4 }
         ]
+      }
+    },
+    watch: {
+      loader () {
+        const l = this.loader
+        this[l] = !this[l]
+
+        setTimeout(() => (this[l] = false), 3000)
+
+        this.loader = null
       }
     }
   }
