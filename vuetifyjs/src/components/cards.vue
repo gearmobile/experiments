@@ -10,8 +10,18 @@
         v-card
           v-card-media( :src="imgPath", height="500" )
           v-card-title
-          v-card-text
+            div
+              h3.headline.mb-0
+                | Kangaroo Valley Safari
+              p.mb-0
+                | Located two hours south of Sydney in the
+                br 
+                | Southern Highlands of New South Wales, ...
           v-card-actions
+            v-btn.orange--text( flat )
+              | share
+            v-btn.orange--text( flat )
+              | explore
 
 </template>
 
@@ -24,7 +34,7 @@
     },
     computed: {
       imgPath () {
-        return require('../assets/space.jpg')
+        return require('../assets/desert.jpg')
       }
     }
   }
