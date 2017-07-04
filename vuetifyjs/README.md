@@ -1,4 +1,4 @@
-# vuetifyjs-webpack-advanced
+# vuetifyjs
 
 > A Vue.js project
 

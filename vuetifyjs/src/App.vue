@@ -1,14 +1,14 @@
 <template lang='pug'>
 
   v-app
-  
+
     app-grids
     app-alerts
     app-breadcrumbs
     app-buttons
     app-cards
 
-      
+
 </template>
 
 <script>

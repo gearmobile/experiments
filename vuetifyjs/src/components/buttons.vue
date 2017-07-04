@@ -14,16 +14,13 @@
         v-card.white
           v-card-text
 
-            v-btn( flat, dark )
+            v-btn( flat )
               | normal button
 
-            v-btn.btn--dark-flat-focused( flat, dark )
-              | focused button
+            v-btn( flat, primary )
+              | flat primary button
 
-            v-btn.btn--dark-flat-pressed( flat, dark )
-              | pressed button
-
-            v-btn( flat, dark, disabled )
+            v-btn( flat, disabled )
               | disabled button
 
     v-layout( mt-3 )
@@ -32,16 +29,13 @@
         v-card.secondary.elevation-0
           v-card-text
 
-            v-btn( flat, light )
+            v-btn( flat, dark )
               | normal button
 
-            v-btn.btn--light-flat-focused( flat, light )
-              | focused button
+            v-btn( flat, dark, primary )
+              | primary button
 
-            v-btn.btn--light-flat-pressed( flat, light )
-              | pressed button
-
-            v-btn( flat, light, disabled )
+            v-btn( flat, dark, disabled )
               | disabled button
 
     h4.text-xs-right.mt-3
@@ -53,34 +47,23 @@
         v-card
           v-card-text
             
-            v-btn( default, dark )
+            v-btn( light )
               | normal button
 
-            v-btn( primary, light )
-              | primary button
+            v-btn( light, disabled )
+              | disabled button
 
-    h4.text-xs-right.mt-3
-      | #3 Button Dropdown
+            v-btn( dark, primary )
+              | dark primary button
 
-    v-layout
+            v-btn( dark, error )
+              | dark error button
 
-      v-flex( xs4 )
-        v-card
-          v-card-text
-            v-btn-dropdown( label="State A", :options="dropdown" )
-
-      v-flex( xs4 )
-        v-card
-          v-card-text
-            v-btn-dropdown( label="State B", :options="dropdown.slice(0, 7)" )
-
-      v-flex( xs4 )
-        v-card
-          v-card-text
-            v-btn-dropdown( label="State C", :options="dropdown.slice(0, 4)", max-height="auto" )
+            v-btn( dark, primary, disabled )
+              | dark primary disabled button
 
     h4.text-xs-right.my-4
-      | #4 Button Dropdown Variants
+      | #3 Button Dropdown Variants
 
     v-layout
 
@@ -89,24 +72,24 @@
           v-card-text
             p
               | Overflow
-            v-btn-dropdown( :options="dropdown_font", overflow="overflow", max-height="auto" )
+            v-select( :items="dropdown_font", overflow )
 
       v-flex( xs4 )
         v-card
           v-card-text
             p
               | Segmented
-            v-btn-dropdown( :options="dropdown_icon", segmented="segmented" )
+            v-select( :items="dropdown_icon", segmented )
 
       v-flex( xs4 )
         v-card
           v-card-text
             p
               | Editable
-            v-btn-dropdown( :options="dropdown_edit", max-height="auto", editable="editable" )
+            v-select( :items="dropdown_edit", editable, item-value="text" )
 
     h4.text-xs-right.my-4
-      | #5 Button Toggle
+      | #4 Button Toggle
 
     v-layout( mb-3 )
 
@@ -115,14 +98,14 @@
           v-card-text
             p
               | Exclusive
-            v-btn-toggle( :options="toggle_options", v-model="toggle_exclusive" )
+            v-btn-toggle( :items="toggle_options", v-model="toggle_exclusive" )
 
       v-flex( xs6 )
         v-card
           v-card-text
             p
               | Multiple
-            v-btn-toggle( :options="toggle_options_multiple", v-model="toggle_multiple", multiple )
+            v-btn-toggle( :items="toggle_options_multiple", v-model="toggle_multiple", multiple )
 
     v-layout( mb-3 )
 
@@ -131,14 +114,14 @@
           v-card-text
             p
               | No Options Selected
-            v-btn-toggle( :options="toggle_options", v-model="toggle_none" )
+            v-btn-toggle( :items="toggle_options", v-model="toggle_none" )
 
       v-flex( xs6 )
         v-card
           v-card-text
             p
               | One Option Selected
-            v-btn-toggle( :options="toggle_options_multiple", v-model="toggle_one", multiple )
+            v-btn-toggle( :items="toggle_options_multiple", v-model="toggle_one", multiple )
 
     v-layout
 
@@ -147,17 +130,17 @@
           v-card-text
             p
               | Text Options
-            v-btn-toggle( :options="toggle_text", v-model="text" )
+            v-btn-toggle( :items="toggle_text", v-model="text" )
 
       v-flex( xs6 )
         v-card
           v-card-text
             p
               | Text &amp; Icon Options
-            v-btn-toggle( :options="toggle_text_icon", v-model="icon" )
+            v-btn-toggle( :items="toggle_text_icon", v-model="icon" )
 
     h4.text-xs-right.my-4
-      | #6 Icon
+      | #5 Icon
 
     v-layout
 
@@ -208,19 +191,7 @@
                 | thumb_up
 
     h4.text-xs-right.my-4
-      | #7 App Bar
-
-    v-layout
-
-      v-flex( xs12 )
-        v-app-bar
-          v-btn-dropdown( :options="dropdown_font", max-height="auto", overflow )
-          v-btn-dropdown( :options="dropdown_edit", max-height="auto", overflow, editable )
-          v-btn-toggle.hidden-md-and-down( :options="toggle_options_multiple", v-model="toggle_multiple", multiple )
-          v-btn-toggle.hidden-sm-and-down( :options="toggle_options", v-model="toggle_exclusive" )
-
-    h4.text-xs-right.my-4
-      | #8 Floating
+      | #6 Floating
 
     v-layout
 
@@ -231,32 +202,32 @@
             h5.text-xs-right
               | Floating buttons are round and usually contain an icon
             
-            v-btn( floating, small, primary )
+            v-btn( fab, small, primary, dark )
               v-icon
                 | remove
 
-            v-btn.pink( floating, small )
-              v-icon( light )
+            v-btn.pink( fab, small, dark )
+              v-icon
                 | favorite
 
-            v-btn.indigo( floating )
-              v-icon( light )
+            v-btn.indigo( fab, dark )
+              v-icon
                 | add
 
-            v-btn.teal( floating )
-              v-icon( light )
+            v-btn.teal( fab, dark )
+              v-icon
                 | list
 
-            v-btn.cyan( floating, large )
-              v-icon( light )
+            v-btn.cyan( fab, large, dark )
+              v-icon
                 | edit
 
-            v-btn.purple( floating, large )
-              v-icon( light )
+            v-btn.purple( fab, large, dark )
+              v-icon
                 | android
 
     h4.text-xs-right.my-4
-      | #9 Loaders
+      | #7 Loaders
 
     v-layout
 
@@ -264,16 +235,16 @@
         v-card
           v-card-text.text-xs-center
             
-            v-btn( light, secondary, :loading="loading", :disabled="loading", @click.native="loader = 'loading'" )
+            v-btn( dark, secondary, :loading="loading", :disabled="loading", @click.native="loader = 'loading'" )
               | accept terms
 
-            v-btn.blue-grey( light, :loading="loading1", :disabled="loading1", @click.native="loader = 'loading1'" )
+            v-btn.blue-grey( dark, :loading="loading1", :disabled="loading1", @click.native="loader = 'loading1'" )
               | upload
-              v-icon( light, right )
+              v-icon( dark, right )
                 | cloud_upload
 
     h4.text-xs-right.my-4
-      | Outline, Round, Block
+      | #8 Outline, Round, Block
 
     v-layout
 
@@ -294,15 +265,14 @@
       v-flex( xs4 )
         v-card
           v-card-text.text-xs-center
-            v-btn( light, primary, round )
+            v-btn( dark, primary, round )
               | rounded button
 
       v-flex( xs4 )
         v-card
           v-card-text
-            v-btn( primary, light, block )
+            v-btn( primary, dark, block )
               | block button
-
 
 </template>
 
@@ -327,17 +297,8 @@
           { text: 'State 9' },
           { text: 'State 10' }
         ],
-        dropdown_font: [
-          { text: 'Arial' },
-          { text: 'Calibri' },
-          { text: 'Courier' },
-          { text: 'Verdana' }
-        ],
-        dropdown_icon: [
-          { action: 'list' },
-          { action: 'favorite' },
-          { action: 'delete' }
-        ],
+        dropdown_font: ['Arial', 'Calibri', 'Courier', 'Verdana'],
+        dropdown_icon: ['list', 'favorite', 'delete'],
         dropdown_edit: [
           { text: '100%' },
           { text: '75%' },
