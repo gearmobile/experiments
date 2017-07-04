@@ -5,6 +5,14 @@
     h2.text-xs-center
       | cards
 
+    v-layout
+      v-flex( xs12 )
+        v-card
+          v-card-media( :src="imgPath", height="500" )
+          v-card-title
+          v-card-text
+          v-card-actions
+
 </template>
 
 <script>
@@ -15,7 +23,7 @@
       }
     },
     computed: {
-      imagePath () {
+      imgPath () {
         return require('../assets/space.jpg')
       }
     }
