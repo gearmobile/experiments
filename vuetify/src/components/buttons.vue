@@ -207,6 +207,18 @@
               v-icon
                 | thumb_up
 
+    h4.text-xs-right.my-4
+      | #7 App Bar
+
+    v-layout
+
+      v-flex( xs12 )
+        v-app-bar
+          v-btn-dropdown( :options="dropdown_font", max-height="auto", overflow )
+          v-btn-dropdown( :options="dropdown_edit", max-height="auto", overflow, editable )
+          v-btn-toggle.hidden-md-and-down( :options="toggle_options_multiple", v-model="toggle_multiple", multiple )
+          v-btn-toggle.hidden-sm-and-down( :options="toggle_options", v-model="toggle_exclusive" )
+
 
 </template>
 
