@@ -6,7 +6,7 @@
       | cards
 
     v-layout
-      v-flex( xs12 )
+      v-flex( xs12, sm6, offset-sm3 )
         v-card
           v-card-media( :src="imgPath", height="500" )
           v-card-title
