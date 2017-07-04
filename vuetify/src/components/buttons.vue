@@ -156,6 +156,58 @@
               | Text &amp; Icon Options
             v-btn-toggle( :options="toggle_text_icon", v-model="icon" )
 
+    h4.text-xs-right.my-4
+      | #6 Icon
+
+    v-layout
+
+      v-flex( xs6 )
+        v-card
+          v-card-text
+
+            h4
+              | normal state
+            
+            v-btn.pink--text( icon )
+              v-icon
+                | favorite
+
+            v-btn.indigo--text( icon )
+              v-icon
+                | star
+
+            v-btn.green--text( icon )
+              v-icon
+                | cached
+
+            v-btn.orange--text( icon )
+              v-icon
+                | thumb_up
+
+      v-flex( xs6 )
+        v-card
+          v-card-text
+
+            h4
+              | disabled state
+
+            v-btn.pink--text( icon, disabled )
+              v-icon
+                | favorite
+
+            v-btn.indigo--text( icon, disabled )
+              v-icon
+                | star
+
+            v-btn.green--text( icon, disabled )
+              v-icon
+                | cached
+
+            v-btn.orange--text( icon, disabled )
+              v-icon
+                | thumb_up
+
+
 </template>
 
 <script>
