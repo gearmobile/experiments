@@ -145,6 +145,11 @@
             v-card.py-4( flat )
               v-card-text.text-xs-center( v-text="tab.text" )
 
+    // TODO
+    // #7 GROW
+    // #8 PAGINATION
+    // #9 DISABLED SCROLL
+
 </template>
 
 <script>
