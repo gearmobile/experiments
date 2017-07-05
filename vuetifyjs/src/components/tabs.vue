@@ -117,6 +117,34 @@
             v-card.py-4( flat )
               v-card-text.text-xs-center( v-text="tab.text" )
 
+    h4.text-xs-right.mt-4
+      | #6 desktop tabs
+
+    v-layout
+      v-flex( xs12 )
+        v-tabs( dark, centered, fixed )
+          // toolbar start --
+          v-toolbar.teal( dark, extended )
+            v-toolbar-side-icon
+            v-toolbar-title.headline
+              | page title
+            v-spacer
+            v-btn( icon )
+              v-icon
+                | search
+            v-btn( icon )
+              v-icon
+                | more_vert
+            // toolbar end --
+          v-tabs-bar( slot="activators" )
+            v-tabs-item( v-for="(tab, index) in tabs5", :key="index", :href="'#' + tab.title", ripple )
+              v-icon
+                | {{ tab.icon }}
+            v-tabs-slider.orange
+          v-tabs-content( v-for="tab in tabs5", :key="tab", :id="tab.title" )
+            v-card.py-4( flat )
+              v-card-text.text-xs-center( v-text="tab.text" )
+
 </template>
 
 <script>
@@ -187,6 +215,27 @@
         ],
         // ICON FIELD
         tabs4: [
+          {
+            title: 'tab-1',
+            icon: 'phone',
+            name: 'recents',
+            text: 'tab 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          },
+          {
+            title: 'tab-2',
+            icon: 'favorite',
+            name: 'favorites',
+            text: 'tab 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          },
+          {
+            title: 'tab-3',
+            icon: 'account_box',
+            name: 'nearby',
+            text: 'tab 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          }
+        ],
+        // DESKTOP ICONS
+        tabs5: [
           {
             title: 'tab-1',
             icon: 'phone',
