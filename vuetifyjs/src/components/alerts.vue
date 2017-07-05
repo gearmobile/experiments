@@ -54,13 +54,24 @@
         v-alert( success, icon="new_releases", :value="true" )
           | this is a success alert with a custom icon
 
+    h4.text-xs-right.mt-3
+      | #4 display transition
+
+    v-layout
+      v-flex.text-xs-center( xs12 )
+        v-btn( primary, @click.native="show = !show" )
+          | toggle alert
+        v-alert.text-xs-left( success, :value="show", transition="scale-transition" )
+          | this is a success alert
+
 </template>
 
 <script>
   export default {
     data () {
       return {
-        alert: true
+        alert: true,
+        show: true
       }
     }
   }
