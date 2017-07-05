@@ -12,11 +12,11 @@
           v-card-title
             div
               h3.headline.mb-0
-                | Kangaroo Valley Safari
+                | kangaroo valley safari
               p.mb-0
-                | Located two hours south of Sydney in the
+                | located two hours south of sydney in the
                 br 
-                | Southern Highlands of New South Wales, ...
+                | southern highlands of new south wales, ...
           v-card-actions
             v-btn.orange--text( flat )
               | share

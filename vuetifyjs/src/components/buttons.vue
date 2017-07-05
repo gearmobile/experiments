@@ -6,7 +6,7 @@
       | buttons
 
     h4.text-xs-right
-      | #1 Flat
+      | #1 flat
 
     v-layout
       
@@ -39,7 +39,7 @@
               | disabled button
 
     h4.text-xs-right.mt-3
-      | #2 Raised
+      | #2 raised
 
     v-layout
 
@@ -63,7 +63,7 @@
               | dark primary disabled button
 
     h4.text-xs-right.my-4
-      | #3 Button Dropdown Variants
+      | #3 button dropdown variants
 
     v-layout
 
@@ -71,25 +71,25 @@
         v-card
           v-card-text
             p
-              | Overflow
+              | overflow
             v-select( :items="dropdown_font", overflow )
 
       v-flex( xs4 )
         v-card
           v-card-text
             p
-              | Segmented
+              | segmented
             v-select( :items="dropdown_icon", segmented )
 
       v-flex( xs4 )
         v-card
           v-card-text
             p
-              | Editable
+              | editable
             v-select( :items="dropdown_edit", editable, item-value="text" )
 
     h4.text-xs-right.my-4
-      | #4 Button Toggle
+      | #4 button toggle
 
     v-layout( mb-3 )
 
@@ -97,14 +97,14 @@
         v-card
           v-card-text
             p
-              | Exclusive
+              | exclusive
             v-btn-toggle( :items="toggle_options", v-model="toggle_exclusive" )
 
       v-flex( xs6 )
         v-card
           v-card-text
             p
-              | Multiple
+              | multiple
             v-btn-toggle( :items="toggle_options_multiple", v-model="toggle_multiple", multiple )
 
     v-layout( mb-3 )
@@ -113,14 +113,14 @@
         v-card
           v-card-text
             p
-              | No Options Selected
+              | no options selected
             v-btn-toggle( :items="toggle_options", v-model="toggle_none" )
 
       v-flex( xs6 )
         v-card
           v-card-text
             p
-              | One Option Selected
+              | one option selected
             v-btn-toggle( :items="toggle_options_multiple", v-model="toggle_one", multiple )
 
     v-layout
@@ -129,18 +129,18 @@
         v-card
           v-card-text
             p
-              | Text Options
+              | text options
             v-btn-toggle( :items="toggle_text", v-model="text" )
 
       v-flex( xs6 )
         v-card
           v-card-text
             p
-              | Text &amp; Icon Options
+              | text &amp; icon options
             v-btn-toggle( :items="toggle_text_icon", v-model="icon" )
 
     h4.text-xs-right.my-4
-      | #5 Icon
+      | #5 icon
 
     v-layout
 
@@ -191,7 +191,7 @@
                 | thumb_up
 
     h4.text-xs-right.my-4
-      | #6 Floating
+      | #6 floating
 
     v-layout
 
@@ -200,7 +200,7 @@
           v-card-text.text-xs-center
 
             h5.text-xs-right
-              | Floating buttons are round and usually contain an icon
+              | floating buttons are round and usually contain an icon
             
             v-btn( fab, small, primary, dark )
               v-icon
@@ -227,7 +227,7 @@
                 | android
 
     h4.text-xs-right.my-4
-      | #7 Loaders
+      | #7 loaders
 
     v-layout
 
@@ -244,7 +244,7 @@
                 | cloud_upload
 
     h4.text-xs-right.my-4
-      | #8 Outline, Round, Block
+      | #8 outline, round, block
 
     v-layout
 

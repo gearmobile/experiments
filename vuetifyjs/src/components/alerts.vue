@@ -6,35 +6,35 @@
       | alerts
 
     h4.text-xs-right
-      | #1 Contextual
+      | #1 contextual
 
     v-layout
       v-flex( xs12 )
         v-alert( success, :value="true" )
-          | This is a success alert
+          | this is a success alert
 
     v-layout
       v-flex( xs12 )
         v-alert( info, :value="true" )
-          | This is a info alert
+          | this is a info alert
 
     v-layout
       v-flex( xs12 )
         v-alert( warning, :value="true" )
-          | This is a warning alert
+          | this is a warning alert
 
     v-layout
       v-flex( xs12 )
         v-alert( error, :value="true" )
-          | This is a error alert
+          | this is a error alert
 
     h4.text-xs-right.mt-3
-      | #2 Closable
+      | #2 closable
 
     v-layout
       v-flex( xs12 )
         v-alert( info, dismissible, v-model="alert" )
-          | This is a info alert that is closable
+          | this is a info alert that is closable
 
     v-layout
       v-flex.text-xs-center( xs12 )
@@ -42,17 +42,17 @@
           | reset alert
 
     h4.text-xs-right.mt-3
-      | #3 Custom Icon / No Icon
+      | #3 custom icon / no icon
 
     v-layout
       v-flex( xs12 )
         v-alert( success, hide-icon, :value="true" )
-          | This is an success alert with no icon
+          | this is an success alert with no icon
 
     v-layout
       v-flex( xs12 )
         v-alert( success, icon="new_releases", :value="true" )
-          | This is a success alert with a custom icon
+          | this is a success alert with a custom icon
 
 </template>
 

@@ -6,7 +6,7 @@
       | breadcrumbs
 
     h4.text-xs-right.mt-3
-      | #1 Text dividers
+      | #1 text dividers
 
     v-layout
       v-flex( xs12 )
@@ -21,7 +21,7 @@
             | {{ breadcrumb.name }}
 
     h4.text-xs-right.mt-3
-      | #2 Icon dividers
+      | #2 icon dividers
 
     v-layout
       v-flex( xs12 )
