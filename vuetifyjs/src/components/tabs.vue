@@ -48,6 +48,59 @@
           v-btn( primary, @click.native="nextTab1()" )
             | next tab 1
 
+    // #3 CONTENT
+
+    h4.text-xs-right
+      | #3 content
+
+    p
+      | Tabs are not the only thing you can put inside the v-tabs component. In this example we've also added a <code>toolbar</code>.
+
+    v-layout
+      v-flex( xs12 )
+        v-tabs( dark, centered, fixed )
+          // toolbar start --
+          v-toolbar.teal( dark, extended )
+            v-toolbar-side-icon
+            v-spacer
+            v-btn( icon )
+              v-icon
+                | search
+            v-btn( icon )
+              v-icon
+                | more_vert
+            v-toolbar-title.display-2( slot="extension" )
+              | page title
+            // toolbar end --
+          v-tabs-bar( slot="activators" )
+            v-tabs-item( v-for="(tab, index) in tabs2", :key="index", :href="'#' + tab.title", ripple )
+              | item {{ index + 1 }}
+            v-tabs-slider.white
+          v-tabs-content( v-for="tab in tabs2", :key="tab", :id="tab.title" )
+            v-card.py-4( flat )
+              v-card-text.text-xs-center( v-text="tab.text" )
+
+    h4.text-xs-right.mt-4
+      | #4 with search
+
+    v-layout
+      v-flex( xs12 )
+        v-tabs( dark, centered, fixed )
+          // toolbar start --
+          v-toolbar.green.lighten-2.py-3
+            v-text-field( solo, label="search", prepend-icon="search", append-icon="keyboard_voice" )
+          // toolbar end --
+          v-tabs-bar( slot="activators" )
+            v-tabs-item( v-for="(tab, index) in tabs3", :key="index", :href="'#' + tab.title", ripple )
+              | item {{ index + 1 }}
+            v-tabs-slider.white
+          v-tabs-content( v-for="tab in tabs3", :key="tab", :id="tab.title" )
+            v-card.py-4( flat )
+              v-card-text.text-xs-center( v-text="tab.text" )
+
+    h4.text-xs-right.mt-4
+      | #5 icons
+
 </template>
 
 <script>
@@ -73,6 +126,36 @@
         // SECOND PART
         active1: 'tab-1',
         tabs1: [
+          {
+            title: 'tab-1',
+            text: 'tab 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          },
+          {
+            title: 'tab-2',
+            text: 'tab 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          },
+          {
+            title: 'tab-3',
+            text: 'tab 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          }
+        ],
+        // TABS WITH CONTENT
+        tabs2: [
+          {
+            title: 'tab-1',
+            text: 'tab 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          },
+          {
+            title: 'tab-2',
+            text: 'tab 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          },
+          {
+            title: 'tab-3',
+            text: 'tab 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          }
+        ],
+        // SEARCH FIELD
+        tabs3: [
           {
             title: 'tab-1',
             text: 'tab 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
