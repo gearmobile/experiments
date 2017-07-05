@@ -12,6 +12,7 @@
     app-transitions
     app-footer
     app-tabs
+    app-dialogs
 
 
 </template>
@@ -27,6 +28,7 @@
   import transitions from './components/transitions.vue'
   import appFooter from './components/footer.vue'
   import tabs from './components/tabs.vue'
+  import dialogs from './components/dialogs.vue'
 
   export default {
     components: {
@@ -39,7 +41,8 @@
       appSteppers: steppers,
       appTransitions: transitions,
       appFooter,
-      appTabs: tabs
+      appTabs: tabs,
+      appDialogs: dialogs
     }
   }
 </script>
