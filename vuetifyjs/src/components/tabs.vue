@@ -101,6 +101,22 @@
     h4.text-xs-right.mt-4
       | #5 icons
 
+    p.text-xs-right
+      | By using the <code>icons</code> prop you can add icons to each tab item
+
+    v-layout
+      v-flex( xs12 )
+        v-tabs( dark, centered, fixed, icons )
+          v-tabs-bar( slot="activators" )
+            v-tabs-item( v-for="(tab, index) in tabs4", :key="index", :href="'#' + tab.title", ripple )
+              v-icon
+                | {{ tab.icon }}
+              | {{ tab.name }}
+            v-tabs-slider.white
+          v-tabs-content( v-for="tab in tabs4", :key="tab", :id="tab.title" )
+            v-card.py-4( flat )
+              v-card-text.text-xs-center( v-text="tab.text" )
+
 </template>
 
 <script>
@@ -166,6 +182,27 @@
           },
           {
             title: 'tab-3',
+            text: 'tab 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          }
+        ],
+        // ICON FIELD
+        tabs4: [
+          {
+            title: 'tab-1',
+            icon: 'phone',
+            name: 'recents',
+            text: 'tab 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          },
+          {
+            title: 'tab-2',
+            icon: 'favorite',
+            name: 'favorites',
+            text: 'tab 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+          },
+          {
+            title: 'tab-3',
+            icon: 'account_box',
+            name: 'nearby',
             text: 'tab 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
           }
         ]
