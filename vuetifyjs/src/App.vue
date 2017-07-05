@@ -10,6 +10,7 @@
     app-steppers
     app-cards
     app-transitions
+    app-footer
 
 
 </template>
@@ -23,6 +24,7 @@
   import cards from './components/cards.vue'
   import steppers from './components/steppers.vue'
   import transitions from './components/transitions.vue'
+  import appFooter from './components/footer.vue'
 
   export default {
     components: {
@@ -33,7 +35,8 @@
       appCards: cards,
       appIcons: icons,
       appSteppers: steppers,
-      appTransitions: transitions
+      appTransitions: transitions,
+      appFooter
     }
   }
 </script>
