@@ -80,6 +80,74 @@
             v-btn.green--text.darken-1( flat, @click.native="modal = false" )
               | agree
 
+    // FULLSCREEN
+
+    h4.headline.text-xs-right
+      | #4 fullscreen
+
+    p.text-xs-right
+      | Due to limited space, full-screen dialogs may be more appropriate for mobile devices than dialogs used on devices with larger screens
+
+    v-layout( row, justify-center )
+      v-dialog( v-model="fullscreen", fullscreen, transition="v-dialog-bottom-transition", :overlay=false )
+        v-btn( primary, dark, slot="activator" )
+          | open fullscreen window
+        v-card
+          v-toolbar.primary( dark )
+            v-btn( dark, icon, @click.native='fullscreen = false' )
+              v-icon
+                | close
+            v-toolbar-title
+              | settings
+            v-spacer
+            v-toolbar-items
+              v-btn( dark, flat, @click.native='fullscreen = false' )
+                | save
+          v-list( three-line, subheader )
+            v-subheader
+              | user controls
+            v-list-tile( avatar )
+              v-list-tile-content
+                v-list-tile-title
+                  | content filtering
+                v-list-tile-sub-title
+                  | set the content filtering level to restrict appts that can be downloaded
+            v-list-tile( avatar )
+              v-list-tile-content
+                v-list-tile-title
+                  | password
+                v-list-tile-sub-title
+                  | require password for purchase or use password to restrict purchase
+          v-divider
+          v-list( three-line, subheader )
+            v-subheader
+              | general
+            v-list-tile( avatar )
+              v-list-tile-action
+                v-checkbox
+              v-list-tile-content
+                v-list-tile-title
+                  | notifications
+                v-list-tile-sub-title
+                  | notify me about updates to apps or games that i downloaded
+            v-list-tile( avatar )
+              v-list-tile-action
+                v-checkbox
+              v-list-tile-content
+                v-list-tile-title
+                  | sound
+                v-list-tile-sub-title
+                  | auto-update apps at any time. data charges may apply
+            v-list-tile( avatar )
+              v-list-tile-action
+                v-checkbox
+              v-list-tile-content
+                v-list-tile-title
+                  | auto-add widgets
+                v-list-tile-sub-title
+                  | automatically add home screen widgets
+
+
 </template>
 
 <script>
@@ -88,7 +156,8 @@
       return {
         dialog: false,
         dialog1: false,
-        modal: false
+        modal: false,
+        fullscreen: false
       }
     }
   }
