@@ -147,6 +147,63 @@
                 v-list-tile-sub-title
                   | automatically add home screen widgets
 
+    // FORM
+
+    h4.headline.text-xs-right
+      | #5 form
+
+    p.text-xs-right
+      | just a simple example of a form in a dialog
+
+    v-layout( row, justify-center )
+      v-dialog( v-model='form', persistent )
+        v-btn( primary, dark, slot="activator" )
+          | open form dialog
+        v-card
+          v-card-title
+            span.headline
+              | user profile
+          v-card-text
+            v-text-field( label="email", required )
+            v-text-field( label='password', required, type='password' )
+            v-text-field( label='first name', required )
+            v-text-field( label='middle name', required, hint='example of helper text only on focus' )
+            v-text-field( label='last name', required, hint='example of persistent helper text', persistent-hint )
+            v-select( label='age', required, :items='age' )
+            v-select( label='interests', multiple, autocomplete, chips, :items='hobbys' )
+            small
+              | *indicates required field
+          v-card-actions
+            v-spacer
+            v-btn.blue--text.darken-1( primary, flat, @click.native='form = false' )
+              | close
+            v-btn.blue--text.darken-1( primary, flat, @click.native='form = false' )
+              | save
+
+    // SCROLLABLE
+
+    h4.headline.text-xs-right
+      | #6 scrollable
+
+    p.text-xs-right
+      | Example of a dialog with scrollable content.
+
+    v-layout( row, justify-center )
+      v-dialog( v-model='scrollable', scrollable )
+        v-btn( primary, dark, slot='activator' )
+          | open scrollable window
+        v-card
+          v-card-title
+            | select country
+          v-divider
+          v-card-text( style='height: 300' )
+            v-radio( v-for='(item, index) in countries', :key='index', :label='item', :value='item', v-model='country' )
+          v-divider
+          v-card-actions
+            v-btn.green--text.darken-2( flat, @click.native='scrollable = false' )
+              | close
+            v-btn.green--text.darken-2( flat, @click.native='scrollable = false' )
+              | save
 
 </template>
 
@@ -157,7 +214,32 @@
         dialog: false,
         dialog1: false,
         modal: false,
-        fullscreen: false
+        fullscreen: false,
+        form: false,
+        age: ['0-17', '18-29', '30-54', '54+'],
+        hobbys: ['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump'],
+        scrollable: false,
+        country: null,
+        countries: [
+          'bahamas',
+          'bahrain',
+          'bangladesh',
+          'barbados',
+          'belarus',
+          'belgium',
+          'belize',
+          'benin',
+          'bhutan',
+          'bolivia',
+          'bosnia',
+          'botswana',
+          'brazil',
+          'brunei',
+          'bulgaria',
+          'burkina',
+          'burma',
+          'burundi'
+        ]
       }
     }
   }
