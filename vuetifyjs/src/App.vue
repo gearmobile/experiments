@@ -13,6 +13,7 @@
     app-footer
     app-tabs
     app-dialogs
+    app-pickers
 
 
 </template>
@@ -29,6 +30,7 @@
   import appFooter from './components/footer.vue'
   import tabs from './components/tabs.vue'
   import dialogs from './components/dialogs.vue'
+  import pickers from './components/pickers.vue'
 
   export default {
     components: {
@@ -42,7 +44,8 @@
       appTransitions: transitions,
       appFooter,
       appTabs: tabs,
-      appDialogs: dialogs
+      appDialogs: dialogs,
+      appPickers: pickers
     }
   }
 </script>
