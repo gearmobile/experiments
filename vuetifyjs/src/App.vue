@@ -15,6 +15,7 @@
     app-dialogs
     app-pickers
     app-toolbars
+    app-lists
 
 </template>
 
@@ -32,6 +33,7 @@
   import dialogs from './components/dialogs.vue'
   import pickers from './components/pickers.vue'
   import toolbars from './components/toolbars.vue'
+  import lists from './components/lists.vue'
 
   export default {
     components: {
@@ -47,7 +49,8 @@
       appTabs: tabs,
       appDialogs: dialogs,
       appPickers: pickers,
-      appToolbars: toolbars
+      appToolbars: toolbars,
+      appLists: lists
     }
   }
 </script>
