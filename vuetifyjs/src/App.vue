@@ -16,6 +16,7 @@
     app-pickers
     app-toolbars
     app-lists
+    app-sliders
 
 </template>
 
@@ -34,6 +35,7 @@
   import pickers from './components/pickers.vue'
   import toolbars from './components/toolbars.vue'
   import lists from './components/lists.vue'
+  import sliders from './components/sliders.vue'
 
   export default {
     components: {
@@ -50,7 +52,8 @@
       appDialogs: dialogs,
       appPickers: pickers,
       appToolbars: toolbars,
-      appLists: lists
+      appLists: lists,
+      appSliders: sliders
     }
   }
 </script>
