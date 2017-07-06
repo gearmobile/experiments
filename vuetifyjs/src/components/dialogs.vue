@@ -55,6 +55,31 @@
             v-btn.green--text.darken-1( flat, @click.native="dialog1 = false" )
               | agree
 
+    // MODAL
+
+    h4.headline.text-xs-right
+      | #3 modal
+
+    p.text-xs-right
+      | Similar to a Simple Dialog, except that it's not dismissed when touching outside.
+
+    v-layout( row, justify-center )
+      v-dialog( v-model="modal", persistent )
+        v-btn( primary, dark, slot="activator" )
+          | open modal
+        v-card
+          v-card-title
+            h5.headline
+              | use google's location service?
+          v-card-text
+            | Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+          v-card-actions
+            v-spacer
+            v-btn.green--text.darken-1( flat, @click.native="modal = false" )
+              | diasgree
+            v-btn.green--text.darken-1( flat, @click.native="modal = false" )
+              | agree
+
 </template>
 
 <script>
@@ -62,7 +87,8 @@
     data () {
       return {
         dialog: false,
-        dialog1: false
+        dialog1: false,
+        modal: false
       }
     }
   }
