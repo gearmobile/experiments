@@ -39,13 +39,13 @@
     h4.text-xs-right
       | #3 date pickers - in dialog and menu
 
-    p.mb-0.px-4
+    p.mb-0.px-4.text-xs-right
       | When integrating a picker into a <code>v-text-field</code>, it is recommended to use the readonly prop. This will prevent mobile keyboards from triggering. To save vertical space, you can also hide the picker title.
 
     // TIME PICKERS BASIC
 
-    h4.text-xs-right
-      | # time pickers basic
+    h4.text-xs-right.mt-4
+      | #4 time pickers basic
 
     v-layout( row, wrap )
       v-flex.ma-3( md12, lg4 )
@@ -56,7 +56,7 @@
     // TIME PICKERS DARK
 
     h4.text-xs-right
-      | # time pickers dark
+      | #5 time pickers dark
 
     v-layout( row, wrap )
       v-flex.ma-3( md12, lg4 )
@@ -67,7 +67,7 @@
     // TIME PICKERS 24 HOURS FORMAT
 
     h4.text-xs-right
-      | # time pickers - 24h format
+      | #6 time pickers - 24h format
 
     p.mb-0.px-4.text-xs-right
       | a time picker can be switched to 24hr format.
@@ -76,6 +76,33 @@
       v-flex.ma-3( md12, lg4 )
         v-time-picker( v-model='tf1', dark, format="24hr" )
       v-flex.ma-3( md12, lg8 )
+
+    // #7 DATE PICKERS - IN DIALOG AND MENU
+
+    h4.text-xs-right
+      | #7 date pickers - in dialog and menu
+
+    p.mb-0.px-4.text-xs-right
+      | When integrating a picker into a <code>v-text-field</code>, it is recommended to use the <strong>readonly</strong> prop. This will prevent mobile keyboards from triggering. To save vertical space, you can also hide the picker title.
+
+    v-layout( row, wrap, pa-3 )
+      // picker in menu
+      v-flex( xs12, sm6 )
+        v-menu( lazy, :close-on-content-click="false", v-model="ta2model", transition="v-scale-transition", offset-y, :nudge-left="40" )
+          v-text-field( slot='activator', label='picker in menu', prepend-icon='access_time', readonly )
+          v-time-picker( v-model='ta2', autosave )
+      // picker in dialog
+      v-flex( xs12, sm6 )
+        v-dialog( persistent, lazy, v-model='ta1model' )
+          v-text-field( slot='activator', label='picker in dialog', prepend-icon='access_time', v-model='ta1', readonly )
+          v-time-picker( v-model='ta1', actions, format='24hr' )
+            template( scope='{ save, cancel }' )
+              v-card-actions
+                v-spacer
+                v-btn( flat, primary, @click.native='cancel()' )
+                  | cancel
+                v-btn( flat, primary, @click.native='save()' )
+                  | save
 
 </template>
 
@@ -91,7 +118,11 @@
         tb2: null,
         td1: null,
         td2: null,
-        tf1: null
+        tf1: null,
+        ta1: null,
+        ta1model: false,
+        ta2: null,
+        ta2model: false
       }
     }
   }
