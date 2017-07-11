@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./calc.css">
+  <title>Calc</title>
+</head>
+<body>
+
+  <div class="container random">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <ul class="list-group random__list">
+          <li class="list-group-item">
+            <div class="form-group random__group">
+                <label>
+                  <input type="checkbox" value="0123456789" checked>
+                  Numbers (0123456789)
+                </label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group random__group">
+                <label>
+                  <input type="checkbox" value="0123456789" checked>
+                  Numbers (0123456789)
+                </label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group random__group">
+                <label>
+                  <input type="checkbox" value="abcdefghijklmnopqrstuvwxyz">
+                  Lowercase (abcdefghijklmnopqrstuvwxyz)
+                </label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group random__group">
+                <label>
+                  <input type="checkbox" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+                  Uppercase (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
+                </label>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-group random__group">
+                <label>
+                  <input type="checkbox" value="!"#$%">
+                  ASCII symbols (!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~)
+                </label>
+            </div>
+          </li>
+        </ul>
+        <div class="form-group random__group">
+          <button id="calc" class="btn btn-primary">calc</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./calc.js"></script>
+</body>
+</html>

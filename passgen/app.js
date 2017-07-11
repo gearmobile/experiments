@@ -5,7 +5,18 @@ document.addEventListener( 'DOMContentLoaded', () => {
   const buttonOne = document.querySelector('#primo')
   const buttonTwo = document.querySelector('#secondo')
 
+  // ---------------
+
+  const calcButton = document.querySelector('#calc')
+
   const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+
+  const charsetCollection = [
+    { checked: true, type: 'numbers', value: "0123456789" },
+    { checked: true, type: 'lowercase', value: "abcdefghijklmnopqrstuvwxyz" },
+    { checked: false, type: 'uppercase', value: "ABCDEFGHIJKLMNOPQRSTUVWXYZ" },
+    { checked: false, type: 'symbols', value: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" }
+  ]
 
   function passgen (pattern, length) {
     let result = ''
