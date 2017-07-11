@@ -1,6 +1,4 @@
-$( document ).ready( () => {
-
-  const calcButton = $('#calc')
+$( document ).ready( function () {
 
   const charsetCollection = [
     { checked: true, type: 'numbers', value: "0123456789" },
@@ -10,10 +8,13 @@ $( document ).ready( () => {
   ]
 
   function calc () {
-    const items = $('.random__list input:checked')
-    console.log(items)
+    let arr = ''
+    $('input:checked').each( function () {
+      arr += $(this).val()
+    })
+    console.log(arr)
   }
 
-  calcButton.on( 'click', calc )
+  $('#calc').on( 'click', calc )
     
 });
