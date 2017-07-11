@@ -14,62 +14,76 @@
     <div class="row">
 
       <div class="col-xs-12 col-md-6 random__column">
-        <ul class="list-group random__list">
-          <li class="list-group-item">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Выбрать пароль</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group random__list">
+              <li class="list-group-item">
+                <div class="form-group random__group">
+                    <label>
+                      <input type="checkbox" value="0123456789" checked>
+                      Numbers (0123456789)
+                    </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="form-group random__group">
+                    <label>
+                      <input type="checkbox" value="abcdefghijklmnopqrstuvwxyz" checked>
+                      Lowercase (abcdefghijklmnopqrstuvwxyz)
+                    </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="form-group random__group">
+                    <label>
+                      <input type="checkbox" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+                      Uppercase (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
+                    </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="form-group random__group">
+                    <label>
+                      <input type="checkbox" value="!\&quot;#$%&amp;'()*+,-./:;&lt;=>?@[\\]^_`{|}~">
+                      ASCII symbols (!"#$%&amp;'()*+,-./:;&lt;=>?@[\]^_`{|}~)
+                    </label>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="form-group random__group">
+                    <label class="control-label" for="length">Длина пароля:</label>
+                    <input id="length" class="form-control" name="number" type="text" placeholder="Пароль не меньше 8 символов">
+                </div>
+              </li>
+            </ul>
             <div class="form-group random__group">
-                <label>
-                  <input type="checkbox" value="0123456789" checked>
-                  Numbers (0123456789)
-                </label>
+              <button type="button" id="calc" class="btn btn-primary">генерировать пароль</button>
             </div>
-          </li>
-          <li class="list-group-item">
-            <div class="form-group random__group">
-                <label>
-                  <input type="checkbox" value="abcdefghijklmnopqrstuvwxyz" checked>
-                  Lowercase (abcdefghijklmnopqrstuvwxyz)
-                </label>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="form-group random__group">
-                <label>
-                  <input type="checkbox" value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
-                  Uppercase (ABCDEFGHIJKLMNOPQRSTUVWXYZ)
-                </label>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="form-group random__group">
-                <label>
-                  <input type="checkbox" value="!\&quot;#$%&amp;'()*+,-./:;&lt;=>?@[\\]^_`{|}~">
-                  ASCII symbols (!"#$%&amp;'()*+,-./:;&lt;=>?@[\]^_`{|}~)
-                </label>
-            </div>
-          </li>
-          <li class="list-group-item">
-            <div class="form-group random__group">
-                <label class="control-label" for="length">Длина пароля:</label>
-                <input id="length" class="form-control" name="number" type="text" placeholder="Введите длину пароля">
-            </div>
-          </li>
-        </ul>
-        <div class="form-group random__group">
-          <button type="button" id="calc" class="btn btn-primary">генерировать пароль</button>
+          </div>
         </div>
       </div>
 
       <div class="col-xs-12 col-md-6 random__column">
-        <div class="form-group">
-          <label for="password" class="col-lg-2 control-label">Пароль</label>
-          <div class="col-lg-10">
-            <textarea class="form-control" rows="8" id="password"></textarea>
-            <span class="help-block">Сгенерированный пароль</span>
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title">Готовый пароль</h3>
           </div>
-        </div>
-        <div class="form-group">
-          <button type="button" id="copy" class="btn btn-success" data-clipboard-action="copy" data-clipboard-target="#password">копировать пароль</button>
-          <button type="button" id="reset" class="btn btn-danger">сбросить пароль</button>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="password" class="col-lg-2 control-label">Пароль</label>
+              <div class="col-lg-10">
+                <textarea class="form-control" rows="8" id="password"></textarea>
+                <span class="help-block">Сгенерированный пароль</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="button" id="copy" class="btn btn-success" data-clipboard-action="copy" data-clipboard-target="#password">копировать пароль</button>
+              <button type="button" id="reset" class="btn btn-danger">сбросить пароль</button>
+            </div>
+          </div>
         </div>
       </div>
 
