@@ -1,20 +1,31 @@
 $( document ).ready( function () {
 
-  const charsetCollection = [
-    { checked: true, type: 'numbers', value: "0123456789" },
-    { checked: true, type: 'lowercase', value: "abcdefghijklmnopqrstuvwxyz" },
-    { checked: false, type: 'uppercase', value: "ABCDEFGHIJKLMNOPQRSTUVWXYZ" },
-    { checked: false, type: 'symbols', value: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~" }
-  ]
-
-  function calc () {
-    let arr = ''
+  function getCharset () {
+    let result = ''
     $('input:checked').each( function () {
-      arr += $(this).val()
+      result += $(this).val()
     })
-    console.log(arr)
+    return result
   }
 
-  $('#calc').on( 'click', calc )
+  function getLength () {
+    let result = $('#length').val() < 8 ? 8 : $('#length').val()
+    return result
+  }
+
+  function passgen (pattern, length) {
+    let result = ''
+    for (let i = 0; i < length; i += 1) {
+      result += pattern.charAt(Math.floor(Math.random() * pattern.length))
+    }
+    return result
+  }
+
+  function getResult () {
+    const result = passgen(getCharset(), getLength())
+    console.info(result)
+  }
+
+  $('#calc').on( 'click', getResult )
     
 });
