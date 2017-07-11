@@ -1,26 +1,31 @@
-document.addEventListener( 'DOMContentLoaded', function( event ) {
+document.addEventListener( 'DOMContentLoaded', () => {
 
   const inputOne = document.querySelector('#primoResult')
+  const passLength = document.querySelector('#passLength')
   const buttonOne = document.querySelector('#primo')
   const buttonTwo = document.querySelector('#secondo')
 
-  const pattern = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-  const passLength = 10
-  let password = ''
+  const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
-  function passgen () {
-    for (let i = 0; i < passLength; i += 1) {
-      password += pattern.charAt(Math.floor(Math.random() * pattern.length))
+  function passgen (pattern, length) {
+    let result = ''
+    for (let i = 0; i < length; i += 1) {
+      result += pattern.charAt(Math.floor(Math.random() * pattern.length))
     }
-    inputOne.value = password
-    password = ''
+    return result
+  }
+
+  function getResult () {
+    const length = passLength.value
+    inputOne.value = passgen(charset, length)
   }
 
   function resetInput () {
     inputOne.value = ''
+    passLength.value = ''
   }
 
-  buttonOne.addEventListener('click', passgen, false)
+  buttonOne.addEventListener('click', getResult, false)
   buttonTwo.addEventListener('click', resetInput, false)
 
 });
