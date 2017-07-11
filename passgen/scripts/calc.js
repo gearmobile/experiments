@@ -44,7 +44,7 @@ $( document ).ready( function () {
     const clipboard = new Clipboard('#copy')
   }
 
-  // reset result
+  // RESET RESULT
   function resetResult () {
     $('#password').val('')
   }
