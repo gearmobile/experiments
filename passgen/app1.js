@@ -17,6 +17,10 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
   function getResult () {
     const length = passLength.value
+    if (!length) {
+      alert('Введите длину пароля')
+      return
+    }
     inputOne.value = passgen(charset, length)
   }
 
