@@ -1,7 +1,12 @@
 <template lang="pug">
   #app.app
-    button.app__btn( type="button", @click="onClear()" )
-      | clear array of objects
+    .app__wrapper
+      button.app__btn( type="button", @click="onGet()" )
+        | get data
+      button.app__btn( type="button", @click="onClear()" )
+        | clear array of objects
+      button.app__btn( type="button", @click="onReset()" )
+        | clear objects
     ul.list
       li.list__unit( v-for="(image, index) in images", :key="image" )
         h3.list__caption {{ image.id }}: {{ image.title }}
@@ -10,17 +15,40 @@
 </template>
 
 <script>
-  // import 'whatwg-fetch'
 
   export default {
     name: 'app',
     data () {
       return {
-        images: []
+        images: [],
+        order: {
+          time: {
+            title: null,
+            price: 0
+          },
+          service: {
+            title: null,
+            price: 0
+          },
+          cert: {
+            title: null,
+            price: 0
+          },
+          shipping: {
+            title: null,
+            price: 0
+          },
+          // greeting: null,
+          customer: {
+            name: null,
+            phone: null,
+            email: null
+          }
+        }
       }
     },
     methods: {
-      load () {
+      onGet () {
         const root = 'https://jsonplaceholder.typicode.com'
         fetch(root + '/photos')
           .then(response => {
@@ -36,10 +64,14 @@
           el.albumId = null
           el.title = ''
         })
+      },
+      onReset () {
+        for (let key in this.order) {
+          let item = this.order[key]
+          item.price = 1
+          item.title = 'title'
+        }
       }
-    },
-    created () {
-      this.load()
     }
   }
 </script>
@@ -56,11 +88,15 @@
   .app
     position relative
 
-    &__btn
-      cursor pointer
+    &__wrapper
       position absolute
       top 1rem
       right 1rem
+
+    &__btn
+      cursor pointer
+      display block
+      margin-bottom .4rem
 
   .list
     list-style-type none
