@@ -7,6 +7,8 @@
         | clear array of objects
       button.app__btn( type="button", @click="onReset()" )
         | clear objects
+    .app__output
+      | {{ sum }}
     ul.list
       li.list__unit( v-for="(image, index) in images", :key="image" )
         h3.list__caption {{ image.id }}: {{ image.title }}
@@ -38,13 +40,18 @@
             title: null,
             price: 0
           },
-          // greeting: null,
+          greeting: null,
           customer: {
             name: null,
             phone: null,
             email: null
           }
         }
+      }
+    },
+    computed: {
+      sum () {
+        return this.order.time.price + this.order.service.price + this.order.cert.price + this.order.shipping.price
       }
     },
     methods: {
@@ -65,12 +72,13 @@
           el.title = ''
         })
       },
-      onReset () {
+      onCleanObject () {
         for (let key in this.order) {
-          let item = this.order[key]
-          item.price = 1
-          item.title = 'title'
+          delete this.order[key]
         }
+      },
+      onReset () {
+        this.onCleanObject()
       }
     }
   }
