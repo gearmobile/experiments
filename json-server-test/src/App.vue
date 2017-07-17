@@ -3,7 +3,7 @@
     v-container( fluid )
       
       // PRIMO SECTION
-      v-layout( row )
+      v-layout.mb-4( row )
         v-flex( xs12 )
           app-primo
 

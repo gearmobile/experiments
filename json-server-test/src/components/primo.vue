@@ -1,10 +1,11 @@
 <template lang="pug">
-  v-card
+  v-card.blue-grey.darken-1
     v-card-title
-      h3.headline.mb-0
+      h3.headline.mb-0.white--text
         | jQuery methods
-    v-card-text
-      //
+    v-card-text.white--text
+      p
+        | Использование jQuery для отправки запросов на локальный сервер JSON-Server
     v-card-actions
       v-btn.teal--text( flat, @click.native="onGet()" )
         | get resource
@@ -14,6 +15,8 @@
         | delete resource
       v-btn.amber--text.darken-3( flat, @click.native="onFilter(4)" )
         | filter resource
+      v-btn.blue--text( flat, @click.native="onJSONP(10)" )
+        | JSONP request
 </template>
 
 <script>
@@ -55,6 +58,13 @@
           .then(data => {
             console.log(data)
           })
+      },
+      onJSONP (value) {
+        $.ajax(root + '/posts/' + value, {
+          dataType: 'jsonp'
+        }).then(data => {
+          console.log(data)
+        })
       }
     }
   }
