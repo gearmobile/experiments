@@ -6,10 +6,14 @@
     v-card-text
       //
     v-card-actions
-      v-btn.teal( flat, @click.native="onGet()" )
+      v-btn.teal--text( flat, @click.native="onGet()" )
         | get resource
-      v-btn.teal( flat, @click.native="onPost()" )
+      v-btn.orange--text( flat, @click.native="onPost()" )
         | post resource
+      v-btn.red--text( flat, @click.native="onDelete(2)" )
+        | delete resource
+      v-btn.amber--text.darken-3( flat, @click.native="onFilter(4)" )
+        | filter resource
 </template>
 
 <script>
@@ -40,6 +44,17 @@
         }).then(data => {
           console.log(data)
         })
+      },
+      onDelete (value) {
+        $.ajax(root + '/posts/' + value, {
+          method: 'DELETE'
+        })
+      },
+      onFilter (value) {
+        $.ajax(root + '/posts/?userId=' + value)
+          .then(data => {
+            console.log(data)
+          })
       }
     }
   }
