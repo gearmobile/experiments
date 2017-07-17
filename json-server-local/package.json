@@ -1,0 +1,19 @@
+{
+  "name": "json-server-local",
+  "version": "1.0.0",
+  "description": "Fake JSON Local Server for Test Purposes",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json"
+  },
+  "keywords": [
+    "json",
+    "server",
+    "local"
+  ],
+  "author": "gearmobile",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.11.2"
+  }
+}
