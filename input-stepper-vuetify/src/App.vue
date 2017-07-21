@@ -13,10 +13,11 @@
                 single-line,
                 prepend-icon="remove",
                 append-icon="add",
-                :append-icon-cb="increment('primo')",
-                :prepend-icon-cb="decrement('primo')",
+                :append-icon-cb="(() => increment('primo'))",
+                :prepend-icon-cb="(() => decrement('primo'))",
                 v-model="primo",
-                hide-details
+                hide-details,
+                disabled="primoStatus"
               )
           
           v-layout
@@ -28,10 +29,11 @@
                 single-line,
                 prepend-icon="remove",
                 append-icon="add",
-                :append-icon-cb="increment('secondo')",
-                :prepend-icon-cb="decrement('secondo')",
+                :append-icon-cb="(() => increment('secondo'))",
+                :prepend-icon-cb="(() => decrement('secondo'))",
                 v-model="secondo",
-                hide-details
+                hide-details,
+                disabled="secondoStatus"
               )
 </template>
 
@@ -40,15 +42,25 @@
     data () {
       return {
         primo: null,
-        secondo: null
+        secondo: null,
+        primoStatus: false,
+        secondoStatus: false
       }
     },
     methods: {
       increment (prop) {
-        this[prop] = (this[prop] || 0) + 1
+        if (this[prop] < 10) {
+          this[prop] = (this[prop] || 0) + 1
+        } else {
+          this.primoStatus = true
+        }
       },
       decrement (prop) {
-        this[prop] = (this[prop] || 0) - 1
+        if (this[prop] > 0) {
+          this[prop] = (this[prop] || 0) - 1
+        } else {
+          this.secondoStatus = true
+        }
       }
     }
   }
