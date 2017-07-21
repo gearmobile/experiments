@@ -3,18 +3,36 @@
     v-container
       v-layout( row )
         v-flex( xs12 )
+          
           v-layout
             v-flex( xs12, md4 )
               v-subheader
                 | primo input
             v-flex( xs12, md8 )
-              v-text-field( single-line, prepend-icon="remove", append-icon="add", :append-icon-cb="() => primo += 1", :prepend-icon-cb="() => primo -= 1", v-model="primo", hide-details )
+              v-text-field(
+                single-line,
+                prepend-icon="remove",
+                append-icon="add",
+                :append-icon-cb="increment('primo')",
+                :prepend-icon-cb="decrement('primo')",
+                v-model="primo",
+                hide-details
+              )
+          
           v-layout
             v-flex( xs12, md4 )
               v-subheader
                 | secondo input
             v-flex( xs12, md8 )
-              v-text-field( single-line, prepend-icon="remove", append-icon="add", :append-icon-cb="() => secondo += 1", :prepend-icon-cb="() => secondo -= 1", v-model="secondo", hide-details )
+              v-text-field(
+                single-line,
+                prepend-icon="remove",
+                append-icon="add",
+                :append-icon-cb="increment('secondo')",
+                :prepend-icon-cb="decrement('secondo')",
+                v-model="secondo",
+                hide-details
+              )
 </template>
 
 <script>
@@ -26,12 +44,11 @@
       }
     },
     methods: {
-      onAdd (value) {
-        value += 1
+      increment (prop) {
+        this[prop] = (this[prop] || 0) + 1
       },
-      onRemove (value) {
-        console.log(value)
-        value -= 1
+      decrement (prop) {
+        this[prop] = (this[prop] || 0) - 1
       }
     }
   }
