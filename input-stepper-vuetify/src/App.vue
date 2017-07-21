@@ -1,12 +1,12 @@
 <template lang="pug">
-  v-app
+  v-app.app
     v-container
       v-layout( row )
         v-flex( xs12 )
           
-          v-layout
+          v-layout( row, wrap )
             v-flex( xs12, md4 )
-              v-subheader
+              v-subheader.app__title
                 | primo input
             v-flex( xs12, md8 )
               v-text-field(
@@ -20,9 +20,9 @@
                 disabled="primoStatus"
               )
           
-          v-layout
+          v-layout( row, wrap )
             v-flex( xs12, md4 )
-              v-subheader
+              v-subheader.app__title
                 | secondo input
             v-flex( xs12, md8 )
               v-text-field(
@@ -92,6 +92,11 @@
       padding 0 .6rem
       text-align center
       color #009688 !important
+
+  .app
+
+    &__title
+      text-transform capitalize
 
 
 </style>
