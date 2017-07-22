@@ -1,20 +1,40 @@
 <template lang="pug">
-  v-app
+  v-app.app
     v-container
       v-layout( row )
         v-flex( xs12 )
-          v-layout
+          
+          v-layout( row, wrap )
             v-flex( xs12, md4 )
-              v-subheader
+              v-subheader.app__title
                 | primo input
             v-flex( xs12, md8 )
-              v-text-field( single-line, prepend-icon="remove", append-icon="add", :append-icon-cb="() => primo += 1", :prepend-icon-cb="() => primo -= 1", v-model="primo", hide-details )
-          v-layout
+              v-text-field(
+                single-line,
+                prepend-icon="remove",
+                append-icon="add",
+                :append-icon-cb="(() => increment('primo'))",
+                :prepend-icon-cb="(() => decrement('primo'))",
+                v-model="primo",
+                hide-details,
+                disabled="primoStatus"
+              )
+          
+          v-layout( row, wrap )
             v-flex( xs12, md4 )
-              v-subheader
+              v-subheader.app__title
                 | secondo input
             v-flex( xs12, md8 )
-              v-text-field( single-line, prepend-icon="remove", append-icon="add", :append-icon-cb="() => secondo += 1", :prepend-icon-cb="() => secondo -= 1", v-model="secondo", hide-details )
+              v-text-field(
+                single-line,
+                prepend-icon="remove",
+                append-icon="add",
+                :append-icon-cb="(() => increment('secondo'))",
+                :prepend-icon-cb="(() => decrement('secondo'))",
+                v-model="secondo",
+                hide-details,
+                disabled="secondoStatus"
+              )
 </template>
 
 <script>
@@ -22,16 +42,25 @@
     data () {
       return {
         primo: null,
-        secondo: null
+        secondo: null,
+        primoStatus: false,
+        secondoStatus: false
       }
     },
     methods: {
-      onAdd (value) {
-        value += 1
+      increment (prop) {
+        if (this[prop] < 10) {
+          this[prop] = (this[prop] || 0) + 1
+        } else {
+          this.primoStatus = true
+        }
       },
-      onRemove (value) {
-        console.log(value)
-        value -= 1
+      decrement (prop) {
+        if (this[prop] > 0) {
+          this[prop] = (this[prop] || 0) - 1
+        } else {
+          this.secondoStatus = true
+        }
       }
     }
   }
@@ -63,6 +92,11 @@
       padding 0 .6rem
       text-align center
       color #009688 !important
+
+  .app
+
+    &__title
+      text-transform capitalize
 
 
 </style>
