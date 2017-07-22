@@ -39225,5 +39225,56 @@
         "bs": "target end-to-end models"
       }
     }
+  ],
+  "electric": [
+    {
+      "name": "area",
+      "title": "Квадратура помещения",
+      "min": 0,
+      "max": 100,
+      "value": null
+    },
+    {
+      "name": "outlet-common",
+      "title": "Розетки (220 V)",
+      "min": 0,
+      "max": 10,
+      "value": null
+    },
+    {
+      "name": "outlet-tv",
+      "title": "Розетки ТВ",
+      "min": 0,
+      "max": 10,
+      "value": null
+    },
+    {
+      "name": "outlet-phone",
+      "title": "Розетки телефон, интернет",
+      "min": 0,
+      "max": 10,
+      "value": null
+    },
+    {
+      "name": "switch",
+      "title": "Выключатели",
+      "min": 0,
+      "max": 10,
+      "value": null
+    },
+    {
+      "name": "lamp",
+      "title": "Люстра, светильник, бра",
+      "min": 0,
+      "max": 10,
+      "value": null
+    },
+    {
+      "name": "point-light",
+      "title": "Точечный свет",
+      "min": 0,
+      "max": 10,
+      "value": null
+    }
   ]
 }
