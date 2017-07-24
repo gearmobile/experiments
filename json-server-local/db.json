@@ -39232,49 +39232,49 @@
       "title": "Квадратура помещения",
       "min": 0,
       "max": 100,
-      "value": null
+      "step": 1
     },
     {
       "name": "outlet-common",
       "title": "Розетки (220 V)",
       "min": 0,
       "max": 10,
-      "value": null
+      "step": 1
     },
     {
       "name": "outlet-tv",
       "title": "Розетки ТВ",
       "min": 0,
       "max": 10,
-      "value": null
+      "step": 1
     },
     {
       "name": "outlet-phone",
       "title": "Розетки телефон, интернет",
       "min": 0,
       "max": 10,
-      "value": null
+      "step": 1
     },
     {
       "name": "switch",
       "title": "Выключатели",
       "min": 0,
       "max": 10,
-      "value": null
+      "step": 1
     },
     {
       "name": "lamp",
       "title": "Люстра, светильник, бра",
       "min": 0,
       "max": 10,
-      "value": null
+      "step": 1
     },
     {
       "name": "point-light",
       "title": "Точечный свет",
       "min": 0,
       "max": 10,
-      "value": null
+      "step": 1
     }
   ]
 }
