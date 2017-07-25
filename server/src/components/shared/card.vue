@@ -22,7 +22,7 @@
 
   .card
     padding .8rem
-    margin .05rem
+    margin .02rem
     display flex
     flex 0 1 calc( 100% / 12 )
     flex-direction column
