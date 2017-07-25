@@ -2,217 +2,253 @@
   "servers": [
     {
       "id": 1,
-      "title": "rank 1",
+      "title": "rack",
       "nodes": [
         {
           "id": "1",
           "ip": 100,
-          "title": "1c1p"
+          "title": "1c1p",
+          "status": "on"
         },
         {
           "id": "2",
           "ip": 100,
-          "title": "1c2p"
+          "title": "1c2p",
+          "status": "on"
         },
         {
           "id": "3",
           "ip": 100,
-          "title": "1c3p"
+          "title": "1c3p",
+          "status": "on"
         },
         {
           "id": "4",
           "ip": 100,
-          "title": "1c4p"
+          "title": "1c4p",
+          "status": "on"
         },
         {
           "id": "5",
           "ip": 100,
-          "title": "1c5p"
+          "title": "1c5p",
+          "status": "on"
         },
         {
           "id": "6",
           "ip": 100,
-          "title": "1c6p"
+          "title": "1c6p",
+          "status": "off"
         }
       ]
     },
     {
       "id": 2,
-      "title": "rank 2",
+      "title": "rack",
       "nodes": [
         {
           "id": "1",
           "ip": 100,
-          "title": "1c1p"
+          "title": "1c1p",
+          "status": "on"
         },
         {
           "id": "2",
           "ip": 100,
-          "title": "1c2p"
+          "title": "1c2p",
+          "status": "on"
         },
         {
           "id": "3",
           "ip": 100,
-          "title": "1c3p"
+          "title": "1c3p",
+          "status": "off"
         },
         {
           "id": "4",
           "ip": 100,
-          "title": "1c4p"
+          "title": "1c4p",
+          "status": "on"
         },
         {
           "id": "5",
           "ip": 100,
-          "title": "1c5p"
+          "title": "1c5p",
+          "status": "on"
         },
         {
           "id": "6",
           "ip": 100,
-          "title": "1c6p"
+          "title": "1c6p",
+          "status": "on"
         }
       ]
     },
     {
       "id": 3,
-      "title": "rank 3",
+      "title": "rack",
       "nodes": [
         {
           "id": "1",
           "ip": 100,
-          "title": "1c1p"
+          "title": "1c1p",
+          "status": "off"
         },
         {
           "id": "2",
           "ip": 100,
-          "title": "1c2p"
+          "title": "1c2p",
+          "status": "on"
         },
         {
           "id": "3",
           "ip": 100,
-          "title": "1c3p"
+          "title": "1c3p",
+          "status": "on"
         },
         {
           "id": "4",
           "ip": 100,
-          "title": "1c4p"
+          "title": "1c4p",
+          "status": "on"
         },
         {
           "id": "5",
           "ip": 100,
-          "title": "1c5p"
+          "title": "1c5p",
+          "status": "off"
         },
         {
           "id": "6",
           "ip": 100,
-          "title": "1c6p"
+          "title": "1c6p",
+          "status": "on"
         }
       ]
     },
     {
       "id": 4,
-      "title": "rank 4",
+      "title": "rack",
       "nodes": [
         {
           "id": "1",
           "ip": 100,
-          "title": "1c1p"
+          "title": "1c1p",
+          "status": "on"
         },
         {
           "id": "2",
           "ip": 100,
-          "title": "1c2p"
+          "title": "1c2p",
+          "status": "on"
         },
         {
           "id": "3",
           "ip": 100,
-          "title": "1c3p"
+          "title": "1c3p",
+          "status": "on"
         },
         {
           "id": "4",
           "ip": 100,
-          "title": "1c4p"
+          "title": "1c4p",
+          "status": "on"
         },
         {
           "id": "5",
           "ip": 100,
-          "title": "1c5p"
+          "title": "1c5p",
+          "status": "on"
         },
         {
           "id": "6",
           "ip": 100,
-          "title": "1c6p"
+          "title": "1c6p",
+          "status": "on"
         }
       ]
     },
     {
       "id": 5,
-      "title": "rank 5",
+      "title": "rack",
       "nodes": [
         {
           "id": "1",
           "ip": 100,
-          "title": "1c1p"
+          "title": "1c1p",
+          "status": "off"
         },
         {
           "id": "2",
           "ip": 100,
-          "title": "1c2p"
+          "title": "1c2p",
+          "status": "on"
         },
         {
           "id": "3",
           "ip": 100,
-          "title": "1c3p"
+          "title": "1c3p",
+          "status": "on"
         },
         {
           "id": "4",
           "ip": 100,
-          "title": "1c4p"
+          "title": "1c4p",
+          "status": "on"
         },
         {
           "id": "5",
           "ip": 100,
-          "title": "1c5p"
+          "title": "1c5p",
+          "status": "on"
         },
         {
           "id": "6",
           "ip": 100,
-          "title": "1c6p"
+          "title": "1c6p",
+          "status": "off"
         }
       ]
     },
     {
       "id": 6,
-      "title": "rank 6",
+      "title": "rack",
       "nodes": [
         {
           "id": "1",
           "ip": 100,
-          "title": "1c1p"
+          "title": "1c1p",
+          "status": "off"
         },
         {
           "id": "2",
           "ip": 100,
-          "title": "1c2p"
+          "title": "1c2p",
+          "status": "on"
         },
         {
           "id": "3",
           "ip": 100,
-          "title": "1c3p"
+          "title": "1c3p",
+          "status": "on"
         },
         {
           "id": "4",
           "ip": 100,
-          "title": "1c4p"
+          "title": "1c4p",
+          "status": "on"
         },
         {
           "id": "5",
           "ip": 100,
-          "title": "1c5p"
+          "title": "1c5p",
+          "status": "on"
         },
         {
           "id": "6",
           "ip": 100,
-          "title": "1c6p"
+          "title": "1c6p",
+          "status": "on"
         }
       ]
     }

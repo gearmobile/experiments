@@ -1,10 +1,10 @@
 <template lang="pug">
   .wrapper
-    .wrapper__item( v-for="(rank, index) in ranks", :key="index" )
+    .wrapper__item( v-for="(rack, index) in racks", :key="index" )
       h3.wrapper__item-title
-        | {{ rank.title }}
+        | {{ rack.title }}: {{ rack.id }}
       .wrapper__inner
-        app-card( v-for="(node, index) in rank.nodes", :key="index", :card="node" )
+        app-card( v-for="(node, index) in rack.nodes", :key="index", :card="node" )
 </template>
 
 <script>
@@ -16,7 +16,7 @@
     name: 'home',
     data () {
       return {
-        ranks: []
+        racks: []
       }
     },
     components: {
@@ -26,7 +26,7 @@
       initData () {
         axios.get(root + '/servers')
           .then(res => {
-            this.ranks = res.data
+            this.racks = res.data
           })
           .catch(err => console.log(err))
       }
@@ -38,26 +38,28 @@
 </script>
 
 <style lang="stylus" scoped>
+
   .wrapper
     display flex
     flex-direction row
     flex-wrap wrap
 
     &__item
-      flex 1 1 30%
-      height 10rem
+      flex 1 1 25%
+      min-height 10rem
       border 1px solid #000
       border-radius .2rem
       display flex
       flex-direction column
       align-items center
       padding 1rem
-      margin 1%
+      margin .4%
 
     &__item-title
       text-align center
       margin 0 0 1rem
       width 100%
+      text-transform capitalize
 
     &__inner
       display flex
