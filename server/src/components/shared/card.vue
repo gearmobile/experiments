@@ -22,12 +22,12 @@
 
   .card
     padding .8rem
-    margin .2rem
+    margin .05rem
     display flex
-    flex 1 1 calc( 100 / 6 )
+    flex 0 1 calc( 100% / 12 )
     flex-direction column
-    justify-content center
-    align-content center
+    // justify-content center
+    // align-content center
     border 1px solid #000
 
     &__title
