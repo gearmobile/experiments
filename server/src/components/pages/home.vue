@@ -1,12 +1,15 @@
 <template lang="pug">
   .wrapper
-    .wrapper__item( v-for="(rank, index) in ranks", :key="index", :card="rank" )
+    .wrapper__item( v-for="(rank, index) in ranks", :key="index" )
       h3.wrapper__item-title
         | {{ rank.title }}
+      .wrapper__inner
+        app-card( v-for="(node, index) in rank.nodes", :key="index", :card="node" )
 </template>
 
 <script>
   import axios from 'axios'
+  import Card from '../shared/card.vue'
   const root = 'http://localhost:3000'
 
   export default {
@@ -15,6 +18,9 @@
       return {
         ranks: []
       }
+    },
+    components: {
+      appCard: Card
     },
     methods: {
       initData () {
@@ -38,16 +44,24 @@
     flex-wrap wrap
 
     &__item
-      flex 1 1 33%
+      flex 1 1 30%
       height 10rem
       border 1px solid #000
       border-radius .2rem
       display flex
+      flex-direction column
+      align-items center
       padding 1rem
+      margin 1%
 
     &__item-title
       text-align center
-      margin 0 1rem
+      margin 0 0 1rem
       width 100%
+
+    &__inner
+      display flex
+      flex-direction row
+      flex-wrap wrap
 
 </style>
