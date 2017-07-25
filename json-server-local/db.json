@@ -16,12 +16,7 @@
           "title": "1c2p",
           "status": "on"
         },
-        {
-          "id": "3",
-          "ip": 100,
-          "title": "1c3p",
-          "status": "on"
-        },
+        {},
         {
           "id": "4",
           "ip": 100,
@@ -262,12 +257,7 @@
           "title": "1c3p",
           "status": "on"
         },
-        {
-          "id": "4",
-          "ip": 100,
-          "title": "1c4p",
-          "status": "on"
-        },
+        {},
         {
           "id": "3",
           "ip": 100,
@@ -568,12 +558,7 @@
           "title": "1c3p",
           "status": "on"
         },
-        {
-          "id": "4",
-          "ip": 100,
-          "title": "1c4p",
-          "status": "on"
-        },
+        {},
         {
           "id": "1",
           "ip": 100,
@@ -779,12 +764,6 @@
           "status": "on"
         },
         {
-          "id": "6",
-          "ip": 100,
-          "title": "1c6p",
-          "status": "off"
-        },
-        {
           "id": "5",
           "ip": 100,
           "title": "1c5p",
@@ -796,6 +775,7 @@
           "title": "1c6p",
           "status": "off"
         },
+        {},
         {
           "id": "1",
           "ip": 100,
@@ -980,7 +960,7 @@
           "id": "4",
           "ip": 100,
           "title": "1c4p",
-          "status": "on"
+          "status": "work"
         },
         {
           "id": "1",
@@ -1304,19 +1284,19 @@
           "id": "3",
           "ip": 100,
           "title": "1c3p",
-          "status": "on"
+          "status": "off"
         },
         {
           "id": "4",
           "ip": 100,
           "title": "1c4p",
-          "status": "on"
+          "status": "off"
         },
         {
           "id": "5",
           "ip": 100,
           "title": "1c5p",
-          "status": "on"
+          "status": "off"
         },
         {
           "id": "6",
@@ -1328,7 +1308,7 @@
           "id": "6",
           "ip": 100,
           "title": "1c6p",
-          "status": "on"
+          "status": "off"
         }
       ]
     }

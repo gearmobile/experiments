@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card( :class="{ 'card--on': card.status === 'on', 'card--off': card.status === 'off' }" )
+  .card( :class="{ 'card--on': card.status === 'on', 'card--off': card.status === 'off', 'card--work': card.status === 'work' }" )
     .card__title
       | {{ card.title }}
     .card__text
@@ -39,6 +39,9 @@
 
     &--off
       background-color salmon
+
+    &--work
+      background-color orange
 
 </style>
 
