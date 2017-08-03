@@ -4,8 +4,8 @@
   "description": "Fake JSON Local Server for Test Purposes",
   "main": "index.js",
   "scripts": {
-    "json:server": "json-server --watch db-old.json",
-    "json:front": "json-server --watch db.json",
+    "db:standart": "json-server --watch standart.json",
+    "db:electric": "json-server --watch electric.json",
     "json:server:remote": "json-server http://jsonplaceholder.typicode.com/db"
   },
   "keywords": [
