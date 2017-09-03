@@ -5,10 +5,10 @@ const state = {
 }
 
 const mutations = {
-  incerementCounter (state) {
+  [types.INCEREMENT_COUNTER] (state) {
     state.counter += 1
   },
-  decrementCounter (state) {
+  [types.DECREMENT_COUNTER] (state) {
     if (state.counter > 0) {
       state.counter -= 1
     }
@@ -16,11 +16,11 @@ const mutations = {
 }
 
 const actions = {
-  increment ({ commit }) {
-    commit('incerementCounter')
+  [types.INCREMENT] ({ commit }) {
+    commit(types.INCEREMENT_COUNTER)
   },
-  decrement ({ commit }) {
-    commit('decrementCounter')
+  [types.DECREMENT] ({ commit }) {
+    commit(types.DECREMENT_COUNTER)
   }
 }
 

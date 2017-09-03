@@ -14,8 +14,7 @@
     name: 'output',
     computed: {
       ...mapGetters({
-        // counterGet: 'getCounter'
-        counterGet: [types.GET_COUNTER]
+        counterGet: types.GET_COUNTER
       }),
       counter () {
         return this.counterGet
