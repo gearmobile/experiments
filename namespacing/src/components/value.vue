@@ -1,10 +1,10 @@
 <template lang="pug">
   v-container
     v-layout( row )
-      v-flex( xs12 )
+      v-flex( xs8, offset-xs2 )
         h4.text-xs-center
           | Value is {{ value }}
-        v-text-field( v-model="value" )
+        v-text-field( v-model="value", label="Value" )
 </template>
 
 <script>
@@ -28,7 +28,3 @@
     }
   }
 </script>
-
-<style lang="stylus" scoped>
-    //
-</style>

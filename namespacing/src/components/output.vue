@@ -2,7 +2,8 @@
   v-container
     v-layout( row )
       v-flex.text-xs-center( xs12 )
-        | Counter is {{ counter }}
+        h3
+          | Counter is {{ counter }}
 </template>
 
 <script>
@@ -21,6 +22,3 @@
   }
 </script>
 
-<style lang="stylus" scoped>
-    //
-</style>
