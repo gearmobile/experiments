@@ -1,3 +1,5 @@
+import * as types from '../types'
+
 const state = {
   counter: 0
 }
@@ -23,7 +25,7 @@ const actions = {
 }
 
 const getters = {
-  getCounter (state) {
+  [types.GET_COUNTER] (state) {
     return state.counter
   }
 }
