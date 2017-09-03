@@ -23,7 +23,16 @@
 
 <script>
   export default {
-    name: 'userDetail'
+    name: 'userDetail',
+    data () {
+      return {
+        check: true
+      }
+    },
+    beforeRouteEnter (to, from, next) {
+      next(vm => vm.check)
+      console.log('before route enter checked')
+    }
   }
 </script>
 

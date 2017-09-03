@@ -3,9 +3,8 @@
   v-container
     v-layout( row )
       v-flex( xs12 )
-        v-btn.primary( :to="'/user/' + $route.params.userID" )
-          | back
-        //- v-btn.primary( @click="onClick()" )
+        v-btn.primary( @click="confirmed = true" )
+          | back to users list
 
 </template>
 
@@ -14,14 +13,20 @@
     name: 'userEdit',
     data () {
       return {
-        answer: false
+        confirmed: false
+      }
+    },
+    beforeRouteLeave (to, from, next) {
+      if (this.confirmed) {
+        next()
+      } else {
+        if (confirm('Are you sure to leave this page?')) {
+          next()
+        } else {
+          next(false)
+        }
       }
     }
-    // methods: {
-    //   onClick () {
-    //     this.answer = true
-    //   }
-    // }
   }
 </script>
 

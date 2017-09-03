@@ -9,7 +9,7 @@ import userEdit from '@/components/user/userEdit'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -33,7 +33,11 @@ export default new Router({
         {
           path: ':userID',
           name: 'userDetail',
-          component: userDetail
+          component: userDetail,
+          beforeEnter: (to, from, next) => {
+            console.log('local beforeEnter')
+            next()
+          }
         },
         {
           path: ':userID/edit',
@@ -43,7 +47,7 @@ export default new Router({
       ]
     },
     {
-      path: '/about',
+      path: '/about', // absolute redirect
       redirect: '/'
     },
     {
@@ -52,3 +56,11 @@ export default new Router({
     }
   ]
 })
+
+// global hook
+router.beforeEach((to, from, next) => {
+  console.log('global beforeEach')
+  next()
+})
+
+export default router
