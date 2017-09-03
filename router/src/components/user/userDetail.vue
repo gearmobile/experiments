@@ -23,11 +23,7 @@
 
 <script>
   export default {
-    name: 'userDetail',
-    beforeRouteEnter (to, from, next) {
-      console.log('before detail page from component')
-      next()
-    }
+    name: 'userDetail'
   }
 </script>
 

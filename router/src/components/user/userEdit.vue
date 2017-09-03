@@ -3,9 +3,9 @@
   v-container
     v-layout( row )
       v-flex( xs12 )
-        //- v-btn.primary( :to="'/user/' + $route.params.userID" )
-        v-btn.primary( @click="onClick()" )
+        v-btn.primary( :to="'/user/' + $route.params.userID" )
           | back
+        //- v-btn.primary( @click="onClick()" )
 
 </template>
 
@@ -16,23 +16,12 @@
       return {
         answer: false
       }
-    },
-    methods: {
-      onClick () {
-        this.answer = true
-      }
-    },
-    beforeRouteLeave (to, from, next) {
-      if (this.answer) {
-        next()
-      } else {
-        if (confirm('Are you sure to leave this page?')) {
-          next()
-        } else {
-          next(false)
-        }
-      }
     }
+    // methods: {
+    //   onClick () {
+    //     this.answer = true
+    //   }
+    // }
   }
 </script>
 

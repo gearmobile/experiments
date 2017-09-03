@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/home'
+import Home from '@/components/Home'
+import Error from '@/components/Error'
 import User from '@/components/user/user'
 import listUsers from '@/components/user/userList'
 import userDetail from '@/components/user/userDetail'
@@ -16,6 +17,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '/error',
+      name: 'Error',
+      component: Error
+    },
+    {
       path: '/user',
       component: User,
       children: [
@@ -27,11 +33,7 @@ export default new Router({
         {
           path: ':userID',
           name: 'userDetail',
-          component: userDetail,
-          beforeEnter: (to, from, next) => {
-            console.log('before enter users detail page')
-            next()
-          }
+          component: userDetail
         },
         {
           path: ':userID/edit',
@@ -39,6 +41,14 @@ export default new Router({
           component: userEdit
         }
       ]
+    },
+    {
+      path: '/about',
+      redirect: '/'
+    },
+    {
+      path: '*',
+      component: Error
     }
   ]
 })
