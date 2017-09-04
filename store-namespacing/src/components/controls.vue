@@ -11,14 +11,13 @@
 
 <script>
   import { mapActions } from 'vuex'
-  import * as types from '../store/types'
 
   export default {
     name: 'controls',
     methods: {
-      ...mapActions({
-        large: [types.INCREMENT],
-        small: [types.DECREMENT]
+      ...mapActions('moduleCounter', {
+        large: 'increment',
+        small: 'decrement'
       }),
       encrease () {
         this.large()

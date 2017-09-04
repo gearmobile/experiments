@@ -8,13 +8,12 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import * as types from '../store/types'
 
   export default {
     name: 'output',
     computed: {
-      ...mapGetters({
-        counterGet: types.GET_COUNTER
+      ...mapGetters('moduleCounter', {
+        counterGet: 'getCounter'
       }),
       counter () {
         return this.counterGet

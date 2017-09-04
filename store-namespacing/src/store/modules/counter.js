@@ -1,14 +1,13 @@
-import * as types from '../types'
 
 const state = {
   counter: 0
 }
 
 const mutations = {
-  [types.INCEREMENT_COUNTER] (state) {
+  incerementCounter (state) {
     state.counter += 1
   },
-  [types.DECREMENT_COUNTER] (state) {
+  decrementCounter (state) {
     if (state.counter > 0) {
       state.counter -= 1
     }
@@ -16,21 +15,22 @@ const mutations = {
 }
 
 const actions = {
-  [types.INCREMENT] ({ commit }) {
-    commit(types.INCEREMENT_COUNTER)
+  increment ({ commit }) {
+    commit('incerementCounter')
   },
-  [types.DECREMENT] ({ commit }) {
-    commit(types.DECREMENT_COUNTER)
+  decrement ({ commit }) {
+    commit('decrementCounter')
   }
 }
 
 const getters = {
-  [types.GET_COUNTER] (state) {
+  getCounter (state) {
     return state.counter
   }
 }
 
 const counter = ({
+  namespaced: true,
   state,
   mutations,
   actions,
