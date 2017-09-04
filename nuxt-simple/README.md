@@ -1,6 +1,6 @@
-# nuxt-basic-example
+# nuxt-simple
 
-> Start using Nuxt.js
+> Nuxt.js project
 
 ## Build Setup
 
