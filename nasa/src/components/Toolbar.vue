@@ -4,11 +4,13 @@
       v-toolbar.primary( dark )
         v-toolbar-title
           span( to="/", style="cursor: pointer" )
-            | NASA
+            | nasa
         v-spacer
         v-toolbar-items
           v-btn( flat, to="/apod" )
-            | APOD
+            | apod
+          v-btn( flat, to="/epic" )
+            | epic
 </template>
 
 <script>
