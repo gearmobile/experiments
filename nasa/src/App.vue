@@ -2,12 +2,15 @@
 
   v-app( light )
     v-container
-      app-home
+      app-nav
+      router-view
+      //- app-home
 
 </template>
 
 <script>
-  import Home from './components/Home.vue'
+  // import Home from './components/Home.vue'
+  const Nav = () => import('./components/Toolbar.vue')
 
   export default {
     data () {
@@ -16,7 +19,7 @@
       }
     },
     components: {
-      appHome: Home
+      appNav: Nav
     }
   }
 </script>
