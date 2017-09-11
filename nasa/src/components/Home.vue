@@ -11,7 +11,7 @@
         form( @submit.prevent="onSearch(query)" )
           v-layout( row, wrap )
             v-flex.pa-2( xs12, sm6 )
-              v-text-field( v-model="query", label="Input term for search" )
+              v-text-field( v-model="query", label="Input name of image" )
             v-flex.pa-2( xs12, sm6 )
               v-text-field( v-model="quantity", label="Input quantity of images" )
     

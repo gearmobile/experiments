@@ -1,7 +1,7 @@
 <template lang="pug">
   v-layout( row )
     v-flex( xs12 )
-      v-toolbar
+      v-toolbar.primary( dark )
         v-toolbar-title
           | NASA
         v-spacer
