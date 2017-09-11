@@ -33,20 +33,21 @@
               h3.headline.mb-0
                 | {{ card.data[0].title }}
           v-card-actions
-            v-btn.primary--text( flat, @click.native="onShow()" )
+            v-btn.primary--text( flat, @click.native="card.show = !card.show" )
               | show more
             v-spacer
-            v-btn( icon, @click.native="onShow()" )
+            v-btn( icon )
               v-icon
-                | {{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}
+                | {{ card.show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}
           v-slide-y-transition
-            v-card-text( v-show="show" )
+            v-card-text( v-show="card.show" )
                 p.mb-0
                   | {{ card.data[0].description }}
 
 </template>
 
 <script>
+  import Vue from 'vue'
   import axios from 'axios'
   const images = 'https://images-api.nasa.gov/'
   // const key = 'E63VawPtEeRx6v2Mkzh2HqyeggvHL9dFPtctVcaN'
@@ -63,14 +64,14 @@
       }
     },
     methods: {
-      onShow () {
-        this.show = !this.show
-      },
       onSearch (value) {
         axios.get(images + 'search?q=' + value + '&media_type=image')
           .then(response => {
             console.log(response.data.collection.items)
             this.cards = response.data.collection.items.splice(0, this.quantity)
+            for (let key in this.cards) {
+              Vue.set(this.cards[key], 'show', false)
+            }
           })
           .catch(error => {
             console.log(error)
