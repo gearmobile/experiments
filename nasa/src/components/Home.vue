@@ -10,22 +10,23 @@
           | Search NASA Images
         form( @submit.prevent="onSearch(query)" )
           v-layout( row, wrap )
-            v-flex.ma-2( xs12, sm6 )
+            v-flex.pa-2( xs12, sm6 )
               v-text-field( v-model="query", label="Input term for search" )
-            v-flex.ma-2( xs12, sm6 )
+            v-flex.pa-2( xs12, sm6 )
               v-text-field( v-model="quantity", label="Input quantity of images" )
     
     v-layout.mb-4( row )
       v-flex( xs12 )
-        v-spacer
-        v-btn( flat, @click.native="onSearch(query)" )
-          | send request
-        v-btn( flat, @click.native="onClear()" )
-          | clear form
+        v-card-actions
+          v-spacer
+          v-btn.primary--text( flat, @click.native="onSearch(query)" )
+            | send request
+          v-btn.primary--text( flat, @click.native="onClear()" )
+            | clear form
 
     v-layout( row, wrap, v-if="cards" )
       v-flex.pa-2.mb-2( xs12, sm6, md4 v-for="card in cards", :key="card" )
-        v-card
+        v-card( style="height: 100%" )
           v-card-media( :src="card.links[0].href", height="200px" )
           v-card-title( primary-title )
             article
