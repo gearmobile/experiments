@@ -2,14 +2,20 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 const Home = () => import('../components/Home.vue')
+const Apod = () => import('../components/APOD.vue')
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '',
-    name: 'Home',
+    name: 'home',
     component: Home
+  },
+  {
+    path: '/apod',
+    name: 'apod',
+    component: Apod
   }
 ]
 

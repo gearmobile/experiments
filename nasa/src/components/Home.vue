@@ -11,9 +11,9 @@
         form( @submit.prevent="onSearch(query)" )
           v-layout( row, wrap )
             v-flex.pa-2( xs12, sm6 )
-              v-text-field( v-model="query", label="Input Name of Image" )
+              v-text-field( v-model.trim="query", label="Input Name of Image" )
             v-flex.pa-2( xs12, sm6 )
-              v-text-field( v-model="quantity", label="Input Quantity of Images" )
+              v-text-field( v-model.trim="quantity", label="Input Quantity of Images" )
     
     v-layout.mb-4( row )
       v-flex( xs12 )
@@ -50,13 +50,11 @@
   import Vue from 'vue'
   import axios from 'axios'
   const images = 'https://images-api.nasa.gov/'
-  // const key = 'E63VawPtEeRx6v2Mkzh2HqyeggvHL9dFPtctVcaN'
 
   export default {
     name: 'home',
     data () {
       return {
-        // image: null,
         query: null,
         quantity: 10,
         cards: [],

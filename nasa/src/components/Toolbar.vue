@@ -3,11 +3,12 @@
     v-flex( xs12 )
       v-toolbar.primary( dark )
         v-toolbar-title
-          | NASA
+          span( to="/", style="cursor: pointer" )
+            | NASA
         v-spacer
         v-toolbar-items
-          v-btn( flat )
-            | one
+          v-btn( flat, to="/apod" )
+            | APOD
 </template>
 
 <script>
