@@ -4,21 +4,33 @@
 
     // https://api.nasa.gov/api.html#apod
 
-    v-layout.mb-4( row )
+    v-layout.mb-2( row, wrap )
       v-flex( xs12 )
         h3
           | Search NASA Images
         form( @submit.prevent="onSearch(query)" )
-          v-text-field( v-model="query", label="Input term for search" )
-
-    v-layout( row, wrap, v-if="collection" )
+          v-layout( row, wrap )
+            v-flex.ma-2( xs12, sm6 )
+              v-text-field( v-model="query", label="Input term for search" )
+            v-flex.ma-2( xs12, sm6 )
+              v-text-field( v-model="quantity", label="Input quantity of images" )
+    
+    v-layout.mb-4( row )
       v-flex( xs12 )
-        v-card.mb-2( v-for="item in collection", :key="item" )
-          v-card-media( :src="item.links[0].href", height="200px" )
+        v-spacer
+        v-btn( flat, @click.native="onSearch(query)" )
+          | send request
+        v-btn( flat, @click.native="onClear()" )
+          | clear form
+
+    v-layout( row, wrap, v-if="cards" )
+      v-flex.pa-2.mb-2( xs12, sm6, md4 v-for="card in cards", :key="card" )
+        v-card
+          v-card-media( :src="card.links[0].href", height="200px" )
           v-card-title( primary-title )
             article
               h3.headline.mb-0
-                | {{ item.data[0].title }}
+                | {{ card.data[0].title }}
           v-card-actions
             v-btn.primary--text( flat, @click.native="onShow()" )
               | show more
@@ -29,7 +41,7 @@
           v-slide-y-transition
             v-card-text( v-show="show" )
                 p.mb-0
-                  | {{ item.data[0].description }}
+                  | {{ card.data[0].description }}
 
     //- v-layout( row )
     //-   v-flex( xs12 )
@@ -66,7 +78,8 @@
       return {
         // image: null,
         query: null,
-        collection: [],
+        quantity: 10,
+        cards: [],
         show: false
       }
     },
@@ -88,11 +101,14 @@
         axios.get(images + 'search?q=' + value + '&media_type=image')
           .then(response => {
             console.log(response.data.collection.items)
-            this.collection = response.data.collection.items.splice(0, 10)
+            this.cards = response.data.collection.items.splice(0, this.quantity)
           })
           .catch(error => {
             console.log(error)
           })
+      },
+      onClear () {
+        this.query = ''
       }
     },
     created () {
