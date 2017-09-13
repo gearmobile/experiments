@@ -1,0 +1,12 @@
+button {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.title {
+  color: burlywood;
+}
+
+.wrapper {
+  margin-bottom: 2rem;
+}
