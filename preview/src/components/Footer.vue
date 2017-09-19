@@ -1,11 +1,11 @@
 <template lang="pug">
   footer.footer
     .container
-      .columns.level
-        .column.is-3.level-left
+      .columns
+        .column.is-3
           a.title.is-5( href="#" )
             | voximplant
-        .column.is-3.level-right
+        .column.is-3.is-offset-6
           ul
             li Zingaya, Inc
             li 2225 East Bayshore Road, Palo Alto

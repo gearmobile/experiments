@@ -8,8 +8,8 @@
               | Введите номер телефона
             .field
               .control
-                input.input.is-medium( type="text", placeholder="phone" )
-            a.button
+                input.input.is-medium( type="text", placeholder="+7-___-___-___" )
+            a.button.is-uppercase.is-outlined
               | отправить
 </template>
 

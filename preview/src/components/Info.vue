@@ -2,7 +2,7 @@
   section.hero.is-medium
     .hero-body
       .container
-        .columns
+        .columns.is-tablet
           .column
             h3.title.is-4
               | Статус: <span>название статуса</span>
