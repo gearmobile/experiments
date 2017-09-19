@@ -25,8 +25,10 @@
 </script>
 
 <style lang="scss" scoped>
+  // $blue-dark: #662eff;
   .hero {
     background-color: #662eff;
+    // @include linear-gradient($lg_blue_From, $lg_blue_To);
     // color: white;
   }
 </style>

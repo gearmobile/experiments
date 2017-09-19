@@ -1,5 +1,7 @@
 <template lang="pug">
   section.hero.is-medium
+    a.hero__link.is-uppercase( href="#" )
+      | в каталог демо-версий
     .hero-body
       .container
         .columns
@@ -40,6 +42,14 @@
 </script>
 
 <style lang="scss" scoped>
-  //
+  .hero {
+    position: relative;
+
+    &__link {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+  }
 </style>
 
