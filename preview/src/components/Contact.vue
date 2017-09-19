@@ -2,10 +2,10 @@
   section.hero.is-medium
     .hero-body
       .container
-        .columns
-          .column
-            h1.title
-              | введите номер телефона
+        .columns.has-text-centered
+          .column.is-6.is-offset-3
+            h1.title.has-text-white
+              | Введите номер телефона
             .field
               .control
                 input.input.is-medium( type="text", placeholder="phone" )
@@ -14,14 +14,14 @@
 </template>
 
 <script>
-export default {
-  name: 'contact',
-  data () {
-    return {
-      //
+  export default {
+    name: 'contact',
+    data () {
+      return {
+        //
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>
