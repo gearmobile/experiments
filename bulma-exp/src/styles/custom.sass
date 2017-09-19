@@ -1,19 +1,29 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700')
+
+// 1. Import the initial variables
 @import '../../node_modules/bulma/sass/utilities/initial-variables.sass'
   
 // 2. Set own initial variables
+$black: #000
 $blue: #72d0eb
 $pink: #ffb3b3
 $pink-invert: #fff
-$family-serif: "Merriweather", "Georgia", serif
+$family-serif: 'Montserrat', sans-serif
 
 // 3. Set the derived variables
 $primary: $pink
 $primary-invert: $pink-invert
 
-// Use the existing orange as the danger color
+$input-background-color: transparent
+$input-shadow: none
+$input-hover-color: transparent
+$input-focus-color: transparent
+$input-focus-border-color: transparent
+// 4. Use the existing orange as the danger color
 $danger: $orange
 
-// Use the new serif family
+// 5. Use the new serif family
 $family-primary: $family-serif
 
 @import '../../node_modules/bulma/bulma.sass'
