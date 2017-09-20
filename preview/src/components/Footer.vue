@@ -26,10 +26,10 @@
 <style lang="scss" scoped>
   
   .footer {
-    padding: 5rem 1.5rem 4rem;
+    padding: 4rem 1.5rem;
     background-color: transparent;
     // border-top: 1px solid $grey-light
-    border-top: 1px solid #000;
+    border-top: 1px solid #e0e4ea;
 
     &__logo {
       display: flex;

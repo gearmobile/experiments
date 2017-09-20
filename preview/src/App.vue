@@ -27,18 +27,5 @@
 </script>
 
 <style lang="scss">
-  @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
-  
-  // UPDATE COLORS
-  $blue: #662eff;
-  $blue-dark: #1c0b43;
-  $blue-light: #8b61ff;
-
-  $primary: $blue-dark;
-  
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  //
 </style>
