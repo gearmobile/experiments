@@ -36,15 +36,15 @@
                 img( src="../assets/icon-demo-01.png" )
               p.item__content
                 | Клиент оформляет заявку на сайте
-              img.item__arrow( src="../assets/icon-arrow.png" )
+              img.item__arrow.is-hidden-mobile( src="../assets/icon-arrow.png" )
             
             // item
-            .column.item
+            .column.item.has-text-center-mobile
               figure.item__icon
                 img( src="../assets/icon-demo-02.png" )
               p.item__content
                 | Робот перезванивает таксисту
-              img.item__arrow( src="../assets/icon-arrow.png" )
+              img.item__arrow.is-hidden-mobile( src="../assets/icon-arrow.png" )
             
             // item
             .column.item
@@ -72,6 +72,7 @@
 
   .demo {
     padding: 14rem 1.5rem;
+    // padding: 14rem 0;
 
     &__nav {
       margin-bottom: 14rem;
@@ -131,6 +132,13 @@
     padding: 1rem 3rem 1rem 1rem;
     position: relative;
     outline: 1px solid #000;
+
+    @media screen and (max-width: 768px) {
+      .item {
+        // text-align: center;
+        padding: 1rem;
+      }
+    }
 
     &__icon {
       width: 100%;
