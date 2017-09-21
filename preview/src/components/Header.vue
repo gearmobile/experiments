@@ -21,6 +21,5 @@ export default {
 <style lang="scss" scoped>
   .header {
     background-color: #1c0b43;
-    // background-color: $primary;
   }
 </style>

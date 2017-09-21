@@ -42,7 +42,7 @@
     }
 
     &__input {
-      font-family: $family-monospace;
+      // font-family: $family-monospace;
       color: white;
       font-size: 1rem;
       font-weight: 500;
@@ -53,7 +53,7 @@
 
     &__button {
       text-transform: uppercase;
-      font-family: $family-monospace;
+      // font-family: $family-monospace;
       color:  #662eff;
       font-size: .75rem;
       font-weight: 500;

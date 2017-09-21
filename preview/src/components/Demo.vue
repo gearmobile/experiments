@@ -10,7 +10,9 @@
       
       // CONTENT SECTION
       .columns
-        .column.is-3
+        
+        // left column
+        .column.is-12-tablet.is-3-desktop
           h1.demo__title
             | demo taxi
           h2.demo__subtitle
@@ -20,19 +22,21 @@
           nav.panel
             a( href="#" )
               | перейти к демонстрации
-        .column.is-9
+        
+        // right column
+        .column.is-12-tablet.is-9-desktop
           .columns
-            .column
+            .column.is-12-mobile
               span.icon.is-large
                 i.fa.fa-male.fa-3x( aria-hidden="true" )
               p
                 | Клиент оформляет заявку на сайте
-            .column
+            .column.is-12-mobile
               span.icon.is-large
                 i.fa.fa-android.fa-3x( aria-hidden="true" )
               p
                 | Робот перезванивает таксисту
-            .column
+            .column.is-12-mobile
               span.icon.is-large
                 i.fa.fa-car.fa-3x( aria-hidden="true" )
               p
@@ -64,7 +68,7 @@
     }
 
     &__link {
-      font-family: $family-monospace;
+      // font-family: $family-monospace;
       color:  #662eff;
       font-size: 0.75rem;
       font-weight: 500;

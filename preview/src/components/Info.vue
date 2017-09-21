@@ -111,7 +111,7 @@ export default {
     }
 
     &__link {
-      font-family: $family-monospace;
+      // font-family: $family-monospace;
       color:  #8b61ff;
       font-size: 0.75rem;
       font-weight: 500;
@@ -124,8 +124,7 @@ export default {
 
     &__title {
       text-transform: uppercase;
-      // font-family: RobotoMono;
-      font-family: $family-monospace;
+      // font-family: $family-monospace;
       color:  #323c47;
       font-size: 1rem;
       font-weight: 500;
