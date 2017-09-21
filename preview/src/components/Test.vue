@@ -128,7 +128,7 @@
   }
   
   .item {
-    padding: 1rem 4rem 1rem 1rem;
+    padding: 1rem 3rem 1rem 1rem;
     position: relative;
     outline: 1px solid #000;
 
@@ -147,7 +147,8 @@
       height: 8px;
       position: absolute;
       top: 20%;
-      right: 5%;
+      // right: 5%;
+      left: 60%;
     }
   }
   
