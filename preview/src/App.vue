@@ -1,7 +1,7 @@
 <template lang="pug">
   #app
     app-header
-    app-hero
+    app-demo
     app-contact
     app-info
     app-footer
@@ -9,7 +9,7 @@
 
 <script>
   const Header = () => import('./components/Header.vue')
-  const Hero = () => import('./components/Hero.vue')
+  const Demo = () => import('./components/Demo.vue')
   const Contact = () => import('./components/Contact.vue')
   const Info = () => import('./components/Info.vue')
   const Footer = () => import('./components/Footer.vue')
@@ -18,7 +18,7 @@
     name: 'app',
     components: {
       appHeader: Header,
-      appHero: Hero,
+      appDemo: Demo,
       appContact: Contact,
       appInfo: Info,
       appFooter: Footer
